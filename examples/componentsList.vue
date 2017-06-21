@@ -2,16 +2,16 @@
   <section class="page-demo">
     <div v-for="group in navs">
       <div class="page-title" v-text="group.title"></div>
-      <mt-cell
-        v-for="(item, index) in group.list"
-        :key="index"
-        :to="item.path"
-        is-link>
-        <div slot="title">
-          <i :class="['nav-icon', 'icon-' + item.icon]"></i>
-          <span>{{item.name}}</span>
-        </div>
-      </mt-cell>
+      <ul>
+        <li
+          v-for="(item, index) in group.list"
+          :key="index">
+          <router-link :to="item.path">
+            <i :class="['nav-icon', 'icon-' + item.icon]"></i>
+            <span>{{item.name}}</span>
+          </router-link>
+        </li>
+      </ul>
     </div>
   </section>
 </template>
@@ -23,6 +23,7 @@
   import { navs } from './route';
 
   export default {
+    name: 'components-list',
     data() {
       return {
         navs: []
