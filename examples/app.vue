@@ -25,21 +25,21 @@
 <template>
   <div class="container">
     <nav v-if="this.$route.path === '/'">
-      <ul>
-        <li>
-          <router-link to="/button">Button</router-link>
-        </li>
-      </ul>
+      <components-list></components-list>
     </nav>
     <router-view></router-view>
   </div>
 </template>
 <script>
+import componentsList from './componentsList'
 module.exports = {
   data: function() {
     return {
 
     }
+  },
+  components: {
+    componentsList
   },
   mounted: function() {
     console.log()
