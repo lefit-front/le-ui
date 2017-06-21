@@ -4,6 +4,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './app.vue';
+import routes from './route';
 import Lemo from '../src/index';
 import locale from '../src/locale/lang/zh-CN';
 
@@ -17,10 +18,8 @@ Vue.config.debug = true;
 
 // 路由配置
 const router = new VueRouter({
-  routes: [{
-    path: '/button',
-    component: require('./routers/button.vue')
-  }]
+  base: __dirname,
+  routes
 });
 
 new Vue({

@@ -1,7 +1,30 @@
-<style lang="less">@import "../src/styles/index.less";</style>
+<style lang="less">
+  @import "../src/styles/index.less";
+
+  html, body {
+    background-color: #fafafa;
+    -webkit-overflow-scrolling: touch;
+    user-select: none;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .page-back {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    i {
+      font-size: 24px;
+      line-height: 40px;
+    }
+  }
+</style>
 <template>
   <div class="container">
-    <nav>
+    <nav v-if="this.$route.path === '/'">
       <ul>
         <li>
           <router-link to="/button">Button</router-link>
@@ -19,7 +42,7 @@ module.exports = {
     }
   },
   mounted: function() {
-
+    console.log()
   },
   beforeDestroy: function() {
 

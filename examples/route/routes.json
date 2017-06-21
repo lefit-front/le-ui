@@ -1,0 +1,12 @@
+[
+  {
+    "title": "JS Components",
+    "list": [
+      {
+        "path": "/button",
+        "name": "Button",
+        "icon": "button"
+      }
+    ]
+  }
+]
