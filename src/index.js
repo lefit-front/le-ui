@@ -4,6 +4,7 @@ import 'core-js/fn/array/find-index';
 import Button from './components/button';
 import Popup from './components/Popup';
 import MessageBox from './components/message-box';
+import Icon from './components/icon';
 import locale from './locale';
 
 import BaseList from './components/base-list';
@@ -13,7 +14,8 @@ const lemo = {
   Popup,
   MessageBox,
   BaseList,
-  TabBar
+  TabBar,
+  Icon
 };
 
 const install = function (Vue, opts = {}) {
@@ -24,10 +26,6 @@ const install = function (Vue, opts = {}) {
     Vue.component(key, lemo[key]);
   });
 
-  // Vue.prototype.$Loading = LoadingBar;
-  // Vue.prototype.$Message = Message;
-  // Vue.prototype.$Modal = Modal;
-  // Vue.prototype.$Notice = Notice;
 };
 
 // auto install

@@ -26,6 +26,11 @@
         "path": "/tabBar",
         "name": "tabBar",
         "icon": "tabBar"
+      },
+      {
+        "path": "/icon",
+        "name": "Icon",
+        "icon": "icon"
       }
     ]
   }
