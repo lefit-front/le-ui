@@ -16,6 +16,16 @@
         "path": "/message-box",
         "name": "MessageBox",
         "icon": "message-box"
+      },
+      {
+        "path": "/baseList",
+        "name": "baseList",
+        "icon": "baseList"
+      },
+      {
+        "path": "/tabBar",
+        "name": "tabBar",
+        "icon": "tabBar"
       }
     ]
   }

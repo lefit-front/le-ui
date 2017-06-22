@@ -9,7 +9,9 @@ import locale from './locale';
 const lemo = {
   Button,
   Popup,
-  MessageBox
+  MessageBox,
+  BaseList,
+  TabBar
 };
 
 const install = function (Vue, opts = {}) {
