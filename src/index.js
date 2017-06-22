@@ -6,6 +6,8 @@ import Popup from './components/Popup';
 import MessageBox from './components/message-box';
 import locale from './locale';
 
+import BaseList from './components/base-list';
+import TabBar from './components/tab-bar';
 const lemo = {
   Button,
   Popup,
