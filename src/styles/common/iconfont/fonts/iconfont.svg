@@ -2,13 +2,13 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Wed Jun 21 10:37:05 2017
+Created by FontForge 20120731 at Thu Jun 22 18:49:31 2017
  By admin
 </metadata>
 <defs>
-<font id="iconfont" horiz-adv-x="1024" >
+<font id="leke-lemo-font" horiz-adv-x="1024" >
   <font-face 
-    font-family="iconfont"
+    font-family="leke-lemo-font"
     font-weight="500"
     font-stretch="normal"
     units-per-em="1024"
@@ -272,5 +272,8 @@ l171 -114q14 -9 32 -9q23 0 40 16.5t17 40.5q0 30 -26 47l-145 97v282z" />
 d="M164 497v-451q0 -10 10 -10v0h676v0q10 0 10 10v451q0 10 -10 10v0h-676v0q-10 0 -10 -10zM102 497q0 29 21 50t51 21v0h676v0q30 0 51 -21t21 -50v-451q0 -30 -21 -51t-51 -21v0h-676v0q-30 0 -51 21t-21 51v451zM746 647q-24 69 -92.5 118t-141.5 49t-141.5 -48.5
 t-92.5 -117.5q-1 -5 -1 -10q0 -13 9 -22t21 -9q9 0 17.5 6t11.5 15q18 51 69.5 88t106.5 37t106.5 -37t69.5 -89q3 -9 11.5 -15t17.5 -6q13 0 22 9t9 22q0 5 -2 10zM297 415zM266 414.5q0 -12.5 9 -21.5t22 -9t22 9t9 21.5t-9 21.5t-22 9t-22 -9t-9 -21.5zM727 415z
 M696 414.5q0 -12.5 9 -21.5t22 -9t22 9t9 21.5t-9 21.5t-22 9t-22 -9t-9 -21.5z" />
+    <glyph glyph-name="pt" unicode="&#xe646;" 
+d="M850 221q0 63 -45 107.5t-108 44.5h-305v0q-63 0 -107.5 -44.5t-44.5 -107.5v-284h610v284zM174 -128v349q0 90 64 153.5t154 63.5h305q90 0 154 -63.5t64 -153.5v-349h-741zM545 526q63 0 107.5 44.5t44.5 107.5t-44.5 108t-107.5 45t-108 -45t-45 -108t45 -107.5
+t108 -44.5zM544.5 460q-90.5 0 -154 64t-63.5 154t63.5 154t154 64t154.5 -64t64 -154t-64 -154t-154.5 -64zM708 743h-566q-14 0 -23.5 -9.5t-9.5 -23t9.5 -23t23.5 -9.5h566q14 0 23.5 9.5t9.5 23t-9.5 23t-23.5 9.5z" />
   </font>
 </defs></svg>
