@@ -6,6 +6,11 @@
         "path": "/button",
         "name": "Button",
         "icon": "button"
+      },
+      {
+        "path": "/popup",
+        "name": "Popup",
+        "icon": "popup"
       }
     ]
   }

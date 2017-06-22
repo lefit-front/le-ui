@@ -3,9 +3,11 @@ import 'core-js/fn/array/find-index';
 
 import Button from './components/button';
 import locale from './locale';
+import Popup from './components/Popup';
 
 const lemo = {
-  Button
+  Button,
+  Popup
 };
 
 const install = function (Vue, opts = {}) {
