@@ -2,25 +2,17 @@
   <div class="page-msgbox">
     <h1 class="page-title">Message Box</h1>
     <div class="page-msgbox-wrapper">
-      <Button @click.native="openAlert" size="large">打开 alert 提示框</Button>
-      <Button @click.native="openConfirm" size="large">打开 confirm 提示框</Button>
-      <Button @click.native="openPrompt" size="large">打开 prompt 提示框</Button>
+      <Button class="demo-button" @click.native="openAlert" size="large">打开 alert 提示框</Button>
+      <Button class="demo-button" @click.native="openConfirm" size="large">打开 confirm 提示框</Button>
+      <Button class="demo-button" @click.native="openPrompt" size="large">打开 prompt 提示框</Button>
     </div>
   </div>
 </template>
 
-<style>
-  @component-namespace page {
-    @component msgbox {
-      @descendent wrapper {
-        padding: 0 20px;
-        position: absolute 50% * * *;
-        width: 100%;
-        transform: translateY(-50%);
-        button:not(:last-child) {
-          margin-bottom: 20px;
-        }
-      }
+<style lang="less">
+  .page-msgbox-wrapper {
+    .demo-button {
+      margin: 10px 0;
     }
   }
 </style>
