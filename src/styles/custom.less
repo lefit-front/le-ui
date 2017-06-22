@@ -22,8 +22,8 @@
 @code-family            : Consolas,Menlo,Courier,monospace;
 @title-color            : #1c2438;
 @text-color             : #000;
-@sub-text-color        : #606060;
-@desc-text-color        : #a9a9a9;
+@sub-text-color         : rgba(0, 0, 0, 0.6);
+@desc-text-color        : rgba(0, 0, 0, 0.3);
 @font-size-base         : 14px;
 @font-size-small        : 12px;
 @line-height-base       : 1.5;
@@ -37,7 +37,8 @@
 @border-color-split     : #e9eaec;  // inside
 
 // Background color
-@background-color-base        : #f2f2f2;  // base
+@background-color-base        : #fff;  // base
+@background-color-gray        : #f2f2f2;  // gray
 @background-color-select-hover: @input-disabled-bg;
 @tooltip-bg                   : rgba(70, 76, 91, .9);
 @head-bg                      : #f9f9f9;
@@ -49,7 +50,7 @@
 @date-picker-cell-hover-bg    : #e1f0fe;
 
 // Shadow
-@shadow-color           : rgba(0, 0, 0, .2);
+@shadow-color           : rgba(0, 0, 0, 0.05);
 @shadow-base            : @shadow-down;
 @shadow-card            : 0 1px 1px 0 rgba(0,0,0,.1);
 @shadow-up              : 0 -1px 6px @shadow-color;
@@ -59,33 +60,33 @@
 
 // Button
 @btn-font-weight        : normal;
-@btn-padding-base       : 6px 15px;
-@btn-padding-large      : 6px 15px 7px 15px;
-@btn-padding-small      : 2px 7px;
-@btn-font-size          : 12px;
-@btn-font-size-large    : 14px;
-@btn-border-radius      : 4px;
+@btn-padding-base       : 7px 20px;
+@btn-padding-large      : 9px 0 8px 0;
+@btn-padding-small      : 5px 12px;
+@btn-font-size-small    : 14px;
+@btn-font-size          : 16px;
+@btn-font-size-large    : 16px;
+@btn-border-radius      : 3px;
 @btn-border-radius-small: 3px;
 @btn-group-border       : shade(@primary-color, 5%);
 
-@btn-disable-color      : #bbbec4;
-@btn-disable-bg         : @background-color-base;
+@btn-disable-color      : #d0d0d0;
+@btn-disable-bg         : @background-color-gray;
 @btn-disable-border     : @border-color-base;
 
-@btn-complete-color      : rgba(0, 0, 0, .3);
-@btn-complete-bg         : @background-color-base;
-@btn-complete-border     : @border-color-base;
-
-@btn-default-color      : @text-color;
+@btn-default-color      : @primary-color;
 @btn-default-bg         : @background-color-base;
 @btn-default-border     : @border-color-base;
+
+@btn-shadow-color      : @text-color;
+@btn-shadow-bg         : @shadow-color;
 
 @btn-primary-color      : #fff;
 @btn-primary-bg         : @primary-color;
 
-@btn-ghost-color        : @text-color;
+@btn-ghost-color        : @sub-text-color;
 @btn-ghost-bg           : transparent;
-@btn-ghost-border       : @border-color-base;
+@btn-ghost-border       : @sub-text-color;
 
 @btn-circle-size        : 32px;
 @btn-circle-size-large  : 36px;

@@ -96,13 +96,13 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="less">
+@import "../../../styles/custom.less";
 /* button统一样式 */
 .le-button{
-  height:40px;
-  font-size:16px;
+  font-weight: @btn-font-weight;
   appearance: none;
-  border-radius: 3px;
+  border-radius: @btn-border-radius;
   border: 0;
   box-sizing: border-box;
   color: inherit;
@@ -111,6 +111,7 @@ export default {
   overflow: hidden;
   position: relative;
   text-align: center;
+  padding: @btn-padding-base;
   display: -webkit-box;  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
   display: -moz-box;     /* 老版本语法: Firefox (buggy) */
   display: -ms-flexbox;  /* 混合版本语法: IE 10 */
@@ -119,18 +120,18 @@ export default {
 }
 /* type:normal 和 按下样式 */
 .le-button-normal{
-  background:#FF4E00;
-  color:#fff;
+  background: @btn-primary-bg;
+  color: @btn-primary-color;
 }
 .le-button-normal:active{
   background: #BD491F;
-  color:#fff;
+  color: @btn-primary-color;
 }
 /* type:border 和 按下样式 */
 .le-button-border{
-  background:#fff;
-  color: #FF4E00;
-  border:1px #FF4E00 solid;
+  background: @btn-default-bg;
+  color: @btn-default-color;
+  border: 1px @btn-default-border solid;
 }
 .le-button-border:active{
   background: #FF4E00;
@@ -139,46 +140,48 @@ export default {
 
 /* type:plain 和 按下样式 */
 .le-button-plain{
-  opacity: 0.6;
-  background: #fff;
-  border: 1px solid #000;
+  background: inherit;
+  color: @btn-ghost-color;
+  border: 1px solid @btn-ghost-border;
 }
 .le-button-plain:active{
-  opacity: 1;
-  border: 1px solid #FF4E00;
-  color: #FF4E00;
+  border: 1px solid @btn-default-border;
+  color: @btn-default-color;
 }
 
 /* type:shadow 和 按下样式 */
 .le-button-shadow{
-  background: rgba(0, 0, 0, 0.05);
-  color: #000;
+  background: @btn-shadow-bg;
+  color: @btn-shadow-color;
 }
 .le-button-shadow:active{
-  background: rgba(252, 238, 230, 1);
-  color: #FF4E00;
+  background: #ffede6;
+  color: @btn-default-color;
 }
 /* disabled样式 */
 .is-disabled{
-  background: #F2F2F2;
-  color:#D0D0D0;
+  background: @btn-disable-bg;
+  color: @btn-disable-color;
 }
 .is-disabled:active{
-  background: #F2F2F2;
-  color:#D0D0D0;
+  background: @btn-disable-bg;
+  color: @btn-disable-color;
 }
 /* size */
 .le-size-large{
-  width:100%;
+  width: 100%;
+  font-size: @btn-font-size-large;
+  padding: @btn-padding-large;
 }
 .le-size-normal{
-  padding:0 12px;
+  font-size: @btn-font-size;
+  padding: @btn-padding-base;
 }
 .le-size-small{
+  border-radius: @btn-border-radius-small;
   display: inline-block;
-  font-size: 14px;
-  padding: 0 12px;
-  height: 33px;
+  font-size: @btn-font-size-small;
+  padding: @btn-padding-small;
 }
 /* loging */
 .le-loding{
