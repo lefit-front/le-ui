@@ -3,11 +3,11 @@
 @css-prefix-iconfont    : lemo-icon;
 
 // Color
-@primary-color          : #2d8cf0;
+@primary-color          : #ff4e00;
 @info-color             : #2db7f5;
 @success-color          : #19be6b;
 @warning-color          : #ff9900;
-@error-color            : #ed3f14;
+@error-color            : #ed433c;
 @link-color             : #2D8cF0;
 @link-hover-color       : tint(@link-color, 20%);
 @link-active-color      : shade(@link-color, 5%);
@@ -21,7 +21,9 @@
 @font-family            : "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
 @code-family            : Consolas,Menlo,Courier,monospace;
 @title-color            : #1c2438;
-@text-color             : #495060;
+@text-color             : #000;
+@sub-text-color        : #606060;
+@desc-text-color        : #a9a9a9;
 @font-size-base         : 14px;
 @font-size-small        : 12px;
 @line-height-base       : 1.5;
@@ -31,14 +33,14 @@
 @cursor-disabled        : not-allowed;
 
 // Border color
-@border-color-base      : #dddee1;  // outside
+@border-color-base      : #ff4e00;  // outside
 @border-color-split     : #e9eaec;  // inside
 
 // Background color
-@background-color-base        : #f7f7f7;  // base
+@background-color-base        : #f2f2f2;  // base
 @background-color-select-hover: @input-disabled-bg;
 @tooltip-bg                   : rgba(70, 76, 91, .9);
-@head-bg                      : #f9fafc;
+@head-bg                      : #f9f9f9;
 @table-thead-bg               : #f8f8f9;
 @table-td-stripe-bg           : #f8f8f9;
 @table-td-hover-bg            : #ebf7ff;
@@ -69,6 +71,10 @@
 @btn-disable-color      : #bbbec4;
 @btn-disable-bg         : @background-color-base;
 @btn-disable-border     : @border-color-base;
+
+@btn-complete-color      : rgba(0, 0, 0, .3);
+@btn-complete-bg         : @background-color-base;
+@btn-complete-border     : @border-color-base;
 
 @btn-default-color      : @text-color;
 @btn-default-bg         : @background-color-base;
