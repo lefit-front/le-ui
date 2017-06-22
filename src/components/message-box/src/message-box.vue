@@ -191,6 +191,7 @@
   @import "../../popup/style/popup.less";
   @msgbox: lemo-msgbox;
   @padding: 25px;
+  @btn-space: 8px;
   .@{msgbox} {
     position: fixed;
     top: 50%;
@@ -265,11 +266,18 @@
       display: flex;
       height: 40px;
       line-height: 40px;
-      padding: @padding;
+      padding: calc(@padding - @btn-space);
       justify-content: space-between;
+
     }
     .@{msgbox}-cancel {
-
+      flex-grow: 2;
+      margin: 0 @btn-space;
+      border-color: rgba(0, 0, 0, 0.1);
+    }
+    .@{msgbox}-confirm {
+      flex-grow: 2;
+      margin: 0 @btn-space;
     }
   }
 
