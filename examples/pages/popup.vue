@@ -18,6 +18,33 @@
       >
       我是内容
     </Popup>
+    <Button type="normal" @click="popCenter">中间</Button>
+    <Popup 
+      v-model="popupCenter"
+      position=""
+      class="popupCenter"
+      pop-transition="popup-fade"
+      >
+      我是内容
+    </Popup>
+    <Button type="normal" @click="popRight">向右边</Button>
+    <Popup 
+      v-model="popupRight"
+      position="right"
+      class="popupRight"
+      modal
+      >
+      <div class="msg">我是内容</div>
+    </Popup>
+    <Button type="normal" @click="popLeft">向左边</Button>
+    <Popup 
+      v-model="popupLeft"
+      position="left"
+      class="popupLeft"
+      modal
+      >
+      <div class="msg">我是内容</div>
+    </Popup>
   </div>
 </template>
 <script>
@@ -26,12 +53,27 @@ export default {
     return {
       popupBottom: false,
       popupTop: false,
-      modal: false
+      modal: false,
+      popupCenter: false,
+      popupRight: false,
+      popupLeft: false
     }
   },
   methods: {
-    popTop () {
-
+    popLeft () {
+      this.popupLeft = true
+      setTimeout(() => {
+        this.popupLeft = false
+      },1000)
+    },
+    popRight () {
+      this.popupRight = true
+      setTimeout(() => {
+        this.popupRight = false
+      },1000)
+    },
+    popCenter () {
+      this.popupCenter = true
     },
     popBottom () {
       this.popupBottom = true
@@ -68,5 +110,29 @@ export default {
   text-align:center;
   background: rgba(0, 0, 0, 0.5)!important;
   color:#fff;
+}
+.popupCenter{
+  width:100%;
+  height:100px;
+  height:100px;
+  line-height:100px;
+  text-align:center;
+}
+.popupRight{
+  text-align:center;
+  color:#fff;
+  width:100%;
+  height:100vh;
+  background: rgba(0, 0, 0, 0.5)!important;
+}
+.popupLeft{
+  text-align:center;
+  color:#fff;
+  width:100%;
+  height:100vh;
+  background: rgba(0, 0, 0, 0.5)!important;
+}
+.msg{
+  margin-top:30%;
 }
 </style>
