@@ -187,6 +187,7 @@
 
 
 <style lang="less">
+  @import "../../../styles/index.less";
   @import "../../popup/style/popup.less";
   @msgbox: lemo-msgbox;
   @padding: 25px;
@@ -197,7 +198,7 @@
     transform: translate3d(-50%, -50%, 0);
     background-color: #fff;
     width: 85%;
-    border-radius: 3px;
+    border-radius: 6px;
     font-size: 12px;
     -webkit-user-select: none;
     overflow: hidden;
@@ -210,9 +211,8 @@
 
     .@{msgbox}-content {
       padding: 0 @padding 0;
-      min-height: 36px;
-      line-height: 16px;
       position: relative;
+      margin-top: 15px;
     }
 
     .@{msgbox}-input {
@@ -247,14 +247,15 @@
       margin-bottom: 0;
       font-size: 18px;
       font-weight: bold;
-      color: #333;
+      color: @text-color;
     }
 
     .@{msgbox}-message {
-      color: #999;
+      font-family: 'PingFangSC-Regular';
+      color: @sub-text-color;
       margin: 0;
-      text-align: center;
-      line-height: 36px;
+      text-align: left;
+      line-height: 16px;
     }
 
     .@{msgbox}-btns {
@@ -265,6 +266,10 @@
       height: 40px;
       line-height: 40px;
       padding: @padding;
+      justify-content: space-between;
+    }
+    .@{msgbox}-cancel {
+
     }
   }
 

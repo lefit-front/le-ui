@@ -1,13 +1,13 @@
 <template>
   <button
-    class="le-button a-i-c j-c-c"
-    :class="['le-button-' + type, 'le-size-' + size, {
+    class="lemo-button a-i-c j-c-c"
+    :class="['lemo-button-' + type, 'lemo-size-' + size, {
       'is-disabled': disabled
     }]"
     :disabled="isDisabled"
     @click="handleClick"
     >
-    <div class="le-loding" v-if="loding === 'block'"
+    <div class="lemo-loding" v-if="loding === 'block'"
       :style="{
       'border-top-color': lodingColor,
       'border-left-color': lodingColor,
@@ -16,7 +16,7 @@
       'width': lodingSize + 'px'
       }"
     ></div>
-    <label class="le-button-text"><slot></slot></label>
+    <label class="lemo-button-text"><slot></slot></label>
   </button>
 </template>
 <script>
@@ -99,7 +99,8 @@ export default {
 <style lang="less">
 @import "../../../styles/index.less";
 /* button统一样式 */
-.le-button{
+@button: lemo-button;
+.@{button} {
   font-weight: @btn-font-weight;
   appearance: none;
   border-radius: @btn-border-radius;
@@ -117,83 +118,89 @@ export default {
   display: -ms-flexbox;  /* 混合版本语法: IE 10 */
   display: -webkit-flex; /* 新版本语法: Chrome 21+ */
   display: flex;         /* 新版本语法: Opera 12.1, Firefox 22+ */
-}
-/* type:normal 和 按下样式 */
-.le-button-normal{
-  background: @btn-primary-bg;
-  color: @btn-primary-color;
-}
-.le-button-normal:active{
-  background: #BD491F;
-  color: @btn-primary-color;
-}
-/* type:border 和 按下样式 */
-.le-button-border{
-  background: @btn-default-bg;
-  color: @btn-default-color;
-  border: 1px @btn-default-border solid;
-}
-.le-button-border:active{
-  background: #FF4E00;
-  color: #fff;
+
+  /* disabled样式 */
+  .is-disabled {
+    background: @btn-disable-bg;
+    color: @btn-disable-color;
+  }
+  .is-disabled:active{
+    background: @btn-disable-bg;
+    color: @btn-disable-color;
+  }
+
+  /* loging */
+  .lemo-loding{
+    animation: mint-spinner-rotate 0.8s infinite linear;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    width:10px;
+    height:10px;
+    margin-right:5px;
+    border-top-color:#fff;
+    border-left-color:#fff;
+    border-bottom-color:#fff;
+  }
 }
 
-/* type:plain 和 按下样式 */
-.le-button-plain{
-  background: inherit;
-  color: @btn-ghost-color;
-  border: 1px solid @btn-ghost-border;
-}
-.le-button-plain:active{
-  border: 1px solid @btn-default-border;
-  color: @btn-default-color;
-}
 
-/* type:shadow 和 按下样式 */
-.le-button-shadow{
-  background: @btn-shadow-bg;
-  color: @btn-shadow-color;
-}
-.le-button-shadow:active{
-  background: #ffede6;
-  color: @btn-default-color;
-}
-/* disabled样式 */
-.is-disabled{
-  background: @btn-disable-bg;
-  color: @btn-disable-color;
-}
-.is-disabled:active{
-  background: @btn-disable-bg;
-  color: @btn-disable-color;
-}
 /* size */
-.le-size-large{
+.lemo-size-large{
   width: 100%;
   font-size: @btn-font-size-large;
   padding: @btn-padding-large;
 }
-.le-size-normal{
+.lemo-size-normal{
   font-size: @btn-font-size;
   padding: @btn-padding-base;
 }
-.le-size-small{
+.lemo-size-small{
   border-radius: @btn-border-radius-small;
   display: inline-block;
   font-size: @btn-font-size-small;
   padding: @btn-padding-small;
 }
-/* loging */
-.le-loding{
-  animation: mint-spinner-rotate 0.8s infinite linear;
-  border: 2px solid transparent;
-  border-radius: 50%;
-  width:10px;
-  height:10px;
-  margin-right:5px;
-  border-top-color:#fff;
-  border-left-color:#fff;
-  border-bottom-color:#fff;
+
+/* type:normal 和 按下样式 */
+.@{button}-normal{
+  background: @btn-primary-bg;
+  color: @btn-primary-color;
+  &:active {
+    background: #BD491F;
+    color: @btn-primary-color;
+  }
+}
+
+/* type:border 和 按下样式 */
+.@{button}-border{
+  background: @btn-default-bg;
+  color: @btn-default-color;
+  border: 1px @btn-default-border solid;
+  &:active {
+    background: #FF4E00;
+    color: #fff;
+  }
+}
+
+/* type:plain 和 按下样式 */
+.@{button}-plain{
+  background: inherit;
+  color: @btn-ghost-color;
+  border: 1px solid @btn-ghost-border;
+  &:active {
+    border: 1px solid @btn-default-border;
+    color: @btn-default-color;
+  }
+}
+
+/* type:shadow 和 按下样式 */
+.@{button}-shadow{
+  background: @btn-shadow-bg;
+  color: @btn-shadow-color;
+  &:active {
+    background: #ffede6;
+    color: @btn-default-color;
+  }
 }
 
 @keyframes mint-spinner-rotate {
