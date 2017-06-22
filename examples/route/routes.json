@@ -11,6 +11,11 @@
         "path": "/popup",
         "name": "Popup",
         "icon": "popup"
+      },
+      {
+        "path": "/message-box",
+        "name": "MessageBox",
+        "icon": "message-box"
       }
     ]
   }

@@ -2,12 +2,14 @@
 import 'core-js/fn/array/find-index';
 
 import Button from './components/button';
-import locale from './locale';
 import Popup from './components/Popup';
+import MessageBox from './components/message-box';
+import locale from './locale';
 
 const lemo = {
   Button,
-  Popup
+  Popup,
+  MessageBox
 };
 
 const install = function (Vue, opts = {}) {

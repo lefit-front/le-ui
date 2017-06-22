@@ -97,7 +97,7 @@ export default {
 </script>
 
 <style lang="less">
-@import "../../../styles/custom.less";
+@import "../../../styles/index.less";
 /* button统一样式 */
 .le-button{
   font-weight: @btn-font-weight;
