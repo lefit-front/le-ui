@@ -1,13 +1,13 @@
 <template>
   <transition :name="currentTransition">
-    <div v-show="currentValue" class="le-popup" :class="[position ? 'le-popup-' + position : '']">
+    <div v-show="currentValue" class="lemo-popup" :class="[position ? 'lemo-popup-' + position : '']">
       <slot></slot>
     </div>
   </transition>
 </template>
 <script>
 /**
- * le-header
+ * lemo-header
  * @module components/popup
  * @desc 弹出框
  * @param {string} [v-mode] - 控制显示 v-model绑定的值为true显示 false消失
@@ -33,7 +33,7 @@ if (!Vue.prototype.$isServer) {
 }
 
 export default {
-  name: 'le-popup',
+  name: 'lemo-popup',
 
   mixins: [Popup],
 
@@ -99,7 +99,7 @@ export default {
 </script>
 
 <style>
-  .le-popup{
+  .lemo-popup{
     position: fixed;
     background: #fff;
     top: 50%;
@@ -108,28 +108,28 @@ export default {
     backface-visibility: hidden;
     transition: .2s ease-out;
   }
-  .le-popup-top{
+  .lemo-popup-top{
     top: 0;
     right: auto;
     bottom: auto;
     left: 50%;
     transform: translate3d(-50%, 0, 0);
   }
-  .le-popup-right{
+  .lemo-popup-right{
     top: 50%;
     right: 0;
     bottom: auto;
     left: auto;
     transform: translate3d(0, -50%, 0);
   }
-  .le-popup-bottom{
+  .lemo-popup-bottom{
     top: auto;
     right: auto;
     bottom: 0;
     left: 50%;
     transform: translate3d(-50%, 0, 0);
   }
-  .le-popup-left{
+  .lemo-popup-left{
     top: 50%;
     right: auto;
     bottom: auto;

@@ -1,15 +1,15 @@
 <template>
-  <div class="le-base-list d-f a-i-c" @click="toRouter" :class="[{'boder-1px-bottom ': border === 'block'}]">
-    <div class="le-title">{{title}}</div>
-    <div class="le-icon">
+  <div class="lemo-base-list d-f a-i-c" @click="toRouter" :class="[{'boder-1px-bottom ': border === 'block'}]">
+    <div class="lemo-title">{{title}}</div>
+    <div class="lemo-icon">
       <slot></slot>   
     </div>
-    <i class="iconfont icon-jiantou_right le-icon" v-if="isLink"></i>
+    <i class="iconfont icon-jiantou_right lemo-icon" v-if="isLink"></i>
   </div>
 </template>
 <script>
 /**
- * le-header
+ * lemo-header
  * @module components/base-list
  * @desc 基础列表
  * @param {string} [title] - 列表title
@@ -24,7 +24,7 @@
  *  </base-list>
  */
 export default {
-  name: 'le-base-list',
+  name: 'lemo-base-list',
   props: {
     title: String,
     isLink: Boolean,
@@ -54,7 +54,7 @@ export default {
 }
 </script>
 <style lang="css">
-.le-base-list{
+.lemo-base-list{
   padding:15px 0;
 }
 .boder-1px-bottom{
@@ -72,10 +72,10 @@ export default {
   transform-origin: 0 0;
   transform: scaleY(0.5);
 }
-.le-icon{
+.lemo-icon{
   margin-left:auto;
 }
-.le-title{
+.lemo-title{
   font-size: 16px;
   color: #000;
   font-size: inherit;

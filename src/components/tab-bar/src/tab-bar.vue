@@ -1,16 +1,16 @@
 <template>
-  <div class="le-tab-bar-box d-f a-i-c" :style="{'height': height + 'px'}">
+  <div class="lemo-tab-bar-box d-f a-i-c" :style="{'height': height + 'px'}">
     <template v-for="data in dataList">
-      <div class="le-tab-bar-name d-f a-i-c" :style="{'height': height + 'px'}" :class="[{'is-selected': selected === data.id}]" @click="selectedEvent(data.id, data.to)">
+      <div class="lemo-tab-bar-name d-f a-i-c" :style="{'height': height + 'px'}" :class="[{'lemo-is-selected': selected === data.id}]" @click="selectedEvent(data.id, data.to)">
         {{data.name}}
-        <div :class="[{'is-line': selected === data.id}]" v-show=" selected === data.id "></div>
+        <div :class="[{'lemo-is-line': selected === data.id}]" v-show=" selected === data.id "></div>
       </div>
     </template>
   </div>
 </template>
 <script>
 /**
- * le-header
+ * lemo-header
  * @module components/tab-bar
  * @desc tab切换
  * @param {Object} [dataList] - 展示数据
@@ -29,7 +29,7 @@
  * <tab-bar style="background-color:#f1f1f1;" :dataList="data" height="35" normal="card"></tab-bar>
  */
 export default {
-  name: 'le-tab-bar',
+  name: 'lemo-tab-bar',
   data () {
     return {
       selected: this.normal 
@@ -59,7 +59,7 @@ export default {
 </script>
 
 <style lang="less">
-@msgbox: le-tab-bar;
+@msgbox: lemo-tab-bar;
 .@{msgbox}-box{
   width:100%;
   padding:0 15px;
@@ -74,12 +74,12 @@ export default {
   opacity: 0.3;
   position:relative;
 }
-.is-selected{
+.lemo-is-selected{
   opacity: 1;
   font-weight:bold;
   color: #000;
 }
-.is-line{
+.lemo-is-line{
   position:absolute;
   bottom:0;
   width:100%;
