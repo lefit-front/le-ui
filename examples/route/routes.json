@@ -52,7 +52,7 @@
         "name": "Money",
         "icon": "money"
       },
-	  {
+	    {
        "path": "/loading",
        "name": "Loading",
        "icon": "loading"
