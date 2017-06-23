@@ -5,6 +5,7 @@ import Button from './components/button';
 import Popup from './components/Popup';
 import MessageBox from './components/message-box';
 import Icon from './components/icon';
+import Tag from './components/tag';
 import locale from './locale';
 
 import BaseList from './components/base-list';
@@ -15,7 +16,8 @@ const lemo = {
   MessageBox,
   BaseList,
   TabBar,
-  Icon
+  Icon,
+  Tag
 };
 
 const install = function (Vue, opts = {}) {
