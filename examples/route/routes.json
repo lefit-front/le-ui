@@ -33,6 +33,11 @@
         "icon": "icon"
       },
       {
+        "path": "/nav-bar",
+        "name": "NavBar",
+        "icon": "nav-bar"
+      },
+      {
         "path": "/tag",
         "name": "Tag",
         "icon": "tag"

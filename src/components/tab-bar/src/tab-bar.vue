@@ -37,7 +37,10 @@ export default {
   },
   props: {
     title: String,
-    normal: String,
+    normal: {
+      type: String,
+      default: ''
+    },
     dataList: {},
     height:{
       default: 35

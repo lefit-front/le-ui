@@ -8,8 +8,8 @@
 </style>
 <template>
   <div class="demo-button">
-    <h1>tabBar</h1>
-    <tab-bar style="background-color:#f1f1f1; font-size:29px!important" :dataList="data" height="35" normal="card"></tab-bar>
+    <h1>NavBar</h1>
+    <nav-bar height="45" style="background:#f1f1f1" :dataList="data" normal="bl"></nav-bar>
   </div>
 </template>
 <script>
@@ -18,23 +18,23 @@ export default {
     return {
       data: [
         { 
-          'id': 'card',
-          'name': '会员卡',
+          'id': 'cl',
+          'name': '约课',
           'to': ''
         },
         {
-          'id': 'pt',
-          'name': '私教课',
+          'id': 'bl',
+          'name': '购买',
           'to': ''
         },
         {
-          'id': 'camp',
-          'name': '训练营',
+          'id': 'ml',
+          'name': '我的课程',
           'to': ''
         },
         {
-          'id': 'mall',
-          'name': '运动装备',
+          'id': 'userCenter',
+          'name': '个人课程',
           'to': '/baseList'
         }
       ]

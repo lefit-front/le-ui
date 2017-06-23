@@ -4,7 +4,7 @@
     <div class="lemo-icon">
       <slot></slot>   
     </div>
-    <i class="iconfont icon-jiantou_right lemo-icon" v-if="isLink"></i>
+    <Icon type="jiantou_right" class="lemo-icon" v-if="isLink"></Icon>
   </div>
 </template>
 <script>
@@ -23,6 +23,7 @@
  *    <div>这里是自定义内容</div>
  *  </base-list>
  */
+import Icon from '../../icon';
 export default {
   name: 'lemo-base-list',
   props: {

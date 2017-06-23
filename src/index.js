@@ -10,6 +10,7 @@ import locale from './locale';
 
 import BaseList from './components/base-list';
 import TabBar from './components/tab-bar';
+import NavBar from './components/nav-bar';
 const lemo = {
   Button,
   Popup,
@@ -17,7 +18,8 @@ const lemo = {
   BaseList,
   TabBar,
   Icon,
-  Tag
+  Tag,
+  NavBar
 };
 
 const install = function (Vue, opts = {}) {

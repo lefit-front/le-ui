@@ -8,9 +8,9 @@
 </style>
 <template>
   <div class="demo-button">
-    <h1>基础列表 文字大小和颜色可以继承,默认16px,黑色</h1>
-    <base-list title="优惠卷" style="color:red;font-size:26px">
-      <div>这里是自定义内容</div>
+    <h1>基础列表 文字大小和颜色继承</h1>
+    <base-list title="优惠卷">
+      <Icon type="logo_lefit"></Icon>
     </base-list>
     <h1>添加右侧箭头</h1>
     <base-list title="优惠卷" is-link></base-list>
