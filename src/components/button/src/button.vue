@@ -119,16 +119,6 @@ export default {
   display: -webkit-flex; /* 新版本语法: Chrome 21+ */
   display: flex;         /* 新版本语法: Opera 12.1, Firefox 22+ */
 
-  /* disabled样式 */
-  .is-disabled {
-    background: @btn-disable-bg;
-    color: @btn-disable-color;
-  }
-  .is-disabled:active{
-    background: @btn-disable-bg;
-    color: @btn-disable-color;
-  }
-
   /* loging */
   .lemo-loding{
     animation: mint-spinner-rotate 0.8s infinite linear;
@@ -201,6 +191,16 @@ export default {
     background: #ffede6;
     color: @btn-default-color;
   }
+}
+
+/* disabled样式 */
+.is-disabled {
+  background: @btn-disable-bg;
+  color: @btn-disable-color;
+}
+.is-disabled:active{
+  background: @btn-disable-bg;
+  color: @btn-disable-color;
 }
 
 @keyframes mint-spinner-rotate {
