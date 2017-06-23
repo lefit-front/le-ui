@@ -12,6 +12,7 @@ import BaseList from './components/base-list';
 import TabBar from './components/tab-bar';
 import NavBar from './components/nav-bar';
 import HandBar from './components/hand-bar';
+import Money from './components/money';
 const lemo = {
   Button,
   Popup,
@@ -21,7 +22,8 @@ const lemo = {
   Icon,
   Tag,
   NavBar,
-  HandBar
+  HandBar,
+  Money
 };
 
 const install = function (Vue, opts = {}) {

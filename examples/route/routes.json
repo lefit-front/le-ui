@@ -46,6 +46,11 @@
         "path": "/hand-bar",
         "name": "HandBar",
         "icon": "hand-bar"
+      },
+      {
+        "path": "/money",
+        "name": "Money",
+        "icon": "money"
       }
     ]
   }
