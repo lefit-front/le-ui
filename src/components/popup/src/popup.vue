@@ -26,12 +26,11 @@
  *     我是内容
  *   </Popup>
  */
-import Popup from '../utils/popup';
+import Popup from '../../../utils/popup';
 import Vue from 'vue';
 if (!Vue.prototype.$isServer) {
-  require('../style/popup.css');
+  require('./popup.less');
 }
-
 export default {
   name: 'lemo-popup',
 
@@ -98,8 +97,9 @@ export default {
 };
 </script>
 
-<style>
-  .lemo-popup{
+<style lang="less">
+  @msgbox: lemo-popup;
+  .@{msgbox}{
     position: fixed;
     background: #fff;
     top: 50%;
@@ -108,28 +108,28 @@ export default {
     backface-visibility: hidden;
     transition: .2s ease-out;
   }
-  .lemo-popup-top{
+  .@{msgbox}-top{
     top: 0;
     right: auto;
     bottom: auto;
     left: 50%;
     transform: translate3d(-50%, 0, 0);
   }
-  .lemo-popup-right{
+  .@{msgbox}-right{
     top: 50%;
     right: 0;
     bottom: auto;
     left: auto;
     transform: translate3d(0, -50%, 0);
   }
-  .lemo-popup-bottom{
+  .@{msgbox}-bottom{
     top: auto;
     right: auto;
     bottom: 0;
     left: 50%;
     transform: translate3d(-50%, 0, 0);
   }
-  .lemo-popup-left{
+  .@{msgbox}-left{
     top: 50%;
     right: auto;
     bottom: auto;
