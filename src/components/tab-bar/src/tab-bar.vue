@@ -64,9 +64,8 @@ export default {
 <style lang="less">
 @msgbox: lemo-tab-bar;
 .@{msgbox}-box{
-  width:100%;
   padding:0 15px;
-  background-color:#f1f1f1;
+  background-color:#f9f9f9;
   background-color:inherit;
 }
 .@{msgbox}-name{

@@ -71,7 +71,7 @@ export default {
   width:100%;
   padding:0;
   margin:0;
-  background-color:#f1f1f1;
+  background-color:#f9f9f9;
   background-color:inherit;
 }
 .@{msgbox}-nav{

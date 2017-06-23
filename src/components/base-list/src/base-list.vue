@@ -1,10 +1,10 @@
 <template>
   <div class="lemo-base-list d-f a-i-c" @click="toRouter" :class="[{'boder-1px-bottom ': border === 'block'}]">
     <div class="lemo-title">{{title}}</div>
-    <div class="lemo-icon">
+    <div class="lemo-icon-floatRight">
       <slot></slot>   
     </div>
-    <Icon type="jiantou_right" class="lemo-icon" v-if="isLink"></Icon>
+    <Icon type="jiantou_right" class="lemo-icon-floatRight" v-if="isLink"></Icon>
   </div>
 </template>
 <script>
@@ -73,7 +73,7 @@ export default {
   transform-origin: 0 0;
   transform: scaleY(0.5);
 }
-.lemo-icon{
+.lemo-icon-floatRight{
   margin-left:auto;
 }
 .lemo-title{

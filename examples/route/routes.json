@@ -41,6 +41,11 @@
         "path": "/tag",
         "name": "Tag",
         "icon": "tag"
+      },
+      {
+        "path": "/hand-bar",
+        "name": "HandBar",
+        "icon": "hand-bar"
       }
     ]
   }
