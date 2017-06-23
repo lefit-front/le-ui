@@ -13,6 +13,7 @@ import TabBar from './components/tab-bar';
 import NavBar from './components/nav-bar';
 import HandBar from './components/hand-bar';
 import Money from './components/money';
+import Loading from './components/loading';
 const lemo = {
   Button,
   Popup,
@@ -23,7 +24,8 @@ const lemo = {
   Tag,
   NavBar,
   HandBar,
-  Money
+  Money,
+  Loading
 };
 
 const install = function (Vue, opts = {}) {

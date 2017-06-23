@@ -19,10 +19,10 @@
     <Button type="normal" size="small">small</Button>
     <Button type="normal" size="normal">normal</Button>
     <Button type="normal" size="large">large</Button>
-    <h1>带loding</h1>
-    <Button type="normal" size="normal" loding="block">large</Button>
-    <h4>设置loding颜色和大小</h4>
-    <Button type="normal" size="normal" loding="block" loding-color="yellow" loding-size="15">large</Button>
+    <h1>带loading</h1>
+    <Button type="normal" size="normal" loading="block">large</Button>
+    <h4>设置loading颜色和大小</h4>
+    <Button type="normal" size="normal" loading="block" loading-color="yellow" loading-size="15">large</Button>
   </div>
 </template>
 <script>

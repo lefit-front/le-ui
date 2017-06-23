@@ -7,13 +7,13 @@
     :disabled="isDisabled"
     @click="handleClick"
     >
-    <div class="lemo-loding" v-if="loding === 'block'"
+    <div class="lemo-loading" v-if="loading === 'block'"
       :style="{
-      'border-top-color': lodingColor,
-      'border-left-color': lodingColor,
-      'border-bottom-color': lodingColor,
-      'height': lodingSize + 'px',
-      'width': lodingSize + 'px'
+      'border-top-color': loadingColor,
+      'border-left-color': loadingColor,
+      'border-bottom-color': loadingColor,
+      'height': loadingSize + 'px',
+      'width': loadingSize + 'px'
       }"
     ></div>
     <label class="lemo-button-text"><slot></slot></label>
@@ -27,14 +27,14 @@
  * @param {string} [type=normal] - 显示类型，接受 normal, border, plain, shadow
  * @param {boolean} [disabled=false] - 禁用
  * @param {string} [size=normal] - 尺寸，接受 normal, small, large
- * @param {string} [loding=none] - 尺寸，接受 block, none
- * @param {string} [loding-color=#fff] - 尺寸，接受 #26a2ff  rgb()  yellow 三种方式
- * @param {string} [loding-size=10] - 尺寸，接受 #26a2ff  rgb()  yellow 三种方式
+ * @param {string} [loading=none] - 尺寸，接受 block, none
+ * @param {string} [loading-color=#fff] - 尺寸，接受 #26a2ff  rgb()  yellow 三种方式
+ * @param {string} [loading-size=10] - 尺寸，接受 #26a2ff  rgb()  yellow 三种方式
  * @param {slot} - 显示文本
  *
  * @example
- * <le-button type="normal" size="normal" :loding="loding" loding-color="yellow" loding-size="11" @click="saveBtnEvent">保存</le-button>
- *                                                 loding block显示  none隐藏
+ * <le-button type="normal" size="normal" :loading="loading" loading-color="yellow" loading-size="11" @click="saveBtnEvent">保存</le-button>
+ *                                                  loading block显示  none隐藏
  */
 export default {
   name: 'le-button',
@@ -42,7 +42,7 @@ export default {
     isDisabled () {
       if (this.disabled === true) {
         return true
-      } else if (this.loding === 'block') {
+      } else if (this.loading === 'block') {
         return true
       } else {
         return false
@@ -52,9 +52,15 @@ export default {
   props: {
     title: String,
     disabled: Boolean,
-    lodingColor: String,
-    lodingSize: String,
-    loding: {
+    loadingColor: {
+      type: String,
+      default: '#fff'
+    },
+    loadingSize: {
+      type: String,
+      default: '10'
+    },
+    loading: {
       type: String,
       default: 'none',
       validator (value) {
@@ -120,16 +126,11 @@ export default {
   display: flex;         /* 新版本语法: Opera 12.1, Firefox 22+ */
 
   /* loging */
-  .lemo-loding{
-    animation: mint-spinner-rotate 0.8s infinite linear;
+  .lemo-loading{
+    animation: button-loading-rotate 0.8s infinite linear;
     border: 2px solid transparent;
     border-radius: 50%;
-    width:10px;
-    height:10px;
     margin-right:5px;
-    border-top-color:#fff;
-    border-left-color:#fff;
-    border-bottom-color:#fff;
   }
 }
 
@@ -203,7 +204,7 @@ export default {
   color: @btn-disable-color;
 }
 
-@keyframes mint-spinner-rotate {
+@keyframes button-loading-rotate {
   0% {
     transform: rotate(0deg);
   }
