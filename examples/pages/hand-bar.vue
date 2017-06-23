@@ -5,10 +5,6 @@
 .demo-button button{
   margin-top:10px;
 }
-body{
-    padding:0;
-    margin:0;
-}
 </style>
 <template>
   <div class="demo-button">
