@@ -188,7 +188,7 @@
 
 <style lang="less">
   @import "../../../styles/index.less";
-  @import "../../popup/style/popup.less";
+  @import "../../popup/src/popup.less";
   @msgbox: lemo-msgbox;
   @padding: 25px;
   @btn-space: 8px;
