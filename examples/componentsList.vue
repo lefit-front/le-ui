@@ -2,7 +2,9 @@
   <section class="page-demo">
     <div v-for="group in navs">
       <div class="page-title" v-text="group.title"></div>
-      <ul>
+
+      <base-list v-for="(item, index) in group.list" :title="item.name" :to="item.path" :key="index"/>
+      <!-- <ul>
         <li
           v-for="(item, index) in group.list"
           :key="index">
@@ -11,7 +13,7 @@
             <span>{{item.name}}</span>
           </router-link>
         </li>
-      </ul>
+      </ul> -->
     </div>
   </section>
 </template>
