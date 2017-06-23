@@ -1,20 +1,22 @@
 <template>
-  <div class="lemo-radio-list">
-    <label class="lemo-radio" slot="title" v-for="(option, index) in options">
-      <input
-        class="lemo-radio-input"
-        type="radio"
-        v-model.lazy="value"
-        :disabled="option.disabled"
-        :value="option.value || option">
-      <span class="lemo-radio-label" v-text="option.label || option"></span>
+  <div class="lemo-checkbox-list">
+    <label class="lemo-checkbox" slot="title" v-for="(option, index) in options">
+      <span class="lemo-check-box-container">
+        <input
+          class="lemo-checkbox-input"
+          type="checkbox"
+          v-model.lazy="value"
+          :disabled="option.disabled"
+          value="option.value || option">
+        <label :for="option.value || option" class="lemo-checkbox-label" v-text="option.label || option"></label>
+      </span>
     </label>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'lemo-radio',
+  name: 'lemo-checkbox',
 
   props: {
     options: {
@@ -25,7 +27,7 @@ export default {
 
   data () {
     return {
-      value: ''
+      value: []
     }
   },
 
@@ -39,22 +41,22 @@ export default {
 
 <style lang="less">
 @import "../../../styles/index.less";
-@radio: lemo-radio;
+@checkbox: lemo-checkbox;
 
-.@{radio}-list {
+.@{checkbox}-list {
   display: flex;
   flex-wrap: wrap;
   margin: -9px;
-  .@{radio} {
+  .@{checkbox} {
     position: relative;
     display: block;
     margin: 9px;
   }
-  .@{radio}-input {
+  .@{checkbox}-input {
     display: none;
 
     &:checked {
-      + .@{radio}-label {
+      + .@{checkbox}-label {
         display: block;
         background: #ffeee6;
 
@@ -72,17 +74,17 @@ export default {
       }
     }
 
-    &[disabled] + .@{radio}-core {
+    &[disabled] + .@{checkbox}-core {
       border-color: #ccc;
     }
   }
-  .@{radio}-core {
+  .@{checkbox}-core {
     display: inline-block;
     box-sizing: border-box;
     border-radius: 3px;
     vertical-align: middle;
   }
-  .@{radio}-label {
+  .@{checkbox}-label {
     position: relative;
     display: block;
     padding: 5px 10px;

@@ -5,8 +5,15 @@
       v-model="value"
       :title="title"
       :options="options"
-      :name="'class'"
-      @change="handleChangeValue" />
+      :type="'radio'"
+      @getValue="handleChangeValue" />
+    <check-list
+      class="demo-check-list"
+      v-model="value2"
+      :title="title"
+      :options="options"
+      :type="'checkbox'"
+      @getValue="handleChangeValue" />
   </div>
 </template>
 <script>
@@ -14,6 +21,7 @@
       data () {
         return {
           value: '',
+          value2: [],
           title: '课程',
           options: [
             {

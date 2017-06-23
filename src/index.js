@@ -7,6 +7,7 @@ import MessageBox from './components/message-box';
 import Icon from './components/icon';
 import Tag from './components/tag';
 import Radio from './components/radio';
+import Checkbox from './components/checkbox';
 import CheckList from './components/check-list';
 import locale from './locale';
 
@@ -29,6 +30,7 @@ const lemo = {
   Money,
   Loading,
   Radio,
+  Checkbox,
   CheckList
 };
 

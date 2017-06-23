@@ -1,9 +1,8 @@
 <template>
   <div class="lemo-check-list">
     <label class="lemo-check-list-title" v-text="title"></label>
-    <div class="lemo-check-list-list">
-      <Radio v-for="(option, index) in options" key="index" :option="option" :value="curValue" @select="handleSelectRadio" :name="name"/>
-    </div>
+    <Radio v-if="type === 'radio'" :options="options" @change="handleSelectRadio"/>
+    <Checkbox v-if="type === 'checkbox'" :options="options" @select="handleSelectCheckbox"/>
   </div>
 </template>
 
@@ -19,9 +18,8 @@ export default {
       type: Array,
       required: true
     },
-    value: String,
-    type: String,
-    name: String
+    value: [String, Array],
+    type: String
   },
 
   data() {
@@ -43,7 +41,11 @@ export default {
   methods: {
     handleSelectRadio (val) {
       this.curValue = val
-      this.$emit('change', this.curValue)
+      this.$emit('getValue', this.curValue)
+    },
+    handleSelectCheckbox (val) {
+      this.curValue = val
+      this.$emit('getValue', this.curValue)
     }
   }
 };
@@ -53,11 +55,6 @@ export default {
 @import "../../../styles/index.less";
 @group: lemo-check-list;
 .@{group} {
-  .@{group}-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -9px;
-  }
   .@{group}-title {
     font-size: @font-size-h3;
     margin-bottom: 18px;
