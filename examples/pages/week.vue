@@ -51,6 +51,7 @@
       methods: {
         handleSelectItem (item, index) {
           console.log(item, index)
+          this.day = index
         }
       }
     }
