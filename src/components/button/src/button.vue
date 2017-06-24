@@ -37,7 +37,7 @@
  *                                                  loading block显示  none隐藏
  */
 export default {
-  name: 'le-button',
+  name: 'lemo-button',
   computed: {
     isDisabled () {
       if (this.disabled === true) {

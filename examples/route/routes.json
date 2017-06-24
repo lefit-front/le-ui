@@ -53,9 +53,14 @@
         "icon": "money"
       },
 	    {
-       "path": "/loading",
-       "name": "Loading",
-       "icon": "loading"
+        "path": "/loading",
+        "name": "Loading",
+        "icon": "loading"
+      },
+      {
+        "path": "/check-list",
+        "name": "CheckList",
+        "icon": "check-list"
       }
     ]
   }
