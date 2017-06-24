@@ -10,6 +10,7 @@ import Radio from './components/radio';
 import Checkbox from './components/checkbox';
 import CheckList from './components/check-list';
 import Week from './components/week';
+import Progress from './components/progress';
 
 import BaseList from './components/base-list';
 import TabBar from './components/tab-bar';
@@ -32,6 +33,7 @@ const lemo = {
   NavBar,
   HandBar,
   Money,
+  Progress,
   Loading,
   Radio,
   Checkbox,

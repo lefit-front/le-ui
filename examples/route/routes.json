@@ -57,6 +57,11 @@
         "name": "Loading",
         "icon": "loading"
       },
+	    {
+        "path": "/progress",
+        "name": "Progress",
+        "icon": "progress"
+      },
       {
         "path": "/check-list",
         "name": "CheckList",
