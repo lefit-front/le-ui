@@ -17,6 +17,7 @@ import NavBar from './components/nav-bar';
 import HandBar from './components/hand-bar';
 import Money from './components/money';
 import Loading from './components/loading';
+import Empty from './components/empty';
 const lemo = {
   Button,
   Popup,
@@ -31,7 +32,8 @@ const lemo = {
   Loading,
   Radio,
   Checkbox,
-  CheckList
+  CheckList,
+  Empty
 };
 
 const install = function (Vue, opts = {}) {
