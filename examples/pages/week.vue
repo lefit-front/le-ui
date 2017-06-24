@@ -1,6 +1,7 @@
 <template>
   <div>
-    <Week class="demo-week" :active="day" :data="data" />
+    <input type="number" placeholder="输入日期" v-model.number="day" />
+    <Week class="demo-week" :active="day" :data="data" v-on:select="handleSelectItem"/>
   </div>
 </template>
 <script>
@@ -45,6 +46,11 @@
               content: '06.30'
             }
           ]
+        }
+      },
+      methods: {
+        handleSelectItem (item, index) {
+          console.log(item, index)
         }
       }
     }

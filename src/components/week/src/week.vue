@@ -37,7 +37,7 @@ export default {
   methods: {
     selectDate (item, index) {
       this.curIndex = index
-      this.$emit('select', {item: item, index: index})
+      this.$emit('select', item, index)
     }
   },
   mounted () {
