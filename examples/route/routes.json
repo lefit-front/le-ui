@@ -63,9 +63,14 @@
         "icon": "check-list"
       },
       {
-       "path": "/empty",
-       "name": "Empty",
-       "icon": "empty"
+        "path": "/empty",
+        "name": "Empty",
+        "icon": "empty"
+      },
+      {
+        "path": "/week",
+        "name": "Week",
+        "icon": "week"
       }
     ]
   }

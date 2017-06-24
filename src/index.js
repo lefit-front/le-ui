@@ -9,7 +9,7 @@ import Tag from './components/tag';
 import Radio from './components/radio';
 import Checkbox from './components/checkbox';
 import CheckList from './components/check-list';
-import locale from './locale';
+import Week from './components/week';
 
 import BaseList from './components/base-list';
 import TabBar from './components/tab-bar';
@@ -18,6 +18,9 @@ import HandBar from './components/hand-bar';
 import Money from './components/money';
 import Loading from './components/loading';
 import Empty from './components/empty';
+
+import locale from './locale';
+
 const lemo = {
   Button,
   Popup,
@@ -33,7 +36,11 @@ const lemo = {
   Radio,
   Checkbox,
   CheckList,
+<<<<<<< HEAD
   Empty
+=======
+  Week
+>>>>>>> feat: week component
 };
 
 const install = function (Vue, opts = {}) {

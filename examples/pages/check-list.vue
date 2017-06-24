@@ -1,16 +1,16 @@
 <template>
   <div>
     <check-list
-      class="demo-check-list"
+      class="demo-radio-list"
       v-model="value"
-      :title="title"
+      :title="`${title}单选`"
       :options="options"
       :type="'radio'"
       @getValue="handleChangeValue" />
     <check-list
-      class="demo-check-list"
+      class="demo-checkbox-list"
       v-model="value2"
-      :title="title"
+      :title="`${title}多选`"
       :options="options"
       :type="'checkbox'"
       @getValue="handleChangeValue" />
@@ -58,3 +58,8 @@
       }
     }
 </script>
+<style lang="less">
+  .demo-radio-list {
+    margin-bottom: 20px;
+  }
+</style>
