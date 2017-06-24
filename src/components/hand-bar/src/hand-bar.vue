@@ -55,11 +55,12 @@ export default {
 </script>
 
 <style lang="less">
+@import "../../../styles/index.less";
 @msgbox: lemo-hand-bar;
 .@{msgbox}-box{
   padding:0 15px;
   margin:0;
-  background-color:#f9f9f9;
+  background-color:@head-bg;
   background-color:inherit;
 }
 .@{msgbox}-nav{
@@ -67,15 +68,15 @@ export default {
   text-align:center;
   opacity: 0.6;
   font-size: 15px;
-  color: #000;
+  color: @text-color;
 }
 .@{msgbox}-title{
-  font-size:12px;
+  font-size:@font-size-small;
   margin-left:5px;
 }
 .@{msgbox}-type{
-  font-size: 14px;
-  color: #000;
+  font-size: @font-size-h5;
+  color: @text-color;
   padding-left:15px;
   border-left:1px rgba(0, 0, 0, 0.1) solid;
 }

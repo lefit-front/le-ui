@@ -46,6 +46,7 @@ export default {
 </script>
 
 <style lang="less">
+@import "../../../styles/index.less";
 @msgbox: lemo-empty;
 .@{msgbox}-box{
   text-align: center;
@@ -58,7 +59,7 @@ export default {
   margin-top: 15px;
   opacity: 0.3;
   font-family: PingFang-SC-Semibold;
-  color: #000;
+  color: @text-color;
 }
 .@{msgbox}-full-screen{
   position: fixed;

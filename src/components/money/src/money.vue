@@ -22,11 +22,11 @@ export default {
   name: 'lemo-money',
   computed: {
     setMoneySize () {
-      return parseInt(this.size, 10) < 12 ? 12 + 'px': parseInt(this.size, 10) + 'px'
+      return parseInt(this.size, 10) + 'px'
     },
     setMoneyIconSize () {
-      /*规则 icon是数值的 三分之二 大小，但是浏览器中最小字体12px， 所以这里判断用户输入低于18px都是返回12px*/
-      return parseInt(this.size, 10) < 18 ? 12 + 'px': parseInt(this.size, 10)*(2/3) + 'px'
+      /*规则 icon是数值的 三分之二 大小*/
+      return parseInt(this.size, 10)*(2/3) + 'px'
     }
   },
   props: {
@@ -49,11 +49,12 @@ export default {
 </script>
 
 <style lang="less">
+@import "../../../styles/index.less";
 @msgbox: lemo-money;
 .@{msgbox}-box{
   padding:0;
   margin:0;
-  color: #000;
+  color: @text-color;
   font-family: "DIN-Medium";
 }
 .@{msgbox}-bold{

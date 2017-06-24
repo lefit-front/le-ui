@@ -8,8 +8,12 @@
 </style>
 <template>
   <div class="demo-button">
-    <h1>基础列表 文字大小和颜色继承</h1>
+    <h1>基础列表</h1>
     <base-list title="优惠卷">
+      <Icon type="logo_lefit"></Icon>
+    </base-list>
+    <h1>基础列表 设置大小和颜色</h1>
+    <base-list title="优惠卷" size="30" color="#ff4e00">
       <Icon type="logo_lefit"></Icon>
     </base-list>
     <h1>添加右侧箭头</h1>

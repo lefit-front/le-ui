@@ -66,20 +66,21 @@ export default {
 </script>
 
 <style lang="less">
+@import "../../../styles/index.less";
 @msgbox: lemo-nav-bar;
 .@{msgbox}-box{
   width:100%;
   padding:0;
   margin:0;
-  background-color:#f9f9f9;
+  background-color:@head-bg ;
   background-color:inherit;
 }
 .@{msgbox}-nav{
-  width:99%;
+  width:100%;
   text-align:center;
   opacity: 0.6;
   font-size: 15px;
-  color: #000;
+  color: @text-color;
 }
 .@{msgbox}-border{
   border-left:1px rgba(0, 0, 0, 0.1) solid;
@@ -87,7 +88,7 @@ export default {
 .@{msgbox}-selected{
   opacity: 0.9;
   font-size: 15px;
-  color: #FF4E00;
+  color: @primary-color;
 }
 /*flex布局 css兼容*/
 .d-f{

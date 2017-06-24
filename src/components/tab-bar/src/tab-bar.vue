@@ -62,16 +62,17 @@ export default {
 </script>
 
 <style lang="less">
+@import "../../../styles/index.less";
 @msgbox: lemo-tab-bar;
 .@{msgbox}-box{
   padding:0 15px;
-  background-color:#f9f9f9;
+  background-color: @head-bg;
   background-color:inherit;
 }
 .@{msgbox}-name{
   padding:0;
-  font-size: 14px;
-  color: #000;
+  font-size: @font-size-h5;
+  color: @text-color;
   margin-right:30px;
   opacity: 0.3;
   position:relative;
@@ -79,14 +80,14 @@ export default {
 .lemo-is-selected{
   opacity: 1;
   font-weight:bold;
-  color: #000;
+  color: @text-color;
 }
 .lemo-is-line{
   position:absolute;
   bottom:0;
   width:100%;
   height:2px;
-  background-color:#000;
+  background-color: @text-color;
   animation: mymove 1s;
   -webkit-animation: mymove 1s;
   animation-iteration-count:1;

@@ -1,10 +1,23 @@
 <template>
   <div class="lemo-base-list d-f a-i-c" @click="toRouter" :class="[{'boder-1px-bottom ': border === 'block'}]">
-    <div class="lemo-title">{{title}}</div>
-    <div class="lemo-icon-floatRight">
-      <slot></slot>   
-    </div>
-    <Icon type="jiantou_right" class="lemo-icon-floatRight" v-if="isLink"></Icon>
+    <div class="lemo-title" 
+      :style="{
+        'font-size': size+ 'px',
+        'color': color
+      }"
+    >{{title}}</div>
+    <div class="lemo-icon-floatRight" 
+      :style="{
+        'font-size': size+ 'px',
+        'color': color
+      }"
+    ><slot></slot></div>
+    <Icon type="jiantou_right" class="lemo-icon-floatRight" v-if="isLink"
+      :style="{
+        'font-size': size+ 'px',
+        'color': color
+      }"
+    ></Icon>
   </div>
 </template>
 <script>
@@ -13,6 +26,8 @@
  * @module components/base-list
  * @desc 基础列表
  * @param {string} [title] - 列表title
+ * @param {string} [size]  - 设置title 和 icon的大小
+ * @param {string} [color]  - 设置title 和 icon的颜色
  * @param {string} [to] - 跳转路径,省略返回click事件
  * @param {boolean} [border=block] -  0.5px bottom border,接受 block, none
  * @param {boolean} [isLink=false] - jiantou icon, 接受 true, false
@@ -30,6 +45,14 @@ export default {
     title: String,
     isLink: Boolean,
     to: String,
+    size: {
+      type: String,
+      default: '16'
+    },
+    color: {
+      type: String,
+      default: '#000'
+    },
     border: {
       type: String,
       default: 'block',
@@ -54,7 +77,8 @@ export default {
   }
 }
 </script>
-<style lang="css">
+<style lang="less">
+@import "../../../styles/index.less";
 .lemo-base-list{
   padding:15px 0;
 }
@@ -77,10 +101,8 @@ export default {
   margin-left:auto;
 }
 .lemo-title{
-  font-size: 16px;
-  color: #000;
-  font-size: inherit;
-  color: inherit;
+  font-size: @font-size-h4;
+  color: @text-color;
 }
 /*竖向居中*/
 .a-i-c{
