@@ -36,11 +36,8 @@ const lemo = {
   Radio,
   Checkbox,
   CheckList,
-<<<<<<< HEAD
-  Empty
-=======
+  Empty,
   Week
->>>>>>> feat: week component
 };
 
 const install = function (Vue, opts = {}) {
