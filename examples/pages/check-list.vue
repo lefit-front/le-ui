@@ -53,7 +53,7 @@
       },
       methods: {
         handleChangeValue (val) {
-          console.log(val)
+          console.log('demo value is: ' + val)
         }
       }
     }

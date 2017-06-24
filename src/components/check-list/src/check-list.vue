@@ -1,8 +1,8 @@
 <template>
   <div class="lemo-check-list">
     <label class="lemo-check-list-title" v-text="title"></label>
-    <Radio v-if="type === 'radio'" :options="options" @change="handleSelectRadio"/>
-    <Checkbox v-if="type === 'checkbox'" :options="options" @select="handleSelectCheckbox"/>
+    <Radio v-if="type === 'radio'" :options="options" v-on:change="handleSelectRadio"/>
+    <Checkbox v-if="type === 'checkbox'" :options="options" @change="handleSelectCheckbox"/>
   </div>
 </template>
 
@@ -20,12 +20,6 @@ export default {
     },
     value: [String, Array],
     type: String
-  },
-
-  data() {
-    return {
-      curValue: this.value
-    };
   },
 
   watch: {

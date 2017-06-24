@@ -1,16 +1,15 @@
 <template>
   <div class="lemo-checkbox-list">
-    <label class="lemo-checkbox" slot="title" v-for="(option, index) in options">
-      <span class="lemo-check-box-container">
-        <input
-          class="lemo-checkbox-input"
-          type="checkbox"
-          v-model.lazy="value"
-          :disabled="option.disabled"
-          value="option.value || option">
-        <label :for="option.value || option" class="lemo-checkbox-label" v-text="option.label || option"></label>
-      </span>
-    </label>
+    <div class="lemo-checkbox" slot="title" v-for="(option, index) in options">
+      <input
+        class="lemo-checkbox-input"
+        :id="option.value || option"
+        type="checkbox"
+        v-model.lazy="value"
+        :disabled="option.disabled"
+        :value="option.value || option">
+      <label class="lemo-checkbox-label" v-text="option.label || option" :for="option.value || option"></label>
+    </div>
   </div>
 </template>
 
@@ -34,6 +33,7 @@ export default {
   watch: {
     value (val) {
       console.log(val)
+      this.$emit('change', val)
     }
   }
 };
