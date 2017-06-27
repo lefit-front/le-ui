@@ -29,11 +29,11 @@
  * @param {string} [size=normal] - 尺寸，接受 normal, small, large
  * @param {string} [loading=none] - 尺寸，接受 block, none
  * @param {string} [loading-color=#fff] - 尺寸，接受 #26a2ff  rgb()  yellow 三种方式
- * @param {string} [loading-size=10] - 尺寸，接受 #26a2ff  rgb()  yellow 三种方式
+ * @param {Number} [loading-size=10] - 尺寸，接受 number数字
  * @param {slot} - 显示文本
  *
  * @example
- * <le-button type="normal" size="normal" :loading="loading" loading-color="yellow" loading-size="11" @click="saveBtnEvent">保存</le-button>
+ * <le-button type="normal" size="normal" :loading="loading" loading-color="yellow" :loading-size="11" @click="saveBtnEvent">保存</le-button>
  *                                                  loading block显示  none隐藏
  */
 export default {
@@ -57,8 +57,8 @@ export default {
       default: '#fff'
     },
     loadingSize: {
-      type: String,
-      default: '10'
+      type: Number,
+      default: 10
     },
     loading: {
       type: String,

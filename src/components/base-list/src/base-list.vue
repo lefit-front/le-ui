@@ -26,10 +26,10 @@
  * @module components/base-list
  * @desc 基础列表
  * @param {string} [title] - 列表title
- * @param {string} [size]  - 设置title 和 icon的大小
+ * @param {number} [size]  - 设置title 和 icon的大小
  * @param {string} [color]  - 设置title 和 icon的颜色
  * @param {string} [to] - 跳转路径,省略返回click事件
- * @param {boolean} [border=block] -  0.5px bottom border,接受 block, none
+ * @param {string} [border=block] -  0.5px bottom border,接受 block, none
  * @param {boolean} [isLink=false] - jiantou icon, 接受 true, false
  * @param {slot} - 自定义内容
  *
@@ -46,8 +46,8 @@ export default {
     isLink: Boolean,
     to: String,
     size: {
-      type: String,
-      default: '16'
+      type: Number,
+      default: 16
     },
     color: {
       type: String,

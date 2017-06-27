@@ -9,7 +9,7 @@
 <template>
   <div class="demo-button">
     <h1>tabBar</h1>
-    <tab-bar style="background-color:#f1f1f1; font-size:29px!important" :dataList="data" height="35" normal="card"></tab-bar>
+    <tab-bar style="background-color:#f1f1f1; font-size:29px!important" :dataList="data" :height="35" select="card"></tab-bar>
   </div>
 </template>
 <script>

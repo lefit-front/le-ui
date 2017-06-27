@@ -11,12 +11,12 @@
  * @desc empty 空白页组件
  * @param {String} [src]          -  图片路径
  * @param {String} [text]         -  空白页文字提示
- * @param {String} [width='100']  -  img 图片大小
- * @param {String} [size='16']    -  提示文字字体大小
+ * @param {Number} [width=100]    -  img 图片大小
+ * @param {Number} [size=16]      -  提示文字字体大小
  * @param {Boolean} [full=false]  -  是否全屏
  * 
  * @example
- * <Empty src="https://cdn.leoao.com/img/%E6%97%A0%E8%A1%8C%E7%A8%8B@3x.png" text="这里是text提示" width="120" size="22" full></Empty>
+ * <Empty src="https://cdn.leoao.com/img/%E6%97%A0%E8%A1%8C%E7%A8%8B@3x.png" text="这里是text提示" :width="120" :size="22" full></Empty>
  */
 export default {
   name: 'lemo-empty',
@@ -34,12 +34,12 @@ export default {
       default: false
     },
     width: {
-      type: String,
-      default: '100'
+      type: Number,
+      default: 100
     },
     size: {
-      type: String,
-      default: '16'
+      type: Number,
+      default: 16
     }
   }
 }

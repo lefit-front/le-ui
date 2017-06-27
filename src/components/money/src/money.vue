@@ -9,8 +9,8 @@
  * lemo-header
  * @module components/money
  * @desc money组件 规则 icon是数值的 2/3 大小
- * @param {String} [number=0]  -  数值大小，接受 数字
- * @param {String} [size=12]   -  数值字体大小，接受 数字
+ * @param {Number} [number=0]  -  数值大小，接受 数字
+ * @param {Number} [size=12]   -  数值字体大小，接受 数字
  * @param {String} [color='']  -  数字和icon颜色， 接受 #开头，yellow, rbga() 三种方式
  * @param {String} [moneyIcon='¥']     -  数值icon，默认'¥'
  * @param {Boolean} [bold=false]     -  字体加粗，接受 true false
@@ -31,9 +31,11 @@ export default {
   },
   props: {
     number: {
+      type: Number,
       default: 0
     },
     size: {
+      type: Number,
       default: 12
     },
     moneyIcon: {

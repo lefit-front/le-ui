@@ -21,25 +21,21 @@
  * @param {String} [lesson='']   -  右侧信息，接受string
  * @param {Function} [positionEvent='']   -  左侧位置信息点击事件
  * @param {Function} [lessonEvent='']     -  右侧课程点击事件
- * @param {String} [height=45]   -  hand-bar高度默认45, 接受 数字
+ * @param {Number} [height=45]   -  hand-bar高度默认45, 接受 数字
  * 
  * @example
- * <hand-bar height="45" style="background:#f1f1f1" :position="names" :lesson="namess" :positionEvent="positionEvent" :lessonEvent="lessonEvent"></hand-bar>
+ * <hand-bar :height="45" style="background:#f1f1f1" :position="names" :lesson="namess" :positionEvent="positionEvent" :lessonEvent="lessonEvent"></hand-bar>
  */
 import Icon from '../../icon';
 export default {
   name: 'lemo-hand-bar',
-  data () {
-    return {
-      selected: this.normal 
-    }
-  },
   props: {
     position: String,
     lesson: String,
     positionEvent: Function,
     lessonEvent: Function,
     height:{
+      type: Number,
       default: 45
     }
   },

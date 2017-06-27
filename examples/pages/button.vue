@@ -22,7 +22,7 @@
     <h1>带loading</h1>
     <Button type="normal" size="normal" loading="block">large</Button>
     <h4>设置loading颜色和大小</h4>
-    <Button type="normal" size="normal" loading="block" loading-color="yellow" loading-size="15">large</Button>
+    <Button type="normal" size="normal" loading="block" loading-color="yellow" :loading-size="15">large</Button>
   </div>
 </template>
 <script>

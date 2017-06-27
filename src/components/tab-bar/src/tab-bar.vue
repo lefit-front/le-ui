@@ -22,27 +22,30 @@
  *   'to': '/button'   // 跳转路径
  *  }
  * ]
- * @param {String} [height=35] -  tab-bar高度 默认35, 接受 数字
- * @param {String} [normal]    -  默认选中tab 不设置没有默认选中 ,接受  数据中的id标识
+ * @param {Number} [height=35] -  tab-bar高度 默认35, 接受 数字
+ * @param {String} [select]    -  默认选中tab 不设置没有默认选中 ,接受  数据中的id标识
  * 
  * @example
- * <tab-bar style="background-color:#f1f1f1;" :dataList="data" height="35" normal="card"></tab-bar>
+ * <tab-bar style="background-color:#f1f1f1;" :dataList="data" height="35" select="card"></tab-bar>
  */
 export default {
   name: 'lemo-tab-bar',
   data () {
     return {
-      selected: this.normal 
+      selected: this.select 
     }
   },
   props: {
     title: String,
-    normal: {
+    select: {
       type: String,
       default: ''
     },
-    dataList: {},
+    dataList: {
+      type: Array
+    },
     height:{
+      type: Number,
       default: 35
     }
   },

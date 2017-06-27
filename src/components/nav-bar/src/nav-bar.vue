@@ -21,27 +21,30 @@
  *   'to': '/button'   // 跳转路径
  *  }
  * ]
- * @param {String} [height=45] -  nav-bar高度 默认45, 接受 数字
- * @param {String} [normal='']    -  默认选中nav 不设置没有默认选中 ,接受  数据中的id标识
+ * @param {Number} [height=45] -  nav-bar高度 默认45, 接受 数字
+ * @param {String} [select='']    -  默认选中nav 不设置没有默认选中 ,接受  数据中的id标识
  * 
  * @example
- * <nav-bar height="45" style="background:#f1f1f1" :dataList="data" normal="bl"></nav-bar>
+ * <nav-bar :height="45" style="background:#f1f1f1" :dataList="data" select="bl"></nav-bar>
  */
 export default {
   name: 'lemo-nav-bar',
   data () {
     return {
-      selected: this.normal 
+      selected: this.select
     }
   },
   props: {
     title: String,
-    normal: {
+    select: {
       type: String,
       default: ''
     },
-    dataList: {},
+    dataList: {
+      type: Array
+    },
     height:{
+      type: Number,
       default: 45
     }
   },
