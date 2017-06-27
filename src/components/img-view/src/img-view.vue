@@ -1,6 +1,6 @@
 <template>
   <div class="lemo-view">
-    <div class="lemo-view-default" :class="{'lemo-view-hide': defaultImg && ready}" :style="`backgroundImage: url(${defaultImg})`"></div>
+    <div v-if="defaultImg" class="lemo-view-default" :class="{'lemo-view-hide': ready}" :style="`backgroundImage: url(${defaultImg})`"></div>
     <img v-show="ready" class="lemo-view-img" :class="{'lemo-view-show': fade && ready}" :src="img"/>
   </div>
 </template>
