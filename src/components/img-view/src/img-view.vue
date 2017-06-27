@@ -1,7 +1,7 @@
 <template>
-  <div class="lemo-view">
-    <div v-if="defaultImg" class="lemo-view-default" :class="{'lemo-view-hide': ready}" :style="`backgroundImage: url(${defaultImg})`"></div>
-    <img v-show="ready" class="lemo-view-img" :class="{'lemo-view-show': fade && ready}" :src="img"/>
+  <div class="lemo-view" :class="shape ? 'lemo-view-' + shape : ''" :style="`width: ${width}px; height: ${height}px`">
+    <div v-if="defaultImg && defaultShow" class="lemo-view-default" :class="{'lemo-view-hide': ready}" :style="`backgroundImage: url(${defaultImg})`"></div>
+    <img v-show="ready" class="lemo-view-img" :class="{'lemo-view-show': fade && ready}" :src="img" @load="handleImgReady"/>
   </div>
 </template>
 
@@ -14,14 +14,24 @@ export default {
       type: [Array, String],
       required: true
     },
+    width: {
+      type: Number,
+      default: 200
+    },
+    height: {
+      type: Number,
+      default: 200
+    },
     defaultImg: String,
-    fade: Boolean
+    fade: Boolean,
+    shape: String
   },
 
   data () {
     return {
       value: '',
-      ready: false
+      ready: false,
+      defaultShow: true
     }
   },
 
@@ -33,13 +43,13 @@ export default {
   },
 
   methods: {
+    handleImgReady () {
+      this.ready = true
+      this.defaultShow = false
+    }
   },
 
   mounted: function () {
-    let img = document.querySelector('.lemo-view-img')
-    img.onload = () => {
-      this.ready = true
-    };
   }
 };
 </script>
@@ -68,8 +78,13 @@ export default {
 
 .@{imgView} {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   .@{imgView}-img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
   }
   .@{imgView}-default {
     position: absolute;
@@ -91,5 +106,9 @@ export default {
     animation: show-to-hide 1s;
     animation-fill-mode: forwards;
   }
+}
+
+.@{imgView}-round {
+  border-radius: 100%
 }
 </style>

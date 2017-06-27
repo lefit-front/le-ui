@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <img-view class="demo-img-view" :img="imgSrc" :defaultImg="defaultImg"/>
+  <div class="demo-img-view">
+    <img-view :img="imgSrc" :defaultImg="defaultImg" :width="200" :height="200" shape="round"/>
   </div>
 </template>
 <script>

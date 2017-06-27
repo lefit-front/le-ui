@@ -9,10 +9,8 @@
   </div>
 </template>
 <script>
-const prefixCls = 'lemo-tag';
-
 export default {
-  name: 'Tag',
+  name: 'lemo-tag',
   props: {
     data: Array
   }

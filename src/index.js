@@ -12,6 +12,7 @@ import CheckList from './components/check-list';
 import Week from './components/week';
 import Progress from './components/progress';
 import ImgView from './components/img-view';
+import Card from './components/card';
 
 import BaseList from './components/base-list';
 import TabBar from './components/tab-bar';
@@ -36,6 +37,7 @@ const lemo = {
   Money,
   Progress,
   ImgView,
+  Card,
   Loading,
   Radio,
   Checkbox,

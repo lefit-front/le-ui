@@ -67,6 +67,11 @@
         "name": "ImgView",
         "icon": "img-view"
       },
+	    {
+        "path": "/card",
+        "name": "Card",
+        "icon": "card"
+      },
       {
         "path": "/check-list",
         "name": "CheckList",
