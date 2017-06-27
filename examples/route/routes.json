@@ -72,6 +72,11 @@
         "name": "Card",
         "icon": "card"
       },
+	    {
+        "path": "/store",
+        "name": "Store",
+        "icon": "store"
+      },
       {
         "path": "/check-list",
         "name": "CheckList",

@@ -1,7 +1,7 @@
 <template>
   <div class="lemo-view" :class="shape ? 'lemo-view-' + shape : ''" :style="`width: ${width}px; height: ${height}px`">
     <div v-if="defaultImg && defaultShow" class="lemo-view-default" :class="{'lemo-view-hide': ready}" :style="`backgroundImage: url(${defaultImg})`"></div>
-    <img v-show="ready" class="lemo-view-img" :class="{'lemo-view-show': fade && ready}" :src="img" @load="handleImgReady"/>
+    <img v-show="ready" class="lemo-view-img" :class="[{'lemo-view-show': fade && ready}, {'lemo-view-cover': cover}]" :src="src" @load="handleImgReady"/>
   </div>
 </template>
 
@@ -10,21 +10,25 @@ export default {
   name: 'lemo-img-view',
 
   props: {
-    img: {
+    src: {
       type: [Array, String],
       required: true
     },
     width: {
-      type: Number,
+      type: [Number, String],
       default: 200
     },
     height: {
-      type: Number,
+      type: [Number, String],
       default: 200
     },
     defaultImg: String,
     fade: Boolean,
-    shape: String
+    shape: String,
+    cover: {
+      type: Boolean,
+      default: false
+    }
   },
 
   data () {
@@ -85,6 +89,12 @@ export default {
   .@{imgView}-img {
     max-width: 100%;
     max-height: 100%;
+  }
+  .@{imgView}-cover {
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 120%;
+    max-height: 120%;
   }
   .@{imgView}-default {
     position: absolute;
