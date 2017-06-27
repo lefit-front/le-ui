@@ -11,6 +11,7 @@ import Checkbox from './components/checkbox';
 import CheckList from './components/check-list';
 import Week from './components/week';
 import Progress from './components/progress';
+import ImgView from './components/img-view';
 
 import BaseList from './components/base-list';
 import TabBar from './components/tab-bar';
@@ -34,6 +35,7 @@ const lemo = {
   HandBar,
   Money,
   Progress,
+  ImgView,
   Loading,
   Radio,
   Checkbox,
