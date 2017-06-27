@@ -1,0 +1,148 @@
+<!-- 打分的与展示组件 -->
+<template>
+  <div class="lemo-rate">
+    <a class="le-rater-box"
+    v-for="i in max" @click="handleClick(i)"
+    :class="{'is-active':iValue > i}"
+    :style="{color: colors && colors[i-1] ? colors[i-1] : '#ccc',marginRight:margin+'px',fontSize: fontSize + 'px', width: fontSize + 'px', height: fontSize + 'px', lineHeight: fontSize + 'px'}">
+      <span class="le-rater-inner">
+        <Icon type="wujiaoxingshixin" :style="{fontSize: fontSize + 'px', lineHeight: fontSize + 'px'}"/>
+        <span class="le-rater-outer"
+        :style="{color: activeColor, width: cutPercent + '%'}"
+        v-if="cutPercent >
+        0 && cutIndex+1 === i"><i class="iconfont" :class="star" :style="{fontSize: fontSize + 'px', lineHeight: fontSize + 'px'}"></i>
+        </span>
+      </span>
+    </a>
+  </div>
+</template>
+<script>
+export default {
+  name: 'lemo-rate',
+  props: {
+    max: {
+      type: Number,
+      default: 5
+    },
+    value: {
+      type: Number,
+      default: 0
+    },
+    disabled: Boolean,
+    star: {
+      type: String,
+      default: 'wujiaoxingshixin'
+    },
+    activeColor: {
+      type: String,
+      default: '#fdac3a'
+    },
+    margin: {
+      type: Number,
+      default: 2
+    },
+    fontSize: {
+      type: Number,
+      default: 14
+    }
+  },
+  computed: {
+    sliceValue () {
+      const _val = this.iValue.toString().split('.')
+      return _val.length === 1 ? [_val[0], 0] : _val
+    },
+    cutIndex () {
+      return this.sliceValue[0] * 1
+    },
+    cutPercent () {
+      return this.sliceValue[1] * 10
+    }
+  },
+  data () {
+    return {
+      colors: [],
+      iValue: 0
+    }
+  },
+  watch: {
+    value (val) {
+      this.iValue = val
+      this.updateStyle()
+    },
+    iValue (val) {
+      this.updateStyle()
+    }
+  },
+  methods: {
+    handleClick (i, force) {
+      if (!this.disabled || force) {
+        if (this.iValue === i) {
+          this.iValue = i
+          this.updateStyle()
+        } else {
+          this.iValue = i
+        }
+        // 通过 input 事件发出数值
+        this.$emit('input', Number(i))
+      }
+    },
+    updateStyle () {
+      for (var j = 0; j < this.max; j++) {
+        if (j <= this.iValue - 1) {
+          this.colors[j] = this.activeColor
+        } else {
+          this.colors[j] = '#ccc'
+        }
+      }
+    }
+  },
+  mounted () {
+    this.$nextTick(function () {
+      this.iValue = this.value
+      this.updateStyle()
+    })
+  }
+}
+</script>
+
+<style lang="less">
+@import "../../../styles/index.less";
+@rate: lemo-rate;
+
+.@{rate} {
+  text-align: left;
+  display: inline-block;
+  line-height: normal;
+  a {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    color: #ccc;
+    &:hover {
+      color: #ffdd99;
+    }
+    &:last-child {
+      padding-right: 2px!important;
+      margin-right: 0px!important;
+    }
+    &.is-disabled {
+      color: #ccc !important;
+      cursor: not-allowed;
+    }
+  }
+  .@{rate}-box {
+    position: relative;
+  }
+  .@{rate}-inner {
+    position: relative;
+    display: inline-block;
+  }
+  .@{rate}-outer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    overflow: hidden;
+  }
+}
+</style>

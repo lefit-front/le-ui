@@ -14,6 +14,7 @@ import Progress from './components/progress';
 import ImgView from './components/img-view';
 import Card from './components/card';
 import Store from './components/store';
+import Rate from './components/rate';
 
 import BaseList from './components/base-list';
 import TabBar from './components/tab-bar';
@@ -40,6 +41,7 @@ const lemo = {
   ImgView,
   Card,
   Store,
+  Rate,
   Loading,
   Radio,
   Checkbox,

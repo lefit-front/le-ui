@@ -77,6 +77,11 @@
         "name": "Store",
         "icon": "store"
       },
+	    {
+        "path": "/rate",
+        "name": "Rate",
+        "icon": "rate"
+      },
       {
         "path": "/check-list",
         "name": "CheckList",
