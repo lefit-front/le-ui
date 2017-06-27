@@ -42,3 +42,12 @@ export function removeClass(el, cls) {
     el.className = trim(curClass);
   }
 };
+export const once = function(el, event, fn) {
+  var listener = function() {
+    if (fn) {
+      fn.apply(this, arguments);
+    }
+    off(el, event, listener);
+  };
+  on(el, event, listener);
+};

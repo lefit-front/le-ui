@@ -91,6 +91,11 @@
         "path": "/week",
         "name": "Week",
         "icon": "week"
+      },
+      {
+        "path": "/picker",
+        "name": "Picker",
+        "icon": "picker"
       }
     ]
   }

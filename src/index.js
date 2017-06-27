@@ -22,7 +22,7 @@ import HandBar from './components/hand-bar';
 import Money from './components/money';
 import Loading from './components/loading';
 import Empty from './components/empty';
-
+import Picker from './components/picker';
 import locale from './locale';
 
 const lemo = {
@@ -45,7 +45,8 @@ const lemo = {
   Checkbox,
   CheckList,
   Empty,
-  Week
+  Week,
+  Picker
 };
 
 const install = function (Vue, opts = {}) {
