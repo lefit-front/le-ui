@@ -86,7 +86,6 @@
     },
 
     created() {
-      console.log('jinlaile')
       this.$on('slotValueChange', this.slotValueChange);
       var slots = this.slots || [];
       this.values = [];
@@ -94,7 +93,6 @@
       var valueIndexCount = 0;
       slots.forEach(slot => {
         if (!slot.divider) {
-          console.log('2222')
           slot.valueIndex = valueIndexCount++;
           values[slot.valueIndex] = (slot.values || [])[slot.defaultIndex || 0];
           this.slotValueChange();
@@ -111,10 +109,16 @@
         this.setShow()
       },
       submitEventFun () {
+        if (this.values[0] === undefined) {
+          this.values[0] = this.slots[0].values[0]
+        }
         this.submit(this.values)
         this.setShow()
       },
       slotValueChange() {
+        if (this.values[0] === undefined) {
+          this.values[0] = this.slots[0].values[0]
+        }
         this.$emit('change', this, this.values);
       },
 
@@ -181,7 +185,7 @@
         var slots = this.slots || [];
         var values = [];
         slots.forEach(function(slot) {
-          if (!slot.divider) values.push(slot.value);
+          // if (!slot.divider) values.push(slot.value);
         });
 
         return values;
