@@ -40,9 +40,7 @@ export default {
   },
   methods: {
     onValuesChange(picker, values) {
-      if (values[0] > values[1]) {
-        picker.setSlotValue(1, values[0]);
-      }
+      console.log(values)
     },
     onAddressChangeThree (picker, values) {
       console.log(values)
@@ -50,9 +48,6 @@ export default {
       let city = {}
       let county = {}
       /* 获取省份value */
-      if (values[0] === undefined) {
-        values[0] = '北京'
-      }
       regionData.forEach((data, index) => {
         if (data.name === values[0] && parseInt(data.parent, 10) === 0) {
           this.provinceId = data.value
@@ -92,7 +87,7 @@ export default {
       this.show = 'none'
     },
     submit (values) {
-      // console.log(values)
+      console.log(values)
       this.show = 'none'
     },
     open () {
