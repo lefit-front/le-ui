@@ -11,7 +11,7 @@
         <span class="lemo-picker-head-submit" @click="submitEventFun">确定</span>
       </div>
 
-      <div class="picker" 
+      <div class="picker"
         :class="[{
           'ipicker-3d': rotateEffect
         }]">
@@ -41,7 +41,7 @@
   * @param {String} [show] - 控制组件显示和消失，并且添加了动效，接受block,none
   * @example
   * <Picker :slots="dataList" @change="onValuesChange" title="选择地址" :cancel="cancel" :submit="submit" :show="show"></Picker>
-  *                                              
+  *
   */
   export default {
     name: 'lemo-picker',
