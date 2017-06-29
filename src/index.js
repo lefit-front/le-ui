@@ -1,7 +1,7 @@
 // es6 polyfill
 import 'core-js/fn/array/find-index';
 
-import Button from './components/button';
+import LemoButton from './components/button';
 import Popup from './components/Popup';
 import MessageBox from './components/message-box';
 import Icon from './components/icon';
@@ -27,7 +27,7 @@ import Picker from './components/picker';
 import locale from './locale';
 
 const lemo = {
-  Button,
+  LemoButton,
   Popup,
   MessageBox,
   BaseList,

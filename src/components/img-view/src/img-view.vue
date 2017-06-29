@@ -26,6 +26,12 @@ export default {
     fade: Boolean,
     shape: {
       type: String,
+      validator (value) {
+        return [
+          'normal',
+          'round'
+        ].indexOf(value) > -1
+      },
       default: 'normal'
     },
     cover: {

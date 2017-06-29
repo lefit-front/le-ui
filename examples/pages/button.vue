@@ -2,7 +2,7 @@
 .demo-lemo-button {
 
 }
-.demo-lemo-button Button{
+.demo-lemo-button button{
   margin-top:10px;
 }
 </style>

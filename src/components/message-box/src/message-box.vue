@@ -13,8 +13,8 @@
           </div>
         </div>
         <div class="lemo-msgbox-btns">
-          <Button :class="[ cancelButtonClasses ]" type="plain" v-show="showCancelButton" @click="handleAction('cancel')">{{ cancelButtonText }}</Button>
-          <Button :class="[ confirmButtonClasses ]" :size="showCancelButton ? 'normal' : 'large'" v-show="showConfirmButton" @click="handleAction('confirm')">{{ confirmButtonText }}</Button>
+          <LemoButton :class="[ cancelButtonClasses ]" type="plain" v-show="showCancelButton" @click="handleAction('cancel')">{{ cancelButtonText }}</LemoButton>
+          <LemoButton :class="[ confirmButtonClasses ]" :size="showCancelButton ? 'normal' : 'large'" v-show="showConfirmButton" @click="handleAction('confirm')">{{ confirmButtonText }}</LemoButton>
         </div>
       </div>
     </transition>
@@ -25,14 +25,14 @@
   let CONFIRM_TEXT = '确定';
   let CANCEL_TEXT = '取消';
 
-  import Button from '../../button';
+  import LemoButton from '../../button';
   import Popup from '../../../utils/popup';
 
   export default {
     name: 'lemo-message-box',
     mixins: [ Popup ],
     components: {
-      Button
+      LemoButton
     },
     props: {
       modal: {

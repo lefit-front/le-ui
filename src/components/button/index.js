@@ -1,2 +1,2 @@
-import Button from './src/button.vue';
-export default Button;
+import LemoButton from './src/button.vue';
+export default LemoButton;

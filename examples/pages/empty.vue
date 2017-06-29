@@ -13,7 +13,7 @@
     <h1>Empty 设置img url /text /width /size</h1>
     <lemo-empty src="https://cdn.leoao.com/img/%E6%97%A0%E8%A1%8C%E7%A8%8B@3x.png" text="这里是text提示" :width="120" :size="22"></lemo-empty>
     <h1>Empty 全屏居中</h1>
-    <Button @click="setFullEvent">点击查看效果</Button>
+    <le-button @click="setFullEvent">点击查看效果</le-button>
     <lemo-empty src="https://cdn.leoao.com/img/%E6%97%A0%E8%A1%8C%E7%A8%8B@3x.png" full v-show="show"></lemo-empty>
   </div>
 </template>

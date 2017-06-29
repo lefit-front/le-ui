@@ -7,9 +7,6 @@
   </section>
 </template>
 
-<style>
-</style>
-
 <script type="text/babel">
   import { navs } from './route';
 
@@ -26,3 +23,10 @@
     }
   };
 </script>
+
+<style lang="less">
+  .page-demo {
+    box-sizing: border-box;
+    padding: 10px 25px;
+  }
+</style>
