@@ -9,12 +9,12 @@
 <template>
   <div class="demo-button">
     <h3>loading默认</h3>
-    <Loading type="rotate"></Loading>
+    <lemo-loading type="rotate" />
      <h3>loading 设置颜色和大小</h3>
-    <Loading type="triple" loading-color="red" :loading-size="12"></Loading>
+    <lemo-loading type="triple" loading-color="red" :loading-size="12" />
     <h3>loading 设置全屏</h3>
     <Button @click="loadingEvent">点击查看全屏loading效果</Button>
-    <Loading type="rotate" loading-color="red" :loading-size="22" full v-if="isFull === true"></Loading>
+    <lemo-loading type="rotate" loading-color="red" :loading-size="22" full v-if="isFull === true" />
   </div>
 </template>
 <script>

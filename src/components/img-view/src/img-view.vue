@@ -24,7 +24,10 @@ export default {
     },
     defaultImg: String,
     fade: Boolean,
-    shape: String,
+    shape: {
+      type: String,
+      default: 'normal'
+    },
     cover: {
       type: Boolean,
       default: false
@@ -41,7 +44,7 @@ export default {
 
   watch: {
     value (val) {
-      console.log(val)
+      // console.log(val)
       this.$emit('change', val)
     }
   },

@@ -17,9 +17,14 @@
 </template>
 
 <script>
+import Icon from '../../icon';
+import ImgView from '../../img-view';
 export default {
   name: 'lemo-store',
-
+  components: {
+    Icon,
+    ImgView
+  },
   props: {
     name: String,
     address: String,

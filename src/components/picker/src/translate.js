@@ -89,6 +89,6 @@ if (!Vue.prototype.$isServer) {
     translateElement: translateElement,
     cancelTranslateElement: cancelTranslateElement
   };
-};
+}
 
 export default exportObj ;

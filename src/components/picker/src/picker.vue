@@ -29,6 +29,7 @@
 </template>
 
 <script type="text/babel">
+  /*eslint-env node*/
   /**
   * lemo-header
   * @module components/lemo-picker
@@ -182,11 +183,11 @@
 
     computed: {
       values() {
-        var slots = this.slots || [];
+        // var slots = this.slots || [];
         var values = [];
-        slots.forEach(function(slot) {
+        // slots.forEach(function(slot) {
           // if (!slot.divider) values.push(slot.value);
-        });
+        // });
 
         return values;
       },

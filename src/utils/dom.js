@@ -1,3 +1,44 @@
+import Vue from 'vue';
+
+const isServer = Vue.prototype.$isServer;
+const trim = function(string) {
+  return (string || '').replace(/^[\s\uFEFF]+|[\s\uFEFF]+$/g, '');
+};
+
+/* istanbul ignore next */
+export const on = (function() {
+  if (!isServer && document.addEventListener) {
+    return function(element, event, handler) {
+      if (element && event && handler) {
+        element.addEventListener(event, handler, false);
+      }
+    };
+  } else {
+    return function(element, event, handler) {
+      if (element && event && handler) {
+        element.attachEvent('on' + event, handler);
+      }
+    };
+  }
+})();
+
+/* istanbul ignore next */
+export const off = (function() {
+  if (!isServer && document.removeEventListener) {
+    return function(element, event, handler) {
+      if (element && event) {
+        element.removeEventListener(event, handler, false);
+      }
+    };
+  } else {
+    return function(element, event, handler) {
+      if (element && event) {
+        element.detachEvent('on' + event, handler);
+      }
+    };
+  }
+})();
+
 /* istanbul ignore next */
 export function addClass(el, cls) {
   if (!el) return;
@@ -19,7 +60,17 @@ export function addClass(el, cls) {
   if (!el.classList) {
     el.className = curClass;
   }
-};
+}
+/* istanbul ignore next */
+export function hasClass(el, cls) {
+  if (!el || !cls) return false;
+  if (cls.indexOf(' ') !== -1) throw new Error('className should not contain space.');
+  if (el.classList) {
+    return el.classList.contains(cls);
+  } else {
+    return (' ' + el.className + ' ').indexOf(' ' + cls + ' ') > -1;
+  }
+}
 /* istanbul ignore next */
 export function removeClass(el, cls) {
   if (!el || !cls) return;
@@ -41,7 +92,7 @@ export function removeClass(el, cls) {
   if (!el.classList) {
     el.className = trim(curClass);
   }
-};
+}
 export const once = function(el, event, fn) {
   var listener = function() {
     if (fn) {

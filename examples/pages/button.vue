@@ -1,28 +1,28 @@
 <style>
-.demo-button {
+.demo-lemo-button {
 
 }
-.demo-button button{
+.demo-lemo-button Button{
   margin-top:10px;
 }
 </style>
 <template>
-  <div class="demo-button">
+  <div class="demo-lemo-button">
     <h1>type类型</h1>
-    <Button type="normal">正常</Button>
-    <Button type="border">带边框</Button>
-    <Button type="plain">幽灵按钮</Button>
-    <Button type="shadow">阴影按钮</Button>
+    <lemo-button type="normal">正常</lemo-button>
+    <lemo-button type="border">带边框</lemo-button>
+    <lemo-button type="plain">幽灵按钮</lemo-button>
+    <lemo-button type="shadow">阴影按钮</lemo-button>
     <h1>禁用</h1>
-    <Button type="shadow" disabled>禁用</Button>
+    <lemo-button type="shadow" disabled>禁用</lemo-button>
     <h1>size大小</h1>
-    <Button type="normal" size="small">small</Button>
-    <Button type="normal" size="normal">normal</Button>
-    <Button type="normal" size="large">large</Button>
+    <lemo-button type="normal" size="small">small</lemo-button>
+    <lemo-button type="normal" size="normal">normal</lemo-button>
+    <lemo-button type="normal" size="large">large</lemo-button>
     <h1>带loading</h1>
-    <Button type="normal" size="normal" loading="block">large</Button>
+    <lemo-button type="normal" size="normal" loading="block">large</lemo-button>
     <h4>设置loading颜色和大小</h4>
-    <Button type="normal" size="normal" loading="block" loading-color="yellow" :loading-size="15">large</Button>
+    <lemo-button type="normal" size="normal" loading="block" loading-color="yellow" :loading-size="15">large</lemo-button>
   </div>
 </template>
 <script>

@@ -11,10 +11,8 @@
   </div>
 </template>
 <script>
-const prefixCls = 'lemo-progress';
-
 export default {
-  name: 'Progress',
+  name: 'lemo-progress',
   props: {
     value: {
       type: Number,

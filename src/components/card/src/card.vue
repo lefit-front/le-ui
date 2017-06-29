@@ -9,16 +9,18 @@
       </div>
     </div>
     <div class="lemo-card-img">
-      <ImgView :src="img" :width="80" :height="80" shape="round" :defaultImg="defaultImg"/>
+      <lemo-img-view :src="img" :width="80" :height="80" shape="round" :defaultImg="defaultImg"/>
       <Icon v-if="!img" type="logo_lefit"/>
     </div>
   </div>
 </template>
 <script>
-const prefixCls = 'lemo-card';
-
+import Icon from '../../icon';
 export default {
   name: 'lemo-card',
+  components: {
+    Icon
+  },
   props: {
     title: String,
     content: String,

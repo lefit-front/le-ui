@@ -12,10 +12,10 @@ body{
 <template>
   <div class="demo-button">
     <h1>picker</h1>
-    <Picker :slots="dataList02" @change="onValuesChange" title="选择地址" :cancel="cancel" :submit="submit" :show="show"></Picker>
-    <Button @click="open">打开picker</Button>
-    <Picker :slots="dataList" @change="onAddressChangeThree" title="选择地址" :cancel="cancelThree" :submit="submitThree" :show="showThree" :visible-item-count="5"></Picker>
-    <Button @click="openThree">打开三级联动</Button>
+    <lemo-picker :slots="dataList02" @change="onValuesChange" title="选择地址" :cancel="cancel" :submit="submit" :show="show"></lemo-picker>
+    <lemo-button @click="open">打开picker</lemo-button>
+    <lemo-picker :slots="dataList" @change="onAddressChangeThree" title="选择地址" :cancel="cancelThree" :submit="submitThree" :show="showThree" :visible-item-count="5"></lemo-picker>
+    <lemo-button @click="openThree">打开三级联动</lemo-button>
   </div>
 </template>
 <script>

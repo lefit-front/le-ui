@@ -47,4 +47,4 @@ export default function(element, options) {
     element.addEventListener('touchend', endFn);
     element.addEventListener('touchcancel', endFn);
   }
-};
+}

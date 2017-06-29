@@ -9,7 +9,7 @@
 <template>
   <div class="demo-button">
     <h1>NavBar</h1>
-    <nav-bar :height="45" style="background:#f1f1f1" :dataList="data" select="bl"></nav-bar>
+    <lemo-nav-bar :height="45" style="background:#f1f1f1" :dataList="data" select="bl"></lemo-nav-bar>
   </div>
 </template>
 <script>
@@ -17,7 +17,7 @@ export default {
   data () {
     return {
       data: [
-        { 
+        {
           'id': 'cl',
           'name': '约课',
           'to': ''

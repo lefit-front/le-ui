@@ -1,50 +1,50 @@
 <template>
   <div class="demo-button">
     <h1>popup</h1>
-    <Button type="normal" @click="popBottom">向下</Button>
-    <Popup 
+    <lemo-button type="normal" @click="popBottom">向下</lemo-button>
+    <lemo-popup
       v-model="popupBottom"
       position="bottom"
       class="popupBottom"
       >
       我是内容
-    </Popup>
-    <Button type="normal" @click="popTop">向上</Button>
-    <Popup 
+    </lemo-popup>
+    <lemo-button type="normal" @click="popTop">向上</lemo-button>
+    <lemo-popup
       v-model="popupTop"
       position="top"
       class="popupTop"
       modal
       >
       我是内容
-    </Popup>
-    <Button type="normal" @click="popCenter">中间</Button>
-    <Popup 
+    </lemo-popup>
+    <lemo-button type="normal" @click="popCenter">中间</lemo-button>
+    <lemo-popup
       v-model="popupCenter"
       position=""
       class="popupCenter"
       pop-transition="popup-fade"
       >
       我是内容
-    </Popup>
-    <Button type="normal" @click="popRight">向右边</Button>
-    <Popup 
+    </lemo-popup>
+    <lemo-button type="normal" @click="popRight">向右边</lemo-button>
+    <lemo-popup
       v-model="popupRight"
       position="right"
       class="popupRight"
       modal
       >
       <div class="msg">我是内容</div>
-    </Popup>
-    <Button type="normal" @click="popLeft">向左边</Button>
-    <Popup 
+    </lemo-popup>
+    <lemo-button type="normal" @click="popLeft">向左边</lemo-button>
+    <lemo-popup
       v-model="popupLeft"
       position="left"
       class="popupLeft"
       modal
       >
       <div class="msg">我是内容</div>
-    </Popup>
+    </lemo-popup>
   </div>
 </template>
 <script>

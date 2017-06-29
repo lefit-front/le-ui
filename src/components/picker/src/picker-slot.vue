@@ -99,6 +99,7 @@
 </style>
 
 <script type="text/babel">
+  /*eslint-env node*/
   import draggable from './draggable';
   import translateUtil from './translate';
   import { once, addClass, removeClass } from '../../../utils/dom';

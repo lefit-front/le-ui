@@ -1,6 +1,6 @@
 <template>
   <div class="demo-rate">
-    <Rate :value="value" :margin="5" disabled />
+    <lemo-rate :value="value" :margin="5" disabled />
   </div>
 </template>
 <script>

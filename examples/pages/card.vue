@@ -1,6 +1,6 @@
 <template>
   <div class="demo-card">
-    <Card v-for="(item, index) in list" :key="index" :title="item.title" :content="item.content" :img="item.img"/>
+    <lemo-card v-for="(item, index) in list" :key="index" :title="item.title" :content="item.content" :img="item.img"/>
   </div>
 </template>
 <script>

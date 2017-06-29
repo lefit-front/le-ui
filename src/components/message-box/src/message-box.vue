@@ -29,8 +29,11 @@
   import Popup from '../../../utils/popup';
 
   export default {
+    name: 'lemo-message-box',
     mixins: [ Popup ],
-
+    components: {
+      Button
+    },
     props: {
       modal: {
         default: true

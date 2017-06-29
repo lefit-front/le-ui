@@ -1,12 +1,12 @@
 <template>
   <div class="lemo-base-list d-f a-i-c" @click="toRouter" :class="[{'boder-1px-bottom ': border === 'block'}]">
-    <div class="lemo-title" 
+    <div class="lemo-title"
       :style="{
         'font-size': size+ 'px',
         'color': color
       }"
     >{{title}}</div>
-    <div class="lemo-icon-floatRight" 
+    <div class="lemo-icon-floatRight"
       :style="{
         'font-size': size+ 'px',
         'color': color
@@ -41,6 +41,9 @@
 import Icon from '../../icon';
 export default {
   name: 'lemo-base-list',
+  components: {
+    Icon
+  },
   props: {
     title: String,
     isLink: Boolean,

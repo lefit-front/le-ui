@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Tag class="demo-tag" :data="tags" />
+    <lemo-tag class="demo-tag" :data="tags" />
   </div>
 </template>
 <script>

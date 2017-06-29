@@ -5,7 +5,7 @@
 const prefixCls = 'lemo-icon';
 
 export default {
-  name: 'Icon',
+  name: 'lemo-icon',
   props: {
     type: String,
     size: [Number, String],

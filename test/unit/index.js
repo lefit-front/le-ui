@@ -14,5 +14,5 @@ testsContext.keys().forEach(testsContext);
 // you want coverage for.
 // const srcContext = require.context('../../src', true, /^\.\/(?!main(\.js)?$)/);
 // @todo
-const srcContext = require.context('../../src', true, /^\.\/(?!styles.*?(\.less)?$)/);
+const srcContext = require.context('../../src/components/button', true, /^\.\/(?!styles.*?(\.less)?$)/);
 srcContext.keys().forEach(srcContext);

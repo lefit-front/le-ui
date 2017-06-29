@@ -6,19 +6,20 @@
   </transition>
 </template>
 <script>
+/*eslint-env node*/
 /**
  * lemo-header
  * @module components/popup
  * @desc 弹出框
  * @param {string} [v-mode] - 控制显示 v-model绑定的值为true显示 false消失
  * @param {string} [position=''] - 控制弹出层方向，接受left, top, right, bottom, '' 代表居中
- * @param {boolean}[modal=true] - 阴影,接受 true, false 
- * @param {boolean}[closeOnClickModal=true] - 标记阴影是否关闭弹窗,接受 true, false 
+ * @param {boolean}[modal=true] - 阴影,接受 true, false
+ * @param {boolean}[closeOnClickModal=true] - 标记阴影是否关闭弹窗,接受 true, false
  * @param {string} [popupTransition=popup-slide] - 	显示/隐藏时的动效，仅在省略 position 时可配置，接受 popup-fade
  * @param {slot} - 显示文本
  *
  * @example
- *   <Popup 
+ *   <Popup
  *     v-model="popupRight"
  *     position="right"
  *     class="popupRight"

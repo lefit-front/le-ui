@@ -17,8 +17,12 @@
   </div>
 </template>
 <script>
+import Icon from '../../icon';
 export default {
   name: 'lemo-rate',
+  components: {
+    Icon
+  },
   props: {
     max: {
       type: Number,
@@ -69,7 +73,7 @@ export default {
       this.iValue = val
       this.updateStyle()
     },
-    iValue (val) {
+    iValue () {
       this.updateStyle()
     }
   },

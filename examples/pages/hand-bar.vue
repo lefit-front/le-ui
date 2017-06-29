@@ -9,7 +9,7 @@
 <template>
   <div class="demo-button">
     <h1>HandBar</h1>
-    <hand-bar :height="45" style="background:#f1f1f1" :position="position" :lesson="lesson" :positionEvent="positionEvent" :lessonEvent="lessonEvent"></hand-bar>
+    <lemo-hand-bar :height="45" style="background:#f1f1f1" :position="position" :lesson="lesson" :positionEvent="positionEvent" :lessonEvent="lessonEvent"></lemo-hand-bar>
   </div>
 </template>
 <script>

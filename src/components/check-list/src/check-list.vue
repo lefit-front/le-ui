@@ -8,9 +8,13 @@
 
 <script>
 import Radio from '../../radio';
+import Checkbox from '../../checkbox';
 export default {
   name: 'lemo-check-list',
-
+  components: {
+    Radio,
+    Checkbox
+  },
   props: {
     title: String,
     align: String,

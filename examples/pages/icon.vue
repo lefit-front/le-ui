@@ -1,7 +1,7 @@
 <template>
   <div class="">
-    <Icon type="icon_didian_x"></Icon>
-    <Icon type="logo_lefit"></Icon>
+    <lemo-icon type="icon_didian_x" />
+    <lemo-icon type="logo_lefit" />
   </div>
 </template>
 <script>

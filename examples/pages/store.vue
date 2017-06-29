@@ -1,6 +1,6 @@
 <template>
   <div class="demo-card">
-    <Store v-for="(item, index) in list" :key="index" :name="item.name" :address="item.address" :img="item.img" :distance="item.distance" @location="clickLocation(item)"/>
+    <lemo-store v-for="(item, index) in list" :key="index" :name="item.name" :address="item.address" :img="item.img" :distance="item.distance" @location="clickLocation(item)"/>
   </div>
 </template>
 <script>

@@ -175,6 +175,7 @@ export default {
 
 /* type:plain 和 按下样式 */
 .@{button}-plain{
+  box-sizing: border-box;
   background: inherit;
   color: @btn-ghost-color;
   border: 1px solid @btn-ghost-border;

@@ -32,7 +32,6 @@ export default {
 
   watch: {
     value (val) {
-      console.log(val)
       this.$emit('change', val)
     }
   }

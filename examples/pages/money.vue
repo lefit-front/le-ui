@@ -1,23 +1,23 @@
 <style>
-.demo-button {
+.demo-money {
 
 }
-.demo-button button{
+.demo-money{
   margin-top:10px;
 }
 </style>
 <template>
-  <div class="demo-button">
+  <div class="demo-money">
     <h3>Money默认</h3>
-    <Money></Money>
+    <lemo-money></lemo-money>
     <h3>Money设置大小和数值</h3>
-    <Money :number="number" :size="20" ></Money>
+    <lemo-money :number="number" :size="20" ></lemo-money>
     <h3>Money设置大小和数值，设置颜色</h3>
-    <Money :number="number" :size="20" :color="color"></Money>
+    <lemo-money :number="number" :size="20" :color="color"></lemo-money>
     <h3>Money修改money Icon</h3>
-    <Money :number="number" :size="20" :color="color" moneyIcon="$"></Money>
+    <lemo-money :number="number" :size="20" :color="color" moneyIcon="$"></lemo-money>
     <h3>Money 字体加粗</h3>
-    <Money :number="number" :size="26" :color="color" moneyIcon="$" bold></Money>
+    <lemo-money :number="number" :size="26" :color="color" moneyIcon="$" bold></lemo-money>
   </div>
 </template>
 <script>
