@@ -13,7 +13,7 @@
      <h3>loading 设置颜色和大小</h3>
     <lemo-loading type="triple" loading-color="red" :loading-size="12" />
     <h3>loading 设置全屏</h3>
-    <le-button @click="loadingEvent">点击查看全屏loading效果</le-button>
+    <lemo-button @click="loadingEvent">点击查看全屏loading效果</lemo-button>
     <lemo-loading type="rotate" loading-color="red" :loading-size="22" full v-if="isFull === true" />
   </div>
 </template>

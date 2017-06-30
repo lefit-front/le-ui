@@ -9,17 +9,19 @@
       </div>
     </div>
     <div class="lemo-card-img">
-      <lemo-img-view :src="img" :width="80" :height="80" shape="round" :defaultImg="defaultImg"/>
+      <LemoView :src="img" :width="80" :height="80" shape="round" :defaultImg="defaultImg"/>
       <Icon v-if="!img" type="logo_lefit"/>
     </div>
   </div>
 </template>
 <script>
 import Icon from '../../icon';
+import LemoView from '../../view';
 export default {
   name: 'lemo-card',
   components: {
-    Icon
+    Icon,
+    LemoView
   },
   props: {
     title: String,

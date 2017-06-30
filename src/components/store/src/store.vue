@@ -1,6 +1,6 @@
 <template>
   <div class="lemo-store">
-    <ImgView class="lemo-store-img" :src="img" width="60" height="60" :cover="true"/>
+    <LemoView class="lemo-store-img" :src="img" width="60" height="60" :cover="true"/>
     <div class="lemo-store-info">
       <div class="lemo-store-name">
         {{name}}
@@ -18,12 +18,12 @@
 
 <script>
 import Icon from '../../icon';
-import ImgView from '../../img-view';
+import LemoView from '../../view';
 export default {
   name: 'lemo-store',
   components: {
     Icon,
-    ImgView
+    LemoView
   },
   props: {
     name: String,

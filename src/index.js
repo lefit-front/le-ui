@@ -11,7 +11,7 @@ import Checkbox from './components/checkbox';
 import CheckList from './components/check-list';
 import Week from './components/week';
 import Progress from './components/progress';
-import ImgView from './components/img-view';
+import LemoView from './components/view';
 import Card from './components/card';
 import Store from './components/store';
 import Rate from './components/rate';
@@ -38,7 +38,7 @@ const lemo = {
   HandBar,
   Money,
   Progress,
-  ImgView,
+  LemoView,
   Card,
   Store,
   Rate,

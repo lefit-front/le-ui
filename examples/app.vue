@@ -11,6 +11,11 @@
     color: inherit;
   }
 
+  .container {
+    box-sizing: border-box;
+    padding: 10px 25px;
+  }
+
   .page-back {
     display: inline-block;
     width: 40px;

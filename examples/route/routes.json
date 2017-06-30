@@ -63,9 +63,9 @@
         "icon": "progress"
       },
 	    {
-        "path": "/img-view",
-        "name": "ImgView",
-        "icon": "img-view"
+        "path": "/view",
+        "name": "View",
+        "icon": "view"
       },
 	    {
         "path": "/card",

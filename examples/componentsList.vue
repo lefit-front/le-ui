@@ -23,10 +23,3 @@
     }
   };
 </script>
-
-<style lang="less">
-  .page-demo {
-    box-sizing: border-box;
-    padding: 10px 25px;
-  }
-</style>

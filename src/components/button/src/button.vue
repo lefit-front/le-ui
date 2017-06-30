@@ -22,7 +22,7 @@
 <script>
 /**
  * le-header
- * @module components/le-button
+ * @module components/lemo-button
  * @desc 按钮
  * @param {string} [type=normal] - 显示类型，接受 normal, border, plain, shadow
  * @param {boolean} [disabled=false] - 禁用
@@ -33,7 +33,7 @@
  * @param {slot} - 显示文本
  *
  * @example
- * <le-button type="normal" size="normal" :loading="loading" loading-color="yellow" :loading-size="11" @click="saveBtnEvent">保存</le-button>
+ * <lemo-button type="normal" size="normal" :loading="loading" loading-color="yellow" :loading-size="11" @click="saveBtnEvent">保存</lemo-button>
  *                                                  loading block显示  none隐藏
  */
 export default {

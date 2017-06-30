@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'lemo-img-view',
+  name: 'lemo-view',
 
   props: {
     src: {
@@ -69,7 +69,7 @@ export default {
 
 <style lang="less">
 @import "../../../styles/index.less";
-@imgView: lemo-view;
+@View: lemo-view;
 
 @keyframes hide-to-show {
   0% {
@@ -89,23 +89,23 @@ export default {
   }
 }
 
-.@{imgView} {
+.@{View} {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  .@{imgView}-img {
+  .@{View}-img {
     max-width: 100%;
     max-height: 100%;
   }
-  .@{imgView}-cover {
+  .@{View}-cover {
     min-width: 100%;
     min-height: 100%;
     max-width: 120%;
     max-height: 120%;
   }
-  .@{imgView}-default {
+  .@{View}-default {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -117,17 +117,17 @@ export default {
     background-position: center;
     background-size: cover;
   }
-  .@{imgView}-show {
+  .@{View}-show {
     animation: hide-to-show 1.5s;
     animation-fill-mode: forwards;
   }
-  .@{imgView}-hide {
+  .@{View}-hide {
     animation: show-to-hide 1s;
     animation-fill-mode: forwards;
   }
 }
 
-.@{imgView}-round {
+.@{View}-round {
   border-radius: 100%
 }
 </style>
