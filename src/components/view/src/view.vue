@@ -11,7 +11,7 @@ export default {
 
   props: {
     src: {
-      type: [Array, String],
+      type: String,
       required: true
     },
     width: {

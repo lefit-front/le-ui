@@ -6,7 +6,7 @@ module.exports = {
   "props": [
     {
       "name": "src",
-      "type": ["Array", "String"],
+      "type": ["String"],
       "describe": "图片的url地址",
       "default": "",
       "option": [],
