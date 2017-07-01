@@ -10,7 +10,7 @@ describe('Button.vue', () => {
   });
   it('create', done => {
     vm = createVue(`
-      <lemo-button type="normal">正常</lemo-button>
+      <lemo-button type="primary">正常</lemo-button>
     `);
     expect(vm.$el.querySelectorAll('.lemo-button-text').length).to.equal(1);
 

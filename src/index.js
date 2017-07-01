@@ -1,8 +1,6 @@
 // es6 polyfill
 import 'core-js/fn/array/find-index';
 
-import LemoButton from './components/button';
-import Popup from './components/Popup';
 import MessageBox from './components/message-box';
 import Icon from './components/icon';
 import Tag from './components/tag';
@@ -16,7 +14,9 @@ import Card from './components/card';
 import Store from './components/store';
 import Rate from './components/rate';
 
+import LemoButton from './components/button';
 import BaseList from './components/base-list';
+import Popup from './components/Popup';
 import TabBar from './components/tab-bar';
 import NavBar from './components/nav-bar';
 import HandBar from './components/hand-bar';
@@ -24,6 +24,7 @@ import Money from './components/money';
 import Loading from './components/loading';
 import Empty from './components/empty';
 import Picker from './components/picker';
+
 import locale from './locale';
 
 const lemo = {

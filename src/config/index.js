@@ -1,11 +1,15 @@
-import View from './View';
-import Card from './Card';
-import Button from './Button';
+import LemoView from './view';
+import Card from './card';
+import LemoButton from './button';
+import Icon from './icon';
+import MessageBox from './message-box';
 
 const config = {
-  View: View,
+  LemoView: LemoView,
   Card: Card,
-  Button: Button
+  LemoButton: LemoButton,
+  Icon: Icon,
+  // MessageBox: MessageBox
 };
 
-module.exports = config
+export default config

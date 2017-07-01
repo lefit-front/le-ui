@@ -7,9 +7,18 @@ const prefixCls = 'lemo-icon';
 export default {
   name: 'lemo-icon',
   props: {
-    type: String,
-    size: [Number, String],
-    color: String
+    type: {
+      type: String,
+      required: true
+    },
+    size: {
+      type: [Number, String],
+      default: 12
+    },
+    color: {
+      type: String,
+      default: '#000'
+    }
   },
   computed: {
     classes () {
