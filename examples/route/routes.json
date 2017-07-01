@@ -4,7 +4,7 @@
     "list": [
       {
         "path": "/button",
-        "name": "Button",
+        "name": "LemoButton",
         "icon": "button"
       },
       {
@@ -64,7 +64,7 @@
       },
 	    {
         "path": "/view",
-        "name": "View",
+        "name": "LemoView",
         "icon": "view"
       },
 	    {
