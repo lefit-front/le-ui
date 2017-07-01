@@ -267,8 +267,6 @@
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      height: 40px;
-      line-height: 40px;
       padding: calc(@padding - @btn-space);
       justify-content: space-between;
 

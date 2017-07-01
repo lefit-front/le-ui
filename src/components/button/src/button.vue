@@ -24,7 +24,7 @@
  * le-header
  * @module components/lemo-button
  * @desc 按钮
- * @param {string} [type=normal] - 显示类型，接受 normal, border, plain, shadow
+ * @param {string} [type=primary] - 显示类型，接受 primary, default, plain, shadow
  * @param {boolean} [disabled=false] - 禁用
  * @param {string} [size=normal] - 尺寸，接受 normal, small, large
  * @param {string} [loading=none] - 尺寸，接受 block, none
@@ -33,7 +33,7 @@
  * @param {slot} - 显示文本
  *
  * @example
- * <lemo-button type="normal" size="normal" :loading="loading" loading-color="yellow" :loading-size="11" @click="saveBtnEvent">保存</lemo-button>
+ * <lemo-button type="primary" size="normal" :loading="loading" loading-color="yellow" :loading-size="11" @click="saveBtnEvent">保存</lemo-button>
  *                                                  loading block显示  none隐藏
  */
 export default {
@@ -50,8 +50,10 @@ export default {
     }
   },
   props: {
-    title: String,
-    disabled: Boolean,
+    disabled: {
+      type: Boolean,
+      default: false
+    },
     loadingColor: {
       type: String,
       default: '#fff'
@@ -83,11 +85,11 @@ export default {
     },
     type: {
       type: String,
-      default: 'normal',
+      default: 'primary',
       validator (value) {
         return [
-          'normal',
-          'border',
+          'primary',
+          'default',
           'plain',
           'shadow'
         ].indexOf(value) > -1
@@ -152,8 +154,8 @@ export default {
   padding: @btn-padding-small;
 }
 
-/* type:normal 和 按下样式 */
-.@{button}-normal{
+/* type:primary 和 按下样式 */
+.@{button}-primary{
   background: @btn-primary-bg;
   color: @btn-primary-color;
   &:active {
@@ -162,8 +164,8 @@ export default {
   }
 }
 
-/* type:border 和 按下样式 */
-.@{button}-border{
+/* type:default 和 按下样式 */
+.@{button}-default{
   background: @btn-default-bg;
   color: @btn-default-color;
   border: 1px @btn-default-border solid;
