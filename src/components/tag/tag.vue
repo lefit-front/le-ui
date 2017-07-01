@@ -12,7 +12,10 @@
 export default {
   name: 'lemo-tag',
   props: {
-    data: Array
+    data: {
+      type: Array,
+      required: true
+    }
   }
 };
 </script>

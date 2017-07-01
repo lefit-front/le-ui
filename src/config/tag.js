@@ -1,16 +1,34 @@
 export default {
-  file: 'card',
-  name: 'Card',
-  class: 'lemo-card',
-  describe: '卡片组件，展示信息',
+  file: 'tag',
+  name: 'Tag',
+  class: 'lemo-tag',
+  describe: '标签组件',
   props: [
     {
-      name: 'title',
-      type: ['String'],
-      describe: '标题',
+      name: 'data',
+      type: ['Array'],
+      describe: '标签内容',
       default: '',
       option: [],
-      required: false
+      required: true,
+      example: [
+        {
+          name: '200-300KCal'
+        },
+        {
+          name: '塑形',
+          amount: 351
+        },
+        {
+          name: '中等难度',
+          amount: 337
+        },
+        {
+          name: '腰腹'
+        },
+        {
+          name: '控制力'
+        }
     },
     {
       name: 'content',
