@@ -2,6 +2,7 @@ module.exports = {
   "file": "view",
   "name": "View",
   "class": "lemo-view",
+  "describe": "图片容器组件",
   "props": [
     {
       "name": "src",
@@ -67,7 +68,7 @@ module.exports = {
           "default": true
         },
         {
-          "name": "normal",
+          "name": "round",
           "describe": "容器为圆形",
           "default": false
         }

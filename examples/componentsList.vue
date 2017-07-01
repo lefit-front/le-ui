@@ -12,6 +12,7 @@
 
   export default {
     name: 'components-list',
+
     data() {
       return {
         navs: []
