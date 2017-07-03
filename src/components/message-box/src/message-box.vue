@@ -189,7 +189,7 @@
 
 
 
-<style lang="less">
+<style lang="less" scoped>
   @import "../../../styles/index.less";
   @import "../../popup/src/popup.less";
   @msgbox: lemo-msgbox;

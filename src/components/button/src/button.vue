@@ -104,7 +104,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 @import "../../../styles/index.less";
 /* button统一样式 */
 @button: lemo-button;

@@ -67,7 +67,7 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 @import "../../../styles/index.less";
 @View: lemo-view;
 

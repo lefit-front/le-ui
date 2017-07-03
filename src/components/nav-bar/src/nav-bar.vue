@@ -68,7 +68,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 @import "../../../styles/index.less";
 @msgbox: lemo-nav-bar;
 .@{msgbox}-box{

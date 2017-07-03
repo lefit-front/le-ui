@@ -37,7 +37,7 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 @import "../../../styles/index.less";
 @radio: lemo-radio;
 
