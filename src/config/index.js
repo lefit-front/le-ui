@@ -7,6 +7,7 @@ import Tag from './tag';
 import Radio from './radio';
 import Checkbox from './checkbox';
 import CheckList from './check-list';
+import Week from './week';
 
 
 const config = {
@@ -18,7 +19,8 @@ const config = {
   Tag: Tag,
   Radio: Radio,
   Checkbox: Checkbox,
-  CheckList: CheckList
+  CheckList: CheckList,
+  Week: Week
 };
 
 export default config

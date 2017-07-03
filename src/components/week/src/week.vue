@@ -20,9 +20,15 @@ export default {
   props: {
     data: {
       type: Array,
-      required: true
+      required: true,
+      validator: function (data) {
+        return data.length > 0
+      }
     },
-    active: Number
+    active: {
+      type: Number,
+      default: 0
+    }
   },
   data () {
     return {
