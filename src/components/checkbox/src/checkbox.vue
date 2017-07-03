@@ -1,6 +1,15 @@
 <template>
-  <div class="lemo-checkbox">
-    <Checkbox v-if="type === 'checkbox'" :options="options" @change="handleSelectCheckbox"/>
+  <div class="lemo-checkbox-list">
+    <div class="lemo-checkbox" slot="title" v-for="(option, index) in options">
+      <input
+        class="lemo-checkbox-input"
+        :id="option.value || option"
+        type="checkbox"
+        v-model.lazy="value"
+        :disabled="option.disabled"
+        :value="option.value || option">
+      <label class="lemo-checkbox-label" v-text="option.label || option" :for="option.value || option"></label>
+    </div>
   </div>
 </template>
 
