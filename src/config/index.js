@@ -8,6 +8,7 @@ import Radio from './radio';
 import Checkbox from './checkbox';
 import CheckList from './check-list';
 import Week from './week';
+import Progress from './progress';
 
 
 const config = {
@@ -20,7 +21,8 @@ const config = {
   Radio: Radio,
   Checkbox: Checkbox,
   CheckList: CheckList,
-  Week: Week
+  Week: Week,
+  Progress: Progress
 };
 
 export default config

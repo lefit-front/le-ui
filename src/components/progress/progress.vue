@@ -3,7 +3,7 @@
     <slot name="start"></slot>
     <div class="lemo-progress-content">
       <div class="lemo-progress-runway" :style="{ height: height + 'px' }"></div>
-      <div class="lemo-progress-progress" :style="{ width: (value / amount) * 100 + '%', height: height + 'px' }">
+      <div class="lemo-progress-progress" :style="{ width: percentage + '%', height: height + 'px' }">
         <div class="lemo-progress-line" :class="{'lemo-progress-animation': animation}" :style="{ background: endColor ? `linear-gradient(to right, ${color} 0%, ${endColor} 100%)` : color }"></div>
       </div>
     </div>
@@ -14,24 +14,23 @@
 export default {
   name: 'lemo-progress',
   props: {
-    value: {
-      type: Number,
+    percentage: {
+      type: [Number, String],
       required: true
     },
     height: {
-      type: Number,
+      type: [Number, String],
       default: 5
-    },
-    amount: {
-      type: Number,
-      default: 100
     },
     color: {
       type: String,
       default: '#ffad26'
     },
     endColor: String,
-    animation: Boolean
+    animation: {
+      type: Boolean,
+      default: false
+    }
   }
 };
 </script>
