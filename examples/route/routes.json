@@ -73,9 +73,9 @@
         "icon": "card"
       },
 	    {
-        "path": "/store",
-        "name": "Store",
-        "icon": "store"
+        "path": "/item",
+        "name": "Item",
+        "icon": "item"
       },
 	    {
         "path": "/rate",

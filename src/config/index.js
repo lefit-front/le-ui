@@ -9,6 +9,7 @@ import Checkbox from './checkbox';
 import CheckList from './check-list';
 import Week from './week';
 import Progress from './progress';
+import Item from './item';
 
 
 const config = {
@@ -22,7 +23,8 @@ const config = {
   Checkbox: Checkbox,
   CheckList: CheckList,
   Week: Week,
-  Progress: Progress
+  Progress: Progress,
+  Item: Item
 };
 
 export default config

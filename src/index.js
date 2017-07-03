@@ -11,7 +11,7 @@ import Week from './components/week';
 import Progress from './components/progress';
 import LemoView from './components/view';
 import Card from './components/card';
-import Store from './components/store';
+import Item from './components/item';
 import Rate from './components/rate';
 
 import LemoButton from './components/button';
@@ -41,7 +41,7 @@ const lemo = {
   Progress,
   LemoView,
   Card,
-  Store,
+  Item,
   Rate,
   Loading,
   Radio,
