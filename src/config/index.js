@@ -4,6 +4,10 @@ import LemoButton from './button';
 import Icon from './icon';
 // import MessageBox from './message-box';
 import Tag from './tag';
+import Radio from './radio';
+import Checkbox from './checkbox';
+import CheckList from './check-list';
+
 
 const config = {
   LemoView: LemoView,
@@ -11,7 +15,10 @@ const config = {
   LemoButton: LemoButton,
   Icon: Icon,
   // MessageBox: MessageBox,
-  Tag: Tag
+  Tag: Tag,
+  Radio: Radio,
+  Checkbox: Checkbox,
+  CheckList: CheckList
 };
 
 export default config

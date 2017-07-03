@@ -1,15 +1,6 @@
 <template>
-  <div class="lemo-checkbox-list">
-    <div class="lemo-checkbox" slot="title" v-for="(option, index) in options">
-      <input
-        class="lemo-checkbox-input"
-        :id="option.value || option"
-        type="checkbox"
-        v-model.lazy="value"
-        :disabled="option.disabled"
-        :value="option.value || option">
-      <label class="lemo-checkbox-label" v-text="option.label || option" :for="option.value || option"></label>
-    </div>
+  <div class="lemo-checkbox">
+    <Checkbox v-if="type === 'checkbox'" :options="options" @change="handleSelectCheckbox"/>
   </div>
 </template>
 
@@ -73,15 +64,10 @@ export default {
       }
     }
 
-    &[disabled] + .@{checkbox}-core {
-      border-color: #ccc;
+    &[disabled] + .@{checkbox}-label {
+      background-color: @background-color-gray;
+      color: @shadow-color;
     }
-  }
-  .@{checkbox}-core {
-    display: inline-block;
-    box-sizing: border-box;
-    border-radius: 3px;
-    vertical-align: middle;
   }
   .@{checkbox}-label {
     position: relative;

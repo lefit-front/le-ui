@@ -17,13 +17,15 @@ export default {
   },
   props: {
     title: String,
-    align: String,
     options: {
       type: Array,
       required: true
     },
     value: [String, Array],
-    type: String
+    type: {
+      type: String,
+      default: 'radio'
+    }
   },
 
   watch: {

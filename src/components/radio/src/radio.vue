@@ -72,15 +72,10 @@ export default {
       }
     }
 
-    &[disabled] + .@{radio}-core {
-      border-color: #ccc;
+    &[disabled] + .@{radio}-label {
+      background-color: @background-color-gray;
+      color: @shadow-color;
     }
-  }
-  .@{radio}-core {
-    display: inline-block;
-    box-sizing: border-box;
-    border-radius: 3px;
-    vertical-align: middle;
   }
   .@{radio}-label {
     position: relative;
