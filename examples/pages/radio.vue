@@ -1,17 +1,17 @@
+<template>
+  <div class="demo-radio">
+    <lemo-radio :options="options" @change="handleSelect"/>
+  </div>
+</template>
+
+<script>
 export default {
-  file: 'checkbox',
-  name: 'Checkbox',
-  class: 'lemo-checkbox',
-  describe: '多选框组件',
-  props: [
-    {
-      name: 'options',
-      type: ['Array'],
-      describe: '选择项',
-      default: '',
-      option: [],
-      required: true,
-      example: [
+  data () {
+    return {
+      value: '',
+      value2: [],
+      title: '课程',
+      options: [
         {
           label: "瑜伽",
           value: '1'
@@ -39,5 +39,15 @@ export default {
         }
       ]
     }
-  ]
+  },
+  methods: {
+    handleSelect (val) {
+      this.curValue = val
+      this.$emit('getValue', this.curValue)
+    }
+  }
 }
+</script>
+
+<style lang="less">
+</style>

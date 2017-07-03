@@ -83,6 +83,16 @@
         "icon": "rate"
       },
       {
+        "path": "/radio",
+        "name": "Radio",
+        "icon": "radio"
+      },
+      {
+        "path": "/checkbox",
+        "name": "Checkbox",
+        "icon": "checkbox"
+      },
+      {
         "path": "/check-list",
         "name": "CheckList",
         "icon": "check-list"
