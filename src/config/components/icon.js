@@ -7,7 +7,7 @@ export default {
     {
       name: 'type',
       type: ['String'],
-      describe: '传入icon图标类名，详见 tt://www.iconfont.cn/manage/index?manage_type=myprojects&projectId=174634&keyword=',
+      describe: '传入icon图标类名，详见 http://www.iconfont.cn/manage/index?manage_type=myprojects&projectId=174634&keyword=',
       default: '',
       option: [],
       required: true,
