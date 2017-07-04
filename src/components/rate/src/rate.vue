@@ -2,7 +2,7 @@
 <template>
   <div class="lemo-rate">
     <a class="le-rater-box"
-    v-for="i in max" @click="handleClick(i)"
+    v-for="i in max" @click="handleClick(i, true)"
     :class="{'is-active':iValue > i}"
     :style="{color: colors && colors[i-1] ? colors[i-1] : '#ccc',marginRight:margin+'px',fontSize: fontSize + 'px', width: fontSize + 'px', height: fontSize + 'px', lineHeight: fontSize + 'px'}">
       <span class="le-rater-inner">
