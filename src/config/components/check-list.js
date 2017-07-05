@@ -24,28 +24,28 @@ export default {
       required: true,
       example: [
         {
-          label: "瑜伽",
+          label: '瑜伽',
           value: '1'
         },
         {
-          label: "踏板",
+          label: '踏板',
           value: '2'
         },
         {
-          label: "舞蹈",
+          label: '舞蹈',
           value: '3',
           disabled: true
         },
         {
-          label: "杠铃",
+          label: '杠铃',
           value: '4'
         },
         {
-          label: "搏击",
+          label: '搏击',
           value: '5'
         },
         {
-          label: "单车",
+          label: '单车',
           value: '6'
         }
       ]

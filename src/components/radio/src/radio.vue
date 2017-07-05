@@ -1,6 +1,6 @@
 <template>
-  <div class="lemo-radio-list">
-    <label class="lemo-radio" slot="title" v-for="(option, index) in options">
+  <div class="lemo-radio">
+    <label class="lemo-radio-item" slot="title" v-for="(option, index) in options">
       <input
         class="lemo-radio-input"
         type="radio"
@@ -41,11 +41,11 @@ export default {
 @import "../../../styles/index.less";
 @radio: lemo-radio;
 
-.@{radio}-list {
+.@{radio} {
   display: flex;
   flex-wrap: wrap;
   margin: -9px;
-  .@{radio} {
+  .@{radio}-item {
     position: relative;
     display: block;
     margin: 9px;

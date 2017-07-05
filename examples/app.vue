@@ -1,14 +1,11 @@
 <template>
   <div class="container">
-    <nav v-if="this.$route.path === '/'">
-      <components-list></components-list>
-    </nav>
-    <router-view></router-view>
-    <readme v-if="$route.name" :name="$route.name"/>
+    <router-view>
+    </router-view>
+    <readme v-if="name" :name="name"/>
   </div>
 </template>
 <script>
-import componentsList from './componentsList'
 import Readme from './components/readme';
 module.exports = {
   data: function () {
@@ -17,8 +14,12 @@ module.exports = {
     }
   },
   components: {
-    componentsList,
     Readme
+  },
+  computed: {
+    name: function () {
+      return this.$route.name
+    }
   },
   mounted: function () {
     console.log()

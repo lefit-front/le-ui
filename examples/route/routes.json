@@ -3,6 +3,11 @@
     "title": "JS Components",
     "list": [
       {
+        "path": "/home",
+        "name": "Home",
+        "icon": "home"
+      },
+      {
         "path": "/button",
         "name": "LemoButton",
         "icon": "button"

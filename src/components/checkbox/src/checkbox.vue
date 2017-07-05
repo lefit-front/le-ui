@@ -1,6 +1,6 @@
 <template>
-  <div class="lemo-checkbox-list">
-    <div class="lemo-checkbox" slot="title" v-for="(option, index) in options">
+  <div class="lemo-checkbox">
+    <div class="lemo-checkbox-item" slot="title" v-for="(option, index) in options">
       <input
         class="lemo-checkbox-input"
         :id="option.value || option"
@@ -42,11 +42,11 @@ export default {
 @import "../../../styles/index.less";
 @checkbox: lemo-checkbox;
 
-.@{checkbox}-list {
+.@{checkbox} {
   display: flex;
   flex-wrap: wrap;
   margin: -9px;
-  .@{checkbox} {
+  .@{checkbox}-item {
     position: relative;
     display: block;
     margin: 9px;

@@ -20,9 +20,9 @@ const registerRoute = (config) => {
 };
 
 const route = registerRoute(config);
-
 route.route.push({
-  path: '/'
+  path: '/',
+  redirect: { name: 'Home' }
 });
 
 export const navs = route.navs;

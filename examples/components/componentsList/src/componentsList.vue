@@ -8,7 +8,7 @@
 </template>
 
 <script type="text/babel">
-  import { navs } from './route';
+  import { navs } from '../../../route';
 
   export default {
     name: 'components-list',
@@ -24,3 +24,8 @@
     }
   };
 </script>
+
+<style lang="less" scoped>
+  .page-demo {
+  }
+</style>
