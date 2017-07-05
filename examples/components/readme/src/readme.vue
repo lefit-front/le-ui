@@ -62,14 +62,17 @@
       };
     },
 
-    mounted() {
-      console.log(this.name)
-      this.getComponentConfig(this.name)
+    watch: {
+      name (val) {
+        console.log(val);
+        this.getComponentConfig(this.name)
+      }
     },
 
     methods: {
       getComponentConfig (name) {
         this.component = lemoConfig[name]
+        console.log(name)
       }
     }
   };
