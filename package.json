@@ -1,9 +1,10 @@
 {
   "name": "lemo",
   "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "yinxueyuan <838476901@qq.com>",
-  "private": true,
+  "description": "leke vue components",
+  "author": "yinxy <yinxy@leoao.com>",
+  "private": false,
+  "main": "src/index.js",
   "keywords": [
     "lemo",
     "vue",
@@ -25,15 +26,15 @@
     "build": "npm run build:style && npm run build:dev && npm run build:prod",
     "lint": "eslint --fix --ext .js,.vue src",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
-    "test": "npm run lint && npm run unit",
-    "prepublish": "npm run build"
+    "test": "npm run lint && npm run unit"
   },
   "dependencies": {
     "async-validator": "^1.7.1",
     "core-js": "^2.4.1",
     "deepmerge": "^1.3.1",
     "popper.js": "^0.6.4",
-    "raf.js": "0.0.4"
+    "raf.js": "0.0.4",
+    "vue-phone": "^1.0.4"
   },
   "peerDependencies": {
     "vue": "^2.3.3"

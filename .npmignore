@@ -5,3 +5,10 @@ build/
 node_modules/
 test/
 gulpfile.js
+examples/
+.editorconfig
+.eslintignore
+.eslintrc.json
+.gitignore
+.postcssrc.js
+index.html
