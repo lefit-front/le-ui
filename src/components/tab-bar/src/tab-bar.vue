@@ -2,7 +2,7 @@
   <div :class="`leuv-tab-bar leuv-tab-bar-${type} d-f a-i-c`">
     <template v-for="data in dataList">
       <div class="leuv-tab-bar-item d-f a-i-c" :class="[{'leuv-is-selected': selected === data.id}]" @click="selectedEvent(data.id, data.to)">
-        <div class="leuv-tab-bar-other" v-html="data.slot"></div>
+        <div v-if="data.slot" class="leuv-tab-bar-other" v-html="data.slot"></div>
         <div class="leuv-tab-bar-name">
           {{data.name}}
         </div>
@@ -84,10 +84,13 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-grow: 2;
+    flex-shrink: 2;
   }
   .@{tab}-other {
     font-family: "DIN-Bold";
     font-size: 24px;
+    margin-bottom: 2px;
   }
   .@{tab}-name {
     padding:0;
@@ -125,7 +128,7 @@ export default {
 
 .@{tab}-block {
   background-color: @body-background;
-  padding: 15px 5px;
+  padding: 15px 0;
   border-bottom: 1px solid @border-color-thin;
   .@{tab}-name {
     font-size: @font-size-h6;

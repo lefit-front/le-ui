@@ -1,4 +1,4 @@
-/* 
+/*
 Name: Github ReadMe style for Mou app
 Version: v1.1
 Author: hzlzh(hzlzh.dev@gmail.com)
@@ -301,7 +301,6 @@ input::-webkit-validation-bubble-icon {
 body{
     font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
     font-size: 16px;
-    line-height: 1.6;
     word-wrap: break-word
 }
 
@@ -647,4 +646,3 @@ pre code,pre tt {
 pre code:before,pre code:after,pre tt:before,pre tt:after {
     content: normal
 }
-
