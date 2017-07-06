@@ -1,6 +1,6 @@
 {
   "name": "leuv",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "leke vue components",
   "author": "yinxy <yinxy@leoao.com>",
   "private": false,
@@ -24,6 +24,7 @@
     "build:dev": "webpack --config build/webpack.dist.dev.config.js",
     "build:prod": "webpack --config build/webpack.dist.prod.config.js",
     "build": "npm run build:style && npm run build:dev && npm run build:prod",
+    "deploy": "npm run build && npm publish",
     "lint": "eslint --fix --ext .js,.vue src",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test": "npm run lint && npm run unit"
