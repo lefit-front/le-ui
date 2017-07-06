@@ -11,7 +11,9 @@ gulp.task('css', function () {
         .pipe(autoprefixer({
             browsers: ['last 2 versions', 'ie > 8']
         }))
-        .pipe(cleanCSS())
+        .pipe(cleanCSS({
+          inline: ['none']
+        }))
         .pipe(rename('leuv.css'))
         .pipe(gulp.dest('../dist/styles'));
 });

@@ -1,6 +1,6 @@
 {
   "name": "leuv",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "leke vue components",
   "author": "yinxy <yinxy@leoao.com>",
   "private": false,
@@ -23,7 +23,7 @@
     "build:style": "gulp --gulpfile build/build-style.js",
     "build:dev": "webpack --config build/webpack.dist.dev.config.js",
     "build:prod": "webpack --config build/webpack.dist.prod.config.js",
-    "build": "npm run build:dev && npm run build:prod",
+    "build": "npm run build:style && npm run build:dev && npm run build:prod",
     "lint": "eslint --fix --ext .js,.vue src",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test": "npm run lint && npm run unit"
@@ -59,7 +59,7 @@
     "function-bind": "^1.1.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
-    "gulp-clean-css": "^2.0.13",
+    "gulp-clean-css": "^3.0.4",
     "gulp-less": "^3.1.0",
     "gulp-rename": "^1.2.2",
     "html-loader": "^0.3.0",
