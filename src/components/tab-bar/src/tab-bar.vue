@@ -1,12 +1,13 @@
 <template>
   <div :class="`leuv-tab-bar leuv-tab-bar-${type} d-f a-i-c`">
     <template v-for="data in dataList">
-      <div class="leuv-tab-bar-item d-f a-i-c" :class="[{'leuv-is-selected': selected === data.id}]" @click="selectedEvent(data.id, data.to)">
-        <div v-if="data.slot" class="leuv-tab-bar-other" v-html="data.slot"></div>
+      <div class="leuv-tab-bar-item d-f a-i-c" :class="[{'leuv-is-selected': selected === data.id}]" @click="selectedEvent(data.id, data.to)" >
+        <div v-if="data.slot" class="leuv-tab-bar-slot" v-html="data.slot"></div>
+        <div v-if="data.img" class="leuv-tab-bar-img" :style="`backgroundImage: url(${data.img})`"></div>
         <div class="leuv-tab-bar-name">
           {{data.name}}
         </div>
-        <div :class="[{'leuv-is-line': selected === data.id}]" v-show=" selected === data.id "></div>
+        <div v-if="line" :class="[{'leuv-is-line': selected === data.id}]" v-show=" selected === data.id "></div>
       </div>
     </template>
   </div>
@@ -56,6 +57,10 @@ export default {
     },
     dataList: {
       type: Array
+    },
+    line: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
@@ -87,26 +92,23 @@ export default {
     flex-grow: 2;
     flex-shrink: 2;
   }
-  .@{tab}-other {
+  .@{tab}-slot {
     font-family: "DIN-Bold";
     font-size: 24px;
     margin-bottom: 2px;
   }
+  .@{tab}-img {
+    width: 33px;
+    height: 33px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin-bottom: 5px;
+  }
   .@{tab}-name {
     padding:0;
-    font-size: @font-size-h5;
+    font-size: @font-size-small;
     color: @text-color;
-  }
-}
-
-.@{tab}-box{
-  padding: 0 15px;
-  background-color: @head-bg;
-  .@{tab}-item {
-    padding: 6px 0;
-  }
-  .@{tab}-name {
-    opacity: 0.3;
   }
   .leuv-is-line{
     position:absolute;
@@ -119,9 +121,19 @@ export default {
     animation-iteration-count:1;
     -webkit-animation-iteration-count:1; /* Safari 和 Chrome */
   }
+}
+
+.@{tab}-box{
+  padding: 0 15px;
+  background-color: @head-bg;
+  .@{tab}-item {
+    padding: 6px 0;
+  }
+  .@{tab}-name {
+    opacity: 0.3;
+  }
   .leuv-is-selected{
     opacity: 1;
-    font-weight:bold;
     color: @text-color;
   }
 }

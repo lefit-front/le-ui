@@ -9,7 +9,7 @@
 <template>
   <div class="demo-button">
     <h1>tabBar</h1>
-    <leuv-tab-bar style="background-color:#f1f1f1; font-size:29px!important" :dataList="data" select="card"></leuv-tab-bar>
+    <leuv-tab-bar style="background-color:#f1f1f1; font-size:29px!important" :dataList="data" select="card" line></leuv-tab-bar>
     <leuv-tab-bar type="block" :dataList="data"></leuv-tab-bar>
   </div>
 </template>
@@ -27,6 +27,7 @@ export default {
         {
           'id': 'pt',
           'name': '私教课',
+          'img': 'https://cdn.leoao.com/img/%E8%AF%BE%E7%A8%8B@2x.png',
           'to': ''
         },
         {

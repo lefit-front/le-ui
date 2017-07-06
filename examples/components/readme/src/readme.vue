@@ -74,6 +74,10 @@
         this.component = leuvConfig[name]
         console.log(name)
       }
+    },
+
+    mounted() {
+      this.getComponentConfig(this.name)
     }
   };
 </script>
