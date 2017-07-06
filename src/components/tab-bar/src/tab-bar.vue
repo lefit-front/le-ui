@@ -1,8 +1,11 @@
 <template>
-  <div class="leuv-tab-bar-box d-f a-i-c" :style="{'height': height + 'px'}">
+  <div :class="`leuv-tab-bar leuv-tab-bar-${type} d-f a-i-c`">
     <template v-for="data in dataList">
-      <div class="leuv-tab-bar-name d-f a-i-c" :style="{'height': height + 'px'}" :class="[{'leuv-is-selected': selected === data.id}]" @click="selectedEvent(data.id, data.to)">
-        {{data.name}}
+      <div class="leuv-tab-bar-item d-f a-i-c" :class="[{'leuv-is-selected': selected === data.id}]" @click="selectedEvent(data.id, data.to)">
+        <div class="leuv-tab-bar-other" v-html="data.slot"></div>
+        <div class="leuv-tab-bar-name">
+          {{data.name}}
+        </div>
         <div :class="[{'leuv-is-line': selected === data.id}]" v-show=" selected === data.id "></div>
       </div>
     </template>
@@ -16,7 +19,7 @@
  * @param {Object} [dataList] - 展示数据
  * @数据格式
  * [
- *  { 
+ *  {
  *   'id': 'card',     // 内容对应id 唯一标识
  *   'name': '会员卡',  // 展示内容
  *   'to': '/button'   // 跳转路径
@@ -24,7 +27,7 @@
  * ]
  * @param {Number} [height=35] -  tab-bar高度 默认35, 接受 数字
  * @param {String} [select]    -  默认选中tab 不设置没有默认选中 ,接受  数据中的id标识
- * 
+ *
  * @example
  * <tab-bar style="background-color:#f1f1f1;" :dataList="data" height="35" select="card"></tab-bar>
  */
@@ -32,21 +35,27 @@ export default {
   name: 'leuv-tab-bar',
   data () {
     return {
-      selected: this.select 
+      selected: this.select
     }
   },
   props: {
     title: String,
+    type: {
+      type: String,
+      default: 'box',
+      validator (value) {
+        return [
+          'box',
+          'block'
+        ].indexOf(value) > -1
+      }
+    },
     select: {
       type: String,
       default: ''
     },
     dataList: {
       type: Array
-    },
-    height:{
-      type: Number,
-      default: 35
     }
   },
   methods: {
@@ -66,36 +75,63 @@ export default {
 
 <style lang="less" scoped>
 @import "../../../styles/index.less";
-@msgbox: leuv-tab-bar;
-.@{msgbox}-box{
-  padding:0 15px;
+@tab: leuv-tab-bar;
+.@{tab} {
+  display: flex;
+  justify-content: space-between;
+  .@{tab}-item {
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .@{tab}-other {
+    font-family: "DIN-Bold";
+    font-size: 24px;
+  }
+  .@{tab}-name {
+    padding:0;
+    font-size: @font-size-h5;
+    color: @text-color;
+  }
+}
+
+.@{tab}-box{
+  padding: 0 15px;
   background-color: @head-bg;
-  background-color:inherit;
+  .@{tab}-item {
+    padding: 6px 0;
+  }
+  .@{tab}-name {
+    opacity: 0.3;
+  }
+  .leuv-is-line{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:2px;
+    background-color: @text-color;
+    animation: mymove 1s;
+    -webkit-animation: mymove 1s;
+    animation-iteration-count:1;
+    -webkit-animation-iteration-count:1; /* Safari 和 Chrome */
+  }
+  .leuv-is-selected{
+    opacity: 1;
+    font-weight:bold;
+    color: @text-color;
+  }
 }
-.@{msgbox}-name{
-  padding:0;
-  font-size: @font-size-h5;
-  color: @text-color;
-  margin-right:30px;
-  opacity: 0.3;
-  position:relative;
+
+.@{tab}-block {
+  background-color: @body-background;
+  padding: 15px 5px;
+  border-bottom: 1px solid @border-color-thin;
+  .@{tab}-name {
+    font-size: @font-size-h6;
+  }
 }
-.leuv-is-selected{
-  opacity: 1;
-  font-weight:bold;
-  color: @text-color;
-}
-.leuv-is-line{
-  position:absolute;
-  bottom:0;
-  width:100%;
-  height:2px;
-  background-color: @text-color;
-  animation: mymove 1s;
-  -webkit-animation: mymove 1s;
-  animation-iteration-count:1;
-  -webkit-animation-iteration-count:1; /* Safari 和 Chrome */
-}
+
 @keyframes mymove
 {
 from {width:20%; opacity:0.1; left:50%; margin-left:-10%;}
