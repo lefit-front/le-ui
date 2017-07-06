@@ -9,12 +9,12 @@ import Checkbox from './components/checkbox';
 import CheckList from './components/check-list';
 import Week from './components/week';
 import Progress from './components/progress';
-import LemoView from './components/view';
+import LeuvView from './components/view';
 import Card from './components/card';
 import Item from './components/item';
 import Rate from './components/rate';
 
-import LemoButton from './components/button';
+import LeuvButton from './components/button';
 import BaseList from './components/base-list';
 import Popup from './components/Popup';
 import TabBar from './components/tab-bar';
@@ -27,8 +27,8 @@ import Picker from './components/picker';
 
 import locale from './locale';
 
-const lemo = {
-  LemoButton,
+const leuv = {
+  LeuvButton,
   Popup,
   MessageBox,
   BaseList,
@@ -39,7 +39,7 @@ const lemo = {
   HandBar,
   Money,
   Progress,
-  LemoView,
+  LeuvView,
   Card,
   Item,
   Rate,
@@ -56,8 +56,8 @@ const install = function (Vue, opts = {}) {
   locale.use(opts.locale);
   locale.i18n(opts.i18n);
 
-  Object.keys(lemo).forEach((key) => {
-    Vue.component(lemo[key].name, lemo[key]);
+  Object.keys(leuv).forEach((key) => {
+    Vue.component(leuv[key].name, leuv[key]);
   });
 
 };
@@ -67,4 +67,4 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }
 
-module.exports = Object.assign(lemo, {install}); // eslint-disable-line no-undef
+module.exports = Object.assign(leuv, {install}); // eslint-disable-line no-undef

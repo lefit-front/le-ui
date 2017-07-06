@@ -20,8 +20,7 @@ module.exports = {
     }
   },
   components: {
-    Readme,
-    Phone
+    Readme
   },
   computed: {
     name: function () {

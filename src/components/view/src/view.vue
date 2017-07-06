@@ -1,13 +1,13 @@
 <template>
-  <div class="lemo-view" :class="shape ? 'lemo-view-' + shape : ''" :style="`width: ${width}px; height: ${height}px`">
-    <div v-if="defaultImg && defaultShow" class="lemo-view-default" :class="{'lemo-view-hide': ready}" :style="`backgroundImage: url(${defaultImg})`"></div>
-    <img v-show="ready" class="lemo-view-img" :class="[{'lemo-view-show': fade && ready}, {'lemo-view-cover': cover}]" :src="src" @load="handleImgReady"/>
+  <div class="leuv-view" :class="shape ? 'leuv-view-' + shape : ''" :style="`width: ${width}px; height: ${height}px`">
+    <div v-if="defaultImg && defaultShow" class="leuv-view-default" :class="{'leuv-view-hide': ready}" :style="`backgroundImage: url(${defaultImg})`"></div>
+    <img v-show="ready" class="leuv-view-img" :class="[{'leuv-view-show': fade && ready}, {'leuv-view-cover': cover}]" :src="src" @load="handleImgReady"/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'lemo-view',
+  name: 'leuv-view',
 
   props: {
     src: {
@@ -69,7 +69,7 @@ export default {
 
 <style lang="less" scoped>
 @import "../../../styles/index.less";
-@View: lemo-view;
+@View: leuv-view;
 
 @keyframes hide-to-show {
   0% {

@@ -43,7 +43,7 @@
 </template>
 
 <script type="text/babel">
-  import lemoConfig from '../../../../src/config'
+  import leuvConfig from '../../../../src/config'
   import '../readme.css'
 
   export default {
@@ -71,7 +71,7 @@
 
     methods: {
       getComponentConfig (name) {
-        this.component = lemoConfig[name]
+        this.component = leuvConfig[name]
         console.log(name)
       }
     }

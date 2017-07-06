@@ -1,16 +1,16 @@
 <template>
-  <div class="lemo-item">
-    <LemoView v-if="img" class="lemo-item-img" :src="img" width="60" height="60" :cover="true"/>
-    <div class="lemo-item-info">
-      <div class="lemo-item-name">
+  <div class="leuv-item">
+    <LeuvView v-if="img" class="leuv-item-img" :src="img" width="60" height="60" :cover="true"/>
+    <div class="leuv-item-info">
+      <div class="leuv-item-name">
         {{name}}
       </div>
-      <div class="lemo-item-content clamp-2">
+      <div class="leuv-item-content clamp-2">
         {{content}}
       </div>
     </div>
-    <div class="lemo-item-opt" @click="handleClickMore">
-      <span class="lemo-item-more">{{more}}</span>
+    <div class="leuv-item-opt" @click="handleClickMore">
+      <span class="leuv-item-more">{{more}}</span>
       <Icon type="icon_weizhi"/>
     </div>
   </div>
@@ -18,12 +18,12 @@
 
 <script>
 import Icon from '../../icon';
-import LemoView from '../../view';
+import LeuvView from '../../view';
 export default {
-  name: 'lemo-item',
+  name: 'leuv-item',
   components: {
     Icon,
-    LemoView
+    LeuvView
   },
   props: {
     name: String,
@@ -48,7 +48,7 @@ export default {
 
 <style lang="less" scoped>
 @import "../../../styles/index.less";
-@item: lemo-item;
+@item: leuv-item;
 
 .@{item} {
   display: flex;

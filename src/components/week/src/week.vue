@@ -1,12 +1,12 @@
 <template>
-  <div class="lemo-week">
-    <div class="lemo-week-nav" v-show="Array.isArray(data) && data.length">
+  <div class="leuv-week">
+    <div class="leuv-week-nav" v-show="Array.isArray(data) && data.length">
       <div
-        class="lemo-week-item"
+        class="leuv-week-item"
         v-for="(item, index) in data"
         :class="{'is-selected': curIndex === index}"
         @click="selectDate(item, index)">
-        <div class="lemo-week-item-label">
+        <div class="leuv-week-item-label">
           <p class="title">{{item.name}}</p>
           <p class="content">{{item.content}}</p>
         </div>
@@ -16,7 +16,7 @@
 </template>
 <script>
 export default {
-  name: 'lemo-week',
+  name: 'leuv-week',
   props: {
     data: {
       type: Array,
@@ -54,7 +54,7 @@ export default {
 </script>
 <style lang="less" scoped>
 @import "../../../styles/index.less";
-@week: lemo-week;
+@week: leuv-week;
 
 .@{week} {
   .@{week}-nav {

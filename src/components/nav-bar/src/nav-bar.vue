@@ -1,15 +1,15 @@
 <template>
-  <div class="lemo-nav-bar-box d-f" :style="{'height': height + 'px'}">
+  <div class="leuv-nav-bar-box d-f" :style="{'height': height + 'px'}">
     <template v-for="(data, index) in dataList">
       <div class="j-c-c d-f a-i-c" :style="{'width':length + '%'}" @click="selectedEvent(data.id, data.to)">
-        <div class="lemo-nav-bar-nav" :class="[{'lemo-nav-bar-border': index !== 0, 'lemo-nav-bar-selected': selected === data.id}]">{{data.name}}</div>
+        <div class="leuv-nav-bar-nav" :class="[{'leuv-nav-bar-border': index !== 0, 'leuv-nav-bar-selected': selected === data.id}]">{{data.name}}</div>
       </div>
     </template>
   </div>
 </template>
 <script>
 /**
- * lemo-header
+ * leuv-header
  * @module components/nav-bar
  * @desc 导航栏
  * @param {Object} [dataList] - 展示数据
@@ -28,7 +28,7 @@
  * <nav-bar :height="45" style="background:#f1f1f1" :dataList="data" select="bl"></nav-bar>
  */
 export default {
-  name: 'lemo-nav-bar',
+  name: 'leuv-nav-bar',
   data () {
     return {
       selected: this.select
@@ -70,7 +70,7 @@ export default {
 
 <style lang="less" scoped>
 @import "../../../styles/index.less";
-@msgbox: lemo-nav-bar;
+@msgbox: leuv-nav-bar;
 .@{msgbox}-box{
   width:100%;
   padding:0;

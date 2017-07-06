@@ -1,13 +1,13 @@
 <template>
   <div>
-    <lemo-check-list
+    <leuv-check-list
       class="demo-radio-list"
       v-model="value"
       :title="`${title}单选`"
       :options="options"
       :type="'radio'"
       @getValue="handleChangeValue" />
-    <lemo-check-list
+    <leuv-check-list
       class="demo-checkbox-list"
       v-model="value2"
       :title="`${title}多选`"

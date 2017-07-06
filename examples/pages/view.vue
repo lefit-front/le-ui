@@ -1,6 +1,6 @@
 <template>
   <div class="demo-view">
-    <lemo-view :src="imgSrc" :defaultImg="defaultImg" :width="200" :height="200" shape="round" :fade="true"/>
+    <leuv-view :src="imgSrc" :defaultImg="defaultImg" :width="200" :height="200" shape="round" :fade="true"/>
   </div>
 </template>
 <script>

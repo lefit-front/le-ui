@@ -1,16 +1,16 @@
 <template>
-  <div class="lemo-tag">
-    <div class="lemo-tag-list">
-      <div class="lemo-tag-item" v-for="(tag, index) in data">
-        <span class="lemo-tag-name">{{tag.name}}</span>
-        <span v-if="tag.amount" class="lemo-tag-num">{{tag.amount}}</span>
+  <div class="leuv-tag">
+    <div class="leuv-tag-list">
+      <div class="leuv-tag-item" v-for="(tag, index) in data">
+        <span class="leuv-tag-name">{{tag.name}}</span>
+        <span v-if="tag.amount" class="leuv-tag-num">{{tag.amount}}</span>
       </div>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: 'lemo-tag',
+  name: 'leuv-tag',
   props: {
     data: {
       type: Array,
@@ -22,7 +22,7 @@ export default {
 <style lang="less" scoped>
 @import "../../styles/index.less";
 
-@tag: lemo-tag;
+@tag: leuv-tag;
 .@{tag} {
   overflow: hidden;
   .@{tag}-list {

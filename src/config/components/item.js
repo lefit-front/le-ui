@@ -1,7 +1,7 @@
 export default {
   file: 'item',
   name: 'Item',
-  class: 'lemo-item',
+  class: 'leuv-item',
   describe: '店铺列表组件',
   props: [
     {

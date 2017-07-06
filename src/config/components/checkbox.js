@@ -1,7 +1,7 @@
 export default {
   file: 'checkbox',
   name: 'Checkbox',
-  class: 'lemo-checkbox',
+  class: 'leuv-checkbox',
   describe: '多选框组件',
   props: [
     {

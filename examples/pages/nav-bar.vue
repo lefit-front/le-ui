@@ -9,7 +9,7 @@
 <template>
   <div class="demo-button">
     <h1>NavBar</h1>
-    <lemo-nav-bar :height="45" style="background:#f1f1f1" :dataList="data" select="bl"></lemo-nav-bar>
+    <leuv-nav-bar :height="45" style="background:#f1f1f1" :dataList="data" select="bl"></leuv-nav-bar>
   </div>
 </template>
 <script>

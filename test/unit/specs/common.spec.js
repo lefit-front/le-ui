@@ -1,8 +1,8 @@
 import { mount } from 'avoriaz';
-import lemo from '../../../src';
+import leuv from '../../../src';
 import config from '../../../src/config'
 
-describe('lemo components test', () => {
+describe('leuv components test', () => {
   let keys = Object.keys(config)
   keys.map((key, index) => {
     let props = {}
@@ -10,7 +10,7 @@ describe('lemo components test', () => {
       config[key].props.map((prop, index) => {
         props[prop.name] = prop.required ? prop.example : prop.default
       })
-      const wrapper = mount(lemo[key], {
+      const wrapper = mount(leuv[key], {
         propsData: props
       });
       // console.log(config[key].name);

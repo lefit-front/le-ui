@@ -1,6 +1,6 @@
-import LemoView from './components/view';
+import LeuvView from './components/view';
 import Card from './components/card';
-import LemoButton from './components/button';
+import LeuvButton from './components/button';
 import Icon from './components/icon';
 // import MessageBox from './components/message-box';
 import Tag from './components/tag';
@@ -14,9 +14,9 @@ import Rate from './components/rate';
 
 
 const config = {
-  LemoView: LemoView,
+  LeuvView: LeuvView,
   Card: Card,
-  LemoButton: LemoButton,
+  LeuvButton: LeuvButton,
   Icon: Icon,
   // MessageBox: MessageBox,
   Tag: Tag,

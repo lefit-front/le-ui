@@ -1,7 +1,7 @@
 export default {
   file: 'button',
-  name: 'LemoButton',
-  class: 'lemo-button',
+  name: 'LeuvButton',
+  class: 'leuv-button',
   describe: '按钮组件',
   props: [
     {

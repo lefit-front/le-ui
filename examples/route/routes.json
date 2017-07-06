@@ -9,7 +9,7 @@
       },
       {
         "path": "/button",
-        "name": "LemoButton",
+        "name": "LeuvButton",
         "icon": "button"
       },
       {
@@ -69,7 +69,7 @@
       },
 	    {
         "path": "/view",
-        "name": "LemoView",
+        "name": "LeuvView",
         "icon": "view"
       },
 	    {

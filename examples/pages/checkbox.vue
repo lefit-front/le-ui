@@ -1,6 +1,6 @@
 <template>
   <div class="demo-checkbox">
-    <lemo-checkbox :options="options" @change="handleSelect"/>
+    <leuv-checkbox :options="options" @change="handleSelect"/>
   </div>
 </template>
 

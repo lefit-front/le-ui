@@ -1,7 +1,7 @@
 <template>
   <div>
     <input type="number" placeholder="输入日期" v-model.number="day" />
-    <lemo-week class="demo-week" :active="day" :data="data" v-on:select="handleSelectItem"/>
+    <leuv-week class="demo-week" :active="day" :data="data" v-on:select="handleSelectItem"/>
   </div>
 </template>
 <script>

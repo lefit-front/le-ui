@@ -1,19 +1,19 @@
 <template>
-  <div class="lemo-hand-bar-box d-f" :style="{'height': height + 'px'}">
+  <div class="leuv-hand-bar-box d-f" :style="{'height': height + 'px'}">
     <div class="d-f a-i-c" @click="positionEventFun">
       <Icon type="icon_didian_x"></Icon>
-      <div class="lemo-hand-bar-title">{{position}}</div>
+      <div class="leuv-hand-bar-title">{{position}}</div>
       <Icon type="xiangshangsanjiaoshouqi"></Icon>
     </div>
-    <div class="d-f a-i-c lemo-hand-bar-rightBox" @click="lessonEventFun">
-      <div class="lemo-hand-bar-type">{{lesson}}</div>
+    <div class="d-f a-i-c leuv-hand-bar-rightBox" @click="lessonEventFun">
+      <div class="leuv-hand-bar-type">{{lesson}}</div>
       <Icon type="xiangshangsanjiaoshouqi"></Icon>
     </div>
   </div>
 </template>
 <script>
 /**
- * lemo-header
+ * leuv-header
  * @module components/hand-bar
  * @desc 导航栏
 
@@ -28,7 +28,7 @@
  */
 import Icon from '../../icon';
 export default {
-  name: 'lemo-hand-bar',
+  name: 'leuv-hand-bar',
   components: {
     Icon
   },
@@ -55,7 +55,7 @@ export default {
 
 <style lang="less" scoped>
 @import "../../../styles/index.less";
-@msgbox: lemo-hand-bar;
+@msgbox: leuv-hand-bar;
 .@{msgbox}-box{
   padding:0 15px;
   margin:0;

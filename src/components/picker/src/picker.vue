@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div class="lemo-picker-box"
+    <div class="leuv-picker-box"
         :class="[{
-          'lemo-picker-show': show === 'block',
-          'lemo-picker-hide': show === 'none'
+          'leuv-picker-show': show === 'block',
+          'leuv-picker-hide': show === 'none'
         }]">
-      <div class="lemo-picker-head d-f j-c-s-b a-i-c">
-        <span class="lemo-picker-head-cancel" @click="cancelEventFun">取消</span>
-        <span class="lemo-picker-head-title">{{title}}</span>
-        <span class="lemo-picker-head-submit" @click="submitEventFun">确定</span>
+      <div class="leuv-picker-head d-f j-c-s-b a-i-c">
+        <span class="leuv-picker-head-cancel" @click="cancelEventFun">取消</span>
+        <span class="leuv-picker-head-title">{{title}}</span>
+        <span class="leuv-picker-head-submit" @click="submitEventFun">确定</span>
       </div>
 
       <div class="picker"
@@ -24,15 +24,15 @@
 
     </div>
 
-    <div class="lemo-picker-shadow" @click="cancelEventFun" v-show="show === 'block'"></div>
+    <div class="leuv-picker-shadow" @click="cancelEventFun" v-show="show === 'block'"></div>
   </div>
 </template>
 
 <script type="text/babel">
   /*eslint-env node*/
   /**
-  * lemo-header
-  * @module components/lemo-picker
+  * leuv-header
+  * @module components/leuv-picker
   * @desc picker
   * @param {Array} [slots] - 数据格式 数据格式参考 mintui ：http://mint-ui.github.io/docs/#/zh-cn2/picker
   * @param {Function} [@change] - 对应change事件
@@ -45,7 +45,7 @@
   *
   */
   export default {
-    name: 'lemo-picker',
+    name: 'leuv-picker',
     componentName: 'picker',
     props: {
       slots: {
@@ -209,7 +209,7 @@
 
 <style lang="less" scoped>
   @import "../../../styles/index.less";
-  @msgbox: lemo-picker;
+  @msgbox: leuv-picker;
   .@{msgbox}-box{
     position:fixed;
     width:100%;

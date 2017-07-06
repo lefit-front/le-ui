@@ -1,7 +1,7 @@
 export default {
   file: 'radio',
   name: 'Radio',
-  class: 'lemo-radio',
+  class: 'leuv-radio',
   describe: '单选框组件',
   props: [
     {

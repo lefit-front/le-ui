@@ -1,13 +1,13 @@
 <template>
   <button
-    class="lemo-button a-i-c j-c-c"
-    :class="['lemo-button-' + type, 'lemo-size-' + size, {
+    class="leuv-button a-i-c j-c-c"
+    :class="['leuv-button-' + type, 'leuv-size-' + size, {
       'is-disabled': disabled
     }]"
     :disabled="isDisabled"
     @click="handleClick"
     >
-    <div class="lemo-loading" v-if="loading === 'block'"
+    <div class="leuv-loading" v-if="loading === 'block'"
       :style="{
       'border-top-color': loadingColor,
       'border-left-color': loadingColor,
@@ -16,13 +16,13 @@
       'width': loadingSize + 'px'
       }"
     ></div>
-    <label class="lemo-button-text"><slot></slot></label>
+    <label class="leuv-button-text"><slot></slot></label>
   </button>
 </template>
 <script>
 /**
  * le-header
- * @module components/lemo-button
+ * @module components/leuv-button
  * @desc 按钮
  * @param {string} [type=primary] - 显示类型，接受 primary, default, plain, shadow
  * @param {boolean} [disabled=false] - 禁用
@@ -33,11 +33,11 @@
  * @param {slot} - 显示文本
  *
  * @example
- * <lemo-button type="primary" size="normal" :loading="loading" loading-color="yellow" :loading-size="11" @click="saveBtnEvent">保存</lemo-button>
+ * <leuv-button type="primary" size="normal" :loading="loading" loading-color="yellow" :loading-size="11" @click="saveBtnEvent">保存</leuv-button>
  *                                                  loading block显示  none隐藏
  */
 export default {
-  name: 'lemo-button',
+  name: 'leuv-button',
   computed: {
     isDisabled () {
       if (this.disabled === true) {
@@ -107,7 +107,7 @@ export default {
 <style lang="less" scoped>
 @import "../../../styles/index.less";
 /* button统一样式 */
-@button: lemo-button;
+@button: leuv-button;
 .@{button} {
   font-weight: @btn-font-weight;
   appearance: none;
@@ -128,7 +128,7 @@ export default {
   display: flex;         /* 新版本语法: Opera 12.1, Firefox 22+ */
 
   /* loging */
-  .lemo-loading{
+  .leuv-loading{
     animation: button-loading-rotate 0.8s infinite linear;
     border: 2px solid transparent;
     border-radius: 50%;
@@ -138,16 +138,16 @@ export default {
 
 
 /* size */
-.lemo-size-large{
+.leuv-size-large{
   width: 100%;
   font-size: @btn-font-size-large;
   padding: @btn-padding-large;
 }
-.lemo-size-normal{
+.leuv-size-normal{
   font-size: @btn-font-size;
   padding: @btn-padding-base;
 }
-.lemo-size-small{
+.leuv-size-small{
   border-radius: @btn-border-radius-small;
   display: inline-block;
   font-size: @btn-font-size-small;

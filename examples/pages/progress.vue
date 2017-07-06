@@ -1,6 +1,6 @@
 <template>
   <div>
-    <lemo-progress class="demo-progress" :percentage="percentage" :animation="true" :endColor="endColor" />
+    <leuv-progress class="demo-progress" :percentage="percentage" :animation="true" :endColor="endColor" />
   </div>
 </template>
 <script>

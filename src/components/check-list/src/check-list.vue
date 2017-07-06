@@ -1,6 +1,6 @@
 <template>
-  <div class="lemo-check-list">
-    <label class="lemo-check-list-title" v-text="title"></label>
+  <div class="leuv-check-list">
+    <label class="leuv-check-list-title" v-text="title"></label>
     <Radio v-if="type === 'radio'" :options="options" v-on:change="handleSelectRadio"/>
     <Checkbox v-if="type === 'checkbox'" :options="options" @change="handleSelectCheckbox"/>
   </div>
@@ -10,7 +10,7 @@
 import Radio from '../../radio';
 import Checkbox from '../../checkbox';
 export default {
-  name: 'lemo-check-list',
+  name: 'leuv-check-list',
   components: {
     Radio,
     Checkbox
@@ -53,7 +53,7 @@ export default {
 
 <style lang="less" scoped>
 @import "../../../styles/index.less";
-@group: lemo-check-list;
+@group: leuv-check-list;
 .@{group} {
   .@{group}-title {
     font-size: @font-size-h3;

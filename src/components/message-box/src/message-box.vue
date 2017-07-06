@@ -1,20 +1,20 @@
 <template>
-  <div class="lemo-msgbox-wrapper">
+  <div class="leuv-msgbox-wrapper">
     <transition name="msgbox-bounce">
-      <div class="lemo-msgbox" v-show="value">
-        <div class="lemo-msgbox-header" v-if="title !== ''">
-          <div class="lemo-msgbox-title">{{ title }}</div>
+      <div class="leuv-msgbox" v-show="value">
+        <div class="leuv-msgbox-header" v-if="title !== ''">
+          <div class="leuv-msgbox-title">{{ title }}</div>
         </div>
-        <div class="lemo-msgbox-content" v-if="message !== ''">
-          <div class="lemo-msgbox-message" v-html="message"></div>
-          <div class="lemo-msgbox-input" v-show="showInput">
+        <div class="leuv-msgbox-content" v-if="message !== ''">
+          <div class="leuv-msgbox-message" v-html="message"></div>
+          <div class="leuv-msgbox-input" v-show="showInput">
             <input v-model="inputValue" :placeholder="inputPlaceholder" ref="input">
-            <div class="lemo-msgbox-errormsg" :style="{ visibility: !!editorErrorMessage ? 'visible' : 'hidden' }">{{ editorErrorMessage }}</div>
+            <div class="leuv-msgbox-errormsg" :style="{ visibility: !!editorErrorMessage ? 'visible' : 'hidden' }">{{ editorErrorMessage }}</div>
           </div>
         </div>
-        <div class="lemo-msgbox-btns">
-          <LemoButton :class="[ cancelButtonClasses ]" type="plain" v-show="showCancelButton" @click="handleAction('cancel')">{{ cancelButtonText }}</LemoButton>
-          <LemoButton :class="[ confirmButtonClasses ]" :size="showCancelButton ? 'normal' : 'large'" v-show="showConfirmButton" @click="handleAction('confirm')">{{ confirmButtonText }}</LemoButton>
+        <div class="leuv-msgbox-btns">
+          <LeuvButton :class="[ cancelButtonClasses ]" type="plain" v-show="showCancelButton" @click="handleAction('cancel')">{{ cancelButtonText }}</LeuvButton>
+          <LeuvButton :class="[ confirmButtonClasses ]" :size="showCancelButton ? 'normal' : 'large'" v-show="showConfirmButton" @click="handleAction('confirm')">{{ confirmButtonText }}</LeuvButton>
         </div>
       </div>
     </transition>
@@ -25,14 +25,14 @@
   let CONFIRM_TEXT = '确定';
   let CANCEL_TEXT = '取消';
 
-  import LemoButton from '../../button';
+  import LeuvButton from '../../button';
   import Popup from '../../../utils/popup';
 
   export default {
-    name: 'lemo-message-box',
+    name: 'leuv-message-box',
     mixins: [ Popup ],
     components: {
-      LemoButton
+      LeuvButton
     },
     props: {
       modal: {
@@ -60,16 +60,16 @@
 
     computed: {
       confirmButtonClasses() {
-        let classes = 'lemo-msgbox-btn lemo-msgbox-confirm ' + this.confirmButtonClass;
+        let classes = 'leuv-msgbox-btn leuv-msgbox-confirm ' + this.confirmButtonClass;
         if (this.confirmButtonHighlight) {
-          classes += ' lemo-msgbox-confirm-highlight';
+          classes += ' leuv-msgbox-confirm-highlight';
         }
         return classes;
       },
       cancelButtonClasses() {
-        let classes = 'lemo-msgbox-btn lemo-msgbox-cancel ' + this.cancelButtonClass;
+        let classes = 'leuv-msgbox-btn leuv-msgbox-cancel ' + this.cancelButtonClass;
         if (this.cancelButtonHighlight) {
-          classes += ' lemo-msgbox-cancel-highlight';
+          classes += ' leuv-msgbox-cancel-highlight';
         }
         return classes;
       }
@@ -192,7 +192,7 @@
 <style lang="less" scoped>
   @import "../../../styles/index.less";
   @import "../../popup/src/popup.less";
-  @msgbox: lemo-msgbox;
+  @msgbox: leuv-msgbox;
   @padding: 25px;
   @btn-space: 8px;
   .@{msgbox} {

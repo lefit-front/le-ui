@@ -1,7 +1,7 @@
 export default {
   file: 'icon',
   name: 'Icon',
-  class: 'lemo-icon',
+  class: 'leuv-icon',
   describe: '图片容器组件',
   props: [
     {

@@ -1,7 +1,7 @@
 export default {
   file: 'card',
   name: 'Card',
-  class: 'lemo-card',
+  class: 'leuv-card',
   describe: '卡片组件，展示信息',
   props: [
     {

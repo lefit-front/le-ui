@@ -1,20 +1,20 @@
 <template>
-  <div class="lemo-radio">
-    <label class="lemo-radio-item" slot="title" v-for="(option, index) in options">
+  <div class="leuv-radio">
+    <label class="leuv-radio-item" slot="title" v-for="(option, index) in options">
       <input
-        class="lemo-radio-input"
+        class="leuv-radio-input"
         type="radio"
         v-model.lazy="value"
         :disabled="option.disabled"
         :value="option.value || option">
-      <span class="lemo-radio-label" v-text="option.label || option"></span>
+      <span class="leuv-radio-label" v-text="option.label || option"></span>
     </label>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'lemo-radio',
+  name: 'leuv-radio',
 
   props: {
     options: {
@@ -39,7 +39,7 @@ export default {
 
 <style lang="less" scoped>
 @import "../../../styles/index.less";
-@radio: lemo-radio;
+@radio: leuv-radio;
 
 .@{radio} {
   display: flex;

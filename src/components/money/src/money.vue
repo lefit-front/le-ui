@@ -1,12 +1,12 @@
 <template>
-  <div class="lemo-money-box" :style="{'color': color}" :class="[{'lemo-money-bold': bold}]">
+  <div class="leuv-money-box" :style="{'color': color}" :class="[{'leuv-money-bold': bold}]">
     <small :style="{'font-size': setMoneyIconSize}">{{moneyIcon}}</small>
     <span :style="{'font-size': setMoneySize}">{{number}}</span>
   </div>
 </template>
 <script>
 /**
- * lemo-header
+ * leuv-header
  * @module components/money
  * @desc money组件 规则 icon是数值的 2/3 大小
  * @param {Number} [number=0]  -  数值大小，接受 数字
@@ -19,7 +19,7 @@
  * <Money :number="number" :size="20" :color="color" moneyIcon="$"></Money>
  */
 export default {
-  name: 'lemo-money',
+  name: 'leuv-money',
   computed: {
     setMoneySize () {
       return parseInt(this.size, 10) + 'px'
@@ -52,7 +52,7 @@ export default {
 
 <style lang="less" scoped>
 @import "../../../styles/index.less";
-@msgbox: lemo-money;
+@msgbox: leuv-money;
 .@{msgbox}-box{
   padding:0;
   margin:0;

@@ -1,7 +1,7 @@
 export default {
   file: 'view',
-  name: 'LemoView',
-  class: 'lemo-view',
+  name: 'LeuvView',
+  class: 'leuv-view',
   describe: '图片容器组件',
   props: [
     {

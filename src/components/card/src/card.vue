@@ -1,27 +1,27 @@
 <template>
-  <div class="lemo-card">
-    <div class="lemo-card-left">
-      <p class="lemo-card-title">{{title}}</p>
-      <p class="lemo-card-content" :class="{'clamp-2': showMore}">{{content}}</p>
-      <div v-if="hasMore" class="lemo-card-more" @click="showMore = !showMore">
+  <div class="leuv-card">
+    <div class="leuv-card-left">
+      <p class="leuv-card-title">{{title}}</p>
+      <p class="leuv-card-content" :class="{'clamp-2': showMore}">{{content}}</p>
+      <div v-if="hasMore" class="leuv-card-more" @click="showMore = !showMore">
         <Icon v-if="showMore" type="xiangshangsanjiaoshouqi"/>
         <Icon v-if="!showMore" type="xiangxiasanjiaoxialazhankai"/>
       </div>
     </div>
-    <div class="lemo-card-img">
-      <LemoView :src="img" :width="80" :height="80" shape="round" :defaultImg="defaultImg"/>
+    <div class="leuv-card-img">
+      <LeuvView :src="img" :width="80" :height="80" shape="round" :defaultImg="defaultImg"/>
       <Icon v-if="!img" type="logo_lefit"/>
     </div>
   </div>
 </template>
 <script>
 import Icon from '../../icon';
-import LemoView from '../../view';
+import LeuvView from '../../view';
 export default {
-  name: 'lemo-card',
+  name: 'leuv-card',
   components: {
     Icon,
-    LemoView
+    LeuvView
   },
   props: {
     title: String,
@@ -48,7 +48,7 @@ export default {
 <style lang="less" scoped>
 @import "../../../styles/index.less";
 
-@card: lemo-card;
+@card: leuv-card;
 .@{card} {
   display: flex;
   padding: 15px 0;

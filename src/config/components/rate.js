@@ -1,7 +1,7 @@
 export default {
   file: 'rate',
   name: 'Rate',
-  class: 'lemo-rate',
+  class: 'leuv-rate',
   describe: '评分组件',
   props: [
     {

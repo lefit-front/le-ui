@@ -1,10 +1,10 @@
 <template>
-  <div class="lemo-progress">
+  <div class="leuv-progress">
     <slot name="start"></slot>
-    <div class="lemo-progress-content">
-      <div class="lemo-progress-runway" :style="{ height: height + 'px' }"></div>
-      <div class="lemo-progress-progress" :style="{ width: percentage + '%', height: height + 'px' }">
-        <div class="lemo-progress-line" :class="{'lemo-progress-animation': animation}" :style="{ background: endColor ? `linear-gradient(to right, ${color} 0%, ${endColor} 100%)` : color }"></div>
+    <div class="leuv-progress-content">
+      <div class="leuv-progress-runway" :style="{ height: height + 'px' }"></div>
+      <div class="leuv-progress-progress" :style="{ width: percentage + '%', height: height + 'px' }">
+        <div class="leuv-progress-line" :class="{'leuv-progress-animation': animation}" :style="{ background: endColor ? `linear-gradient(to right, ${color} 0%, ${endColor} 100%)` : color }"></div>
       </div>
     </div>
     <slot name="end"></slot>
@@ -12,7 +12,7 @@
 </template>
 <script>
 export default {
-  name: 'lemo-progress',
+  name: 'leuv-progress',
   props: {
     percentage: {
       type: [Number, String],
@@ -46,7 +46,7 @@ export default {
   }
 }
 
-@progress: lemo-progress;
+@progress: leuv-progress;
 .@{progress} {
   position: relative;
   display: flex;

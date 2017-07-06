@@ -1,6 +1,6 @@
 <!-- 打分的与展示组件 -->
 <template>
-  <div class="lemo-rate">
+  <div class="leuv-rate">
     <a class="le-rater-box"
     v-for="i in max" @click="handleClick(i, true)"
     :class="{'is-active':iValue > i}"
@@ -19,7 +19,7 @@
 <script>
 import Icon from '../../icon';
 export default {
-  name: 'lemo-rate',
+  name: 'leuv-rate',
   components: {
     Icon
   },
@@ -111,7 +111,7 @@ export default {
 
 <style lang="less" scoped>
 @import "../../../styles/index.less";
-@rate: lemo-rate;
+@rate: leuv-rate;
 
 .@{rate} {
   text-align: left;

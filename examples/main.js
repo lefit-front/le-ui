@@ -5,11 +5,11 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './app.vue';
 import routes from './route';
-import Lemo from '../src/index';
+import Leuv from '../src/index';
 import locale from '../src/locale/lang/zh-CN';
 
 Vue.use(VueRouter);
-Vue.use(Lemo, {
+Vue.use(Leuv, {
   locale
 });
 

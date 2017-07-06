@@ -1,12 +1,12 @@
 <template>
-  <div class="lemo-empty-box" :class="[{'lemo-empty-full-screen d-f a-i-c j-c-c f-d-c': full}]">
-    <img class="lemo-empty-img" :src="src" :style="{'width': width + 'px'}">
-    <p class="lemo-empty-text" :style="{'font-size': size + 'px'}">{{text}}</p>
+  <div class="leuv-empty-box" :class="[{'leuv-empty-full-screen d-f a-i-c j-c-c f-d-c': full}]">
+    <img class="leuv-empty-img" :src="src" :style="{'width': width + 'px'}">
+    <p class="leuv-empty-text" :style="{'font-size': size + 'px'}">{{text}}</p>
   </div>
 </template>
 <script>
 /**
- * lemo-header
+ * leuv-header
  * @module components/empty
  * @desc empty 空白页组件
  * @param {String} [src]          -  图片路径
@@ -19,7 +19,7 @@
  * <Empty src="https://cdn.leoao.com/img/%E6%97%A0%E8%A1%8C%E7%A8%8B@3x.png" text="这里是text提示" :width="120" :size="22" full></Empty>
  */
 export default {
-  name: 'lemo-empty',
+  name: 'leuv-empty',
   props: {
     src: {
       type: String,
@@ -47,7 +47,7 @@ export default {
 
 <style lang="less" scoped>
 @import "../../../styles/index.less";
-@msgbox: lemo-empty;
+@msgbox: leuv-empty;
 .@{msgbox}-box{
   text-align: center;
 }
