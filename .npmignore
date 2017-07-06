@@ -2,6 +2,7 @@
 *.md
 *.yml
 build/
+src/
 node_modules/
 test/
 gulpfile.js
