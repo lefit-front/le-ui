@@ -53,7 +53,7 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 @import "../../../styles/index.less";
 @msgbox: leuv-hand-bar;
 .@{msgbox}-box{

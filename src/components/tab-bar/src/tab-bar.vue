@@ -78,7 +78,7 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 @import "../../../styles/index.less";
 @tab: leuv-tab-bar;
 .@{tab} {

@@ -189,7 +189,7 @@
 
 
 
-<style lang="less" scoped>
+<style lang="less">
   @import "../../../styles/index.less";
   @import "../../popup/src/popup.less";
   @msgbox: leuv-msgbox;

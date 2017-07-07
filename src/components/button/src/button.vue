@@ -104,7 +104,7 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 @import "../../../styles/index.less";
 /* button统一样式 */
 @button: leuv-button;

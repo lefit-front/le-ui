@@ -52,7 +52,7 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped>
+<style lang="less">
 @import "../../../styles/index.less";
 @week: leuv-week;
 

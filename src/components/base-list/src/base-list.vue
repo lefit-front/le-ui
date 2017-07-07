@@ -80,7 +80,7 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped>
+<style lang="less">
 @import "../../../styles/index.less";
 .leuv-base-list{
   padding:15px 0;

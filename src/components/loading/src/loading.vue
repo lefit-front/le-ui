@@ -68,7 +68,7 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped>
+<style lang="less">
 @msgbox: leuv-loading;
 .@{msgbox}-box{
 }
