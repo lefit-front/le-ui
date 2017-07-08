@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Phone>
+    <Phone @home="goBack">
       <router-view>
       </router-view>
       <readme v-if="name && name !== 'Home'" :name="name"/>
@@ -32,7 +32,11 @@ module.exports = {
 
   },
   methods: {
-
+    goBack () {
+      this.$router.push({
+        path: 'home'
+      })
+    }
   }
 }
 </script>
