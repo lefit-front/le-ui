@@ -52,7 +52,7 @@ export default {
       }
     },
     select: {
-      type: String,
+      type: [String, Number],
       default: ''
     },
     dataList: {
@@ -91,6 +91,7 @@ export default {
     align-items: center;
     flex-grow: 2;
     flex-shrink: 2;
+    color: @text-color;
   }
   .@{tab}-slot {
     font-family: "DIN-Bold";
@@ -108,7 +109,6 @@ export default {
   .@{tab}-name {
     padding:0;
     font-size: @font-size-small;
-    color: @text-color;
   }
   .leuv-is-line{
     position:absolute;

@@ -1,16 +1,13 @@
 <style>
-.demo-button {
-
-}
-.demo-button button{
-  margin-top:10px;
+.demo-tab-bar .leuv-tab-bar-name {
+  font-size: 15px;
 }
 </style>
 <template>
-  <div class="demo-button">
+  <div class="demo-tab">
     <h1>tabBar</h1>
     <leuv-tab-bar style="background-color:#f1f1f1; font-size:29px!important" :dataList="data" select="card" line></leuv-tab-bar>
-    <leuv-tab-bar type="block" :dataList="data"></leuv-tab-bar>
+    <leuv-tab-bar class="demo-tab-bar" type="block" :dataList="data"></leuv-tab-bar>
   </div>
 </template>
 <script>

@@ -1,18 +1,15 @@
 <template>
   <div class="container">
-    <router-view>
-    </router-view>
-    <readme v-if="name && name !== 'Home'" :name="name"/>
-    <!-- <Phone>
-      <div class="demo-page">
-        hello world
-      </div>
-    </Phone> -->
+    <Phone>
+      <router-view>
+      </router-view>
+      <readme v-if="name && name !== 'Home'" :name="name"/>
+    </Phone>
   </div>
 </template>
 <script>
 import Readme from './components/readme';
-// import Phone from 'vue-phone';
+import Phone from 'vue-phone';
 module.exports = {
   data: function () {
     return {
@@ -20,7 +17,8 @@ module.exports = {
     }
   },
   components: {
-    Readme
+    Readme,
+    Phone
   },
   computed: {
     name: function () {

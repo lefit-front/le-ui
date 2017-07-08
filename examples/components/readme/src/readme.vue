@@ -44,7 +44,6 @@
 
 <script type="text/babel">
   import leuvConfig from '../../../../src/config'
-  import '../readme.css'
 
   export default {
     name: 'components-list',
@@ -82,8 +81,9 @@
   };
 </script>
 
-<style lang="less">
-  .readme-tag {
-    margin-right: 5px;
-  }
+<style lang="less" scoped>
+@import "../readme.css";
+.readme-tag {
+  margin-right: 5px;
+}
 </style>
