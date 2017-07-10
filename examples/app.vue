@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Phone @home="goBack">
+    <Phone class="demo-phone" @home="goBack">
       <router-view>
       </router-view>
       <readme v-if="name && name !== 'Home'" :name="name"/>
@@ -62,6 +62,12 @@ module.exports = {
     i {
       font-size: 24px;
       line-height: 40px;
+    }
+  }
+
+  .demo-phone {
+    .vue-phone-content {
+      padding: 10px 20px;
     }
   }
 </style>
