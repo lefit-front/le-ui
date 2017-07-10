@@ -1,7 +1,7 @@
 <template>
   <div class="demo-button">
     <h1>popup</h1>
-    <leuv-button type="normal" @click="popBottom">向下</leuv-button>
+    <leuv-button type="primary" @click="popBottom">向下</leuv-button>
     <leuv-popup
       v-model="popupBottom"
       position="bottom"
@@ -9,7 +9,7 @@
       >
       我是内容
     </leuv-popup>
-    <leuv-button type="normal" @click="popTop">向上</leuv-button>
+    <leuv-button type="primary" @click="popTop">向上</leuv-button>
     <leuv-popup
       v-model="popupTop"
       position="top"
@@ -18,7 +18,7 @@
       >
       我是内容
     </leuv-popup>
-    <leuv-button type="normal" @click="popCenter">中间</leuv-button>
+    <leuv-button type="primary" @click="popCenter">中间</leuv-button>
     <leuv-popup
       v-model="popupCenter"
       position=""
@@ -27,7 +27,7 @@
       >
       我是内容
     </leuv-popup>
-    <leuv-button type="normal" @click="popRight">向右边</leuv-button>
+    <leuv-button type="primary" @click="popRight">向右边</leuv-button>
     <leuv-popup
       v-model="popupRight"
       position="right"
@@ -36,7 +36,7 @@
       >
       <div class="msg">我是内容</div>
     </leuv-popup>
-    <leuv-button type="normal" @click="popLeft">向左边</leuv-button>
+    <leuv-button type="primary" @click="popLeft">向左边</leuv-button>
     <leuv-popup
       v-model="popupLeft"
       position="left"

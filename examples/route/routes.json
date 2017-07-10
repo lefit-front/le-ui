@@ -24,12 +24,12 @@
       },
       {
         "path": "/baseList",
-        "name": "baseList",
+        "name": "BaseList",
         "icon": "baseList"
       },
       {
         "path": "/tabBar",
-        "name": "tabBar",
+        "name": "TabBar",
         "icon": "tabBar"
       },
       {

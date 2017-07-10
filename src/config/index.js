@@ -11,7 +11,15 @@ import Week from './components/week';
 import Progress from './components/progress';
 import Item from './components/item';
 import Rate from './components/rate';
-
+import Popup from './components/popup';
+import BaseList from './components/base-list';
+import NavBar from './components/nav-bar';
+import HandBar from './components/hand-bar';
+import TabBar from './components/tab-bar';
+import Money from './components/money';
+import Loading from './components/loading';
+import Empty from './components/empty';
+import Picker from './components/picker';
 
 const config = {
   LeuvView: LeuvView,
@@ -26,7 +34,16 @@ const config = {
   Week: Week,
   Progress: Progress,
   Item: Item,
-  Rate: Rate
+  Rate: Rate,
+  Popup: Popup,
+  BaseList: BaseList,
+  NavBar: NavBar,
+  HandBar: HandBar,
+  TabBar: TabBar,
+  Money: Money,
+  Loading: Loading,
+  Empty: Empty,
+  Picker: Picker
 };
 
 export default config
