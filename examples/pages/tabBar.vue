@@ -7,7 +7,7 @@
   <div class="demo-tab">
     <h1>tabBar</h1>
     <leuv-tab-bar class="demo-tab-bar" style="margin-bottom:10px" :dataList="data02" select="card" line @change="changeTab"></leuv-tab-bar>
-    <leuv-tab-bar style="background-color:#f1f1f1; font-size:29px!important" :dataList="data" select="card" line></leuv-tab-bar>
+    <leuv-tab-bar style="background-color:#f1f1f1; font-size:20px" :dataList="data" select="card" line></leuv-tab-bar>
     <leuv-tab-bar class="demo-tab-bar" type="block" :dataList="data03"></leuv-tab-bar>
   </div>
 </template>

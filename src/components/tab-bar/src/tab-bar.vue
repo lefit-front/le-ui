@@ -78,6 +78,7 @@ export default {
 .@{tab} {
   display: flex;
   justify-content: space-between;
+  font-size: @font-size-small;
   .@{tab}-item {
     position:relative;
     display: flex;
@@ -102,7 +103,6 @@ export default {
   }
   .@{tab}-name {
     padding:0;
-    font-size: @font-size-small;
   }
   .leuv-is-line{
     position:absolute;
@@ -136,9 +136,6 @@ export default {
   background-color: @body-background;
   padding: 15px 0;
   border-bottom: 1px solid @border-color-thin;
-  .@{tab}-name {
-    font-size: @font-size-h6;
-  }
 }
 
 @keyframes mymove
