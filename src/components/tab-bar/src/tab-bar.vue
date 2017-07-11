@@ -65,14 +65,8 @@ export default {
   },
   methods: {
     selectedEvent (id, to) {
+      this.$emit('change', id)
       this.selected = id
-      if (to !== '') {
-        this.$router.push({
-          path: to
-        })
-      } else {
-        this.$emit('click')
-      }
     }
   }
 }
