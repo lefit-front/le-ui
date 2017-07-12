@@ -1,13 +1,13 @@
 <template>
   <div :class="`leuv-tab-bar leuv-tab-bar-${type} d-f a-i-c`">
     <template v-for="data in dataList">
-      <div class="leuv-tab-bar-item d-f a-i-c" :class="[{'leuv-is-selected': selected === data.id}]" @click="selectedEvent(data.id, data.to)" >
+      <div class="leuv-tab-bar-item d-f a-i-c" :class="[{'leuv-tab-bar-selected': selected === data.id}]" @click="selectedEvent(data.id, data.to)" >
         <div v-if="data.slot" class="leuv-tab-bar-slot" v-html="data.slot"></div>
         <div v-if="data.img" class="leuv-tab-bar-img" :style="`backgroundImage: url(${data.img})`"></div>
         <div class="leuv-tab-bar-name">
           {{data.name}}
         </div>
-        <div v-if="line" :class="[{'leuv-is-line': selected === data.id}]" v-show=" selected === data.id "></div>
+        <div v-if="line" :class="[{'leuv-tab-bar-line': selected === data.id}]" v-show=" selected === data.id "></div>
       </div>
     </template>
   </div>
@@ -71,92 +71,3 @@ export default {
   }
 }
 </script>
-
-<style lang="less">
-@import "../../../styles/index.less";
-@tab: leuv-tab-bar;
-.@{tab} {
-  display: flex;
-  justify-content: space-between;
-  font-size: @font-size-small;
-  .@{tab}-item {
-    position:relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-grow: 2;
-    flex-shrink: 2;
-    color: @text-color;
-  }
-  .@{tab}-slot {
-    font-family: "DIN-Bold";
-    font-size: 24px;
-    margin-bottom: 2px;
-  }
-  .@{tab}-img {
-    width: 33px;
-    height: 33px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    margin-bottom: 5px;
-  }
-  .@{tab}-name {
-    padding:0;
-  }
-  .leuv-is-line{
-    position:absolute;
-    bottom:0;
-    width:100%;
-    height:2px;
-    background-color: @text-color;
-    animation: mymove 1s;
-    -webkit-animation: mymove 1s;
-    animation-iteration-count:1;
-    -webkit-animation-iteration-count:1; /* Safari 和 Chrome */
-  }
-}
-
-.@{tab}-box{
-  padding: 0 15px;
-  background-color: @head-bg;
-  .@{tab}-item {
-    padding: 6px 0;
-  }
-  .@{tab}-name {
-    opacity: 0.3;
-  }
-  .leuv-is-selected{
-    opacity: 1;
-    color: @text-color;
-  }
-}
-
-.@{tab}-block {
-  background-color: @body-background;
-  padding: 15px 0;
-  border-bottom: 1px solid @border-color-thin;
-}
-
-@keyframes mymove
-{
-from {width:20%; opacity:0.1; left:50%; margin-left:-10%;}
-to {width:100%;; opacity:1; left:0; margin-left:0;}
-}
-/*flex布局 css兼容*/
-.d-f{
-  display: -webkit-box;  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
-  display: -moz-box;     /* 老版本语法: Firefox (buggy) */
-  display: -ms-flexbox;  /* 混合版本语法: IE 10 */
-  display: -webkit-flex; /* 新版本语法: Chrome 21+ */
-  display: flex;         /* 新版本语法: Opera 12.1, Firefox 22+ */
-}
-/*竖向居中*/
-.a-i-c{
-  align-items:center;
-  -webkit-align-items:center;
-  box-align:center;
-  -moz-box-align:center;
-  -webkit-box-align:center;
-}
-</style>

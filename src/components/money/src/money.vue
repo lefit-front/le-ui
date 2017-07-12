@@ -14,7 +14,7 @@
  * @param {String} [color='']  -  数字和icon颜色， 接受 #开头，yellow, rbga() 三种方式
  * @param {String} [moneyIcon='¥']     -  数值icon，默认'¥'
  * @param {Boolean} [bold=false]     -  字体加粗，接受 true false
- * 
+ *
  * @example
  * <Money :number="number" :size="20" :color="color" moneyIcon="$"></Money>
  */
@@ -49,17 +49,3 @@ export default {
   }
 }
 </script>
-
-<style lang="less">
-@import "../../../styles/index.less";
-@msgbox: leuv-money;
-.@{msgbox}-box{
-  padding:0;
-  margin:0;
-  color: @text-color;
-  font-family: "DIN-Medium";
-}
-.@{msgbox}-bold{
-  font-weight: bold;
-}
-</style>

@@ -13,6 +13,8 @@ Vue.use(Leuv, {
   locale
 });
 
+import '../src/styles/index.less'
+
 // 开启debug模式
 Vue.config.debug = true;
 

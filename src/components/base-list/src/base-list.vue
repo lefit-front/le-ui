@@ -1,6 +1,6 @@
 <template>
   <div class="leuv-base-list d-f a-i-c" @click="toRouter" :class="[{'boder-1px-bottom ': border === 'block'}]">
-    <div class="leuv-title"
+    <div class="leuv-base-list-title"
       :style="{
         'font-size': size+ 'px',
         'color': color

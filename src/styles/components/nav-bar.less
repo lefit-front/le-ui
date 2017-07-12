@@ -1,0 +1,56 @@
+
+@nav-bar: ~"@{css-prefix}nav-bar";
+.@{nav-bar}-box{
+  width:100%;
+  padding:0;
+  margin:0;
+  background-color:@head-bg ;
+  background-color:inherit;
+}
+.@{nav-bar}-nav{
+  width:100%;
+  text-align:center;
+  opacity: 0.6;
+  font-size: 15px;
+  color: @text-color;
+}
+.@{nav-bar}-border{
+  border-left:1px rgba(0, 0, 0, 0.1) solid;
+}
+.@{nav-bar}-selected{
+  opacity: 0.9;
+  font-size: 15px;
+  color: @primary-color;
+}
+/*flex布局 css兼容*/
+.d-f{
+  display: -webkit-box;  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+  display: -moz-box;     /* 老版本语法: Firefox (buggy) */
+  display: -ms-flexbox;  /* 混合版本语法: IE 10 */
+  display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+  display: flex;         /* 新版本语法: Opera 12.1, Firefox 22+ */
+}
+/*竖向居中*/
+.a-i-c{
+  align-items:center;
+  -webkit-align-items:center;
+  box-align:center;
+  -moz-box-align:center;
+  -webkit-box-align:center;
+}
+/*横向 每个项目两侧的间隔相等*/
+.j-c-s-a{
+  -webkit-justify-content:space-around;
+  justify-content:space-around;
+  -moz-box-pack:space-around;
+  -webkit--moz-box-pack:space-around;
+  box-pack:space-around;
+}
+/*横向居中*/
+.j-c-c{
+  -webkit-justify-content:center;
+  justify-content:center;
+  -moz-box-pack:center;
+  -webkit--moz-box-pack:center;
+  box-pack:center;
+}

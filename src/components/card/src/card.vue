@@ -44,36 +44,3 @@ export default {
     }
   }
 };
-</script>
-<style lang="less">
-@import "../../../styles/index.less";
-
-@card: leuv-card;
-.@{card} {
-  display: flex;
-  padding: 15px 0;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  border-bottom: 1px solid @border-color-thin;
-  .@{card}-more {
-    text-align: center;
-    margin-top: 5px;
-  }
-  .@{card}-title {
-    font-size: @font-size-h3;
-    color: #000;
-    margin-bottom: 6px;
-    font-weight: bold;
-  }
-  .@{card}-content {
-    font-size: @font-size-small;
-    color: #6e6e6e;
-    padding-right: 15px;
-  }
-  .@{card}-img {
-    text-align: center;
-    align-self: flex-start;
-  }
-}
-</style>

@@ -50,25 +50,3 @@ export default {
   }
 };
 </script>
-
-<style lang="less">
-@import "../../../styles/index.less";
-@group: leuv-check-list;
-.@{group} {
-  .@{group}-title {
-    font-size: @font-size-h3;
-    margin-bottom: 18px;
-    margin-left: 0;
-    display: block;
-    font-weight: bold;
-    color: @text-color;
-  }
-  &:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-  }
-}
-</style>
