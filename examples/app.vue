@@ -42,7 +42,6 @@ module.exports = {
 </script>
 
 <style lang="less">
-  @import "../src/styles/index.less";
 
   html, body {
     background-color: #fafafa;
