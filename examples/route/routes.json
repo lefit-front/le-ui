@@ -2,7 +2,121 @@
   {
     "title": "JS Components",
     "list": [
-      
+      {
+        "path": "/home",
+        "name": "Home",
+        "icon": "home"
+      },
+      {
+        "path": "/button",
+        "name": "LeuvButton",
+        "icon": "button"
+      },
+      {
+        "path": "/popup",
+        "name": "Popup",
+        "icon": "popup"
+      },
+      {
+        "path": "/message-box",
+        "name": "MessageBox",
+        "icon": "message-box"
+      },
+      {
+        "path": "/baseList",
+        "name": "BaseList",
+        "icon": "baseList"
+      },
+      {
+        "path": "/tabBar",
+        "name": "TabBar",
+        "icon": "tabBar"
+      },
+      {
+        "path": "/icon",
+        "name": "Icon",
+        "icon": "icon"
+      },
+      {
+        "path": "/nav-bar",
+        "name": "NavBar",
+        "icon": "nav-bar"
+      },
+      {
+        "path": "/tag",
+        "name": "Tag",
+        "icon": "tag"
+      },
+      {
+        "path": "/hand-bar",
+        "name": "HandBar",
+        "icon": "hand-bar"
+      },
+      {
+        "path": "/money",
+        "name": "Money",
+        "icon": "money"
+      },
+	    {
+        "path": "/loading",
+        "name": "Loading",
+        "icon": "loading"
+      },
+	    {
+        "path": "/progress",
+        "name": "Progress",
+        "icon": "progress"
+      },
+	    {
+        "path": "/view",
+        "name": "LeuvView",
+        "icon": "view"
+      },
+	    {
+        "path": "/card",
+        "name": "Card",
+        "icon": "card"
+      },
+	    {
+        "path": "/item",
+        "name": "Item",
+        "icon": "item"
+      },
+	    {
+        "path": "/rate",
+        "name": "Rate",
+        "icon": "rate"
+      },
+      {
+        "path": "/radio",
+        "name": "Radio",
+        "icon": "radio"
+      },
+      {
+        "path": "/checkbox",
+        "name": "Checkbox",
+        "icon": "checkbox"
+      },
+      {
+        "path": "/check-list",
+        "name": "CheckList",
+        "icon": "check-list"
+      },
+      {
+        "path": "/empty",
+        "name": "Empty",
+        "icon": "empty"
+      },
+      {
+        "path": "/week",
+        "name": "Week",
+        "icon": "week"
+      },
+      {
+        "path": "/picker",
+        "name": "Picker",
+        "icon": "picker"
+      }
     ]
   }
 ]
