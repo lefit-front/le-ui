@@ -1,7 +1,7 @@
 export default {
   file: 'popup',
-  name: 'leuvPopup',
-  class: 'leuv-popup',
+  name: 'lePopup',
+  class: 'le-popup',
   describe: '弹窗组件',
   props: [
     {

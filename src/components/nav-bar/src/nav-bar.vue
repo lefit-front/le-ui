@@ -1,15 +1,15 @@
 <template>
-  <div class="leuv-nav-bar-box d-f" :style="{'height': height + 'px'}">
+  <div class="le-nav-bar-box d-f" :style="{'height': height + 'px'}">
     <template v-for="(data, index) in dataList">
       <div class="j-c-c d-f a-i-c" :style="{'width':length + '%'}" @click="selectedEvent(data.id, data.to)">
-        <div class="leuv-nav-bar-nav" :class="[{'leuv-nav-bar-border': index !== 0, 'leuv-nav-bar-selected': selected === data.id}]">{{data.name}}</div>
+        <div class="le-nav-bar-nav" :class="[{'le-nav-bar-border': index !== 0, 'le-nav-bar-selected': selected === data.id}]">{{data.name}}</div>
       </div>
     </template>
   </div>
 </template>
 <script>
 /**
- * leuv-header
+ * le-header
  * @module components/nav-bar
  * @desc 导航栏
  * @param {Object} [dataList] - 展示数据
@@ -28,7 +28,7 @@
  * <nav-bar :height="45" style="background:#f1f1f1" :dataList="data" select="bl"></nav-bar>
  */
 export default {
-  name: 'leuv-nav-bar',
+  name: 'le-nav-bar',
   data () {
     return {
       selected: this.select

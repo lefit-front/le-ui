@@ -1,7 +1,7 @@
 export default {
   file: 'message-box',
   name: 'MessageBox',
-  class: 'leuv-message-box',
+  class: 'le-message-box',
   describe: '图片容器组件',
   props: [
     {

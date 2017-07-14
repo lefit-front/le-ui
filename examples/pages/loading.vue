@@ -9,12 +9,12 @@
 <template>
   <div class="demo-button">
     <h3>loading默认</h3>
-    <leuv-loading type="rotate" />
+    <le-loading type="rotate" />
      <h3>loading 设置颜色和大小</h3>
-    <leuv-loading type="triple" loading-color="red" :loading-size="12" />
+    <le-loading type="triple" loading-color="red" :loading-size="12" />
     <h3>loading 设置全屏</h3>
-    <leuv-button @click="loadingEvent">点击查看全屏loading效果</leuv-button>
-    <leuv-loading type="rotate" loading-color="red" :loading-size="22" full v-if="isFull === true" />
+    <le-button @click="loadingEvent">点击查看全屏loading效果</le-button>
+    <le-loading type="rotate" loading-color="red" :loading-size="22" full v-if="isFull === true" />
   </div>
 </template>
 <script>

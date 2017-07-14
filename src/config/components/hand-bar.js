@@ -1,7 +1,7 @@
 export default {
   file: 'hand-bar',
   name: 'HandBar',
-  class: 'leuv-hand-bar',
+  class: 'le-hand-bar',
   describe: '导航组件',
   props: [
     {

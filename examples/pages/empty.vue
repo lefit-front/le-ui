@@ -9,12 +9,12 @@
 <template>
   <div class="demo-empty">
     <h1>Empty 默认</h1>
-    <leuv-empty></leuv-empty>
+    <le-empty></le-empty>
     <h1>Empty 设置img url /text /width /size</h1>
-    <leuv-empty src="https://cdn.leoao.com/img/%E6%97%A0%E8%A1%8C%E7%A8%8B@3x.png" text="这里是text提示" :width="120" :size="22"></leuv-empty>
+    <le-empty src="https://cdn.leoao.com/img/%E6%97%A0%E8%A1%8C%E7%A8%8B@3x.png" text="这里是text提示" :width="120" :size="22"></le-empty>
     <h1>Empty 全屏居中</h1>
-    <leuv-button @click="setFullEvent">点击查看效果</leuv-button>
-    <leuv-empty src="https://cdn.leoao.com/img/%E6%97%A0%E8%A1%8C%E7%A8%8B@3x.png" full v-show="show"></leuv-empty>
+    <le-button @click="setFullEvent">点击查看效果</le-button>
+    <le-empty src="https://cdn.leoao.com/img/%E6%97%A0%E8%A1%8C%E7%A8%8B@3x.png" full v-show="show"></le-empty>
   </div>
 </template>
 <script>

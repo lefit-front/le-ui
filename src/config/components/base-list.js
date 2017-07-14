@@ -1,7 +1,7 @@
 export default {
   file: 'base-list',
   name: 'BaseList',
-  class: 'leuv-base-list',
+  class: 'le-base-list',
   describe: '基础列表',
   props: [
     {

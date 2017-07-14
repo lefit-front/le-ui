@@ -1,2 +1,2 @@
-import LeuvView from './src/view.vue';
-export default LeuvView;
+import LeView from './src/view.vue';
+export default LeView;

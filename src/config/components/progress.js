@@ -1,7 +1,7 @@
 export default {
   file: 'progress',
   name: 'Progress',
-  class: 'leuv-progress',
+  class: 'le-progress',
   describe: '进度条组件',
   props: [
     {

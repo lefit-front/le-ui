@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div class="leuv-picker-box"
+    <div class="le-picker-box"
         :class="[{
-          'leuv-picker-show': show === 'block',
-          'leuv-picker-hide': show === 'none'
+          'le-picker-show': show === 'block',
+          'le-picker-hide': show === 'none'
         }]">
-      <div class="leuv-picker-head d-f j-c-s-b a-i-c">
-        <span class="leuv-picker-head-cancel" @click="cancelEventFun">取消</span>
-        <span class="leuv-picker-head-title">{{title}}</span>
-        <span class="leuv-picker-head-submit" @click="submitEventFun">确定</span>
+      <div class="le-picker-head d-f j-c-s-b a-i-c">
+        <span class="le-picker-head-cancel" @click="cancelEventFun">取消</span>
+        <span class="le-picker-head-title">{{title}}</span>
+        <span class="le-picker-head-submit" @click="submitEventFun">确定</span>
       </div>
 
       <div class="picker"
@@ -24,15 +24,15 @@
 
     </div>
 
-    <div class="leuv-picker-shadow" @click="cancelEventFun" v-show="show === 'block'"></div>
+    <div class="le-picker-shadow" @click="cancelEventFun" v-show="show === 'block'"></div>
   </div>
 </template>
 
 <script type="text/babel">
   /*eslint-env node*/
   /**
-  * leuv-header
-  * @module components/leuv-picker
+  * le-header
+  * @module components/le-picker
   * @desc picker
   * @param {Array} [slots] - 数据格式 数据格式参考 mintui ：http://mint-ui.github.io/docs/#/zh-cn2/picker
   * @param {Function} [@change] - 对应change事件
@@ -45,7 +45,7 @@
   *
   */
   export default {
-    name: 'leuv-picker',
+    name: 'le-picker',
     componentName: 'picker',
     props: {
       slots: {

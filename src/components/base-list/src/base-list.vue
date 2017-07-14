@@ -1,18 +1,18 @@
 <template>
-  <div class="leuv-base-list d-f a-i-c" @click="toRouter" :class="[{'boder-1px-bottom ': border === 'block'}]">
-    <div class="leuv-base-list-title"
+  <div class="le-base-list d-f a-i-c" @click="toRouter" :class="[{'boder-1px-bottom ': border === 'block'}]">
+    <div class="le-base-list-title"
       :style="{
         'font-size': size+ 'px',
         'color': color
       }"
     >{{title}}</div>
-    <div class="leuv-icon-floatRight"
+    <div class="le-icon-floatRight"
       :style="{
         'font-size': size+ 'px',
         'color': color
       }"
     ><slot></slot></div>
-    <Icon type="jiantou_right" class="leuv-icon-floatRight" v-if="isLink"
+    <Icon type="jiantou_right" class="le-icon-floatRight" v-if="isLink"
       :style="{
         'font-size': size+ 'px',
         'color': color
@@ -22,7 +22,7 @@
 </template>
 <script>
 /**
- * leuv-header
+ * le-header
  * @module components/base-list
  * @desc 基础列表
  * @param {string} [title] - 列表title
@@ -40,7 +40,7 @@
  */
 import Icon from '../../icon';
 export default {
-  name: 'leuv-base-list',
+  name: 'le-base-list',
   components: {
     Icon
   },
@@ -82,7 +82,7 @@ export default {
 </script>
 <style lang="less">
 @import "../../../styles/index.less";
-.leuv-base-list{
+.le-base-list{
   padding:15px 0;
 }
 .boder-1px-bottom{
@@ -100,10 +100,10 @@ export default {
   transform-origin: 0 0;
   transform: scaleY(0.5);
 }
-.leuv-icon-floatRight{
+.le-icon-floatRight{
   margin-left:auto;
 }
-.leuv-title{
+.le-title{
   font-size: @font-size-h4;
   color: @text-color;
 }

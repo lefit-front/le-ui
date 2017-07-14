@@ -1,7 +1,7 @@
 import Vue from 'vue';
-import leuv from '../../src/index';
+import le from '../../src/index';
 
-Vue.use(leuv);
+Vue.use(le);
 
 let id = 0;
 

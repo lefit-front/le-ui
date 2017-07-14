@@ -1,6 +1,6 @@
 <template>
   <div>
-    <leuv-tag class="demo-tag" :data="tags" />
+    <le-tag class="demo-tag" :data="tags" />
   </div>
 </template>
 <script>

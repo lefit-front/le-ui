@@ -9,15 +9,15 @@
 <template>
   <div class="demo-money">
     <h3>Money默认</h3>
-    <leuv-money></leuv-money>
+    <le-money></le-money>
     <h3>Money设置大小和数值</h3>
-    <leuv-money :number="number" :size="20" ></leuv-money>
+    <le-money :number="number" :size="20" ></le-money>
     <h3>Money设置大小和数值，设置颜色</h3>
-    <leuv-money :number="number" :size="20" :color="color"></leuv-money>
+    <le-money :number="number" :size="20" :color="color"></le-money>
     <h3>Money修改money Icon</h3>
-    <leuv-money :number="number" :size="20" :color="color" moneyIcon="$"></leuv-money>
+    <le-money :number="number" :size="20" :color="color" moneyIcon="$"></le-money>
     <h3>Money 字体加粗</h3>
-    <leuv-money :number="number" :size="26" :color="color" moneyIcon="$" bold></leuv-money>
+    <le-money :number="number" :size="26" :color="color" moneyIcon="$" bold></le-money>
   </div>
 </template>
 <script>

@@ -1,20 +1,20 @@
 <template>
-  <div :class="`leuv-tab-bar leuv-tab-bar-${type} d-f a-i-c`">
+  <div :class="`le-tab-bar le-tab-bar-${type} d-f a-i-c`">
     <template v-for="data in dataList">
-      <div class="leuv-tab-bar-item d-f a-i-c" :class="[{'leuv-tab-bar-selected': selected === data.id}]" @click="selectedEvent(data.id, data.to)" >
-        <div v-if="data.slot" class="leuv-tab-bar-slot" v-html="data.slot"></div>
-        <div v-if="data.img" class="leuv-tab-bar-img" :style="`backgroundImage: url(${data.img})`"></div>
-        <div class="leuv-tab-bar-name">
+      <div class="le-tab-bar-item d-f a-i-c" :class="[{'le-tab-bar-selected': selected === data.id}]" @click="selectedEvent(data.id, data.to)" >
+        <div v-if="data.slot" class="le-tab-bar-slot" v-html="data.slot"></div>
+        <div v-if="data.img" class="le-tab-bar-img" :style="`backgroundImage: url(${data.img})`"></div>
+        <div class="le-tab-bar-name">
           {{data.name}}
         </div>
-        <div v-if="line" :class="[{'leuv-tab-bar-line': selected === data.id}]" v-show=" selected === data.id "></div>
+        <div v-if="line" :class="[{'le-tab-bar-line': selected === data.id}]" v-show=" selected === data.id "></div>
       </div>
     </template>
   </div>
 </template>
 <script>
 /**
- * leuv-header
+ * le-header
  * @module components/tab-bar
  * @desc tab切换
  * @param {Object} [dataList] - 展示数据
@@ -33,7 +33,7 @@
  * <tab-bar style="background-color:#f1f1f1;" :dataList="data" height="35" select="card"></tab-bar>
  */
 export default {
-  name: 'leuv-tab-bar',
+  name: 'le-tab-bar',
   data () {
     return {
       selected: this.select

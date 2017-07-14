@@ -1,10 +1,10 @@
 <template>
-  <div class="leuv-progress">
+  <div class="le-progress">
     <slot name="start"></slot>
-    <div class="leuv-progress-content">
-      <div class="leuv-progress-runway" :style="{ height: height + 'px' }"></div>
-      <div class="leuv-progress-progress" :style="{ width: percentage + '%', height: height + 'px' }">
-        <div class="leuv-progress-line" :class="{'leuv-progress-animation': animation}" :style="{ background: endColor ? `linear-gradient(to right, ${color} 0%, ${endColor} 100%)` : color }"></div>
+    <div class="le-progress-content">
+      <div class="le-progress-runway" :style="{ height: height + 'px' }"></div>
+      <div class="le-progress-progress" :style="{ width: percentage + '%', height: height + 'px' }">
+        <div class="le-progress-line" :class="{'le-progress-animation': animation}" :style="{ background: endColor ? `linear-gradient(to right, ${color} 0%, ${endColor} 100%)` : color }"></div>
       </div>
     </div>
     <slot name="end"></slot>
@@ -12,7 +12,7 @@
 </template>
 <script>
 export default {
-  name: 'leuv-progress',
+  name: 'le-progress',
   props: {
     percentage: {
       type: [Number, String],

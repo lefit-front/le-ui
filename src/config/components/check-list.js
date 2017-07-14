@@ -4,7 +4,7 @@ import Checkbox from './checkbox';
 export default {
   file: 'check-list',
   name: 'CheckList',
-  class: 'leuv-check-list',
+  class: 'le-check-list',
   describe: '选择器列表组件',
   props: [
     {

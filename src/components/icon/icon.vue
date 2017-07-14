@@ -2,10 +2,10 @@
   <i :class="classes" :style="styles"></i>
 </template>
 <script>
-const prefixCls = 'leuv-icon';
+const prefixCls = 'le-icon';
 
 export default {
-  name: 'leuv-icon',
+  name: 'le-icon',
   props: {
     type: {
       type: String,

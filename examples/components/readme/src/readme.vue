@@ -43,7 +43,7 @@
 </template>
 
 <script type="text/babel">
-  import leuvConfig from '../../../../src/config'
+  import leConfig from '../../../../src/config'
 
   export default {
     name: 'components-list',
@@ -70,7 +70,7 @@
 
     methods: {
       getComponentConfig (name) {
-        this.component = leuvConfig[name]
+        this.component = leConfig[name]
         console.log(name)
       }
     },

@@ -1,6 +1,6 @@
 <!-- 打分的与展示组件 -->
 <template>
-  <div class="leuv-rate">
+  <div class="le-rate">
     <a class="le-rater-box"
     v-for="i in max" @click="handleClick(i, true)"
     :class="{'is-active':iValue > i}"
@@ -19,7 +19,7 @@
 <script>
 import Icon from '../../icon';
 export default {
-  name: 'leuv-rate',
+  name: 'le-rate',
   components: {
     Icon
   },

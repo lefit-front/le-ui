@@ -14,7 +14,7 @@ gulp.task('css', function () {
         .pipe(cleanCSS({
           inline: ['none']
         }))
-        .pipe(rename('leuv.css'))
+        .pipe(rename('le.css'))
         .pipe(gulp.dest('../dist/styles'));
 });
 

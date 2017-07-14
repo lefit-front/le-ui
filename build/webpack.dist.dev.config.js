@@ -12,8 +12,8 @@ module.exports = merge(webpackBaseConfig, {
     output: {
         path: path.resolve(__dirname, '../dist'),
         publicPath: '/dist/',
-        filename: 'leuv.js',
-        library: 'leuv',
+        filename: 'le.js',
+        library: 'le',
         libraryTarget: 'umd',
         umdNamedDefine: true
     },

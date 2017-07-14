@@ -1,7 +1,7 @@
 export default {
   file: 'tag',
   name: 'Tag',
-  class: 'leuv-tag',
+  class: 'le-tag',
   describe: '标签组件',
   props: [
     {

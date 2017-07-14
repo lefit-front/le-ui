@@ -1,7 +1,7 @@
 export default {
   file: 'tab-bar',
   name: 'TabBar',
-  class: 'leuv-tab-bar',
+  class: 'le-tab-bar',
   describe: 'tabBar组件',
   props: [
     {

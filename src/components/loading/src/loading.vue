@@ -1,7 +1,7 @@
 <template>
-  <div class="leuv-loading-box d-f j-c-c a-i-c" :class="[{'leuv-loading-full-screen': full}]">
+  <div class="le-loading-box d-f j-c-c a-i-c" :class="[{'le-loading-full-screen': full}]">
     <div
-      :class="['leuv-loading-' + type]"
+      :class="['le-loading-' + type]"
       :style="{
       'border-top-color': loadingColor,
       'border-left-color': loadingColor,
@@ -11,16 +11,16 @@
       }"
       v-if="type === 'rotate'"
     ></div>
-    <div class="leuv-loading-triple" v-if="type === 'triple'">
-      <div class="leuv-loading-triple-bounce1" :style="bounceStyle"></div>
-      <div class="leuv-loading-triple-bounce2" :style="bounceStyle"></div>
-      <div class="leuv-loading-triple-bounce3" :style="bounceStyle"></div>
+    <div class="le-loading-triple" v-if="type === 'triple'">
+      <div class="le-loading-triple-bounce1" :style="bounceStyle"></div>
+      <div class="le-loading-triple-bounce2" :style="bounceStyle"></div>
+      <div class="le-loading-triple-bounce3" :style="bounceStyle"></div>
     </div>
   </div>
 </template>
 <script>
 /**
- * leuv-header
+ * le-header
  * @module components/loading
  * @desc loading 组件
  * @param {String} [type= 'rotate']          -  loadig 类型 。接受 rotate triple
@@ -32,7 +32,7 @@
  * <Loading type="rotate" loading-color="red" loading-size="28" full></Loading>
  */
 export default {
-  name: 'leuv-loading',
+  name: 'le-loading',
   props: {
     type: {
       type: String,

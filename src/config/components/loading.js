@@ -1,7 +1,7 @@
 export default {
   file: 'loading',
   name: 'Loading',
-  class: 'leuv-loading',
+  class: 'le-loading',
   describe: 'loading组件',
   props: [
     {

@@ -1,7 +1,7 @@
 export default {
   file: 'money',
   name: 'Money',
-  class: 'leuv-money',
+  class: 'le-money',
   describe: 'monen组件',
   props: [
     {

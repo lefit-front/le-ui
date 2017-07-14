@@ -1,8 +1,8 @@
 import { mount } from 'avoriaz';
-import leuv from '../../../src';
+import le from '../../../src';
 import config from '../../../src/config'
 
-describe('leuv components test', () => {
+describe('le components test', () => {
   let keys = Object.keys(config)
   keys.map((key, index) => {
     let props = {}
@@ -10,7 +10,7 @@ describe('leuv components test', () => {
       config[key].props.map((prop, index) => {
         props[prop.name] = prop.required ? prop.example : prop.default
       })
-      const wrapper = mount(leuv[key], {
+      const wrapper = mount(le[key], {
         propsData: props
       });
       // console.log(config[key].name);

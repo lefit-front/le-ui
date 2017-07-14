@@ -1,7 +1,7 @@
 export default {
   file: 'view',
-  name: 'LeuvView',
-  class: 'leuv-view',
+  name: 'LeView',
+  class: 'le-view',
   describe: '图片容器组件',
   props: [
     {

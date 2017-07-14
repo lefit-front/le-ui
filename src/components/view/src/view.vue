@@ -1,13 +1,13 @@
 <template>
-  <div class="leuv-view" :class="shape ? 'leuv-view-' + shape : ''" :style="`width: ${width}px; height: ${height}px`">
-    <div v-if="defaultImg && defaultShow" class="leuv-view-default" :class="{'leuv-view-hide': ready}" :style="`backgroundImage: url(${defaultImg})`"></div>
-    <img v-show="ready" class="leuv-view-img" :class="[{'leuv-view-show': fade && ready}, {'leuv-view-cover': cover}]" :src="src" @load="handleImgReady"/>
+  <div class="le-view" :class="shape ? 'le-view-' + shape : ''" :style="`width: ${width}px; height: ${height}px`">
+    <div v-if="defaultImg && defaultShow" class="le-view-default" :class="{'le-view-hide': ready}" :style="`backgroundImage: url(${defaultImg})`"></div>
+    <img v-show="ready" class="le-view-img" :class="[{'le-view-show': fade && ready}, {'le-view-cover': cover}]" :src="src" @load="handleImgReady"/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'leuv-view',
+  name: 'le-view',
 
   props: {
     src: {

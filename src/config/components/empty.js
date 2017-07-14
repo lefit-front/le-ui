@@ -1,7 +1,7 @@
 export default {
   file: 'empty',
   name: 'Empty',
-  class: 'leuv-empty',
+  class: 'le-empty',
   describe: '空白页组件',
   props: [
     {

@@ -1,7 +1,7 @@
 export default {
   file: 'picker',
   name: 'Picker',
-  class: 'leuv-picker',
+  class: 'le-picker',
   describe: '选择组件',
   props: [
     {

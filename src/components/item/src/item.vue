@@ -1,16 +1,16 @@
 <template>
-  <div class="leuv-item">
-    <LeuvView v-if="img" class="leuv-item-img" :src="img" width="60" height="60" :cover="true"/>
-    <div class="leuv-item-info">
-      <div class="leuv-item-name">
+  <div class="le-item">
+    <LeView v-if="img" class="le-item-img" :src="img" width="60" height="60" :cover="true"/>
+    <div class="le-item-info">
+      <div class="le-item-name">
         {{name}}
       </div>
-      <div class="leuv-item-content clamp-2">
+      <div class="le-item-content clamp-2">
         {{content}}
       </div>
     </div>
-    <div class="leuv-item-opt" @click="handleClickMore">
-      <span class="leuv-item-more">{{more}}</span>
+    <div class="le-item-opt" @click="handleClickMore">
+      <span class="le-item-more">{{more}}</span>
       <Icon type="icon_weizhi"/>
     </div>
   </div>
@@ -18,12 +18,12 @@
 
 <script>
 import Icon from '../../icon';
-import LeuvView from '../../view';
+import LeView from '../../view';
 export default {
-  name: 'leuv-item',
+  name: 'le-item',
   components: {
     Icon,
-    LeuvView
+    LeView
   },
   props: {
     name: String,

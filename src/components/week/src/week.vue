@@ -1,12 +1,12 @@
 <template>
-  <div class="leuv-week">
-    <div class="leuv-week-nav" v-show="Array.isArray(data) && data.length">
+  <div class="le-week">
+    <div class="le-week-nav" v-show="Array.isArray(data) && data.length">
       <div
-        class="leuv-week-item"
+        class="le-week-item"
         v-for="(item, index) in data"
         :class="{'is-selected': curIndex === index}"
         @click="selectDate(item, index)">
-        <div class="leuv-week-item-label">
+        <div class="le-week-item-label">
           <p class="title">{{item.name}}</p>
           <p class="content">{{item.content}}</p>
         </div>
@@ -16,7 +16,7 @@
 </template>
 <script>
 export default {
-  name: 'leuv-week',
+  name: 'le-week',
   props: {
     data: {
       type: Array,

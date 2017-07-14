@@ -1,27 +1,27 @@
 <template>
-  <div class="leuv-card">
-    <div class="leuv-card-left">
-      <p class="leuv-card-title">{{title}}</p>
-      <p class="leuv-card-content" :class="{'clamp-2': showMore}">{{content}}</p>
-      <div v-if="hasMore" class="leuv-card-more" @click="showMore = !showMore">
+  <div class="le-card">
+    <div class="le-card-left">
+      <p class="le-card-title">{{title}}</p>
+      <p class="le-card-content" :class="{'clamp-2': showMore}">{{content}}</p>
+      <div v-if="hasMore" class="le-card-more" @click="showMore = !showMore">
         <Icon v-if="showMore" type="xiangshangsanjiaoshouqi"/>
         <Icon v-if="!showMore" type="xiangxiasanjiaoxialazhankai"/>
       </div>
     </div>
-    <div class="leuv-card-img">
-      <LeuvView :src="img" :width="80" :height="80" shape="round" :defaultImg="defaultImg"/>
+    <div class="le-card-img">
+      <LeView :src="img" :width="80" :height="80" shape="round" :defaultImg="defaultImg"/>
       <Icon v-if="!img" type="logo_lefit"/>
     </div>
   </div>
 </template>
 <script>
 import Icon from '../../icon';
-import LeuvView from '../../view';
+import LeView from '../../view';
 export default {
-  name: 'leuv-card',
+  name: 'le-card',
   components: {
     Icon,
-    LeuvView
+    LeView
   },
   props: {
     title: String,

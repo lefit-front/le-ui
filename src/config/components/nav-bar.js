@@ -1,7 +1,7 @@
 export default {
   file: 'nav-bar',
   name: 'NavBar',
-  class: 'leuv-nav-bar',
+  class: 'le-nav-bar',
   describe: '导航组件',
   props: [
     {

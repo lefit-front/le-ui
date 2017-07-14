@@ -1,6 +1,6 @@
 <template>
   <div class="demo-radio">
-    <leuv-radio :options="options" @change="handleSelect"/>
+    <le-radio :options="options" @change="handleSelect"/>
   </div>
 </template>
 

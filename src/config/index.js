@@ -1,6 +1,6 @@
-import LeuvView from './components/view';
+import LeView from './components/view';
 import Card from './components/card';
-import LeuvButton from './components/button';
+import LeButton from './components/button';
 import Icon from './components/icon';
 // import MessageBox from './components/message-box';
 import Tag from './components/tag';
@@ -22,9 +22,9 @@ import Empty from './components/empty';
 import Picker from './components/picker';
 
 const config = {
-  LeuvView: LeuvView,
+  LeView: LeView,
   Card: Card,
-  LeuvButton: LeuvButton,
+  LeButton: LeButton,
   Icon: Icon,
   // MessageBox: MessageBox,
   Tag: Tag,

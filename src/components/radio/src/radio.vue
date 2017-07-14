@@ -1,20 +1,20 @@
 <template>
-  <div class="leuv-radio">
-    <label class="leuv-radio-item" slot="title" v-for="(option, index) in options">
+  <div class="le-radio">
+    <label class="le-radio-item" slot="title" v-for="(option, index) in options">
       <input
-        class="leuv-radio-input"
+        class="le-radio-input"
         type="radio"
         v-model.lazy="value"
         :disabled="option.disabled"
         :value="option.value || option">
-      <span class="leuv-radio-label" v-text="option.label || option"></span>
+      <span class="le-radio-label" v-text="option.label || option"></span>
     </label>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'leuv-radio',
+  name: 'le-radio',
 
   props: {
     options: {

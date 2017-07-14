@@ -1,19 +1,19 @@
 <template>
-  <div class="leuv-hand-bar-box d-f" :style="{'height': height + 'px'}">
+  <div class="le-hand-bar-box d-f" :style="{'height': height + 'px'}">
     <div class="d-f a-i-c" @click="positionEventFun">
       <Icon type="icon_didian_x"></Icon>
-      <div class="leuv-hand-bar-title">{{position}}</div>
+      <div class="le-hand-bar-title">{{position}}</div>
       <Icon type="xiangshangsanjiaoshouqi"></Icon>
     </div>
-    <div class="d-f a-i-c leuv-hand-bar-rightBox" @click="lessonEventFun">
-      <div class="leuv-hand-bar-type">{{lesson}}</div>
+    <div class="d-f a-i-c le-hand-bar-rightBox" @click="lessonEventFun">
+      <div class="le-hand-bar-type">{{lesson}}</div>
       <Icon type="xiangshangsanjiaoshouqi"></Icon>
     </div>
   </div>
 </template>
 <script>
 /**
- * leuv-header
+ * le-header
  * @module components/hand-bar
  * @desc 导航栏
 
@@ -28,7 +28,7 @@
  */
 import Icon from '../../icon';
 export default {
-  name: 'leuv-hand-bar',
+  name: 'le-hand-bar',
   components: {
     Icon
   },

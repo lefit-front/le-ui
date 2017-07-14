@@ -1,6 +1,6 @@
 <template>
   <div class="demo-rate">
-    <leuv-rate :value="value" :margin="5" disabled @input="handleChange"/>
+    <le-rate :value="value" :margin="5" disabled @input="handleChange"/>
   </div>
 </template>
 <script>

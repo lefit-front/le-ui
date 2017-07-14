@@ -1,7 +1,7 @@
 export default {
   file: 'week',
   name: 'Week',
-  class: 'leuv-week',
+  class: 'le-week',
   describe: '一周日期选择组件',
   props: [
     {

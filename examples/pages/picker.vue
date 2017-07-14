@@ -12,10 +12,10 @@ body{
 <template>
   <div class="demo-button">
     <h1>picker</h1>
-    <leuv-picker :slots="dataList02" @change="onValuesChange" title="选择地址" :cancel="cancel" :submit="submit" :show="show"></leuv-picker>
-    <leuv-button @click="open">打开picker</leuv-button>
-    <leuv-picker :slots="dataList" @change="onAddressChangeThree" title="选择地址" :cancel="cancelThree" :submit="submitThree" :show="showThree" :visible-item-count="5"></leuv-picker>
-    <leuv-button @click="openThree">打开三级联动</leuv-button>
+    <le-picker :slots="dataList02" @change="onValuesChange" title="选择地址" :cancel="cancel" :submit="submit" :show="show"></le-picker>
+    <le-button @click="open">打开picker</le-button>
+    <le-picker :slots="dataList" @change="onAddressChangeThree" title="选择地址" :cancel="cancelThree" :submit="submitThree" :show="showThree" :visible-item-count="5"></le-picker>
+    <le-button @click="openThree">打开三级联动</le-button>
   </div>
 </template>
 <script>

@@ -1,6 +1,6 @@
 <template>
   <transition :name="currentTransition">
-    <div v-show="currentValue" class="leuv-popup" :class="[position ? 'leuv-popup-' + position : '']">
+    <div v-show="currentValue" class="le-popup" :class="[position ? 'le-popup-' + position : '']">
       <slot></slot>
     </div>
   </transition>
@@ -8,7 +8,7 @@
 <script>
 /*eslint-env node*/
 /**
- * leuv-header
+ * le-header
  * @module components/popup
  * @desc 弹出框
  * @param {string} [v-mode] - 控制显示 v-model绑定的值为true显示 false消失
@@ -33,7 +33,7 @@ if (!Vue.prototype.$isServer) {
   require('./popup.less');
 }
 export default {
-  name: 'leuv-popup',
+  name: 'le-popup',
 
   mixins: [Popup],
 

@@ -1,2 +1,2 @@
-import LeuvButton from './src/button.vue';
-export default LeuvButton;
+import LeButton from './src/button.vue';
+export default LeButton;

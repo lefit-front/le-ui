@@ -1,20 +1,20 @@
 <template>
-  <div class="leuv-msgbox-wrapper">
+  <div class="le-msgbox-wrapper">
     <transition name="msgbox-bounce">
-      <div class="leuv-msgbox" v-show="value">
-        <div class="leuv-msgbox-header" v-if="title !== ''">
-          <div class="leuv-msgbox-title">{{ title }}</div>
+      <div class="le-msgbox" v-show="value">
+        <div class="le-msgbox-header" v-if="title !== ''">
+          <div class="le-msgbox-title">{{ title }}</div>
         </div>
-        <div class="leuv-msgbox-content" v-if="message !== ''">
-          <div class="leuv-msgbox-message" v-html="message"></div>
-          <div class="leuv-msgbox-input" v-show="showInput">
+        <div class="le-msgbox-content" v-if="message !== ''">
+          <div class="le-msgbox-message" v-html="message"></div>
+          <div class="le-msgbox-input" v-show="showInput">
             <input v-model="inputValue" :placeholder="inputPlaceholder" ref="input">
-            <div class="leuv-msgbox-errormsg" :style="{ visibility: !!editorErrorMessage ? 'visible' : 'hidden' }">{{ editorErrorMessage }}</div>
+            <div class="le-msgbox-errormsg" :style="{ visibility: !!editorErrorMessage ? 'visible' : 'hidden' }">{{ editorErrorMessage }}</div>
           </div>
         </div>
-        <div class="leuv-msgbox-btns">
-          <LeuvButton :class="[ cancelButtonClasses ]" type="plain" v-show="showCancelButton" @click="handleAction('cancel')">{{ cancelButtonText }}</LeuvButton>
-          <LeuvButton :class="[ confirmButtonClasses ]" :size="showCancelButton ? 'normal' : 'large'" v-show="showConfirmButton" @click="handleAction('confirm')">{{ confirmButtonText }}</LeuvButton>
+        <div class="le-msgbox-btns">
+          <LeButton :class="[ cancelButtonClasses ]" type="plain" v-show="showCancelButton" @click="handleAction('cancel')">{{ cancelButtonText }}</LeButton>
+          <LeButton :class="[ confirmButtonClasses ]" :size="showCancelButton ? 'normal' : 'large'" v-show="showConfirmButton" @click="handleAction('confirm')">{{ confirmButtonText }}</LeButton>
         </div>
       </div>
     </transition>
@@ -25,14 +25,14 @@
   let CONFIRM_TEXT = '确定';
   let CANCEL_TEXT = '取消';
 
-  import LeuvButton from '../../button';
+  import LeButton from '../../button';
   import Popup from '../../../utils/popup';
 
   export default {
-    name: 'leuv-message-box',
+    name: 'le-message-box',
     mixins: [ Popup ],
     components: {
-      LeuvButton
+      LeButton
     },
     props: {
       modal: {
@@ -60,16 +60,16 @@
 
     computed: {
       confirmButtonClasses() {
-        let classes = 'leuv-msgbox-btn leuv-msgbox-confirm ' + this.confirmButtonClass;
+        let classes = 'le-msgbox-btn le-msgbox-confirm ' + this.confirmButtonClass;
         if (this.confirmButtonHighlight) {
-          classes += ' leuv-msgbox-confirm-highlight';
+          classes += ' le-msgbox-confirm-highlight';
         }
         return classes;
       },
       cancelButtonClasses() {
-        let classes = 'leuv-msgbox-btn leuv-msgbox-cancel ' + this.cancelButtonClass;
+        let classes = 'le-msgbox-btn le-msgbox-cancel ' + this.cancelButtonClass;
         if (this.cancelButtonHighlight) {
-          classes += ' leuv-msgbox-cancel-highlight';
+          classes += ' le-msgbox-cancel-highlight';
         }
         return classes;
       }
