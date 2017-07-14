@@ -1,10 +1,21 @@
 {
-  "name": "le",
-  "version": "1.0.29",
+  "name": "le-ui",
+  "version": "1.0.0",
   "description": "leke vue components",
-  "author": "yinxy <yinxy@leoao.com>",
+  "author": {
+    "name": "thomasyxy",
+    "email": "838476901@qq.com",
+    "url": "https://github.com/thomasyxy"
+  },
   "private": false,
   "main": "dist/le.js",
+  "license": "MIT",
+  "bugs": "https://github.com/lefit-front/le-ui/issues/1",
+  "homepage": "https://github.com/lefit-front/le-ui",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lefit-front/le-ui"
+  },
   "keywords": [
     "le",
     "vue",

@@ -5,9 +5,22 @@
 
 > 乐刻前端vue组件库
 
+## Usage
+
+``` bash
+npm install --save le-ui
+```
+
+``` bash
+import 'leui/dist/styles/leui.css';
+```
+
 ## Build Setup
 
 ``` bash
+# git
+git clone https://github.com/lefit-front/le-ui.git
+
 # install dependencies
 npm install
 
@@ -24,4 +37,5 @@ npm run unit
 npm test
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## License
+[MIT](http://opensource.org/licenses/MIT)
