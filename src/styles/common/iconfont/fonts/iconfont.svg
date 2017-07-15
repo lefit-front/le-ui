@@ -2,13 +2,13 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Mon Jul 10 16:36:18 2017
+Created by FontForge 20120731 at Sat Jul 15 10:49:26 2017
  By admin
 </metadata>
 <defs>
-<font id="leke-le-font" horiz-adv-x="1024" >
+<font id="le-font" horiz-adv-x="1024" >
   <font-face 
-    font-family="leke-le-font"
+    font-family="le-font"
     font-weight="500"
     font-stretch="normal"
     units-per-em="1024"
@@ -264,7 +264,7 @@ M696 414.5q0 -12.5 9 -21.5t22 -9t22 9t9 21.5t-9 21.5t-22 9t-22 -9t-9 -21.5z" />
     <glyph glyph-name="pt" unicode="&#xe646;" 
 d="M850 221q0 63 -45 107.5t-108 44.5h-305v0q-63 0 -107.5 -44.5t-44.5 -107.5v-284h610v284zM174 -128v349q0 90 64 153.5t154 63.5h305q90 0 154 -63.5t64 -153.5v-349h-741zM545 526q63 0 107.5 44.5t44.5 107.5t-44.5 108t-107.5 45t-108 -45t-45 -108t45 -107.5
 t108 -44.5zM544.5 460q-90.5 0 -154 64t-63.5 154t63.5 154t154 64t154.5 -64t64 -154t-64 -154t-154.5 -64zM708 743h-566q-14 0 -23.5 -9.5t-9.5 -23t9.5 -23t23.5 -9.5h566q14 0 23.5 9.5t9.5 23t-9.5 23t-23.5 9.5z" />
-    <glyph glyph-name="loction" unicode="&#xe60b;" 
+    <glyph glyph-name="loctaion" unicode="&#xe60b;" 
 d="M486 722q80 0 136.5 -55t56.5 -133t-56.5 -133t-136 -55t-136 55t-56.5 133t56.5 133t135.5 55v0zM819 520q0 88 -44.5 163t-121 118.5t-167 43.5t-167 -43.5t-121 -118.5t-44.5 -163v0q0 -36 13 -83.5t31 -78.5l215 -402q30 -56 72.5 -56t72.5 56l216 401q19 31 32 79
 t13 84v0z" />
     <glyph glyph-name="clock" unicode="&#xe60c;" 

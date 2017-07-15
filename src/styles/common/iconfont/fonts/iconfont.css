@@ -1,14 +1,14 @@
 
-@font-face {font-family: "leke-le-font";
-  src: url('iconfont.eot?t=1499675778500'); /* IE9*/
-  src: url('iconfont.eot?t=1499675778500#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1499675778500') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1499675778500') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1499675778500#leke-le-font') format('svg'); /* iOS 4.1- */
+@font-face {font-family: "le-font";
+  src: url('iconfont.eot?t=1500086966300'); /* IE9*/
+  src: url('iconfont.eot?t=1500086966300#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1500086966300') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1500086966300') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1500086966300#le-font') format('svg'); /* iOS 4.1- */
 }
 
-.leke-le-font {
-  font-family:"leke-le-font" !important;
+.le-font {
+  font-family:"le-font" !important;
   font-size:16px;
   font-style:normal;
   -webkit-font-smoothing: antialiased;
@@ -165,7 +165,7 @@
 
 .le-icon-pt:before { content: "\e646"; }
 
-.le-icon-loction:before { content: "\e60b"; }
+.le-icon-loctaion:before { content: "\e60b"; }
 
 .le-icon-clock:before { content: "\e60c"; }
 
