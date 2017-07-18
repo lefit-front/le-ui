@@ -11,7 +11,7 @@
     </div>
     <div class="le-item-opt" @click="handleClickMore">
       <span class="le-item-more">{{more}}</span>
-      <Icon type="icon_weizhi"/>
+      <Icon :type="icon"/>
     </div>
   </div>
 </template>
