@@ -12,8 +12,7 @@ export default {
       required: true
     },
     size: {
-      type: [Number, String],
-      default: 12
+      type: [Number, String]
     },
     color: {
       type: String,
