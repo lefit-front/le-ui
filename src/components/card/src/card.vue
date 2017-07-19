@@ -1,16 +1,20 @@
 <template>
   <div class="le-card">
-    <slot name="left"></slot>
+    <div class="le-card-left">
+      <slot name="left"></slot>
+    </div>
     <div class="le-card-main">
       <p v-if="title" class="le-card-title">{{title}}</p>
       <p v-if="content" class="le-card-content" :class="{'clamp-2': showMore}">{{content}}</p>
       <slot></slot>
       <div v-if="hasMore" class="le-card-more" @click="showMore = !showMore">
-        <Icon v-if="showMore" type="arrow-up-a"/>
-        <Icon v-if="!showMore" type="arrow-down-a"/>
+        <Icon v-if="showMore" type="arrow-down-a"/>
+        <Icon v-if="!showMore" type="arrow-up-a"/>
       </div>
     </div>
-    <slot name="right"></slot>
+    <div class="le-card-right">
+      <slot name="right"></slot>
+    </div>
   </div>
 </template>
 <script>

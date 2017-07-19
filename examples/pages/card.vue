@@ -1,9 +1,7 @@
 <template>
   <div class="demo-card">
     <le-card v-for="(item, index) in list" :key="index" :title="item.title" :content="item.content">
-      <div class="demo-left" slot="left">
-        <le-view :src="item.img" :width="60" :height="60" shape="round" defaultImg="https://cdn.leoao.com/m/img/blank_class.png?imageView2/2/w/200"/>
-      </div>
+      <le-view slot="right" :src="item.img" :width="60" :height="60" shape="round" defaultImg="https://cdn.leoao.com/m/img/blank_class.png?imageView2/2/w/200"/>
     </le-card>
   </div>
 </template>
