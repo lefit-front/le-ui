@@ -1,10 +1,10 @@
 
 @font-face {font-family: "le-font";
-  src: url('iconfont.eot?t=1500436128562'); /* IE9*/
-  src: url('iconfont.eot?t=1500436128562#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1500436128562') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1500436128562') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1500436128562#le-font') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1500443993624'); /* IE9*/
+  src: url('iconfont.eot?t=1500443993624#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1500443993624') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1500443993624') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1500443993624#le-font') format('svg'); /* iOS 4.1- */
 }
 
 .le-font {
@@ -37,7 +37,7 @@
 
 .le-icon-arrow-down-a:before { content: "\e629"; }
 
-.le-icon-xiangxiasanjiaoxialazhankai:before { content: "\e62a"; }
+.le-icon-arrow-up-a:before { content: "\e62a"; }
 
 .le-icon-success:before { content: "\e66a"; }
 

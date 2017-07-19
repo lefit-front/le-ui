@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Wed Jul 19 11:48:48 2017
+Created by FontForge 20120731 at Wed Jul 19 13:59:53 2017
  By admin
 </metadata>
 <defs>
@@ -64,7 +64,7 @@ M512 223z" />
 d="M344 33q-13 0 -21.5 9t-8.5 21.5t9 21.5l309 304l-312 313q-9 9 -9 21.5t9 21.5t21.5 9t21.5 -9l335 -334q9 -10 9 -22.5t-10 -21.5l-331 -325q-9 -9 -22 -9z" />
     <glyph glyph-name="arrow-down-a" unicode="&#xe629;" 
 d="M392 378q-17 17 -12 28t28 11h225q23 0 28 -11t-12 -28l-109 -109q-8 -8 -19.5 -8t-19.5 8z" />
-    <glyph glyph-name="xiangxiasanjiaoxialazhankai" unicode="&#xe62a;" 
+    <glyph glyph-name="arrow-up-a" unicode="&#xe62a;" 
 d="M648 376q18 -18 12.5 -30t-30.5 -12h-239q-25 0 -30 12t12 30l117 116q9 9 21 9t21 -9z" />
     <glyph glyph-name="success" unicode="&#xe66a;" horiz-adv-x="1215" 
 d="M1057 701q-185 -164 -444 -555l-85 -133q-107 134 -344 371l79 79l212 -185q111 111 206.5 201.5t152.5 138.5t97 82t57 44l16 10q3 0 8 -1.5t19 -14t26 -37.5z" />
