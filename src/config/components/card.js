@@ -44,7 +44,7 @@ export default {
     {
       name: '',
       describe: '主题位置的额外内容'
-    }，
+    },
     {
       name: 'left',
       describe: '左侧位置的额外内容'
