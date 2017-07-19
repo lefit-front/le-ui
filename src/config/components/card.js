@@ -21,14 +21,6 @@ export default {
       required: false
     },
     {
-      name: 'img',
-      type: ['String'],
-      describe: '在右边展示图片',
-      default: '',
-      option: [],
-      required: false
-    },
-    {
       name: 'more',
       type: ['Boolean'],
       describe: '是否控制更多内容展示',
@@ -46,6 +38,20 @@ export default {
         }
       ],
       required: false
+    }
+  ],
+  slot: [
+    {
+      name: '',
+      describe: '主题位置的额外内容'
+    }，
+    {
+      name: 'left',
+      describe: '左侧位置的额外内容'
+    },
+    {
+      name: 'right',
+      describe: '右侧位置的额外内容'
     }
   ]
 }
