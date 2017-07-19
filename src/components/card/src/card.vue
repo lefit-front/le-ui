@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="le-card-img">
-      <LeView :src="img" :width="80" :height="80" shape="round" :defaultImg="defaultImg"/>
+      <LeView :src="img" :width="imgSize" :height="imgSize" shape="round" :defaultImg="defaultImg"/>
       <Icon v-if="!img" type="logo_lefit"/>
     </div>
   </div>
@@ -28,6 +28,10 @@ export default {
     title: String,
     content: String,
     img: String,
+    imgSize: {
+      type: [String, Array],
+      default: 80
+    },
     more: {
       type: Boolean,
       default: true
