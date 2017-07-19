@@ -1,8 +1,9 @@
 <template>
   <div class="le-card">
     <div class="le-card-left">
-      <p class="le-card-title">{{title}}</p>
-      <p class="le-card-content" :class="{'clamp-2': showMore}">{{content}}</p>
+      <p v-if="title" class="le-card-title">{{title}}</p>
+      <p v-if="content" class="le-card-content" :class="{'clamp-2': showMore}">{{content}}</p>
+      <slot></slot>
       <div v-if="hasMore" class="le-card-more" @click="showMore = !showMore">
         <Icon v-if="showMore" type="xiangshangsanjiaoshouqi"/>
         <Icon v-if="!showMore" type="xiangxiasanjiaoxialazhankai"/>
