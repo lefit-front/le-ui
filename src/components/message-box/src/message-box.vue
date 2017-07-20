@@ -186,7 +186,3 @@
     }
   };
 </script>
-
-<style lang="less">
-  @import "../../popup/src/popup.less";
-</style>

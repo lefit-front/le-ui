@@ -1,8 +1,6 @@
-
-@msgbox: ~"@{css-prefix}msgbox";
 @padding: 25px;
 @btn-space: 8px;
-.@{msgbox} {
+.le-msgbox-wrapper {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -15,78 +13,78 @@
   overflow: hidden;
   backface-visibility: hidden;
   transition: .2s;
+}
 
-  .@{msgbox}-header {
-    padding: @padding 0 0;
+.le-msgbox-header {
+  padding: @padding 0 0;
+}
+
+.le-msgbox-content {
+  padding: 0 @padding 0;
+  position: relative;
+  margin-top: 15px;
+}
+
+.le-msgbox-input {
+  padding-top: 15px;
+  & input {
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    padding: 4px 5px;
+    width: 100%;
+    appearance: none;
+    outline: none;
   }
-
-  .@{msgbox}-content {
-    padding: 0 @padding 0;
-    position: relative;
-    margin-top: 15px;
-  }
-
-  .@{msgbox}-input {
-    padding-top: 15px;
-    & input {
-      border: 1px solid #dedede;
-      border-radius: 5px;
-      padding: 4px 5px;
-      width: 100%;
-      appearance: none;
-      outline: none;
-    }
-    & input.invalid {
+  & input.invalid {
+    border-color: #ff4949;
+    &:focus {
       border-color: #ff4949;
-      &:focus {
-        border-color: #ff4949;
-      }
     }
   }
+}
 
-  .@{msgbox}-errormsg {
-    color: red;
-    font-size: 12px;
-    min-height: 18px;
-    margin-top: 2px;
-  }
+.le-msgbox-errormsg {
+  color: red;
+  font-size: 12px;
+  min-height: 18px;
+  margin-top: 2px;
+}
 
-  .@{msgbox}-title {
-    font-family: 'PingFang-SC-Semibold';
-    text-align: center;
-    padding-left: 0;
-    margin-bottom: 0;
-    font-size: 18px;
-    font-weight: bold;
-    color: @text-color;
-  }
+.le-msgbox-title {
+  font-family: 'PingFang-SC-Semibold';
+  text-align: center;
+  padding-left: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: @text-color;
+}
 
-  .@{msgbox}-message {
-    font-family: 'PingFangSC-Regular';
-    color: @sub-text-color;
-    margin: 0;
-    text-align: left;
-    line-height: 16px;
-  }
+.le-msgbox-message {
+  font-family: 'PingFangSC-Regular';
+  color: @sub-text-color;
+  margin: 0;
+  text-align: left;
+  line-height: 16px;
+}
 
-  .@{msgbox}-btns {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    padding: calc(@padding - @btn-space);
-    justify-content: space-between;
+.le-msgbox-btns {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: calc(@padding - @btn-space);
+  justify-content: space-between;
 
-  }
-  .@{msgbox}-cancel {
-    flex-grow: 2;
-    margin: 0 @btn-space;
-    border-color: rgba(0, 0, 0, 0.1);
-  }
-  .@{msgbox}-confirm {
-    flex-grow: 2;
-    margin: 0 @btn-space;
-  }
+}
+.le-msgbox-cancel {
+  flex-grow: 2;
+  margin: 0 @btn-space;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+.le-msgbox-confirm {
+  flex-grow: 2;
+  margin: 0 @btn-space;
 }
 
 .msgbox-bounce-enter {

@@ -29,9 +29,6 @@
  */
 import Popup from '../../../utils/popup';
 import Vue from 'vue';
-if (!Vue.prototype.$isServer) {
-  require('./popup.less');
-}
 export default {
   name: 'le-popup',
 
