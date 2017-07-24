@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Wed Jul 19 13:59:53 2017
+Created by FontForge 20120731 at Mon Jul 24 21:23:17 2017
  By admin
 </metadata>
 <defs>
@@ -39,8 +39,8 @@ t9.5 -10.5t21.5 -4h37h67h81h80h64h36q23 0 34 12t2 38q-5 13 -9.5 30.5t-9.5 34.5q-
 d="M781 164q16 -77 30 -145q6 -27 11 -55q5 -24 10 -50q5 -22 8 -38q3 -17 4 -20q3 -21 -9.5 -27.5t-27.5 -6.5q-5 0 -15 4t-14 5l-267 155q-72 -43 -131 -76q-26 -15 -51 -29q-24 -14 -45 -26l-35 -21q-15 -8 -20 -10q-10 -5 -21 -3.5t-19.5 7.5t-12.5 15t-2 18l1.5 6.5
 t3.5 13.5q4 16 9 37q5 22 12 49q5 21 14 54q10 42 34 142q-62 54 -108 93q-17 15 -40 34q-20 17 -36 31q-19 16 -26 22q-10 9 -11 10q-12 11 -20.5 25t-6.5 28t11 22t20 10l315 29l117 273q7 16 18 28t30 12q11 0 18.5 -4.5t12.5 -11t9 -12.5q3 -5 5 -10l114 -273l316 -30
 q20 -5 28 -12t8 -22q0 -14 -8 -25q-9 -10 -22 -26zM781 164z" />
-    <glyph glyph-name="luxiandaohang" unicode="&#xe76b;" 
-d="M676 484h146l-219 264l-219 -264h146v-190h-328v-113v-38v-291h146v291h219v1h109v340z" />
+    <glyph glyph-name="nav" unicode="&#xe76b;" 
+d="M676 568h146l-219 264l-219 -264h146v-190h-328v-113v-38v-291h146v291h219v1h109v340z" />
     <glyph glyph-name="jia" unicode="&#xe612;" 
 d="M119 436h786q49 0 84 -35t35 -84.5t-35 -84t-84 -34.5h-786q-49 0 -84 34.5t-35 84t35 84.5t84 35zM528.5 812q49.5 0 84.5 -35t35 -84v-786q0 -49 -35 -84t-84.5 -35t-84 35t-34.5 84v786q0 49 34.5 84t84 35z" />
     <glyph glyph-name="bianji" unicode="&#xe615;" 

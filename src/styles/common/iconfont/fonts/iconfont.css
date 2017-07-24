@@ -1,10 +1,10 @@
 
 @font-face {font-family: "le-font";
-  src: url('iconfont.eot?t=1500443993624'); /* IE9*/
-  src: url('iconfont.eot?t=1500443993624#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1500443993624') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1500443993624') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1500443993624#le-font') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1500902597324'); /* IE9*/
+  src: url('iconfont.eot?t=1500902597324#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1500902597324') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1500902597324') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1500902597324#le-font') format('svg'); /* iOS 4.1- */
 }
 
 .le-font {
@@ -17,7 +17,7 @@
 
 .le-icon-wujiaoxingshixin:before { content: "\e652"; }
 
-.le-icon-luxiandaohang:before { content: "\e76b"; }
+.le-icon-nav:before { content: "\e76b"; }
 
 .le-icon-jia:before { content: "\e612"; }
 
