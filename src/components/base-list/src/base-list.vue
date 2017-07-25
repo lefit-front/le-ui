@@ -92,13 +92,14 @@ export default {
   content:"";
   position:absolute;
   left:0;
-  bottom:0;
+  bottom:-1px;
   width:100%;
   height:1px;
   border-top:1px solid rgba(0, 0, 0, 0.1);
   color:#d9d9d9;
   transform-origin: 0 0;
   transform: scaleY(0.5);
+  box-sizing: border-box;
 }
 .le-icon-floatRight{
   margin-left:auto;
