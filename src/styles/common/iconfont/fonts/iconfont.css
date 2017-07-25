@@ -1,10 +1,10 @@
 
 @font-face {font-family: "le-font";
-  src: url('iconfont.eot?t=1500902597324'); /* IE9*/
-  src: url('iconfont.eot?t=1500902597324#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1500902597324') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1500902597324') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1500902597324#le-font') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1500964615048'); /* IE9*/
+  src: url('iconfont.eot?t=1500964615048#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1500964615048') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1500964615048') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1500964615048#le-font') format('svg'); /* iOS 4.1- */
 }
 
 .le-font {
@@ -59,7 +59,7 @@
 
 .le-icon-icon_timeup:before { content: "\e616"; }
 
-.le-icon-icon_weizhi:before { content: "\e617"; }
+.le-icon-location-b:before { content: "\e617"; }
 
 .le-icon-iconfont-shijian:before { content: "\e61c"; }
 
@@ -165,7 +165,7 @@
 
 .le-icon-pt:before { content: "\e646"; }
 
-.le-icon-loctaion:before { content: "\e60b"; }
+.le-icon-location-a:before { content: "\e60b"; }
 
 .le-icon-clock:before { content: "\e60c"; }
 
