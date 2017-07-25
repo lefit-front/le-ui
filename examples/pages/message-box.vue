@@ -18,21 +18,22 @@
 </style>
 
 <script type="text/babel">
-  import { MessageBox } from '../../src/index';
+  // 组件内单独引入message-box组件
+  // import { MessageBox } from '../../src/index';
   export default {
     methods: {
       openAlert() {
-        MessageBox.alert('操作成功!', '提示');
+        this.$msg.alert('操作成功!', '提示');
       },
 
       openConfirm() {
-        MessageBox.confirm('确定执行此操作?', '提示');
+        this.$msg.confirm('确定执行此操作?', '提示');
       },
 
       openPrompt() {
-        MessageBox.prompt(' ', '请输入姓名').then(({ value }) => {
+        this.$msg.prompt(' ', '请输入姓名').then(({ value }) => {
           if (value) {
-            MessageBox.alert(`你的名字是 ${ value }`, '输入成功');
+            this.$msg.alert(`你的名字是 ${ value }`, '输入成功');
           }
         });
       }

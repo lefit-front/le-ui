@@ -15,6 +15,10 @@ Vue.use(Le, {
 
 import '../src/styles/index.less'
 
+// 全局引入message-box组件，并注册为全局方法
+import { MessageBox } from '../src/index';
+Vue.prototype.$msg = MessageBox
+
 // 开启debug模式
 Vue.config.debug = true;
 
