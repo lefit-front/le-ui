@@ -1,6 +1,6 @@
 <template>
   <div class="le-item">
-    <LeView v-if="img" class="le-item-img" :src="img" width="60" height="60" :cover="true"/>
+    <LeView v-if="img" class="le-item-img" :src="img" :width="60" :height="60" :cover="true"/>
     <div class="le-item-info">
       <div class="le-item-name">
         {{name}}
