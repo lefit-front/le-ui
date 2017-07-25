@@ -1,5 +1,5 @@
 <template>
-  <div class="le-view" :class="shape ? 'le-view-' + shape : ''" :style="`width: ${width}px; height: ${height}px`">
+  <div class="le-view" :class="shape ? 'le-view-' + shape : ''" :style="`width: ${realWidth}px; height: ${realHeight}px`">
     <div v-if="defaultImg && defaultShow" class="le-view-default" :class="{'le-view-hide': ready}" :style="`backgroundImage: url(${defaultImg})`"></div>
     <img v-show="ready" class="le-view-img" :class="[{'le-view-show': fade && ready}, {'le-view-cover': cover}]" :src="src" @load="handleImgReady"/>
   </div>
@@ -44,7 +44,9 @@ export default {
     return {
       value: '',
       ready: false,
-      defaultShow: true
+      defaultShow: true,
+      realWidth: '',
+      realHeight: ''
     }
   },
 
@@ -63,6 +65,8 @@ export default {
   },
 
   mounted: function () {
+    this.realWidth = typeof(this.width) === number ? this.width + 'px' : this.width
+    this.realHeight = typeof(this.height) === number ? this.height + 'px' : this.height
   }
 };
 </script>
