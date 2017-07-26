@@ -75,14 +75,8 @@
       submit: Function,
       cancel: Function,
       show: {
-        type: String,
-        default: 'block',
-        validator (value) {
-          return [
-            'block',
-            'none'
-          ].indexOf(value) > -1
-        }
+        type: Boolean,
+        default: false
       }
     },
 

@@ -63,14 +63,8 @@ export default {
       default: 10
     },
     loading: {
-      type: String,
-      default: 'none',
-      validator (value) {
-        return [
-          'none',
-          'block'
-        ].indexOf(value) > -1
-      }
+      type: Boolean,
+      default: false
     },
     size: {
       type: String,
