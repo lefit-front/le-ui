@@ -7,7 +7,7 @@
     :disabled="isDisabled"
     @click="handleClick"
     >
-    <div class="le-loading" v-if="loading === 'block'"
+    <div class="le-loading" v-if="loading === true"
       :style="{
       'border-top-color': loadingColor,
       'border-left-color': loadingColor,
@@ -42,7 +42,7 @@ export default {
     isDisabled () {
       if (this.disabled === true) {
         return true
-      } else if (this.loading === 'block') {
+      } else if (this.loading === true) {
         return true
       } else {
         return false

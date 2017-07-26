@@ -2,8 +2,8 @@
   <div>
     <div class="le-picker-box"
         :class="[{
-          'le-picker-show': show === 'block',
-          'le-picker-hide': show === 'none'
+          'le-picker-show': show === true,
+          'le-picker-hide': show === false
         }]">
       <div class="le-picker-head d-f j-c-s-b a-i-c">
         <span class="le-picker-head-cancel" @click="cancelEventFun">取消</span>
@@ -24,7 +24,7 @@
 
     </div>
 
-    <div class="le-picker-shadow" @click="cancelEventFun" v-show="show === 'block'"></div>
+    <div class="le-picker-shadow" @click="cancelEventFun" v-show="show === true"></div>
   </div>
 </template>
 
@@ -39,7 +39,7 @@
   * @param {String} [title='选择'] - 默认显示 '选择'，设置title
   * @param {Function} [cancel] - 对应取消按钮事件
   * @param {Function} [submit] - 对应确定按钮事件，返回选中values值
-  * @param {String} [show] - 控制组件显示和消失，并且添加了动效，接受block,none
+  * @param {String} [show] - 控制组件显示和消失，并且添加了动效
   * @example
   * <Picker :slots="dataList" @change="onValuesChange" title="选择地址" :cancel="cancel" :submit="submit" :show="show"></Picker>
   *

@@ -23,8 +23,8 @@ import regionData from '../region.js'
 export default {
   data() {
     return {
-      show: 'none',
-      showThree: 'none',
+      show: false,
+      showThree: false,
       regionDataList: '',
       provinceId: '',
       cityId: '',
@@ -77,24 +77,24 @@ export default {
       picker.setSlotValues(2, Object.keys(county))
     },
     cancelThree () {
-      this.showThree = 'none'
+      this.showThree = false
     },
     submitThree (values) {
       console.log(values)
-      this.showThree = 'none'
+      this.showThree = false
     },
     cancel () {
-      this.show = 'none'
+      this.show = false
     },
     submit (values) {
       console.log(values)
-      this.show = 'none'
+      this.show = false
     },
     open () {
-      this.show = 'block'
+      this.show = true
     },
     openThree () {
-      this.showThree = 'block'
+      this.showThree = true
     },
     initP () {
       let sort = {}

@@ -20,9 +20,9 @@
     <le-button size="normal">normal</le-button>
     <le-button size="large">large</le-button>
     <h1>带loading</h1>
-    <le-button size="normal" loading="block">large</le-button>
+    <le-button size="normal" :loading="true">large</le-button>
     <h4>设置loading颜色和大小</h4>
-    <le-button size="normal" loading="block" loading-color="yellow" :loading-size="15">large</le-button>
+    <le-button size="normal" :loading="true" loading-color="yellow" :loading-size="15">large</le-button>
   </div>
 </template>
 <script>
