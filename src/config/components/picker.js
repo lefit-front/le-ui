@@ -174,9 +174,9 @@ export default {
     },
     {
       name: 'show',
-      type: ['String'],
-      describe: '控制组件显示和消失，并且添加了动效，接受block,none',
-      default: '',
+      type: ['Boolean'],
+      describe: '控制组件显示和消失，并且添加了动效',
+      default: 'false',
       option: [],
       required: false
     }

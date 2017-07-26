@@ -59,17 +59,17 @@ export default {
     },
     {
       name: 'loading',
-      type: ['String'],
+      type: ['Boolean'],
       describe: '是否显示loading',
-      default: 'none',
+      default: 'false',
       option: [
         {
-          name: 'none',
+          name: 'false',
           describe: '不显示loading',
           default: true
         },
         {
-          name: 'block',
+          name: 'true',
           describe: '显示loading',
           default: false
         }
