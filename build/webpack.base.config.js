@@ -17,7 +17,7 @@ module.exports = {
                 loader: 'vue-loader',
                 options: {
                     loaders: {
-                        css: 'vue-style-loader!css-loader',
+                        css: 'vue-style-loader!css-loader!autoprefixer-loader?{browsers:["last 2 version", "Android >= 4.0"]}',
                         less: 'vue-style-loader!css-loader!less-loader'
                     },
                     postLoaders: {
@@ -34,7 +34,7 @@ module.exports = {
                 use: [
                     'style-loader',
                     'css-loader',
-                    'autoprefixer-loader'
+                    'autoprefixer-loader?{browsers:["last 2 version", "Android >= 4.0"]}'
                 ]
             },
             {
@@ -42,7 +42,8 @@ module.exports = {
                 use: [
                     'style-loader',
                     'css-loader',
-                    'less-loader'
+                    'less-loader',
+                    'autoprefixer-loader?{browsers:["last 2 version", "Android >= 4.0"]}'
                 ]
             },
             {
