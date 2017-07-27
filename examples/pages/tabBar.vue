@@ -75,28 +75,29 @@ export default {
       ],
       data04: [
         {
-          'id': 'team',
-          'name': '团体课',
-          'class': 'le-barbell',
-          'to': ''
+          'id': 'locker',
+          'name': '自助储物柜',
+          'class': 'le-barbell'
         },
         {
-          'id': 'private',
-          'name': '私教',
-          'class': 'le-order',
-          'to': ''
+          'id': 'test',
+          'name': '体质测试',
+          'class': 'le-order'
         },
         {
-          'id': 'camp',
-          'name': '训练营',
-          'class': 'le-cup',
-          'to': ''
+          'id': 'run',
+          'name': '智能跑步',
+          'class': 'le-cup'
         },
         {
-          'id': 'mall',
-          'name': '商城',
-          'class': 'le-bag',
-          'to': ''
+          'id': 'recipe',
+          'name': '运动处方',
+          'class': 'le-bicycle'
+        },
+        {
+          'id': 'recipe',
+          'name': '运动处方',
+          'class': 'le-barbell'
         }
       ]
     }
