@@ -12,7 +12,7 @@ npm install --save le-ui
 ```
 
 ``` bash
-import 'leui/dist/styles/leui.css';
+import 'leui/dist/styles/leui.cssass';
 ```
 
 ## Build Setup
