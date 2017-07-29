@@ -6,7 +6,7 @@ export default {
   props: [
     {
       name: 'number',
-      type: ['Number'],
+      type: ['Number', 'String'],
       describe: '数值大小',
       default: '0',
       option: [],
