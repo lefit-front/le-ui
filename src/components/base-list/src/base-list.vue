@@ -54,7 +54,7 @@ export default {
     },
     color: {
       type: String,
-      default: '#000'
+      default: ''
     },
     border: {
       type: String,

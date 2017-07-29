@@ -24,7 +24,7 @@ export default {
       name: 'color',
       type: ['String'],
       describe: '设置title 和 icon的颜色',
-      default: '#000',
+      default: '',
       option: [],
       required: false
     },
