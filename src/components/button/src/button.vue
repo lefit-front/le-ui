@@ -1,13 +1,13 @@
 <template>
   <button
     class="le-button a-i-c j-c-c"
-    :class="['le-button-' + type, 'le-size-' + size, 'le-shape-' + shape, {
+    :class="['le-button-' + type, 'le-button-size-' + size, 'le-button-shape-' + shape, {
       'is-disabled': disabled
     }]"
     :disabled="isDisabled"
     @click="handleClick"
     >
-    <div class="le-loading" v-if="loading === true"
+    <div class="le-button-loading" v-if="loading === true"
       :style="{
       'border-top-color': loadingColor,
       'border-left-color': loadingColor,
