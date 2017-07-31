@@ -19,6 +19,9 @@
     <le-button size="small">small</le-button>
     <le-button size="normal">normal</le-button>
     <le-button size="large">large</le-button>
+    <h1>button形状</h1>
+    <le-button shape="primary">primary</le-button>
+    <le-button shape="circle">circle</le-button>
     <h1>带loading</h1>
     <le-button size="normal" :loading="true">large</le-button>
     <h4>设置loading颜色和大小</h4>

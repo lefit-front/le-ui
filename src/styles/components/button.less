@@ -19,7 +19,7 @@
   display: flex;         /* 新版本语法: Opera 12.1, Firefox 22+ */
 
   /* loging */
-  .le-loading{
+  .@{button}-loading{
     animation: button-loading-rotate 0.8s infinite linear;
     border: 2px solid transparent;
     border-radius: 50%;
@@ -27,22 +27,26 @@
   }
 }
 
-
 /* size */
-.le-size-large{
+.@{button}-size-large{
   width: 100%;
   font-size: @btn-font-size-large;
   padding: @btn-padding-large;
 }
-.le-size-normal{
+.@{button}-size-normal{
   font-size: @btn-font-size;
   padding: @btn-padding-base;
 }
-.le-size-small{
+.@{button}-size-small{
   border-radius: @btn-border-radius-small;
   display: inline-block;
   font-size: @btn-font-size-small;
   padding: @btn-padding-small;
+}
+
+/* shape */
+.@{button}-circle{
+  border-radius: 50%;
 }
 
 /* type:primary 和 按下样式 */
@@ -86,11 +90,6 @@
     background: #ffede6;
     color: @btn-default-color;
   }
-}
-
-/* shape:圆形 */
-.@{button}-circle{
-  border-radius: 50%;
 }
 
 /* disabled样式 */
