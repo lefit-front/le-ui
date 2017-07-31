@@ -9,7 +9,7 @@ gulp.task('css', function () {
     gulp.src('../src/styles/index.less')
         .pipe(less())
         .pipe(autoprefixer({
-            browsers: ['last 2 versions', 'ie > 8']
+            browsers: ['last 2 versions', 'Android >= 4.0']
         }))
         .pipe(cleanCSS({
           inline: ['none']
