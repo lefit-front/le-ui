@@ -1,7 +1,7 @@
 <template>
   <button
     class="le-button a-i-c j-c-c"
-    :class="['le-button-' + type, 'le-size-' + size, {
+    :class="['le-button-' + type, 'le-size-' + size, 'le-shape-' + shape, {
       'is-disabled': disabled
     }]"
     :disabled="isDisabled"
@@ -86,6 +86,16 @@ export default {
           'default',
           'plain',
           'shadow'
+        ].indexOf(value) > -1
+      }
+    },
+    shape: {
+      type: String,
+      default: 'primary',
+      validator (value) {
+        return [
+          'primary',
+          'circle'
         ].indexOf(value) > -1
       }
     }
