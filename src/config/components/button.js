@@ -58,6 +58,25 @@ export default {
       required: false
     },
     {
+      name: 'shape',
+      type: ['String'],
+      describe: '按钮形状',
+      default: 'primary',
+      option: [
+        {
+          name: 'primary',
+          describe: '正常按钮',
+          default: true
+        },
+        {
+          name: 'circle',
+          describe: '圆形按钮',
+          default: false
+        }
+      ],
+      required: false
+    },
+    {
       name: 'loading',
       type: ['Boolean'],
       describe: '是否显示loading',
