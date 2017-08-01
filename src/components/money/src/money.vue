@@ -35,7 +35,7 @@ export default {
       default: 0
     },
     size: {
-      type: Number,
+      type: [Number, String],
       default: 12
     },
     moneyIcon: {

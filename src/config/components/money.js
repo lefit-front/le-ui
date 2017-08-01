@@ -14,7 +14,7 @@ export default {
     },
     {
       name: 'size',
-      type: ['Number'],
+      type: ['Number', 'String'],
       describe: '计算数值和icon字体大小',
       default: '12',
       option: [],
