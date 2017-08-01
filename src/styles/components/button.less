@@ -13,11 +13,9 @@
   text-align: center;
   line-height: 1.5;
   padding: @btn-padding-base;
-  display: -webkit-box;  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
-  display: -moz-box;     /* 老版本语法: Firefox (buggy) */
-  display: -ms-flexbox;  /* 混合版本语法: IE 10 */
-  display: -webkit-flex; /* 新版本语法: Chrome 21+ */
-  display: flex;         /* 新版本语法: Opera 12.1, Firefox 22+ */
+  display: flex;
+  display: -webkit-box;
+  justify-content: center;
 
   /* loging */
   .@{button}-loading{
@@ -110,20 +108,4 @@
   100% {
     transform: rotate(360deg);
   }
-}
-/*竖向居中*/
-.a-i-c{
-  align-items:center;
-  -webkit-align-items:center;
-  box-align:center;
-  -moz-box-align:center;
-  -webkit-box-align:center;
-}
-/*横向居中*/
-.j-c-c{
-  -webkit-justify-content:center;
-  justify-content:center;
-  -moz-box-pack:center;
-  -webkit--moz-box-pack:center;
-  box-pack:center;
 }

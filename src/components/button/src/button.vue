@@ -1,6 +1,6 @@
 <template>
   <button
-    class="le-button a-i-c j-c-c"
+    class="le-button"
     :class="['le-button-' + type, 'le-button-size-' + size, 'le-button-shape-' + shape, {
       'is-disabled': disabled
     }]"
