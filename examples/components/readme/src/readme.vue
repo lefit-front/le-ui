@@ -5,13 +5,22 @@
       <p>{{component.describe}}</p>
     </div>
     <div class="readme-content">
-      <h3>Attributes</h3>
-      <div class="readme-props" v-for="(prop, index) in component.props">
-        <h4>{{prop.name}}<strong v-if="prop.required">(必传)</strong></h4>
-        <p>说明：{{prop.describe}}</p>
-        <p>类型：<code class="readme-tag" v-for="tag in prop.type">{{tag}}</code></p>
-        <p v-if="prop.option.length > 0">可选值：<ul><li v-for="value in prop.option">{{value.name}}<strong v-if="value.default">(默认)</strong>: {{value.describe}}</li></ul></p>
-        <p v-if="prop.default !== ''">默认值：{{prop.default}}</p>
+      <div class="readme-props" v-if="component.props && component.props.length > 0">
+        <h3>Props</h3>
+        <div v-for="(prop, index) in component.props">
+          <h4>{{prop.name}}<strong v-if="prop.required">(必传)</strong></h4>
+          <p>说明：{{prop.describe}}</p>
+          <p>类型：<code class="readme-tag" v-for="tag in prop.type">{{tag}}</code></p>
+          <p v-if="prop.option.length > 0">可选值：<ul><li v-for="value in prop.option">{{value.name}}<strong v-if="value.default">(默认)</strong>: {{value.describe}}</li></ul></p>
+          <p v-if="prop.default !== ''">默认值：{{prop.default}}</p>
+        </div>
+      </div>
+      <div class="readme-slot" v-if="component.slot && component.slot.length > 0">
+        <h3>slot</h3>
+        <div v-for="(slot, index) in component.slot">
+          <h4>{{slot.name || '默认'}}</h4>
+          <p>说明：{{slot.describe}}</p>
+        </div>
       </div>
     </div>
     <!-- <table>
