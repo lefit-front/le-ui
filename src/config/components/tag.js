@@ -30,6 +30,13 @@ export default {
           name: '控制力'
         }
       ]
+    },
+    {
+      name: 'value',
+      type: ['Array'],
+      describe: '选中的tag',
+      default: [],
+      option: []
     }
   ]
 }
