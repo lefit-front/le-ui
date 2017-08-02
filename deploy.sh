@@ -1,0 +1,1 @@
+rm -rf github.io/ && npm run page && qtool upload -f github.io -k le-ui -a dP5UdTA5ylgZDy4qFAGzTK_URi0EDE9UasGzWtFR -s Lhm3iTPtpQaF8WVt--8koPE0FQV4kRhNqky18DZM -b front-res --hostUrl http://cdn.leoao.com
