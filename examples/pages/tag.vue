@@ -1,12 +1,13 @@
 <template>
   <div>
-    <le-tag class="demo-tag" :data="tags" />
+    <le-tag class="demo-tag" :data="tags" :value="value" @select="handleSelect"/>
   </div>
 </template>
 <script>
     export default {
       data () {
         return {
+          value: [2, 4],
           tags: [
             {
               name: '200-300KCal'
@@ -26,6 +27,11 @@
               name: '控制力'
             }
           ]
+        }
+      },
+      methods: {
+        handleSelect (val) {
+          console.log(val)
         }
       }
     }
