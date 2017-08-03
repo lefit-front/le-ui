@@ -1,10 +1,10 @@
 
 @font-face {font-family: "le-font";
-  src: url('iconfont.eot?t=1501657791297'); /* IE9*/
-  src: url('iconfont.eot?t=1501657791297#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1501657791297') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1501657791297') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1501657791297#le-font') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1501757292930'); /* IE9*/
+  src: url('iconfont.eot?t=1501757292930#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1501757292930') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1501757292930') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1501757292930#le-font') format('svg'); /* iOS 4.1- */
 }
 
 .le-font {
@@ -62,4 +62,8 @@
 .le-icon-coupon:before { content: "\e61c"; }
 
 .le-icon-money:before { content: "\e61d"; }
+
+.le-icon-close:before { content: "\e61e"; }
+
+.le-icon-flag:before { content: "\e61f"; }
 
