@@ -1,7 +1,7 @@
 <template>
   <div class="le-view" :class="shape ? 'le-view-' + shape : ''" :style="`width: ${realWidth}; height: ${realHeight}`">
     <div v-if="defaultImg && defaultShow" class="le-view-default" :class="{'le-view-hide': ready}" :style="`backgroundImage: url(${defaultImg})`"></div>
-    <img v-show="ready" class="le-view-img" :class="[{'le-view-show': fade && ready}, {'le-view-cover': cover}, 'le-view-' + mod]" :src="src" @load="handleImgReady"/>
+    <img v-show="ready" class="le-view-img" :class="[{'le-view-show': fade && ready}, {'le-view-cover': cover}]" :src="src" @load="handleImgReady" :style="imgStyle"/>
   </div>
 </template>
 
@@ -38,15 +38,9 @@ export default {
       type: Boolean,
       default: false
     },
-    mod: {
-      type: String,
-      validator (value) {
-        return [
-          'min',
-          'max'
-        ].indexOf(value) > -1
-      },
-      default: 'min'
+    imgStyle: {
+      type: Object
+      default: {}
     }
   },
 
