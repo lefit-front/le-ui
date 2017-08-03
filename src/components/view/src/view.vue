@@ -39,7 +39,7 @@ export default {
       default: false
     },
     imgStyle: {
-      type: Object
+      type: Object,
       default: {}
     }
   },
