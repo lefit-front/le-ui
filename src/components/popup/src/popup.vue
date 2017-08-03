@@ -2,6 +2,7 @@
   <transition :name="currentTransition">
     <div v-show="currentValue" class="le-popup" :class="[position ? 'le-popup-' + position : '']">
       <slot></slot>
+      <slot name="close"></slot>
     </div>
   </transition>
 </template>
