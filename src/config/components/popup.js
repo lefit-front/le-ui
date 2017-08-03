@@ -98,5 +98,15 @@ export default {
       ],
       required: false
     }
+  ],
+  slot: [
+    {
+      name: '',
+      describe: '主题位置的内容部分'
+    },
+    {
+      name: 'close',
+      describe: '关闭按钮区域'
+    }
   ]
 }
