@@ -40,7 +40,10 @@ export default {
     },
     imgStyle: {
       type: Object,
-      default: {}
+      default: {
+        maxWidth: '100%',
+        maxHeight: '100%'
+      }
     }
   },
 
