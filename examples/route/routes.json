@@ -98,11 +98,6 @@
         "icon": "checkbox"
       },
       {
-        "path": "/check-list",
-        "name": "CheckList",
-        "icon": "check-list"
-      },
-      {
         "path": "/empty",
         "name": "Empty",
         "icon": "empty"

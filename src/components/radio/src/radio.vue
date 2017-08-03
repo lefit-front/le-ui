@@ -1,13 +1,13 @@
 <template>
   <div class="le-radio">
-    <label class="le-radio-item" slot="title" v-for="(option, index) in options">
+    <label class="le-radio-item" slot="title">
       <input
         class="le-radio-input"
         type="radio"
-        v-model.lazy="value"
-        :disabled="option.disabled"
-        :value="option.value || option">
-      <span class="le-radio-label" v-text="option.label || option"></span>
+        :disabled="disabled"
+        :checked="checked"
+        @change="change">
+      <span class="le-radio-label"><slot>{{label}}</slot></span>
     </label>
   </div>
 </template>
@@ -17,22 +17,57 @@ export default {
   name: 'le-radio',
 
   props: {
-    options: {
-      type: Array,
-      required: true
+    checked: {
+      type: Boolean,
+      default: false
+    },
+    value: {
+      type: [String, Number]
+    },
+    label: {
+      type: [String, Number]
+    },
+    vertical: {
+      type: Boolean,
+      default: false
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    group: {
+      type: Boolean,
+      default: false
     }
   },
 
   data () {
     return {
-      value: ''
+      currentValue: this.value
+    }
+  },
+
+  methods: {
+    change (event) {
+      if (this.disabled) {
+        return false
+      }
+      let checked = event.target.checked
+      this.$emit('input', this.currentValue)
+      console.log(this.currentValue)
+    },
+    updateValue () {
+      this.currentValue = this.value;
     }
   },
 
   watch: {
     value (val) {
-      this.$emit('change', val)
+      this.updateValue()
     }
+  },
+
+  mounted () {
   }
 };
 </script>

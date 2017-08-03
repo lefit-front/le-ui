@@ -6,7 +6,6 @@ import Icon from './components/icon';
 import Tag from './components/tag';
 import Radio from './components/radio';
 import Checkbox from './components/checkbox';
-import CheckList from './components/check-list';
 import Week from './components/week';
 import Progress from './components/progress';
 import LeView from './components/view';
@@ -45,8 +44,8 @@ const le = {
   Rate,
   Loading,
   Radio,
+  RadioGroup: Radio.Group,
   Checkbox,
-  CheckList,
   Empty,
   Week,
   Picker

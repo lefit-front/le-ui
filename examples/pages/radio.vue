@@ -1,6 +1,7 @@
 <template>
   <div class="demo-radio">
-    <le-radio :options="options" @change="handleSelect"/>
+    <le-radio value="value" label="哈哈哈" :checked="checked"/>{{checked}}
+    <le-radio-group :options="options" @change="handleSelect" :value="value"/>
   </div>
 </template>
 
@@ -8,8 +9,8 @@
 export default {
   data () {
     return {
-      value: '',
-      value2: [],
+      value: '2',
+      checked: false,
       title: '课程',
       options: [
         {
@@ -43,7 +44,6 @@ export default {
   methods: {
     handleSelect (val) {
       this.curValue = val
-      this.$emit('getValue', this.curValue)
     }
   }
 }

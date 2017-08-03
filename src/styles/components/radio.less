@@ -1,7 +1,9 @@
 @radio: ~"@{css-prefix}radio";
 
-.@{radio} {
+.@{radio}-group {
   display: flex;
+}
+.@{radio}-horizontal {
   flex-wrap: wrap;
   margin: -9px;
   .@{radio}-item {
@@ -42,5 +44,20 @@
     padding: 5px 10px;
     font-size: @font-size-h4;
     background-color: @background-color-gray;
+  }
+}
+
+.@{radio}-vertical {
+  flex-direction: column;
+  .@{radio}-item {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .@{radio}-input {
+
+  }
+  .@{radio}-label {
+    font-size: @font-size-h5;
   }
 }
