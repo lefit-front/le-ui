@@ -40,9 +40,11 @@ export default {
     },
     imgStyle: {
       type: Object,
-      default: {
-        maxWidth: '100%',
-        maxHeight: '100%'
+      default: function () {
+        return {
+          maxWidth: '100%',
+          maxHeight: '100%'
+        }
       }
     }
   },
