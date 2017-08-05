@@ -93,6 +93,16 @@ export default {
         }
       ],
       required: false
+    },
+    {
+      name: 'imgStyle',
+      type: ['Object'],
+      describe: '直接作用于图片的样式',
+      default: {
+        maxWidth: '100%',
+        maxHeight: '100%'
+      },
+      required: false
     }
   ]
 }
