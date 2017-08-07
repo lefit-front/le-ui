@@ -1,10 +1,10 @@
 
 @font-face {font-family: "le-font";
-  src: url('iconfont.eot?t=1501757292930'); /* IE9*/
-  src: url('iconfont.eot?t=1501757292930#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1501757292930') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1501757292930') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1501757292930#le-font') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1502098310540'); /* IE9*/
+  src: url('iconfont.eot?t=1502098310540#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1502098310540') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1502098310540') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1502098310540#le-font') format('svg'); /* iOS 4.1- */
 }
 
 .le-font {
@@ -66,4 +66,8 @@
 .le-icon-close:before { content: "\e61e"; }
 
 .le-icon-flag:before { content: "\e61f"; }
+
+.le-icon-tip:before { content: "\e604"; }
+
+.le-icon-success-b:before { content: "\e605"; }
 
