@@ -5,10 +5,10 @@
         class="le-checkbox-input"
         type="checkbox"
         :disabled="disabled"
-        :checked="checked"
+        :checked="checked === 0 ? iChecked : checked"
         @change="change">
       <span class="le-checkbox-label"><slot>{{label}}</slot></span>
-      <div v-if="vertical" class="le-checkbox-sign" :class="{'le-checkbox-sign-active' : checked}"><le-icon type="success" color="#fff" size="12"/></div>
+      <div v-if="vertical" class="le-checkbox-sign" :class="{'le-checkbox-sign-active' : checked === 0 ? iChecked : checked}"><le-icon type="success" color="#fff" size="12" /></div>
     </label>
   </div>
 </template>
@@ -20,8 +20,8 @@ export default {
 
   props: {
     checked: {
-      type: Boolean,
-      default: false
+      type: [Boolean, Number],
+      default: 0
     },
     value: {
       type: [String, Number]
@@ -43,11 +43,18 @@ export default {
     }
   },
 
+  data () {
+    return {
+      iChecked: false
+    }
+  },
+
   methods: {
     change (event) {
       if (this.disabled) {
         return false
       }
+      this.iChecked = event.target.checked
       let result = this.group ? {value: this.currentValue, checked: event.target.checked} : event.target.checked
       this.$emit('input', result)
       console.log(result)
