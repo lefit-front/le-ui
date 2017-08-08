@@ -46,6 +46,7 @@ const le = {
   Radio,
   RadioGroup: Radio.Group,
   Checkbox,
+  CheckboxGroup: Checkbox.Group,
   Empty,
   Week,
   Picker
