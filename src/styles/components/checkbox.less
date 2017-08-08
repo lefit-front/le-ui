@@ -1,7 +1,9 @@
 @checkbox: ~"@{css-prefix}checkbox";
 
-.@{checkbox} {
+.@{checkbox}-group {
   display: flex;
+}
+.@{checkbox}-horizontal {
   flex-wrap: wrap;
   margin: -9px;
   .@{checkbox}-item {
@@ -42,5 +44,41 @@
     padding: 5px 10px;
     font-size: @font-size-h4;
     background-color: @background-color-gray;
+  }
+}
+
+.@{checkbox}-vertical {
+  flex-direction: column;
+  .@{checkbox}-item {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .@{checkbox}-input {
+    display: none;
+
+    &:checked {
+      + .@{checkbox}-label {
+        &::after {
+          content: "\E61F";
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 18px;
+          height: 18px;
+          background-color: #f74b24;
+          background-size: cover;
+          transform: scale(1);
+        }
+      }
+    }
+
+    &[disabled] + .@{checkbox}-label {
+      background-color: @background-color-gray;
+      color: @shadow-color;
+    }
+  }
+  .@{checkbox}-label {
+    font-size: @font-size-h5;
   }
 }

@@ -1,6 +1,6 @@
 <template>
-  <div class="le-checkbox-group" :class="vertical ? 'le-checkbox-vertical' : 'le-checkbox-horizontal'">
-    <Checkbox v-for="(option, index) in options" :label="option.label" :value="option.value" :checked="hasValue(option.value)" @input="changeValue" group/>
+  <div class="le-checkbox-group" :class="vertical ? 'le-checkbox-group-vertical' : 'le-checkbox-group-horizontal'">
+    <Checkbox v-for="(option, index) in options" :label="option.label" :value="option.value" :checked="hasValue(option.value)" @input="changeValue" group :vertical="vertical" />
   </div>
 </template>
 

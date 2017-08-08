@@ -1,5 +1,5 @@
 <template>
-  <div class="le-checkbox">
+  <div class="le-checkbox" :class="vertical ? 'le-checkbox-vertical' : 'le-checkbox-horizontal'">
     <label class="le-checkbox-item" slot="title">
       <input
         class="le-checkbox-input"
