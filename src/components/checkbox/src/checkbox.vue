@@ -1,15 +1,14 @@
 <template>
   <div class="le-checkbox">
-    <div class="le-checkbox-item" slot="title" v-for="(option, index) in options">
+    <label class="le-checkbox-item" slot="title">
       <input
         class="le-checkbox-input"
-        :id="option.value || option"
         type="checkbox"
-        v-model.lazy="value"
-        :disabled="option.disabled"
-        :value="option.value || option">
-      <label class="le-checkbox-label" v-text="option.label || option" :for="option.value || option"></label>
-    </div>
+        :disabled="disabled"
+        :checked="checked"
+        @change="change">
+      <span class="le-checkbox-label"><slot>{{label}}</slot></span>
+    </label>
   </div>
 </template>
 
@@ -18,9 +17,27 @@ export default {
   name: 'le-checkbox',
 
   props: {
-    options: {
-      type: Array,
-      required: true
+    checked: {
+      type: Boolean,
+      default: false
+    },
+    value: {
+      type: [String, Number]
+    },
+    label: {
+      type: [String, Number]
+    },
+    vertical: {
+      type: Boolean,
+      default: false
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    group: {
+      type: Boolean,
+      default: false
     }
   },
 

@@ -52,10 +52,9 @@ export default {
       if (this.disabled) {
         return false
       }
-      let checked = event.target.checked
-      debugger
-      this.$emit('input', this.currentValue)
-      console.log(this.currentValue)
+      let result = this.group ? this.currentValue : event.target.checked
+      this.$emit('input', result)
+      console.log(result)
     },
     updateValue () {
       this.currentValue = this.value;
