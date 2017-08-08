@@ -4,7 +4,7 @@
     <le-checkbox value="value" label="哈哈哈" :checked="checked" @input="getValue" />
     <le-checkbox-group :options="options" @change="handleSelect" :value="value"/>
     <p>垂直</p>
-    <le-checkbox value="value" label="哈哈哈" :checked="checked" @input="getValue" vertical />
+    <le-checkbox value="value" label="哈哈哈" :checked="checked2" @input="getValue2" vertical />
     <le-checkbox-group :options="options2" @change="handleSelect" :value="value2" vertical />
   </div>
 </template>
@@ -16,6 +16,7 @@ export default {
       value: ['2', '4'],
       value2: ['2', '4'],
       checked: false,
+      checked2: false,
       title: '课程',
       options: [
         {
@@ -67,6 +68,9 @@ export default {
     },
     getValue (val) {
       console.log(val)
+    },
+    getValue2 (val) {
+      this.checked2 = !this.checked2
     }
   }
 }

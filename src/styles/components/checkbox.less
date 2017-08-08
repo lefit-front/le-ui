@@ -58,18 +58,11 @@
     position: relative;
     display: block;
     margin: 9px;
-    background-color: #ddd;
     display: flex;
     align-items: center;
   }
   .@{checkbox}-input {
     display: none;
-
-    &:checked {
-      + .@{checkbox}-label {
-        display: block;
-      }
-    }
   }
   .@{checkbox}-label {
     position: relative;
@@ -81,10 +74,13 @@
   .@{checkbox}-sign {
     width: 20px;
     height: 20px;
-    background-color: @primary-color;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    background-color: @primary-color;
+  }
+  .le-checkbox-sign-active {
+    background-color: @background-color-gray;
   }
 }
