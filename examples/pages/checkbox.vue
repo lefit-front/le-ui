@@ -1,7 +1,11 @@
 <template>
   <div class="demo-checkbox">
+    <p>水平</p>
     <le-checkbox value="value" label="哈哈哈" :checked="checked" @input="getValue" />
     <le-checkbox-group :options="options" @change="handleSelect" :value="value"/>
+    <p>垂直</p>
+    <le-checkbox value="value" label="哈哈哈" :checked="checked" @input="getValue" vertical />
+    <le-checkbox-group :options="options2" @change="handleSelect" :value="value2" vertical />
   </div>
 </template>
 
@@ -10,6 +14,7 @@ export default {
   data () {
     return {
       value: ['2', '4'],
+      value2: ['2', '4'],
       checked: false,
       title: '课程',
       options: [
@@ -38,12 +43,27 @@ export default {
           label: "单车",
           value: '6'
         }
+      ],
+      options2: [
+        {
+          label: "瑜伽",
+          value: '1'
+        },
+        {
+          label: "踏板",
+          value: '2'
+        },
+        {
+          label: "舞蹈",
+          value: '3',
+          disabled: true
+        }
       ]
     }
   },
   methods: {
     handleSelect (val) {
-      this.curValue = val
+      console.log('change:' + val)
     },
     getValue (val) {
       console.log(val)

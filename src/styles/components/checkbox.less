@@ -3,9 +3,11 @@
 .@{checkbox}-group {
   display: flex;
 }
-.@{checkbox}-horizontal {
+.@{checkbox}-group-horizontal {
   flex-wrap: wrap;
   margin: -9px;
+}
+.@{checkbox}-group-horizontal {
   .@{checkbox}-item {
     position: relative;
     display: block;
@@ -44,41 +46,45 @@
     padding: 5px 10px;
     font-size: @font-size-h4;
     background-color: @background-color-gray;
+    border-radius: 3px;
   }
 }
 
-.@{checkbox}-vertical {
+.@{checkbox}-group-vertical {
   flex-direction: column;
+}
+.@{checkbox}-vertical {
   .@{checkbox}-item {
+    position: relative;
+    display: block;
+    margin: 9px;
+    background-color: #ddd;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    align-items: center;
   }
   .@{checkbox}-input {
     display: none;
 
     &:checked {
       + .@{checkbox}-label {
-        &::after {
-          content: "\E61F";
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          width: 18px;
-          height: 18px;
-          background-color: #f74b24;
-          background-size: cover;
-          transform: scale(1);
-        }
+        display: block;
       }
-    }
-
-    &[disabled] + .@{checkbox}-label {
-      background-color: @background-color-gray;
-      color: @shadow-color;
     }
   }
   .@{checkbox}-label {
-    font-size: @font-size-h5;
+    position: relative;
+    display: block;
+    padding: 5px 10px;
+    font-size: @font-size-h4;
+    border-radius: 3px;
+  }
+  .@{checkbox}-sign {
+    width: 20px;
+    height: 20px;
+    background-color: @primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
   }
 }

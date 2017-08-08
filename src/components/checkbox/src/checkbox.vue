@@ -8,11 +8,13 @@
         :checked="checked"
         @change="change">
       <span class="le-checkbox-label"><slot>{{label}}</slot></span>
+      <div v-if="vertical" class="le-checkbox-sign"><le-icon type="success" color="#fff" size="12"/></div>
     </label>
   </div>
 </template>
 
 <script>
+import leIcon from '../../icon'
 export default {
   name: 'le-checkbox',
 
