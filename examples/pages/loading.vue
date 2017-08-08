@@ -10,7 +10,7 @@
   <div class="demo-button">
     <h3>loading默认</h3>
     <le-loading type="rotate" />
-     <h3>loading 设置颜色和大小</h3>
+    <h3>loading 设置颜色和大小</h3>
     <le-loading type="triple" loading-color="red" :loading-size="12" />
     <h3>loading 设置全屏</h3>
     <le-button @click="loadingEvent">点击查看全屏loading效果</le-button>

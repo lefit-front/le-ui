@@ -53,6 +53,7 @@ export default {
         return false
       }
       let checked = event.target.checked
+      debugger
       this.$emit('input', this.currentValue)
       console.log(this.currentValue)
     },

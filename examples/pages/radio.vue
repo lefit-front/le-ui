@@ -1,6 +1,6 @@
 <template>
   <div class="demo-radio">
-    <le-radio value="value" label="哈哈哈" :checked="checked"/>{{checked}}
+    <le-radio value="value" label="哈哈哈" :checked="checked" @input="getValue" />
     <le-radio-group :options="options" @change="handleSelect" :value="value"/>
   </div>
 </template>
@@ -44,6 +44,9 @@ export default {
   methods: {
     handleSelect (val) {
       this.curValue = val
+    },
+    getValue (val) {
+      console.log(val)
     }
   }
 }
