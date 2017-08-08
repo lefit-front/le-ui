@@ -43,7 +43,7 @@ export default {
   slot: [
     {
       name: '',
-      describe: '主题位置的额外内容'
+      describe: '主体位置的额外内容'
     },
     {
       name: 'left',
