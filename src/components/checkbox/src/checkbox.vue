@@ -41,16 +41,28 @@ export default {
     }
   },
 
-  data () {
-    return {
-      value: []
+  methods: {
+    change (event) {
+      if (this.disabled) {
+        return false
+      }
+      let result = this.group ? {value: this.currentValue, checked: event.target.checked} : event.target.checked
+      this.$emit('input', result)
+      console.log(result)
+    },
+    updateValue () {
+      this.currentValue = this.value;
     }
   },
 
   watch: {
     value (val) {
-      this.$emit('change', val)
+      this.updateValue()
     }
+  },
+
+  mounted () {
+    this.updateValue()
   }
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div class="le-radio-group" :class="vertical ? 'le-radio-vertical' : 'le-radio-horizontal'">
-    <Radio v-for="(option, index) in options" :label="option.label" :value="option.value" :checked="option.value === curValue" @input="changeValue" @clear="clearValue" group/>
+    <Radio v-for="(option, index) in options" :label="option.label" :value="option.value" :checked="option.value === curValue" @input="changeValue" group/>
   </div>
 </template>
 
@@ -43,9 +43,6 @@ export default {
   methods: {
     changeValue (val) {
       this.curValue = val
-    },
-    clearValue () {
-      this.curValue = ''
     }
   }
 };

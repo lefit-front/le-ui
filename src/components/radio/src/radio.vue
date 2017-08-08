@@ -68,6 +68,7 @@ export default {
   },
 
   mounted () {
+    this.updateValue()
   }
 };
 </script>

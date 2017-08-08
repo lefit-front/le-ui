@@ -9,7 +9,7 @@
 export default {
   data () {
     return {
-      value: '2',
+      value: ['2', '4'],
       checked: false,
       title: '课程',
       options: [
