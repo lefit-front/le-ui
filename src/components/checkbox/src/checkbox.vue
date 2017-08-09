@@ -49,6 +49,10 @@ export default {
     }
   },
 
+  components: {
+    leIcon
+  },
+
   methods: {
     change (event) {
       if (this.disabled) {
