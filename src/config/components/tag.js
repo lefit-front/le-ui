@@ -39,7 +39,7 @@ export default {
       option: []
     },
     {
-      name: 'key',
+      name: 'name',
       type: ['String'],
       describe: '用于替换data中name的key值',
       default: '',
