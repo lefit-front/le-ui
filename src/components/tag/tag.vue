@@ -17,16 +17,17 @@ export default {
       required: true
     },
     value: {
-      type: Array,
-      default: []
+      type: Array
     }
   },
   methods: {
     isSelected (idx) {
-      let res = this.value.findIndex(function (value, index, arr) {
-        return value === idx
-      })
-      return res !== -1
+      if (this.value > 0) {
+        let res = this.value.findIndex(function (value, index, arr) {
+          return value === idx
+        })
+        return res !== -1
+      }
     },
     handleClickTag (idx) {
       this.$emit('select', idx)
