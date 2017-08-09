@@ -2,7 +2,7 @@
   <div class="le-tag">
     <div class="le-tag-list">
       <div class="le-tag-item" v-for="(tag, index) in data" :class="{'le-tag-selected': isSelected(index)}" @click="handleClickTag(index)">
-        <span class="le-tag-name">{{tag.name}}</span>
+        <span class="le-tag-name">{{key ? tag[key] : tag.name}}</span>
         <span v-if="tag.amount" class="le-tag-num">{{tag.amount}}</span>
       </div>
     </div>
@@ -18,6 +18,9 @@ export default {
     },
     value: {
       type: Array
+    },
+    key: {
+      type: String
     }
   },
   methods: {
