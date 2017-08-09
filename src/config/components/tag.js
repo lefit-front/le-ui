@@ -37,6 +37,13 @@ export default {
       describe: '选中的tag',
       default: [],
       option: []
+    },
+    {
+      name: 'key',
+      type: ['String'],
+      describe: '用于替换data中name的key值',
+      default: '',
+      option: []
     }
   ]
 }
