@@ -55,7 +55,7 @@ export default {
         return false
       }
       this.iChecked = event.target.checked
-      let result = this.group ? {value: this.currentValue, checked: event.target.checked} : event.target.checked
+      let result = {value: this.currentValue, checked: event.target.checked}
       this.$emit('input', result)
       console.log(result)
     },
