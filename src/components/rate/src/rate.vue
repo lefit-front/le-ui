@@ -35,7 +35,7 @@ export default {
     disabled: Boolean,
     star: {
       type: String,
-      default: 'wujiaoxingshixin'
+      default: 'star'
     },
     activeColor: {
       type: String,
