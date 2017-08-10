@@ -14,7 +14,7 @@ export default {
     },
     {
       name: 'value',
-      type: ['String', 'Number'],
+      type: ['String', 'Number', 'Object', 'Boolean'],
       describe: '传入的value值，用于返回给用户',
       default: '',
       option: [],
