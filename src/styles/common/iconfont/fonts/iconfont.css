@@ -1,10 +1,10 @@
 
 @font-face {font-family: "le-font";
-  src: url('iconfont.eot?t=1502364482879'); /* IE9*/
-  src: url('iconfont.eot?t=1502364482879#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1502364482879') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1502364482879') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1502364482879#le-font') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1502431280514'); /* IE9*/
+  src: url('iconfont.eot?t=1502431280514#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1502431280514') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1502431280514') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1502431280514#le-font') format('svg'); /* iOS 4.1- */
 }
 
 .le-font {
@@ -78,4 +78,6 @@
 .le-icon-select:before { content: "\e609"; }
 
 .le-icon-delete:before { content: "\e60d"; }
+
+.le-icon-achieve:before { content: "\e620"; }
 
