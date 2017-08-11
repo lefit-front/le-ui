@@ -1,5 +1,7 @@
 <template>
-  <i :class="classes" :style="styles"></i>
+  <span>
+    <i :class="classes" :style="styles"></i>
+  </span>
 </template>
 <script>
 const prefixCls = 'le-icon';
