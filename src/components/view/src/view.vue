@@ -42,8 +42,9 @@ export default {
       type: Object,
       default: function () {
         return {
-          maxWidth: '100%',
-          maxHeight: '100%'
+          maxWidth: 'initial',
+          height: '100%',
+          height: '100%'
         }
       }
     }

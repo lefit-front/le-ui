@@ -13,7 +13,7 @@ export default {
         {
           title: 'Peter',
           content: '擅长:单车，power。↵获得证书：Fitness Rider认证单车教练，BH摇摆单车认证教练，Radical power，Radical kimax   Radical topride，中华健身协会C级健身指导员，   急救照顾协会急救员证。',
-          img: 'https://img.leoao.com/o_1bj4h0kko3p6173lrhqv32afuk.jpeg?imageView2/2/w/150'
+          img: 'https://img.leoao.com/o_1bj586qe2ti1av21ap81olh188a8.jpg?imageslim'
         },
         {
           title: 'Kasing',
