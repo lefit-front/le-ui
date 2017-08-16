@@ -4,8 +4,8 @@
       <div class="le-tab-bar-item d-f a-i-c" :class="[{'le-tab-bar-selected': selected === data.id}]" @click="selectedEvent(data.id, data.to)" >
         <div v-if="data.slot" class="le-tab-bar-slot" v-html="data.slot"></div>
         <div v-if="data.img" class="le-tab-bar-img" :style="`backgroundImage: url(${data.img})`"></div>
-        <div v-if="sprite" class="le-tab-bar-sprite">
-          <div class="le-tab-bar-sprite-img" :class="data.class"></div>
+        <div v-if="data.sprite" class="le-tab-bar-sprite">
+          <div class="le-tab-bar-sprite-img" :class="data.sprite"></div>
         </div>
         <div class="le-tab-bar-name">
           {{data.name}}
@@ -62,10 +62,6 @@ export default {
       type: Array
     },
     line: {
-      type: Boolean,
-      default: false
-    },
-    sprite: {
       type: Boolean,
       default: false
     }
