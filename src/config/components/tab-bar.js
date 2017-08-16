@@ -42,25 +42,6 @@ export default {
         }
       ],
       required: false
-    },
-    {
-      name: 'sprite',
-      type: ['Boolean'],
-      describe: '是否使用雪碧图，数据格式中需要包含class',
-      default: 'false',
-      option: [
-        {
-          name: true,
-          describe: '使用雪碧图',
-          default: false
-        },
-        {
-          name: false,
-          describe: '不使用雪碧图',
-          default: true
-        }
-      ],
-      required: false
-    },
+    }
   ]
 }
