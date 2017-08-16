@@ -1,5 +1,5 @@
 <template>
-  <div class="le-radio-group" :class="vertical ? 'le-radio-vertical' : 'le-radio-horizontal'">
+  <div class="le-radio-group" :class="vertical ? 'le-radio-group-vertical' : 'le-radio-group-horizontal'">
     <Radio v-for="(option, index) in options" :label="option.label" :value="option.value" :checked="option.value === curValue" @input="changeValue" group/>
   </div>
 </template>

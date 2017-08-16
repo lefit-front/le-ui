@@ -47,17 +47,39 @@
   }
 }
 
-.@{radio}-vertical {
+.@{radio}-group-vertical {
   flex-direction: column;
+}
+.@{radio}-vertical {
   .@{radio}-item {
+    position: relative;
+    display: block;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    align-items: center;
   }
   .@{radio}-input {
-
+    display: none;
   }
   .@{radio}-label {
-    font-size: @font-size-h5;
+    position: relative;
+    display: block;
+    font-size: @font-size-h4;
+    border-radius: 3px;
+    flex-grow: 2;
+    flex-shrink: 2;
+  }
+  .@{radio}-sign {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: @background-color-gray;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  .@{radio}-sign-active {
+    background-color: @primary-color;
   }
 }

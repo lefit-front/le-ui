@@ -1,5 +1,5 @@
 <template>
-  <div class="le-radio">
+  <div class="le-radio" :class="vertical ? 'le-radio-vertical' : 'le-radio-horizontal'">
     <label class="le-radio-item" slot="title">
       <input
         class="le-radio-input"
