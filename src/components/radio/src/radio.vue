@@ -22,7 +22,7 @@ export default {
       default: false
     },
     value: {
-      type: [String, Number]
+      type: [String, Number, Object, Boolean]
     },
     label: {
       type: [String, Number]
