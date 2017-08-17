@@ -4,8 +4,8 @@
       <div class="le-tab-bar-item d-f a-i-c" :class="[{'le-tab-bar-selected': selected === data.id}]" @click="selectedEvent({id: data.id, url: data.url})" >
         <div v-if="data.slot" class="le-tab-bar-slot" v-html="data.slot"></div>
         <div v-if="data.img" class="le-tab-bar-img" :style="`backgroundImage: url(${data.img})`"></div>
-        <div v-if="data.sprite" class="le-tab-bar-sprite">
-          <div class="le-tab-bar-sprite-img" :class="data.sprite"></div>
+        <div v-if="data.class" class="le-tab-bar-sprite">
+          <div class="le-tab-bar-sprite-img" :class="data.class"></div>
         </div>
         <div class="le-tab-bar-name">
           {{data.name}}
@@ -24,7 +24,6 @@ export default {
     }
   },
   props: {
-    title: String,
     type: {
       type: String,
       default: 'box',
@@ -49,6 +48,7 @@ export default {
   },
   methods: {
     selectedEvent (data) {
+      debugger
       if (data.id) {
         this.$emit('change', data.id)
         this.selected = data.id
