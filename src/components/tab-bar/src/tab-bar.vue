@@ -48,7 +48,6 @@ export default {
   },
   methods: {
     selectedEvent (data) {
-      debugger
       if (data.id) {
         this.$emit('change', data.id)
         this.selected = data.id
