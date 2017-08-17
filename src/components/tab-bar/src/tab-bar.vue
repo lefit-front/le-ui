@@ -5,7 +5,7 @@
         <div v-if="data.slot" class="le-tab-bar-slot" v-html="data.slot"></div>
         <div v-if="data.img" class="le-tab-bar-img" :style="`backgroundImage: url(${data.img})`"></div>
         <div v-if="data.class" class="le-tab-bar-sprite">
-          <div class="le-tab-bar-sprite-img" :class="data.class"></div>
+          <div class="le-tab-bar-sprite-img" :class="`le-${data.class}`"></div>
         </div>
         <div class="le-tab-bar-name">
           {{data.name}}
