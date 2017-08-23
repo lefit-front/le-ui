@@ -39,14 +39,7 @@ export default {
       default: false
     },
     imgStyle: {
-      type: Object,
-      default: function () {
-        return {
-          maxWidth: 'initial',
-          height: '100%',
-          width: '100%'
-        }
-      }
+      type: Object
     }
   },
 

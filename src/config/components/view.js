@@ -98,10 +98,8 @@ export default {
       name: 'imgStyle',
       type: ['Object'],
       describe: '直接作用于图片的样式',
-      default: {
-        maxWidth: '100%',
-        maxHeight: '100%'
-      },
+      default: '',
+      option: [],
       required: false
     }
   ]
