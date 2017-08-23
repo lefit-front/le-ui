@@ -1,6 +1,6 @@
 <template>
   <div class="demo-view">
-    <le-view :src="imgSrc" :width="200" :height="200" shape="round" :fade="true" :imgStyle="{minWidth: '100%'}" />
+    <le-view :src="imgSrc" :defaultImg="defaultImg" :width="200" :height="200" shape="round" :fade="true" :imgStyle="{minWidth: '100%'}" />
   </div>
 </template>
 <script>
