@@ -118,6 +118,14 @@ export default {
       default: 10,
       option: [],
       required: false
+    },
+    {
+      name: 'interval',
+      type: ['Number'],
+      describe: '设置按钮点击间隔',
+      default: 0,
+      option: [],
+      required: false
     }
   ]
 }
