@@ -30,7 +30,7 @@
     "src"
   ],
   "scripts": {
-    "dev": "webpack-dev-server --content-base test/ --open --inline --hot --compress --history-api-fallback --port 8096 --config build/webpack.dev.config.js",
+    "dev": "webpack-dev-server --content-base test/ --open --inline --hot --compress --history-api-fallback --host 0.0.0.0 --port 8096 --disableHostCheck true --config build/webpack.dev.config.js",
     "build:style": "gulp --gulpfile build/build-style.js",
     "build:dev": "webpack --config build/webpack.dist.dev.config.js",
     "build:prod": "webpack --config build/webpack.dist.prod.config.js",
