@@ -2,7 +2,7 @@
   <button
     class="le-button"
     :class="['le-button-' + type, 'le-button-size-' + size, 'le-button-shape-' + shape, {
-      'is-disabled': disabled
+      'is-disabled': disabled || isAction
     }]"
     :disabled="isDisabled"
     @click="handleClick"
@@ -66,6 +66,10 @@ export default {
       type: Boolean,
       default: false
     },
+    interval: {
+      type: Number,
+      default: 0
+    },
     size: {
       type: String,
       default: 'normal',
@@ -100,8 +104,22 @@ export default {
       }
     }
   },
+  data () {
+    return {
+      isAction: false
+    }
+  },
   methods: {
     handleClick (evt) {
+      if (this.isAction || this.isDisabled) {
+        return false
+      }
+      if (this.interval > 0) {
+        this.isAction = true
+        setTimeout(() => {
+          this.isAction = false
+        }, this.interval)
+      }
       this.$emit('click', evt)
     }
   }

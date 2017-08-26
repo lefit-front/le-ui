@@ -26,6 +26,8 @@
     <le-button size="normal" :loading="true">large</le-button>
     <h4>设置loading颜色和大小</h4>
     <le-button size="normal" :loading="true" loading-color="yellow" :loading-size="15">large</le-button>
+    <h1>设置间隔</h1>
+    <le-button :interval="1000">间隔按钮</le-button>
   </div>
 </template>
 <script>
