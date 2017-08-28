@@ -2,7 +2,7 @@
 <template>
   <div class="le-rate">
     <a class="le-rater-box"
-    v-for="i in max" @click="handleClick(i, true)"
+    v-for="i in max" @click="handleClick(i)"
     :class="{'is-active':iValue > i}"
     :style="{color: colors && colors[i-1] ? colors[i-1] : '#ccc',marginRight:margin+'px',fontSize: fontSize + 'px', width: fontSize + 'px', height: fontSize + 'px', lineHeight: fontSize + 'px'}">
       <span class="le-rater-inner">
@@ -78,8 +78,8 @@ export default {
     }
   },
   methods: {
-    handleClick (i, force) {
-      if (!this.disabled || force) {
+    handleClick (i) {
+      if (!this.disabled) {
         if (this.iValue === i) {
           this.iValue = i
           this.updateStyle()
