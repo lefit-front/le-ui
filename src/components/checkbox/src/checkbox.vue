@@ -8,7 +8,7 @@
         :checked="checked === 0 ? iChecked : checked"
         @change="change">
       <span class="le-checkbox-label"><slot>{{label}}</slot></span>
-      <div v-if="vertical" class="le-checkbox-sign" :class="{'le-checkbox-sign-active' : checked === 0 ? iChecked : checked}"><le-icon type="success" color="#fff" size="12" /></div>
+      <div v-if="vertical" class="le-checkbox-sign" :class="{'le-checkbox-sign-active' : checked === 0 ? iChecked : checked}"><le-icon type="success-d" color="#fff" size="12" /></div>
     </label>
   </div>
 </template>
