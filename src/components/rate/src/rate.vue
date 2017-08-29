@@ -6,11 +6,11 @@
     :class="{'is-active':iValue > i}"
     :style="{color: colors && colors[i-1] ? colors[i-1] : '#ccc',marginRight:margin+'px',fontSize: fontSize + 'px', width: fontSize + 'px', height: fontSize + 'px', lineHeight: fontSize + 'px'}">
       <span class="le-rater-inner">
-        <Icon :type="star" :style="{fontSize: fontSize + 'px', lineHeight: fontSize + 'px'}" color="#f2f2f2"/>
+        <Icon :type="star" :style="{fontSize: fontSize + 'px', lineHeight: fontSize + 'px'}"/>
         <span class="le-rater-outer"
         :style="{color: activeColor, width: cutPercent + '%'}"
         v-if="cutPercent > 0 && cutIndex+1 === i">
-          <Icon :type="star" :style="{fontSize: fontSize + 'px', lineHeight: fontSize + 'px'}"/>
+          <Icon :type="star" :style="{fontSize: fontSize + 'px', lineHeight: fontSize + 'px'}" color="#f2f2f2"/>
         </span>
       </span>
     </a>
