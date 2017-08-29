@@ -13,8 +13,8 @@
           </div>
         </div>
         <div class="le-msgbox-btns">
-          <LeButton :class="[ cancelButtonClasses ]" type="plain" v-show="showCancelButton" @click="handleAction('cancel')">{{ cancelButtonText }}</LeButton>
-          <LeButton :class="[ confirmButtonClasses ]" :size="showCancelButton ? 'normal' : 'large'" v-show="showConfirmButton" @click="handleAction('confirm')">{{ confirmButtonText }}</LeButton>
+          <LeButton :class="[ cancelButtonClasses ]" type="plain" v-show="showCancelButton" @click="handleAction('cancel')" shape="circle">{{ cancelButtonText }}</LeButton>
+          <LeButton :class="[ confirmButtonClasses ]" :size="showCancelButton ? 'normal' : 'large'" v-show="showConfirmButton" @click="handleAction('confirm')" shape="circle">{{ confirmButtonText }}</LeButton>
         </div>
       </div>
     </transition>

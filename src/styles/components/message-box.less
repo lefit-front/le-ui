@@ -22,7 +22,7 @@
 .le-msgbox-content {
   padding: 0 @padding 0;
   position: relative;
-  margin-top: 15px;
+  margin-top: 13px;
 }
 
 .le-msgbox-input {
@@ -64,8 +64,12 @@
   font-family: 'PingFangSC-Regular';
   color: @sub-text-color;
   margin: 0;
-  text-align: left;
+  text-align: center;
   line-height: 16px;
+}
+
+.le-msgbox-message-left {
+  text-align: left;
 }
 
 .le-msgbox-btns {
@@ -73,9 +77,8 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: calc(@padding - @btn-space);
+  padding: @padding calc(@padding - @btn-space);
   justify-content: space-between;
-
 }
 .le-msgbox-cancel {
   flex-grow: 2;
