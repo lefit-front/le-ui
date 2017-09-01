@@ -12,7 +12,7 @@
         'color': color
       }"
     ><slot></slot></div>
-    <Icon type="jiantou_right" class="le-icon-floatRight" v-if="isLink"
+    <Icon type="arrow-right-b" class="le-icon-floatRight" v-if="isLink"
       :style="{
         'font-size': size+ 'px',
         'color': color
