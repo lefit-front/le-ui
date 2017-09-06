@@ -1,7 +1,5 @@
 @tab: ~"@{css-prefix}tab-bar";
 .@{tab} {
-  display: flex;
-  justify-content: space-between;
   font-size: @font-size-small;
   font-family: "Noto Sans CJK SC Blod", "Source Han Sans CN Blod", "PingFangSC-Semibold";
 }
@@ -29,8 +27,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-grow: 2;
-  flex-shrink: 2;
   color: @text-color;
 }
 
@@ -60,19 +56,45 @@
   height:2px;
   background-color: @text-color;
 }
-/*flex布局 css兼容*/
-.d-f{
-  display: -webkit-box;  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
-  display: -moz-box;     /* 老版本语法: Firefox (buggy) */
-  display: -ms-flexbox;  /* 混合版本语法: IE 10 */
-  display: -webkit-flex; /* 新版本语法: Chrome 21+ */
-  display: flex;         /* 新版本语法: Opera 12.1, Firefox 22+ */
+
+.@{tab}-flex {
+  display: flex;
+  justify-content: space-between;
+  .@{tab}-item {
+    flex-grow: 2;
+    flex-shrink: 2;
+  }
 }
-/*竖向居中*/
-.a-i-c{
-  align-items:center;
-  -webkit-align-items:center;
-  box-align:center;
-  -moz-box-align:center;
-  -webkit-box-align:center;
+
+.@{tab}-flex-3 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .@{tab}-item {
+    flex-basis: 33%;
+    flex-grow: 2;
+    flex-shrink: 2;
+  }
+}
+
+.@{tab}-flex-4 {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  .@{tab}-item {
+    flex-basis: 25%;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}
+
+.@{tab}-flex-5 {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  .@{tab}-item {
+    flex-basis: 20%;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
 }

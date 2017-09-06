@@ -31,6 +31,31 @@ export default {
           'id': 'mall',
           'img': 'https://cdn.leoao.com/img/%E8%AF%BE%E7%A8%8B@2x.png',
           'name': '运动装备'
+        },
+        {
+          'id': 'mall',
+          'img': 'https://cdn.leoao.com/img/%E8%AF%BE%E7%A8%8B@2x.png',
+          'name': '运动装备'
+        },
+        {
+          'id': 'mall',
+          'img': 'https://cdn.leoao.com/img/%E8%AF%BE%E7%A8%8B@2x.png',
+          'name': '运动装备'
+        },
+        {
+          'id': 'mall',
+          'img': 'https://cdn.leoao.com/img/%E8%AF%BE%E7%A8%8B@2x.png',
+          'name': '运动装备'
+        },
+        {
+          'id': 'mall',
+          'img': 'https://cdn.leoao.com/img/%E8%AF%BE%E7%A8%8B@2x.png',
+          'name': '运动装备'
+        },
+        {
+          'id': 'mall',
+          'img': 'https://cdn.leoao.com/img/%E8%AF%BE%E7%A8%8B@2x.png',
+          'name': '运动装备'
         }
       ],
       data03: [

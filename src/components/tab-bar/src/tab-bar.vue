@@ -1,7 +1,7 @@
 <template>
-  <div :class="`le-tab-bar le-tab-bar-${type} d-f a-i-c`">
+  <div class="le-tab-bar" :class="`le-tab-bar-${type} le-tab-bar-${className}`">
     <template v-for="data in dataList">
-      <div class="le-tab-bar-item d-f a-i-c" :class="[{'le-tab-bar-selected': selected === data.id}]" @click="selectedEvent({id: data.id, url: data.url})" >
+      <div class="le-tab-bar-item" :class="[{'le-tab-bar-selected': selected === data.id}]" @click="selectedEvent({id: data.id, url: data.url})" >
         <div v-if="data.slot" class="le-tab-bar-slot" v-html="data.slot"></div>
         <div v-if="data.img" class="le-tab-bar-img" :style="`backgroundImage: url(${data.img})`"></div>
         <div v-if="data.class" class="le-tab-bar-sprite">
@@ -44,6 +44,20 @@ export default {
     line: {
       type: Boolean,
       default: false
+    }
+  },
+  computed: {
+    className: function () {
+      let len = this.dataList.length
+      if (len <= 5) {
+        return 'flex'
+      } else if (len === 6) {
+        return 'flex-3'
+      } else if (len === 7 || len === 8) {
+        return 'flex-4'
+      } else {
+        return 'flex-5'
+      }
     }
   },
   methods: {
