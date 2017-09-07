@@ -6,3 +6,63 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+
+.border-1px-top{
+  position: relative;
+}
+.border-1px-top:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid @border-color-thin;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+  z-index: 9;
+}
+.border-1px-top:first-child {
+  &:before {
+    border-top: none;
+  }
+}
+.border-1px-bottom{
+    position: relative;
+  }
+.border-1px-bottom:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid @border-color-thin;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+  z-index: 9;
+}
+.border-1px-left{
+  position: relative;
+}
+.border-1px-left:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 25%;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  border-left: 1px solid @border-color-thin;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+}

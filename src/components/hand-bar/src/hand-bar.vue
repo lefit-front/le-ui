@@ -6,7 +6,7 @@
       <Icon type="xiangshangsanjiaoshouqi"></Icon>
     </div>
     <div class="d-f a-i-c le-hand-bar-rightBox" @click="lessonEventFun">
-      <div class="le-hand-bar-type">{{lesson}}</div>
+      <div class="le-hand-bar-type border-1px-left">{{lesson}}</div>
       <Icon type="xiangshangsanjiaoshouqi"></Icon>
     </div>
   </div>

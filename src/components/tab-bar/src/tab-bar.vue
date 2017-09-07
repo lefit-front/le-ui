@@ -1,5 +1,5 @@
 <template>
-  <div class="le-tab-bar" :class="`le-tab-bar-${type} le-tab-bar-${className}`">
+  <div class="le-tab-bar" :class="`le-tab-bar-${type} le-tab-bar-${className} ${type === 'block' ? 'border-1px-bottom' : ''}`">
     <template v-for="data in dataList">
       <div class="le-tab-bar-item" :class="[{'le-tab-bar-selected': selected === data.id}]" @click="selectedEvent({id: data.id, url: data.url})" >
         <div v-if="data.slot" class="le-tab-bar-slot" v-html="data.slot"></div>

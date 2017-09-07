@@ -2,7 +2,7 @@
   <div class="le-nav-bar-box d-f" :style="{'height': height + 'px'}">
     <template v-for="(data, index) in dataList">
       <div class="j-c-c d-f a-i-c" :style="{'width':length + '%'}" @click="selectedEvent(data.id, data.to)">
-        <div class="le-nav-bar-nav" :class="[{'le-nav-bar-border': index !== 0, 'le-nav-bar-selected': selected === data.id}]">{{data.name}}</div>
+        <div class="le-nav-bar-nav" :class="[{'border-1px-left': index !== 0, 'le-nav-bar-selected': selected === data.id}]">{{data.name}}</div>
       </div>
     </template>
   </div>
