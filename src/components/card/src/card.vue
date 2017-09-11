@@ -8,8 +8,8 @@
       <p v-if="content" class="le-card-content" :class="{'clamp-2': showMore}">{{content}}</p>
       <slot></slot>
       <div v-if="hasMore" class="le-card-more" @click="showMore = !showMore">
-        <Icon v-if="showMore" type="arrow-down-a"/>
-        <Icon v-if="!showMore" type="arrow-up-a"/>
+        <Icon v-if="showMore" type="arrow-down-a" color="rgba(0, 0, 0, .6)"/>
+        <Icon v-if="!showMore" type="arrow-up-a" color="rgba(0, 0, 0, .6)"/>
       </div>
     </div>
     <div class="le-card-right">
