@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="le-picker-box"
+    <div class="le-picker-box" v-show="show"
         :class="[{
           'le-picker-show': show === true,
           'le-picker-hide': show === false
@@ -24,7 +24,7 @@
 
     </div>
 
-    <div class="le-picker-shadow" @click="cancelEventFun" v-show="show === true"></div>
+    <div class="le-picker-shadow" @click="cancelEventFun" v-show="show"></div>
   </div>
 </template>
 
