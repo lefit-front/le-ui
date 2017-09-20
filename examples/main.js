@@ -19,6 +19,10 @@ import '../src/styles/index.less'
 import { MessageBox } from '../src/index';
 Vue.prototype.$msg = MessageBox
 
+// 添加指令
+import vScrollabled from '../src/directives/v-scrollabled'
+Vue.use(vScrollabled)
+
 // 开启debug模式
 Vue.config.debug = true;
 

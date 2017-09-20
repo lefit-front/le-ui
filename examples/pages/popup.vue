@@ -27,6 +27,17 @@
       >
       我是内容
     </le-popup>
+    <le-button type="primary" @click="popupScroll=true">可滚动容器</le-button>
+    <le-popup
+      v-model="popupScroll"
+      position=""
+      class="popupScroll"
+      pop-transition="popup-fade"
+      v-scrollabled
+      >
+      <p v-for="n in 40">第{{n}}行</p>
+      <le-button type="primary" size="large" @click="popupScroll=false">点击关闭</le-button>
+    </le-popup>
     <le-button type="primary" @click="popRight">向右边</le-button>
     <le-popup
       v-model="popupRight"
@@ -56,7 +67,8 @@ export default {
       modal: false,
       popupCenter: false,
       popupRight: false,
-      popupLeft: false
+      popupLeft: false,
+      popupScroll: false
     }
   },
   methods: {
@@ -131,6 +143,13 @@ export default {
   width:100%;
   height:100vh;
   background: rgba(0, 0, 0, 0.5)!important;
+}
+.popupScroll{
+  width:80%;
+  height:50%;
+  overflow: auto;
+  border-radius:15px;
+  -webkit-overflow-scrolling: touch;
 }
 .msg{
   margin-top:30%;

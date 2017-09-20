@@ -24,6 +24,8 @@ import Loading from './components/loading';
 import Empty from './components/empty';
 import Picker from './components/picker';
 
+import vScrollabled from './directives/v-scrollabled';
+
 import locale from './locale';
 
 const le = {
@@ -55,7 +57,8 @@ const le = {
 const install = function (Vue, opts = {}) {
   locale.use(opts.locale);
   locale.i18n(opts.i18n);
-
+  Vue.use(vScrollabled);
+  
   Object.keys(le).forEach((key) => {
     Vue.component(le[key].name, le[key]);
   });
