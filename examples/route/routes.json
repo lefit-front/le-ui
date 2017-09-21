@@ -111,6 +111,11 @@
         "path": "/picker",
         "name": "Picker",
         "icon": "picker"
+      },
+      {
+        "path": "/imgLoad",
+        "name": "ImgLoad",
+        "icon": "picker"
       }
     ]
   }

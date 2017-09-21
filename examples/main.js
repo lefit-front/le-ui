@@ -22,6 +22,9 @@ Vue.prototype.$msg = MessageBox
 // 开启debug模式
 Vue.config.debug = true;
 
+import imgLoad from '../src/directives/img-load'
+Vue.use(imgLoad)
+
 // 路由配置
 const router = new VueRouter({
   base: __dirname,
