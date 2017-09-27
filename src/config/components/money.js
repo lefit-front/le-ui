@@ -45,7 +45,7 @@ export default {
       required: false
     },
     {
-      name: 'delete',
+      name: 'line',
       type: ['Boolean'],
       describe: '是否加上删除线',
       default: 'false',
