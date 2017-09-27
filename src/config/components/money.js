@@ -2,7 +2,7 @@ export default {
   file: 'money',
   name: 'Money',
   class: 'le-money',
-  describe: 'monen组件',
+  describe: 'money组件',
   props: [
     {
       name: 'number',
@@ -41,6 +41,14 @@ export default {
       type: ['Boolean'],
       describe: '字体加粗，接受 true false',
       default: 'true',
+      option: [],
+      required: false
+    },
+    {
+      name: 'delete',
+      type: ['Boolean'],
+      describe: '是否加上删除线',
+      default: 'false',
       option: [],
       required: false
     }
