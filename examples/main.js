@@ -23,7 +23,7 @@ Vue.prototype.$msg = MessageBox
 Vue.config.debug = true;
 
 import imgLoad from '../src/directives/img-load'
-Vue.use(imgLoad)
+Vue.use(imgLoad, {scale: 0.4})
 
 // 路由配置
 const router = new VueRouter({
