@@ -1,5 +1,5 @@
 <template>
-  <div class="le-money-box" :style="{'color': color}" :class="[{'le-money-bold': bold}]">
+  <div class="le-money-box" :style="{'color': color}" :class="[{'le-money-bold': bold, 'le-money-delete': delete}]">
     <small :style="{'font-size': setMoneyIconSize}">{{moneyIcon}}</small>
     <span :style="{'font-size': setMoneySize}">{{number}}</span>
   </div>
@@ -43,6 +43,10 @@ export default {
     },
     color: String,
     bold: {
+      type: Boolean,
+      default: false
+    },
+    delete: {
       type: Boolean,
       default: false
     }
