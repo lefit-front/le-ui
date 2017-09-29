@@ -29,23 +29,25 @@ class LefitImgLoad {
     }
     setTimeout(() => {
       let opacity = window.getComputedStyle(el).opacity * 1
-      // console.log('0是谁啊')
-      // console.log(opacity)
       if (opacity < 0.95) {
         el.style.opacity = (1 - opacity) / 6 + opacity
         this.fadeIn(el, opacity)
       } else {
         el.style.opacity = 1
       }
-    }, 1000)
+    }, 60)
   }
 }
 export default {
   install(Vue, {scale, fadeIn}) {
     Vue.directive('lefit-load', {
       bind(el, { value }) {
-        console.log('进来一次')
         if (value === undefined) return false
+        if (el.getAttribute('bind')) {
+          return false
+        }
+        console.log(el.getAttribute('bind'))
+        el.setAttribute('bind', 'true')
         let valType = typeof value === 'string' ? 'string' : 'object'
         let originStyle = ''
         let src = ''
@@ -64,7 +66,7 @@ export default {
         let imgTemp = new Image()
         imgTemp.src = src
         imgTemp.addEventListener('load', function () {
-          el.style.opacity = 0
+          el.style.opacity = 0.3
           if (el.nodeName === 'IMG') {
             el.src = this.src
           } else {
