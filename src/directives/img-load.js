@@ -40,14 +40,9 @@ class LefitImgLoad {
 }
 export default {
   install(Vue, {scale, fadeIn}) {
-    Vue.directive('lefit-load', {
+    Vue.directive('imgLoad', {
       bind(el, { value }) {
         if (value === undefined) return false
-        if (el.getAttribute('bind')) {
-          return false
-        }
-        console.log(el.getAttribute('bind'))
-        el.setAttribute('bind', 'true')
         let valType = typeof value === 'string' ? 'string' : 'object'
         let originStyle = ''
         let src = ''

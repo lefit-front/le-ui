@@ -19,6 +19,7 @@ import Money from './components/money';
 import Loading from './components/loading';
 import Empty from './components/empty';
 import Picker from './components/picker';
+import ImgLoad from './components/img-load'
 
 const config = {
   LeView: LeView,
@@ -41,7 +42,8 @@ const config = {
   Money: Money,
   Loading: Loading,
   Empty: Empty,
-  Picker: Picker
+  Picker: Picker,
+  ImgLoad: ImgLoad
 };
 
 export default config

@@ -1,31 +1,30 @@
 export default {
-  file: 'icon',
-  name: 'Icon',
-  class: 'le-icon',
-  describe: '图片容器组件',
+  file: 'imgLoad',
+  name: 'imgLoad',
+  describe: '图片加载插件',
   props: [
     {
-      name: 'type',
+      name: 'url',
       type: ['String'],
-      describe: '传入icon图标类名，详见 http://www.iconfont.cn/manage/index?manage_type=myprojects&projectId=174634&keyword=',
+      describe: '图片链接',
       default: '',
       option: [],
       required: true,
       example: 'logo_lefit'
     },
     {
-      name: 'size',
-      type: ['Number', 'String'],
-      describe: 'icon尺寸大小',
-      default: 12,
+      name: 'fadeIn',
+      type: ['Boolean'],
+      describe: '是否需要动画',
+      default: true,
       option: [],
       required: false
     },
     {
-      name: 'color',
-      type: ['String'],
-      describe: 'icon的颜色',
-      default: '',
+      name: 'scale',
+      type: ['Number'],
+      describe: '占位图放大的比例',
+      default: 0.4,
       option: [],
       required: false
     }
