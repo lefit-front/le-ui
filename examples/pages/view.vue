@@ -7,7 +7,7 @@
     export default {
       data () {
         return {
-          imgSrc: '',
+          imgSrc: 'https://cdn.leoao.com/o_1blil75gs1p2u1kpm5pp1ov51rfq8.png',
           defaultImg: 'https://cdn.leoao.com/m/img/blank_class.png?imageView2/2/w/200'
         }
       },
