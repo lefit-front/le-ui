@@ -20,7 +20,7 @@ import TabBar from './components/tab-bar';
 import NavBar from './components/nav-bar';
 import HandBar from './components/hand-bar';
 import Money from './components/money';
-import Loading from './components/loading';
+import { Loading } from './components/loading';
 import Empty from './components/empty';
 import Picker from './components/picker';
 
