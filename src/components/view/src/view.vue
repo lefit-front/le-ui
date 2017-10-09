@@ -1,7 +1,7 @@
 <template>
-  <div class="le-view" :class="shape ? 'le-view-' + shape : ''" :style="`width: ${realWidth}; height: ${realHeight}`">
+  <div class="le-view" :class="shape ? 'le-view-' + shape : ''" :style="`width: ${realWidth}; height: ${realHeight}`" @click="handleClick">
     <div v-if="defaultImg && defaultShow" class="le-view-default" :class="{'le-view-hide': ready}" :style="`backgroundImage: url(${defaultImg})`"></div>
-    <img v-show="ready" class="le-view-img" :class="[{'le-view-show': fade && ready}, {'le-view-cover': cover}]" :src="src" @load="handleImgReady" :style="imgStyle"/>
+    <img v-show="ready" class="le-view-img" :class="[{'le-view-show': fade && ready}, {'le-view-cover': cover}]" :src="src || defaultImg" @load="handleImgReady" :style="imgStyle"/>
   </div>
 </template>
 
@@ -64,6 +64,9 @@ export default {
     handleImgReady () {
       this.ready = true
       this.defaultShow = false
+    },
+    handleClick () {
+      this.$emit('click')
     }
   },
 
