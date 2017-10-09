@@ -18,6 +18,8 @@
     <le-money :number="number" :size="20" :color="color" moneyIcon="$"></le-money>
     <h3>Money 字体加粗</h3>
     <le-money :number="number" :size="26" :color="color" moneyIcon="$" bold></le-money>
+    <h3>Money 删除线</h3>
+    <le-money :number="number" :size="26" :color="color" moneyIcon="$" line></le-money>
   </div>
 </template>
 <script>
