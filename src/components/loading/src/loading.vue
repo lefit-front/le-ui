@@ -1,5 +1,5 @@
 <template>
-  <div class="le-loading-box d-f j-c-c a-i-c" :class="[{'le-loading-full-screen': full}]">
+  <div v-if="show" class="le-loading-box d-f j-c-c a-i-c" :class="[{'le-loading-full-screen': full}]" :style="{backgroundColor: backgroundColor}" @touchstart.prevent>
     <div
       :class="['le-loading-' + type]"
       :style="{
@@ -48,6 +48,7 @@ export default {
       type: String,
       default: '#000'
     },
+    backgroundColor: String,
     loadingSize: {
       type: Number,
       default: 22
@@ -55,6 +56,10 @@ export default {
     full: {
       type: Boolean,
       default: false
+    },
+    show: {
+      type: Boolean,
+      default: true
     }
   },
   computed: {

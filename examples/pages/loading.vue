@@ -15,6 +15,8 @@
     <h3>loading 设置全屏</h3>
     <le-button @click="loadingEvent">点击查看全屏loading效果</le-button>
     <le-loading type="rotate" loading-color="red" :loading-size="22" full v-if="isFull === true" />
+    <le-button @click="openLoading">点击开启全局loading</le-button>
+    <le-button @click="openLoading({backgroundColor: 'rgba(0,0,0,.6)', type: 'triple'})">点击开启全局loading(传参)</le-button>
   </div>
 </template>
 <script>
@@ -34,6 +36,12 @@ export default {
       setTimeout(() => {
         this.isFull = false
       },1000)
+    },
+    openLoading(option) {
+      this.$loading.show(option)
+      setTimeout(() => {
+        this.$loading.close()
+      }, 2000)
     }
   }
 }
