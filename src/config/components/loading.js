@@ -46,6 +46,14 @@ export default {
       default: '',
       option: [],
       required: false
-    }
+    },
+    {
+      name: 'backgroundColor',
+      type: ['String'],
+      describe: 'loading的背景颜色',
+      default: '无',
+      option: [],
+      required: false
+    },
   ]
 }
