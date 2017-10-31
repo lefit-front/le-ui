@@ -1,6 +1,10 @@
 @input: ~"@{css-prefix}input";
 .@{input}-wrapper {
   input[type="text"] {
+    color: @text-color;
+    font-size: 16px;
+  }
+  input[type="text"]::-webkit-input-placeholder {
     color: @desc-text-color;
   }
 }
