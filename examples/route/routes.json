@@ -38,6 +38,11 @@
         "icon": "icon"
       },
       {
+        "path": "/input",
+        "name": "Input",
+        "icon": "input"
+      },
+      {
         "path": "/nav-bar",
         "name": "NavBar",
         "icon": "nav-bar"
