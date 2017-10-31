@@ -146,6 +146,7 @@ export default {
       return [
         `${prefixCls}`,
         {
+          [`${prefixCls}-${this.size}`]: !!this.size,
           [`${prefixCls}-disabled`]: this.disabled
         }
       ];

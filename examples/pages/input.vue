@@ -7,7 +7,7 @@
     <h1>设置最大长度</h1>
     <le-input placeholder="hello" :maxlength="5"/>
     <h1>textarea</h1>
-    <le-input placeholder="hello" type="textarea" :rows="4"/>
+    <le-input placeholder="hello" type="textarea" size="large" :rows="4"/>
     <h1>只读</h1>
     <le-input value="此处只可读，不可写" placeholder="hello" readonly/>
     <h1>带icon</h1>
