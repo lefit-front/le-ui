@@ -1,1 +1,23 @@
 @input: ~"@{css-prefix}input";
+
+.@{input} {
+}
+
+.@{input}-icon {
+    @input-height-base: 22px;
+    width: 32px;
+    height: @input-height-base;
+    line-height: @input-height-base;
+    font-size: 16px;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    z-index: 3;
+}
+
+.@{input}-wrapper{
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    vertical-align: middle;
+}
