@@ -14,6 +14,8 @@
     <le-input placeholder="hello" icon="tip" size="large"/>
     <h1>无边框</h1>
     <le-input placeholder="hello" noBorder/>
+    <h1>居中</h1>
+    <le-input placeholder="hello" align="center" noBorder size="large"/>
   </div>
 </template>
 <script>

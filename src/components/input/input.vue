@@ -111,6 +111,16 @@ export default {
     noBorder: {
       type: Boolean,
       default: false
+    },
+    align: {
+      validator (value) {
+        return [
+          'left',
+          'center',
+          'right'
+        ].indexOf(value) > -1
+      },
+      default: 'left'
     }
   },
   data () {
@@ -138,6 +148,7 @@ export default {
         `${prefixCls}`,
         {
           [`${prefixCls}-${this.size}`]: !!this.size,
+          [`${prefixCls}-${this.align}`]: !!this.align,
           [`${prefixCls}-disabled`]: this.disabled
         }
       ];

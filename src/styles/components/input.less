@@ -1,4 +1,9 @@
 @input: ~"@{css-prefix}input";
+.@{input}-wrapper {
+  input[type="text"] {
+    color: @desc-text-color;
+  }
+}
 
 .@{input}-no-border {
   input[type="text"] {
@@ -42,4 +47,12 @@
   width: 100%;
   position: relative;
   vertical-align: middle;
+}
+
+.@{input}-center {
+  text-align: center;
+}
+
+.@{input}-right {
+  text-align: right;
 }
