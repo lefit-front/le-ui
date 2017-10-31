@@ -28,6 +28,6 @@ export default {
         Object.assign(tpl, defaultProperties)
       }
     }
-    Object.defineProperty(Vue.prototype, '$loading', {value: methods})
+    // Object.defineProperty(Vue.prototype, '$loading', {value: methods})
   }
 }
