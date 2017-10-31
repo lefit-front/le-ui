@@ -1,7 +1,7 @@
 <template>
   <div :class="wrapClasses">
     <template v-if="type !== 'textarea'">
-      <Icon :class="[prefixCls + '-icon']" :type="icon" :size="iconSize" :color="iconColor" v-if="icon" @click="handleIconClick">
+      <Icon :class="[prefixCls + '-icon']" :type="icon" :size="iconSize" :color="iconColor" v-if="icon" @click="handleIconClick" />
       <input
           ref="input"
           :type="type"

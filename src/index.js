@@ -12,6 +12,7 @@ import LeView from './components/view';
 import Card from './components/card';
 import Item from './components/item';
 import Rate from './components/rate';
+import Input from './components/input';
 
 import LeButton from './components/button';
 import BaseList from './components/base-list';
@@ -42,6 +43,7 @@ const le = {
   Card,
   Item,
   Rate,
+  Input,
   Loading,
   Radio,
   RadioGroup: Radio.Group,
