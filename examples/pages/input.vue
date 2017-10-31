@@ -1,17 +1,19 @@
 <template>
   <div class="">
     <h1>正常</h1>
-    <le-input placeholder="hello" @on-enter="handleEnter"/>
+    <le-input placeholder="hello"/>
     <h1>禁用</h1>
-    <le-input placeholder="hello" @on-enter="handleEnter" disabled/>
+    <le-input placeholder="hello" disabled/>
     <h1>设置最大长度</h1>
-    <le-input placeholder="hello" @on-enter="handleEnter" :maxlength="5"/>
+    <le-input placeholder="hello" :maxlength="5"/>
     <h1>textarea</h1>
-    <le-input placeholder="hello" @on-enter="handleEnter" type="textarea" :rows="4"/>
+    <le-input placeholder="hello" type="textarea" :rows="4"/>
     <h1>只读</h1>
-    <le-input value="此处只可读，不可写" placeholder="hello" @on-enter="handleEnter" readonly/>
+    <le-input value="此处只可读，不可写" placeholder="hello" readonly/>
     <h1>带icon</h1>
-    <le-input placeholder="hello" @on-enter="handleEnter" icon="lefit"/>
+    <le-input placeholder="hello" icon="tip" size="large"/>
+    <h1>无边框</h1>
+    <le-input placeholder="hello" noBorder/>
   </div>
 </template>
 <script>

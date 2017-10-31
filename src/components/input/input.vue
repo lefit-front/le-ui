@@ -128,7 +128,8 @@ export default {
         `${prefixCls}-wrapper`,
         {
           [`${prefixCls}-wrapper-${this.size}`]: !!this.size,
-          [`${prefixCls}-type`]: this.type
+          [`${prefixCls}-type`]: this.type,
+          [`${prefixCls}-no-border`]: this.noBorder
         }
       ];
     },
