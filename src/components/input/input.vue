@@ -1,7 +1,7 @@
 <template>
   <div :class="wrapClasses">
     <template v-if="type !== 'textarea'">
-      <Icon :class="[prefixCls + '-icon']" :type="icon" :size="iconSize" :color="iconColor" v-if="icon" @click="handleIconClick" />
+      <le-icon :class="[prefixCls + '-icon']" :type="icon" :size="iconSize" :color="iconColor" v-if="icon" @click="handleIconClick" />
       <input
           ref="input"
           :type="type"
@@ -40,7 +40,7 @@
   </div>
 </template>
 <script>
-import Icon from '../icon'
+import leIcon from '../icon'
 
 const prefixCls = 'le-input';
 export default {
@@ -79,10 +79,6 @@ export default {
       type: Boolean,
       default: false
     },
-    autosize: {
-      type: [Boolean, Object],
-      default: false
-    },
     rows: {
       type: Number,
       default: 2
@@ -95,12 +91,12 @@ export default {
       type: String
     },
     number: {
-        type: Boolean,
-        default: false
+      type: Boolean,
+      default: false
     },
     autofocus: {
-        type: Boolean,
-        default: false
+      type: Boolean,
+      default: false
     },
     icon: {
       type: String
@@ -118,6 +114,9 @@ export default {
       currentValue: this.value,
       prefixCls: prefixCls
     }
+  },
+  components: {
+    leIcon
   },
   computed: {
     wrapClasses () {
