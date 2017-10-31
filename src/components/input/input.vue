@@ -107,6 +107,10 @@ export default {
     iconColor: {
       type: String,
       default: ''
+    },
+    noBorder: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
