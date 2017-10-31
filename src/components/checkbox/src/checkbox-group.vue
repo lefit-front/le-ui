@@ -37,7 +37,6 @@ export default {
   watch: {
     curValue (val) {
       this.$emit('change', val)
-      console.log(val)
     }
   },
 

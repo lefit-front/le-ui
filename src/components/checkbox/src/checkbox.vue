@@ -61,7 +61,6 @@ export default {
       this.iChecked = event.target.checked
       let result = {value: this.currentValue, checked: event.target.checked}
       this.$emit('input', result)
-      console.log(result)
     },
     updateValue () {
       this.currentValue = this.value;
@@ -69,7 +68,7 @@ export default {
   },
 
   watch: {
-    value (val) {
+    value () {
       this.updateValue()
     }
   },

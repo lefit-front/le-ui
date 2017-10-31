@@ -26,7 +26,7 @@ export default {
   methods: {
     isSelected (idx) {
       if (this.value && this.value.length > 0) {
-        let res = this.value.findIndex(function (value, index, arr) {
+        let res = this.value.findIndex(function (value) {
           return value === idx
         })
         return res !== -1

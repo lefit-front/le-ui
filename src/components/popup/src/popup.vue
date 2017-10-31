@@ -31,7 +31,6 @@
  *   </Popup>
  */
 import Popup from '../../../utils/popup';
-import Vue from 'vue';
 export default {
   name: 'le-popup',
 

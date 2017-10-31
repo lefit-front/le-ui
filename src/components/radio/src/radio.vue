@@ -54,7 +54,6 @@ export default {
       }
       let result = this.group ? this.currentValue : event.target.checked
       this.$emit('input', result)
-      console.log(result)
     },
     updateValue () {
       this.currentValue = this.value;
@@ -62,7 +61,7 @@ export default {
   },
 
   watch: {
-    value (val) {
+    value () {
       this.updateValue()
     }
   },
