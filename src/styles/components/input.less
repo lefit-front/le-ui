@@ -1,8 +1,21 @@
 @input: ~"@{css-prefix}input";
 .@{input}-wrapper {
-  input[type="text"] {
+  textarea {
+    overflow: auto;
+  }
+  input, textarea {
     color: @text-color;
     font-size: 16px;
+    min-height: 34px;
+    padding: 7px 8px;
+    vertical-align: middle;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right center;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
   }
   input[type="text"]::-webkit-input-placeholder {
     color: @desc-text-color;
