@@ -51,7 +51,8 @@ export default {
         return [
           'text',
           'textarea',
-          'password'
+          'password',
+          'number'
         ].indexOf(value) > -1
       },
       default: 'text'
