@@ -8,6 +8,9 @@ import routes from './route';
 import Le from '../src/index';
 import locale from '../src/locale/lang/zh-CN';
 import LoadingPlugin from '../src/components/loading/src/plugin'
+import InfiniteScroll from '../src/components/infinite-scroll'
+
+Vue.use(InfiniteScroll);
 
 Vue.use(VueRouter);
 Vue.use(LoadingPlugin);

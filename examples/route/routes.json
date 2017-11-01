@@ -43,6 +43,11 @@
         "icon": "input"
       },
       {
+        "path": "/infiniteScroll",
+        "name": "InfiniteScroll",
+        "icon": "infinite-scroll"
+      },
+      {
         "path": "/nav-bar",
         "name": "NavBar",
         "icon": "nav-bar"
