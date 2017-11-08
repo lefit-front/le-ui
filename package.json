@@ -35,7 +35,7 @@
     "build:dev": "webpack --config build/webpack.dist.dev.config.js",
     "build:prod": "webpack --config build/webpack.dist.prod.config.js",
     "build": "npm run build:style && npm run build:dev && npm run build:prod",
-    "deploy": "npm run build && npm publish",
+    "deploy": "npm run build && npm publish --registry http://registry.npmjs.org",
     "page": "webpack --config build/webpack.page.config.js",
     "lint": "eslint --fix --ext .js,.vue src",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
