@@ -3,7 +3,7 @@
     <template v-for="data in dataList">
       <div class="le-tab-bar-item" :class="[{'le-tab-bar-selected': selected === data.id}]" @click="selectedEvent({id: data.id, url: data.url})" >
         <div v-if="data.slot" class="le-tab-bar-slot" v-html="data.slot"></div>
-        <div class="le-tab-bar-sprite">
+        <div class="le-tab-bar-sprite" v-if="data.class || data.img">
           <div v-if="data.img" class="le-tab-bar-img" :style="`backgroundImage: url(${data.img})`"></div>
           <div v-if="data.class" class="le-tab-bar-sprite-img" :class="`le-${data.class}`"></div>
           <span v-if="data.tag" class="le-tab-bar-tag">{{data.tag || 'HOT'}}</span>
