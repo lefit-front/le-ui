@@ -44,6 +44,7 @@
   * <Picker :slots="dataList" @change="onValuesChange" title="选择地址" :cancel="cancel" :submit="submit" :show="show"></Picker>
   *
   */
+  import pickerSlot from './picker-slot.vue'
   export default {
     name: 'le-picker',
     componentName: 'picker',
@@ -195,7 +196,7 @@
     },
 
     components: {
-      PickerSlot: require('./picker-slot.vue')
+      pickerSlot
     }
   };
 </script>
