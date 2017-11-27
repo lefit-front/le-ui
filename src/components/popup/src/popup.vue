@@ -2,7 +2,7 @@
   <transition :name="currentTransition">
     <div v-show="currentValue" class="le-popup" :class="[position ? 'le-popup-' + position : '']">
       <slot></slot>
-      <div class="le-popup-close">
+      <div class="le-popup-close" v-if="close">
         <slot name="close"></slot>
       </div>
     </div>
@@ -61,6 +61,11 @@ export default {
     position: {
       type: String,
       default: ''
+    },
+
+    close: {
+      type: Boolean,
+      default: true
     }
   },
 
