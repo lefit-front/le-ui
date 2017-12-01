@@ -1,6 +1,8 @@
 @list: ~"@{css-prefix}base-list";
 .@{list} {
   padding:15px 0;
+  display: flex;
+  justify-content: space-between;
 }
 .boder-1px-bottom {
   position:relative;
@@ -18,7 +20,7 @@
   transform: scaleY(0.5);
 }
 .le-icon-floatRight {
-  margin-left:auto;
+  margin-left: auto;
   text-align: right;
 }
 .@{list} {
@@ -31,20 +33,4 @@
   color: @text-color;
   flex-grow: 0;
   flex-shrink: 0;
-}
-
-/*竖向居中*/
-.a-i-c {
-  align-items:center;
-  -webkit-align-items:center;
-  box-align:center;
-  -moz-box-align:center;
-  -webkit-box-align:center;
-}
-.d-f {
-  display: -webkit-box;  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
-  display: -moz-box;     /* 老版本语法: Firefox (buggy) */
-  display: -ms-flexbox;  /* 混合版本语法: IE 10 */
-  display: -webkit-flex; /* 新版本语法: Chrome 21+ */
-  display: flex;         /* 新版本语法: Opera 12.1, Firefox 22+ */
 }
