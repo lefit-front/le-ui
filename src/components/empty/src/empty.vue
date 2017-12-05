@@ -1,6 +1,7 @@
 <template>
   <div class="le-empty-box" :class="[{'le-empty-full-screen d-f a-i-c j-c-c f-d-c': full}]">
     <img class="le-empty-img" :src="src" :style="{'width': width + 'px'}">
+    <slot></slot>
     <p class="le-empty-text" :style="{'font-size': size + 'px'}">{{text}}</p>
   </div>
 </template>
