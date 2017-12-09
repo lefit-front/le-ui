@@ -4,7 +4,7 @@
       <slot name="left"></slot>
     </div>
     <div class="le-card-main">
-      <p v-if="title" class="le-card-title">{{title}}</p>
+      <p v-if="title" class="le-card-title">{{title}}<slot name="sub"></slot></p>
       <p v-if="content" class="le-card-content" :class="{'clamp-2': showMore}">{{content}}</p>
       <slot></slot>
       <div v-if="hasMore" class="le-card-more" @click="showMore = !showMore">
