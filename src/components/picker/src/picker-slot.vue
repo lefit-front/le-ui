@@ -105,6 +105,7 @@
   import { once, addClass, removeClass } from '../../../utils/dom';
   import emitter from './mixin';
   import Vue from 'vue';
+  import isEqual from 'lodash.isequal';
   if (!Vue.prototype.$isServer) {
     require('raf.js');
   }
@@ -210,7 +211,17 @@
         return this.itemHeight * this.visibleItemCount;
       },
       valueIndex() {
-        return this.mutatingValues.indexOf(this.currentValue);
+        if ((typeof this.currentValue === "object") && (this.currentValue !== null)) {
+          var sign = -1
+          this.mutatingValues.filter((i) => {
+            if (isEqual(i, this.currentValue)) {
+              sign = 1
+            }
+          })
+          return sign
+        } else {
+          return this.mutatingValues.indexOf(this.currentValue);
+        }
       },
       dragRange() {
         var values = this.mutatingValues;
