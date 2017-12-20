@@ -19,6 +19,8 @@ import Money from './components/money';
 import Loading from './components/loading';
 import Empty from './components/empty';
 import Picker from './components/picker';
+import Input from './components/input';
+import Switch from './components/switch';
 
 const config = {
   LeView: LeView,
@@ -41,7 +43,9 @@ const config = {
   Money: Money,
   Loading: Loading,
   Empty: Empty,
-  Picker: Picker
+  Picker: Picker,
+  Input: Input,
+  Switch: Switch
 };
 
 export default config

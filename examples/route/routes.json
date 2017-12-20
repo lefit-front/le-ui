@@ -121,6 +121,11 @@
         "path": "/picker",
         "name": "Picker",
         "icon": "picker"
+      },
+      {
+        "path": "/switch",
+        "name": "Switch",
+        "icon": "switch"
       }
     ]
   }

@@ -13,6 +13,7 @@ import Card from './components/card';
 import Item from './components/item';
 import Rate from './components/rate';
 import Input from './components/input';
+import Switch from './components/switch';
 
 import LeButton from './components/button';
 import BaseList from './components/base-list';
@@ -44,6 +45,7 @@ const le = {
   Item,
   Rate,
   Input,
+  Switch,
   Loading,
   Radio,
   RadioGroup: Radio.Group,
