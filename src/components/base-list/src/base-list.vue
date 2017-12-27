@@ -5,6 +5,7 @@
         'font-size': size+ 'px',
         'color': color
       }"
+      @click="handleClickTitle"
     >{{title}}</div>
     <div class="le-icon-floatRight"
       :style="{
@@ -76,6 +77,9 @@ export default {
       } else {
         this.$emit('click')
       }
+    },
+    handleClickTitle (e) {
+      this.$emit('clickTitle', e)
     }
   }
 }
