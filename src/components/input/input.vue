@@ -52,7 +52,8 @@ export default {
           'text',
           'textarea',
           'password',
-          'number'
+          'number',
+          'tel'
         ].indexOf(value) > -1
       },
       default: 'text'
