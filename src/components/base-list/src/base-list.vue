@@ -2,7 +2,7 @@
   <div class="le-base-list d-f a-i-c" @click="toRouter" :class="[{'boder-1px-bottom ': border === 'block'}]">
     <div class="le-base-list-title"
       :style="{
-        'font-size': size+ 'px',
+        'font-size': typeof(this.size) === 'number' ? this.size + 'px' : this.size,
         'color': color
       }"
       @click="handleClickTitle"
@@ -50,7 +50,7 @@ export default {
     isLink: Boolean,
     to: String,
     size: {
-      type: Number,
+      type: [Number, String],
       default: 16
     },
     color: {
