@@ -2,7 +2,7 @@
   <div class="">
     <le-icon type="nav" />
     <le-icon type="lefit" />
-    <le-icon symbol="le-icon-delete" />
+    <le-icon symbol="le-icon le-icon-delete" />
   </div>
 </template>
 <script>

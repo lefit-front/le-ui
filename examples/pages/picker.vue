@@ -12,7 +12,7 @@ body{
 <template>
   <div class="demo-button">
     <h1>picker</h1>
-    <le-picker :slots="dataList02" @change="onValuesChange" title="选择地址" :cancel="cancel" :submit="submit" :show="show"></le-picker>
+    <le-picker :slots="dataList02" @change="onValuesChange" title="选择日期" :cancel="cancel" :submit="submit" :show="show"></le-picker>
     <le-button @click="open">打开picker</le-button>
     <le-picker :slots="dataList" @change="onAddressChangeThree" title="选择地址" :cancel="cancelThree" :submit="submitThree" :show="showThree" :visible-item-count="5"></le-picker>
     <le-button @click="openThree">打开三级联动</le-button>
