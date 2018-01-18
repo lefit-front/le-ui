@@ -27,7 +27,7 @@ export default {
   },
   computed: {
     classes () {
-      return this.symbol ? `${prefixCls} ${this.symbol}` : `${prefixCls} ${prefixCls}-${this.type}`;
+      return this.symbol ? `${this.symbol}` : `${prefixCls} ${prefixCls}-${this.type}`;
     },
     styles () {
       let style = {};
