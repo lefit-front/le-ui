@@ -19,11 +19,15 @@ export default {
     color: {
       type: String,
       default: ''
+    },
+    symbol: {
+      type: String,
+      default: ''
     }
   },
   computed: {
     classes () {
-      return `${prefixCls} ${prefixCls}-${this.type}`;
+      return this.symbol ? `${prefixCls} ${this.symbol}` : `${prefixCls} ${prefixCls}-${this.type}`;
     },
     styles () {
       let style = {};
