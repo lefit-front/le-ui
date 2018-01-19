@@ -7,9 +7,9 @@
         </div>
         <div class="le-msgbox-content" v-if="message !== ''">
           <div class="le-msgbox-message" v-html="message"></div>
-          <div class="le-msgbox-input" v-show="showInput">
-            <input v-model="inputValue" :placeholder="inputPlaceholder" ref="input">
-            <div class="le-msgbox-errormsg" :style="{ visibility: !!editorErrorMessage ? 'visible' : 'hidden' }">{{ editorErrorMessage }}</div>
+          <div class="le-msgbox-input border-1px-bottom" v-show="showInput">
+            <le-input v-model="inputValue" :placeholder="placeholder" ref="input" align="center" noBorder size="large" />
+            <div class="le-msgbox-errormsg" v-if="!!editorErrorMessage" :style="{ visibility: !!editorErrorMessage ? 'visible' : 'hidden' }">{{ editorErrorMessage }}</div>
           </div>
         </div>
         <div class="le-msgbox-btns">
@@ -26,13 +26,15 @@
   let CANCEL_TEXT = '取消';
 
   import LeButton from '../../button';
+  import LeInput from '../../input';
   import Popup from '../../../utils/popup';
 
   export default {
     name: 'le-message-box',
     mixins: [ Popup ],
     components: {
-      LeButton
+      LeButton,
+      LeInput
     },
     props: {
       modal: {
@@ -55,6 +57,10 @@
       inputType: {
         type: String,
         default: 'text'
+      },
+      placeholder: {
+        type: String,
+        default: '请输入'
       }
     },
 
@@ -129,7 +135,7 @@
           }
         }
         this.editorErrorMessage = '';
-        this.$refs.input.classList.remove('invalid');
+        // this.$refs.input.classList.remove('invalid');
         return true;
       },
 
