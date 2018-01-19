@@ -31,7 +31,9 @@
       },
 
       openPrompt() {
-        this.$msg.prompt(' ', '请输入姓名').then(({ value }) => {
+        this.$msg.prompt(' ', '请输入姓名', {
+          placeholder: '请输入姓名123'
+        }).then(({ value }) => {
           if (value) {
             this.$msg.alert(`你的名字是 ${ value }`, '输入成功');
           }
