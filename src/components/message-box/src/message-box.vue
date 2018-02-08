@@ -8,7 +8,7 @@
         <div class="le-msgbox-content" v-if="message !== ''">
           <div class="le-msgbox-message" v-html="message"></div>
           <div class="le-msgbox-input border-1px-bottom" v-show="showInput">
-            <le-input v-model="inputValue" :placeholder="placeholder" ref="input" align="center" noBorder size="large" />
+            <le-input v-model="inputValue" :placeholder="placeholder" ref="input" align="center" noBorder size="large" :type="inputType"/>
             <div class="le-msgbox-errormsg" v-if="!!editorErrorMessage" :style="{ visibility: !!editorErrorMessage ? 'visible' : 'hidden' }">{{ editorErrorMessage }}</div>
           </div>
         </div>
