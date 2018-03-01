@@ -1,6 +1,27 @@
 <template>
   <div :class="wrapClasses">
-    <template v-if="type !== 'textarea'">
+    <template v-if="type === 'textarea'">
+      <textarea
+          ref="textarea"
+          :class="textareaClasses"
+          :placeholder="placeholder"
+          :disabled="disabled"
+          :rows="rows"
+          :maxlength="maxlength"
+          :readonly="readonly"
+          :name="name"
+          :value="currentValue"
+          :autofocus="autofocus"
+          @keyup.enter="handleEnter"
+          @focus="handleFocus"
+          @blur="handleBlur"
+          @input="handleInput">
+      </textarea>
+      <div class="le-input-limit" v-if="type === 'textarea' && maxlength">
+        {{currentValue.length}}/{{maxlength}}
+      </div>
+    </template>
+    <template v-else>
       <le-icon :class="[prefixCls + '-icon']" :type="icon" :size="iconSize" :color="iconColor" v-if="icon" @click="handleIconClick" />
       <input
           ref="input"
@@ -20,23 +41,6 @@
           @input="handleInput"
           @change="handleChange">
     </template>
-    <textarea
-        v-else
-        ref="textarea"
-        :class="textareaClasses"
-        :placeholder="placeholder"
-        :disabled="disabled"
-        :rows="rows"
-        :maxlength="maxlength"
-        :readonly="readonly"
-        :name="name"
-        :value="value"
-        :autofocus="autofocus"
-        @keyup.enter="handleEnter"
-        @focus="handleFocus"
-        @blur="handleBlur"
-        @input="handleInput">
-    </textarea>
   </div>
 </template>
 <script>
@@ -186,24 +190,24 @@ export default {
       this.$emit('on-change', event);
     },
     handleChange (event) {
-        this.$emit('on-input-change', event);
+      this.$emit('on-input-change', event);
     },
     setCurrentValue (value) {
-        if (value === this.currentValue) return;
-        this.currentValue = value;
+      if (value === this.currentValue) return;
+      this.currentValue = value;
     },
     focus() {
-        if (this.type === 'textarea') {
-            this.$refs.textarea.focus();
-        } else {
-            this.$refs.input.focus();
-        }
+      if (this.type === 'textarea') {
+        this.$refs.textarea.focus();
+      } else {
+        this.$refs.input.focus();
+      }
     }
   },
   watch: {
-      value (val) {
-          this.setCurrentValue(val);
-      }
+    value (val) {
+      this.setCurrentValue(val);
+    }
   },
   mounted () {
   }
