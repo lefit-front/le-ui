@@ -7,7 +7,7 @@
   export default {
     data () {
       return {
-        value: 3
+        value: 3.5
       }
     },
     methods: {
