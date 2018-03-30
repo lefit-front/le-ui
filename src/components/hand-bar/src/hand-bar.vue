@@ -1,13 +1,13 @@
 <template>
   <div class="le-hand-bar-box d-f" :style="{'height': height + 'px'}">
     <div class="d-f a-i-c" @click="positionEventFun">
-      <Icon type="icon_didian_x"></Icon>
+      <Icon type="location-a"></Icon>
       <div class="le-hand-bar-title">{{position}}</div>
-      <Icon type="xiangshangsanjiaoshouqi"></Icon>
+      <Icon type="arrow-down-a"></Icon>
     </div>
     <div class="d-f a-i-c le-hand-bar-rightBox" @click="lessonEventFun">
       <div class="le-hand-bar-type border-1px-left">{{lesson}}</div>
-      <Icon type="xiangshangsanjiaoshouqi"></Icon>
+      <Icon type="arrow-up-a"></Icon>
     </div>
   </div>
 </template>
