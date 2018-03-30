@@ -3,11 +3,9 @@
     <div class="d-f a-i-c" @click="positionEventFun">
       <Icon type="location-a"></Icon>
       <div class="le-hand-bar-title">{{position}}</div>
-      <Icon type="arrow-down-a"></Icon>
     </div>
     <div class="d-f a-i-c le-hand-bar-rightBox" @click="lessonEventFun">
       <div class="le-hand-bar-type border-1px-left">{{lesson}}</div>
-      <Icon type="arrow-up-a"></Icon>
     </div>
   </div>
 </template>
