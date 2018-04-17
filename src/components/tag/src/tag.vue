@@ -1,5 +1,5 @@
 <template>
-  <div class="le-tag" :class="{'le-tag-selected': select}" @click="handleClick(data)">
+  <div class="le-tag" :class="{'le-tag-selected': active}" @click="handleClick(data)">
     <span class="le-tag-name">{{name ? data[name] : data.name}}</span>
     <span v-if="data.amount" class="le-tag-num">{{data.amount}}</span>
   </div>
@@ -12,7 +12,7 @@ export default {
       type: Object,
       required: true
     },
-    select: {
+    active: {
       type: Boolean,
       default: false
     },
