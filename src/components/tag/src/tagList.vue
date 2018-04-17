@@ -1,6 +1,6 @@
 <template>
   <div class="le-tag-list">
-    <tag class="le-tag-item" v-for="(tag, index) in data" :data="tag" :select="isSelected(index)" @click="handleClickTag(index)" :name="name">
+    <tag class="le-tag-item" v-for="(tag, index) in data" :key="index" :data="tag" :select="isSelected(index)" @click="handleClickTag(index)" :name="name">
     </tag>
   </div>
 </template>
