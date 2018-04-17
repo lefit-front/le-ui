@@ -1,30 +1,27 @@
 @tag: ~"@{css-prefix}tag";
 
+.@{tag}-list {
+  display: flex;
+  align-items: center;
+  font-size: @tag-font-size;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+}
 .@{tag} {
-  overflow: hidden;
-  .@{tag}-list {
-    display: flex;
-    align-items: center;
-    font-size: @tag-font-size;
-    flex-wrap: wrap;
-    margin: 0 -5px;
+  padding: 1px 10px;
+  border: 1px solid #6e6e6e;
+  border-radius: 100px;
+  margin: 3px 5px;
+  .@{tag}-name {
+    color: @sub-text-color;
   }
-  .@{tag}-item {
-    padding: 1px 10px;
-    border: 1px solid #6e6e6e;
-    border-radius: 100px;
-    margin: 3px 5px;
-    .@{tag}-name {
-      color: @sub-text-color;
-    }
-    .@{tag}-num {
-      color: @border-color-base;
-    }
+  .@{tag}-num {
+    color: @border-color-base;
   }
-  .@{tag}-selected {
-    border-color: #ff4e00;
-    .@{tag}-name {
-      color: @primary-color;
-    }
+}
+.@{tag}-selected {
+  border-color: #ff4e00;
+  .@{tag}-name {
+    color: @primary-color;
   }
 }

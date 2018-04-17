@@ -36,6 +36,7 @@ const le = {
   TabBar,
   Icon,
   Tag,
+  TagList: Tag.List,
   NavBar,
   HandBar,
   Money,

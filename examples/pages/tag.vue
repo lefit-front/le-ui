@@ -1,6 +1,6 @@
 <template>
   <div>
-    <le-tag class="demo-tag" :data="tags" :value="value" @select="handleSelect"/>
+    <le-tag-list class="demo-tag" :data="tags" :value="value" @select="handleSelect"/>
   </div>
 </template>
 <script>

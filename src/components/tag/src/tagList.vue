@@ -1,16 +1,13 @@
 <template>
-  <div class="le-tag">
-    <div class="le-tag-list">
-      <div class="le-tag-item" v-for="(tag, index) in data" :class="{'le-tag-selected': isSelected(index)}" @click="handleClickTag(index)">
-        <span class="le-tag-name">{{name ? tag[name] : tag.name}}</span>
-        <span v-if="tag.amount" class="le-tag-num">{{tag.amount}}</span>
-      </div>
-    </div>
+  <div class="le-tag-list">
+    <tag class="le-tag-item" v-for="(tag, index) in data" :data="tag" :select="isSelected(index)" @click="handleClickTag(index)" :name="name">
+    </tag>
   </div>
 </template>
 <script>
+import tag from './tag.vue'
 export default {
-  name: 'le-tag',
+  name: 'le-tag-list',
   props: {
     data: {
       type: Array,
@@ -23,6 +20,9 @@ export default {
       type: String
     }
   },
+  components: {
+    tag
+  },
   methods: {
     isSelected (idx) {
       if (this.value && this.value.length > 0) {
@@ -32,8 +32,8 @@ export default {
         return res !== -1
       }
     },
-    handleClickTag (idx) {
-      this.$emit('select', idx)
+    handleClickTag (idx, d) {
+      this.$emit('select', idx, d)
     }
   }
 };
