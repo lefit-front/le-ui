@@ -17,7 +17,7 @@
           @blur="handleBlur"
           @input="handleInput">
       </textarea>
-      <div class="le-input-limit" v-if="type === 'textarea' && maxlength">
+      <div class="le-input-limit" v-if="type === 'textarea' && maxlength && currentValue">
         {{currentValue.length}}/{{maxlength}}
       </div>
     </template>
