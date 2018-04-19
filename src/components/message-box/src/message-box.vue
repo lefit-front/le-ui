@@ -8,7 +8,7 @@
         <div class="le-msgbox-content" v-if="message !== ''">
           <div class="le-msgbox-message" v-html="message"></div>
           <div class="le-msgbox-input border-1px-bottom" v-show="showInput">
-            <le-input v-model="inputValue" :placeholder="placeholder" ref="input" align="center" noBorder size="large" :type="inputType"/>
+            <le-input v-model="inputValue" :placeholder="placeholder" ref="input" align="center" noBorder size="large" :type="inputType" :maxlength="maxlength"/>
             <div class="le-msgbox-errormsg" v-if="!!editorErrorMessage" :style="{ visibility: !!editorErrorMessage ? 'visible' : 'hidden' }">{{ editorErrorMessage }}</div>
           </div>
         </div>
@@ -61,6 +61,9 @@
       placeholder: {
         type: String,
         default: '请输入'
+      },
+      maxlength: {
+        type: Number
       }
     },
 
