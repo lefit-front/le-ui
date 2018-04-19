@@ -8,7 +8,7 @@
         <div class="le-msgbox-content" v-if="message !== ''">
           <div class="le-msgbox-message" v-html="message"></div>
           <div class="le-msgbox-input border-1px-bottom" v-show="showInput">
-            <le-input v-model="inputValue" :placeholder="placeholder" ref="input" align="center" noBorder size="large" :type="inputType" :maxlength="maxlength" :rows="rows" />
+            <le-input v-model="inputValue" :placeholder="placeholder" ref="input" align="center" noBorder size="large" :type="inputType" :maxlength="maxlength" :rows="rows || parseInt(maxlength/20)" />
             <div class="le-msgbox-errormsg" v-if="!!editorErrorMessage" :style="{ visibility: !!editorErrorMessage ? 'visible' : 'hidden' }">{{ editorErrorMessage }}</div>
           </div>
         </div>
@@ -66,8 +66,7 @@
         type: Number
       },
       rows: {
-        type: Number,
-        default: 3
+        type: Number
       }
     },
 
