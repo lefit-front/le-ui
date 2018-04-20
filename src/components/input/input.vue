@@ -210,6 +210,9 @@ export default {
     }
   },
   mounted () {
+    if (this.autofocus) {
+      this.focus()
+    }
   }
 };
 </script>
