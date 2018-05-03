@@ -3,7 +3,7 @@
     <slot name="start"></slot>
     <div class="le-progress-content" :style="{ minHeight: realHeight }">
       <div class="le-progress-runway" :style="{ height: realHeight }"></div>
-      <div class="le-progress-progress" :style="{ width: percentage + '%', height: height + 'px' }">
+      <div class="le-progress-progress" :style="{ width: percentage + '%', height: realHeight }">
         <div class="le-progress-line" :class="{'le-progress-animation': animation}" :style="{ background: endColor ? `linear-gradient(to right, ${color} 0%, ${endColor} 100%)` : color }"></div>
       </div>
     </div>
