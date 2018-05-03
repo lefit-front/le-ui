@@ -36,7 +36,7 @@ export default {
     return {
       realHeight: ''
     }
-  }
+  },
   mounted: function () {
     this.realHeight = typeof(this.height) === 'number' ? this.height + 'px' : this.height
   }
