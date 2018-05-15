@@ -62,10 +62,10 @@
         type: String,
         default: '请输入'
       },
-      inputBackground: {
+      buttonBackground: {
         type: String
       },
-      inputColor: {
+      buttonColor: {
         type: String
       }
     },

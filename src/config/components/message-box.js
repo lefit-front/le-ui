@@ -191,7 +191,7 @@ export default {
       required: false
     },
     {
-      name: 'inputColor',
+      name: 'buttonColor',
       type: ['String'],
       describe: '主按钮文字颜色',
       default: '',
@@ -199,7 +199,7 @@ export default {
       required: false
     },
     {
-      name: 'inputBackground',
+      name: 'buttonBackground',
       type: ['String'],
       describe: '主按钮背景',
       default: '',
