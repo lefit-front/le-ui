@@ -1,6 +1,10 @@
 {
   "name": "le-ui",
+<<<<<<< HEAD
   "version": "2.0.12",
+=======
+  "version": "1.4.33",
+>>>>>>> master
   "description": "leke vue components",
   "author": {
     "name": "thomasyxy",

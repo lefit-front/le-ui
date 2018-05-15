@@ -6,6 +6,7 @@
     }]"
     :disabled="isDisabled"
     @click="handleClick"
+    :style="{backgroundColor: background, borderColor: background}"
     >
     <div class="le-button-loading" v-if="loading === true"
       :style="{
@@ -16,7 +17,7 @@
       'width': loadingSize + 'px'
       }"
     ></div>
-    <label class="le-button-text"><slot></slot></label>
+    <label class="le-button-text" :style="{color: color}"><slot></slot></label>
   </button>
 </template>
 <script>
@@ -102,6 +103,12 @@ export default {
           'circle'
         ].indexOf(value) > -1
       }
+    },
+    color: {
+      type: String
+    },
+    background: {
+      type: String
     }
   },
   data () {

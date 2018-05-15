@@ -189,6 +189,22 @@ export default {
       default: '',
       option: [],
       required: false
+    },
+    {
+      name: 'inputColor',
+      type: ['String'],
+      describe: '主按钮文字颜色',
+      default: '',
+      option: [],
+      required: false
+    },
+    {
+      name: 'inputBackground',
+      type: ['String'],
+      describe: '主按钮背景',
+      default: '',
+      option: [],
+      required: false
     }
   ]
 }
