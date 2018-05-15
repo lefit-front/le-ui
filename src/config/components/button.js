@@ -126,6 +126,22 @@ export default {
       default: 0,
       option: [],
       required: false
+    },
+    {
+      name: 'color',
+      type: ['String'],
+      describe: '设置按钮文字颜色',
+      default: '',
+      option: [],
+      required: false
+    },
+    {
+      name: 'background',
+      type: ['String'],
+      describe: '设置按钮背景',
+      default: '',
+      option: [],
+      required: false
     }
   ]
 }
