@@ -72,10 +72,10 @@
         type: Boolean,
         default: true
       },
-      inputBackground: {
+      buttonBackground: {
         type: String
       },
-      inputColor: {
+      buttonColor: {
         type: String
       }
     },
