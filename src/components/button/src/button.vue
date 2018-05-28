@@ -6,7 +6,7 @@
     }]"
     :disabled="isDisabled"
     @click="handleClick"
-    :style="{backgroundColor: background, borderColor: background}"
+    :style="{backgroundColor: background, borderColor: border || background}"
     >
     <div class="le-button-loading" v-if="loading === true"
       :style="{
@@ -108,6 +108,9 @@ export default {
       type: String
     },
     background: {
+      type: String
+    },
+    border: {
       type: String
     }
   },

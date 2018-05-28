@@ -142,6 +142,14 @@ export default {
       default: '',
       option: [],
       required: false
+    },
+    {
+      name: 'border',
+      type: ['String'],
+      describe: '设置按钮边框',
+      default: '',
+      option: [],
+      required: false
     }
   ]
 }

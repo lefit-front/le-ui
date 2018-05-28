@@ -29,7 +29,7 @@
     <h1>设置间隔</h1>
     <le-button :interval="1000">间隔按钮</le-button>
     <h1>传入颜色</h1>
-    <le-button color="red" background="black">间隔按钮</le-button>
+    <le-button color="red" background="black" border="green">样式按钮自定义</le-button>
   </div>
 </template>
 <script>

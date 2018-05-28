@@ -205,6 +205,14 @@ export default {
       default: '',
       option: [],
       required: false
+    },
+    {
+      name: 'buttonBorder',
+      type: ['String'],
+      describe: '主按钮边框',
+      default: '',
+      option: [],
+      required: false
     }
   ]
 }

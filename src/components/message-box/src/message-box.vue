@@ -14,7 +14,7 @@
         </div>
         <div class="le-msgbox-btns">
           <LeButton :class="[ cancelButtonClasses ]" type="plain" v-show="showCancelButton" @click="handleAction('cancel')" shape="circle">{{ cancelButtonText }}</LeButton>
-          <LeButton :class="[ confirmButtonClasses ]" :size="showCancelButton ? 'normal' : 'large'" v-show="showConfirmButton" @click="handleAction('confirm')" shape="circle" :background="buttonBackground" :color="buttonColor">{{ confirmButtonText }}</LeButton>
+          <LeButton :class="[ confirmButtonClasses ]" :size="showCancelButton ? 'normal' : 'large'" v-show="showConfirmButton" @click="handleAction('confirm')" shape="circle" :background="buttonBackground" :color="buttonColor" :border="buttonBorder">{{ confirmButtonText }}</LeButton>
         </div>
       </div>
     </transition>
@@ -66,6 +66,9 @@
         type: String
       },
       buttonColor: {
+        type: String
+      },
+      buttonBorder: {
         type: String
       }
     },
