@@ -2,7 +2,7 @@
   <transition :name="currentTransition">
     <div v-show="currentValue" class="le-popup" :class="[position ? 'le-popup-' + position : '']">
       <slot></slot>
-      <div class="le-popup-close" v-if="showClose">
+      <div class="le-popup-close" v-if="showClose && $slots.close">
         <slot name="close"></slot>
       </div>
     </div>
