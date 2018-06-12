@@ -28,6 +28,14 @@ export default {
       default: '',
       option: [],
       required: false
+    },
+    {
+      name: 'symbol',
+      type: ['String'],
+      describe: '传入icon图标类名，需补全',
+      default: '',
+      option: [],
+      required: false
     }
   ]
 }

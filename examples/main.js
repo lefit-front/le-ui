@@ -10,10 +10,9 @@ import locale from '../src/locale/lang/zh-CN';
 import LoadingPlugin from '../src/components/loading/src/plugin'
 import InfiniteScroll from '../src/components/infinite-scroll'
 
-Vue.use(InfiniteScroll);
-
-Vue.use(VueRouter);
-Vue.use(LoadingPlugin);
+Vue.use(InfiniteScroll)
+Vue.use(VueRouter)
+Vue.use(LoadingPlugin)
 Vue.use(Le, {
   locale
 });
@@ -21,8 +20,9 @@ Vue.use(Le, {
 import '../src/styles/index.less'
 
 // 全局引入message-box组件，并注册为全局方法
-import { MessageBox } from '../src/index';
+import { MessageBox, Toast } from '../src/index'
 Vue.prototype.$msg = MessageBox
+Vue.prototype.$toast = Toast
 
 // 开启debug模式
 Vue.config.debug = true;

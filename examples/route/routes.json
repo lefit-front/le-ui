@@ -126,6 +126,11 @@
         "path": "/switch",
         "name": "Switch",
         "icon": "switch"
+      },
+      {
+        "path": "/toast",
+        "name": "Toast",
+        "icon": "toast"
       }
     ]
   }

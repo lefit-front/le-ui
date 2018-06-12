@@ -21,6 +21,7 @@ import Empty from './components/empty';
 import Picker from './components/picker';
 import Input from './components/input';
 import Switch from './components/switch';
+import Toast from './components/toast';
 
 const config = {
   LeView: LeView,
@@ -45,7 +46,8 @@ const config = {
   Empty: Empty,
   Picker: Picker,
   Input: Input,
-  Switch: Switch
+  Switch: Switch,
+  Toast: Toast
 };
 
 export default config
