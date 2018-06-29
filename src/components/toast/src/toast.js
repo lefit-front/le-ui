@@ -1,11 +1,11 @@
 import Vue from 'vue';
 
-const ToastConstructor = Vue.extend(require('./toast.vue'));
-let toastPool = [];
+var ToastConstructor = Vue.extend(require('./toast.vue'));
+var toastPool = [];
 
-let getAnInstance = () => {
+var getAnInstance = () => {
   if (toastPool.length > 0) {
-    let instance = toastPool[0];
+    var instance = toastPool[0];
     toastPool.splice(0, 1);
     return instance;
   }
@@ -14,13 +14,13 @@ let getAnInstance = () => {
   });
 };
 
-let returnAnInstance = instance => {
+var returnAnInstance = instance => {
   if (instance) {
     toastPool.push(instance);
   }
 };
 
-let removeDom = event => {
+var removeDom = event => {
   if (event.target.parentNode) {
     event.target.parentNode.removeChild(event.target);
   }
@@ -33,10 +33,10 @@ ToastConstructor.prototype.close = function() {
   returnAnInstance(this);
 };
 
-let Toast = (options = {}) => {
-  let duration = options.duration || 3000;
+var Toast = (options = {}) => {
+  var duration = options.duration || 3000;
 
-  let instance = getAnInstance();
+  var instance = getAnInstance();
   instance.closed = false;
   clearTimeout(instance.timer);
   instance.message = typeof options === 'string' ? options : options.message;
