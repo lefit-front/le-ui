@@ -27,6 +27,10 @@ export default {
     }
   },
 
+  components: {
+    leIcon
+  },
+
   data() {
     return {
       visible: false
