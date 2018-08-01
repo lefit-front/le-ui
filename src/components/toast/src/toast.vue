@@ -10,6 +10,7 @@
 <script>
 import leIcon from '../../icon'
 export default {
+  name: 'le-toast',
   props: {
     message: String,
     icon: {

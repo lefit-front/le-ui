@@ -57,3 +57,4 @@ var Toast = (options = {}) => {
 };
 
 export default Toast;
+export { Toast };
