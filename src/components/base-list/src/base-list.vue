@@ -1,12 +1,14 @@
 <template>
   <div class="le-base-list d-f a-i-c" @click="toRouter" :class="[{'boder-1px-bottom ': border === 'block'}]">
     <div class="le-base-list-title"
+      v-if="!$slots.title"
       :style="{
         'font-size': typeof(this.size) === 'number' ? this.size + 'px' : this.size,
         'color': color
       }"
       @click="handleClickTitle"
     >{{title}}</div>
+    <slot name="title"></slot>
     <div class="le-icon-floatRight"
       :style="{
         'font-size': size+ 'px',
