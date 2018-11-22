@@ -25,6 +25,7 @@ import Money from './components/money';
 import Loading from './components/loading';
 import Empty from './components/empty';
 import Picker from './components/picker';
+import PickerNew from './components/picker-new';
 
 import locale from './locale';
 
@@ -53,7 +54,8 @@ const le = {
   CheckboxGroup: Checkbox.Group,
   Empty,
   Week,
-  Picker
+  Picker,
+  PickerNew
 };
 
 const install = function (Vue, opts = {}) {
@@ -61,6 +63,7 @@ const install = function (Vue, opts = {}) {
   locale.i18n(opts.i18n);
 
   Object.keys(le).forEach((key) => {
+    console.log(key, le[key].name, le[key]);
     Vue.component(le[key].name, le[key]);
   });
 

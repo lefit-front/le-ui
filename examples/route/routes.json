@@ -123,6 +123,11 @@
         "icon": "picker"
       },
       {
+        "path": "/picker-new",
+        "name": "PickerNew",
+        "icon": "pickerNew"
+      },
+      {
         "path": "/switch",
         "name": "Switch",
         "icon": "switch"

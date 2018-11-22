@@ -63,7 +63,7 @@
       valueKey: String,
       rotateEffect: {
         type: Boolean,
-        default: false
+        default: true
       },
       itemHeight: {
         type: Number,

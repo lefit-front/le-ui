@@ -137,7 +137,7 @@
       value: {},
       visibleItemCount: {
         type: Number,
-        default: 5
+        default: 7
       },
       valueKey: String,
       rotateEffect: {
