@@ -63,7 +63,6 @@ const install = function (Vue, opts = {}) {
   locale.i18n(opts.i18n);
 
   Object.keys(le).forEach((key) => {
-    console.log(key, le[key].name, le[key]);
     Vue.component(le[key].name, le[key]);
   });
 

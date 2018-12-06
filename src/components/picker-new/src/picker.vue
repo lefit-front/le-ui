@@ -1,16 +1,19 @@
 <template>
-  <div class="leui-picker-new">
-    <div class="leui-picker-new-header" v-if="showbar">
-      <div class="leui-picker-new-btn">取消</div>
-      <div class="leui-picker-new-title">{{title}}</div>
-      <div class="leui-picker-new-btn leui-picker-new-btn-active">确定</div>
-    </div>
-    <div class="leui-picker-new-container" :style="{height: `${itemHeight * visibleItemCount}px`}">
-      <picker-item :itemHeight="itemHeight" :visibleItemCount="visibleItemCount"></picker-item>
-      <div class="leui-picker-new-container-highlight"></div>
+  <div class="">
+    <div class="black-model"></div>
+    <div class="leui-picker-new">
+      <div class="leui-picker-new-header" v-if="showbar">
+        <div class="leui-picker-new-btn">取消</div>
+        <div class="leui-picker-new-title">{{title}}</div>
+        <div class="leui-picker-new-btn leui-picker-new-btn-active">确定</div>
+      </div>
+      <div class="leui-picker-new-container" :style="{height: pickerContainerHeight}">
+        <picker-item :itemHeight="itemHeight" :visibleItemCount="visibleItemCount"></picker-item>
+        <picker-item :itemHeight="itemHeight" :visibleItemCount="visibleItemCount"></picker-item>
+        <!-- <picker-item :itemHeight="itemHeight" :visibleItemCount="visibleItemCount"></picker-item> -->
+      </div>
     </div>
   </div>
-  
 </template>
 <script>
 import pickerItem from './picker-item'
@@ -27,11 +30,15 @@ export default{
     },
     data: { // 待选项
       type: Array,
-      default: []
+      default: () => {
+        return []
+      }
     },
     value: { // 选中对象
       type: Array,
-      default: []
+      default: () => {
+        return []
+      }
     },
     showbar: { // 显示顶部bar
       type: Boolean,
@@ -48,12 +55,28 @@ export default{
   },
   components: {
     pickerItem
+  },
+  computed: {
+    pickerContainerHeight () {
+      return `${this.itemHeight * this.visibleItemCount}px`
+    }
   }
 }
 </script>
 <style lang="less">
 @import '../../../styles/custom';
+@ITEM_HEIGHT: 36px;
+.black-model{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,.35);
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+}
 .leui-picker-new{
+  z-index: 1001;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -84,45 +107,12 @@ export default{
   color: @primary-color;
 }
 .leui-picker-new-container{
-  width: 100%;
+  background-color: #fff;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  overflow: scroll;
-}
-.leui-picker-new-container-highlight{
-  position: absolute;
-  top: 0;
-  top: 50%;
-  margin-top: (-12+44)px;
-  height: 36px;
-  width: 100%;
-  &:before{
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    -webkit-transform-origin: 0 0;
-    transform-origin: 0 0;
-    -webkit-transform: scaleY(.5);
-    transform: scaleY(.5);
-    z-index: 1;
-  }
-  &:after{
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    -webkit-transform-origin: 0 0;
-    transform-origin: 0 0;
-    -webkit-transform: scaleY(.5);
-    transform: scaleY(.5);
-    z-index: 1;
-  }
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 0 30px;
 }
 </style>
