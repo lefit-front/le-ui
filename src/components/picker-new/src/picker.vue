@@ -1,16 +1,23 @@
 <template>
-  <div class="">
-    <div class="black-model"></div>
+  <div v-if="value">
+    <div class="black-model" @click="modelClick"></div>
     <div class="leui-picker-new">
-      <div class="leui-picker-new-header" v-if="showbar">
-        <div class="leui-picker-new-btn">取消</div>
+      <div class="leui-picker-new-header" v-if="showBar">
+        <div class="leui-picker-new-btn" @click="cancel">{{cancelText}}</div>
         <div class="leui-picker-new-title">{{title}}</div>
-        <div class="leui-picker-new-btn leui-picker-new-btn-active">确定</div>
+        <div class="leui-picker-new-btn leui-picker-new-btn-active" @click="confirm">{{confirmText}}</div>
       </div>
       <div class="leui-picker-new-container" :style="{height: pickerContainerHeight}">
-        <picker-item :itemHeight="itemHeight" :visibleItemCount="visibleItemCount"></picker-item>
-        <picker-item :itemHeight="itemHeight" :visibleItemCount="visibleItemCount"></picker-item>
-        <!-- <picker-item :itemHeight="itemHeight" :visibleItemCount="visibleItemCount"></picker-item> -->
+        <picker-item 
+          v-for="(item, index) in datas"
+          :key="index"
+          :datas="item"
+          :itemHeight="itemHeight"
+          :visibleItemCount="visibleItemCount"
+          @change="itemChange($event, item, index)"
+          @initData="initData($event, item, index)"
+          :currentValue="currentValue[index]"
+          :showKey="showKey"></picker-item>
       </div>
     </div>
   </div>
@@ -20,27 +27,39 @@ import pickerItem from './picker-item'
 export default{
   name: 'le-picker-new',
   props: {
-    title: { // 选择栏标题
+    title: {            // 选择栏标题
       type: String,
       default: '请选择'
     },
-    show: { // 显示隐藏
+    value: {             // 显示隐藏
       type: Boolean,
       default: false
     },
-    data: { // 待选项
+    confirmText: {
+      type: String,
+      default: '确定'
+    },
+    cancelText: {
+      type: String,
+      default: '取消'
+    },
+    showKey: {            // 用于显示的key
+      type: String,
+      default: 'label'
+    },
+    datas: {            // 待选项
       type: Array,
       default: () => {
         return []
       }
     },
-    value: { // 选中对象
+    currentValue: {            // 选中对象
       type: Array,
       default: () => {
         return []
       }
     },
-    showbar: { // 显示顶部bar
+    showBar: {          // 显示顶部bar
       type: Boolean,
       default: true
     },
@@ -48,9 +67,14 @@ export default{
       type: Number,
       default: 5
     },
-    itemHeight: {    // 每行数据的高度，单位px
+    itemHeight: {       // 每行数据的高度，单位px
       type: Number,
       default: 36
+    }
+  },
+  data () {
+    return {
+      selectValue: []
     }
   },
   components: {
@@ -60,6 +84,31 @@ export default{
     pickerContainerHeight () {
       return `${this.itemHeight * this.visibleItemCount}px`
     }
+  },
+  methods: {
+    itemChange(selectIndex, item, index){
+      this.selectValue[index] = item[selectIndex]
+      console.log('this.selectValue', JSON.stringify(this.selectValue))
+      this.$emit('change', this.selectValue)
+    },
+    initData(selectIndex, item, index){ // 初始化数据
+      this.selectValue[index] = item[selectIndex]
+    },
+    cancel(){
+      this.$emit('input', false)
+    },
+    confirm(){
+      this.$emit('input', false)
+      this.$emit('select', this.selectValue)
+    },
+    modelClick(){
+      this.$emit('input', false)
+      this.$emit('modelClick')
+    }
+  },
+  mounted () {
+    console.log(this.datas);
+    console.log(this.currentValue)
   }
 }
 </script>

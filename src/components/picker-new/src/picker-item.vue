@@ -5,7 +5,7 @@
     @touchend="onTouchend"
     @touchcancel="onTouchend">
     <div class="leui-picker-new-container-mask" :style="maskStyle"></div>
-    <div class="leui-picker-new-container-column"  :style="wrapperStyle">
+    <div v-if="isArr(datas)" class="leui-picker-new-container-column"  :style="wrapperStyle">
       <div class="leui-picker-new-container-item" 
         :style="itemStyle" 
         v-for="(item, index) in datas" 
@@ -13,50 +13,44 @@
         v-html="getOptionText(item)" 
         @click="setIndex(index, true)"></div>
     </div>
+    <div v-else class="leui-picker-new-container-string" :style="{margin: `${itemHeight*(Math.floor(visibleItemCount/2))}px 0`, height: `${itemHeight}px`, lineHeight: `${itemHeight}px`}">{{datas}}</div>
   </div>
 </template>
 <script>
-import { data } from '../data'
 export default{
  data(){
     return {
-      startY: 0,
-      startOffset: 0,
-      offset: 0,
-      prevY: 0,
-      prevTime: null,
-      velocity: 0,       // 移动速度
-      transition: '',
-      currentOptions: this.datas,
-      currentIndex: this.defaultIndex
+      startY: 0,                // 垂直方向的开始位置
+      startOffset: 0,           // 开始的位移位置
+      offset: 0,                // 位移
+      prevY: 0,                 // 上次位置
+      prevTime: null,           // 上次滚动的时间
+      velocity: 0,              // 移动速度
+      transition: '',           // 动画
+      currentDatas: this.datas, // 待选数据
+      currentIndex: '',         // 当前选中
+      defaultIndex: 0           // 默认选中
     }
   },
   props: {
-    currentItem: {       // 当前滚动栏是第几个
-      type: Number,
-    },
-    datas: {             // 用于展示的数据
-      type: Array,
+    datas: {                                // 用于展示的数据
+      type: [Array, String],
       default: () => {
-        return data
+        return []
       }
     },
-    value: String,
-    valueKey: {          // 显示的对象key
+    currentValue: [String, Number],         // 选中的值
+    showKey: {                              // 显示的对象key
       type: String,
       default: 'label'
     },
-    itemHeight: Number,  // 单位px
-    visibleItemCount: {  // 显示多少行
+    itemHeight: Number,                     // 单位px
+    visibleItemCount: {                     // 显示多少行
       type: Number,
       default: 7,
       validator: (value) => {
         return [3, 5, 7].indexOf(value) > -1
       }
-    },
-    defaultIndex: {      // 默认选中item
-      type: Number,
-      default: 0
     }
   },
   computed: {
@@ -84,7 +78,7 @@ export default{
       }
     },
     count () {
-      return this.currentOptions.length
+      return this.currentDatas.length
     }
   },
   methods: {
@@ -95,8 +89,11 @@ export default{
       const type = typeof x
       return x !== null && (type === 'object' || type === 'function')
     },
+    isArr (a) {
+      return this.isObj(a) && Object.prototype.toString.call(a)==='[object Array]'
+    },
     getOptionText (option) {
-      return this.isObj(option) && this.valueKey in option ? option[this.valueKey] : option
+      return this.isObj(option) && this.showKey in option ? option[this.showKey] : option
     },
     isDisabled (option) {
       return this.isObj(option) && option.disabled
@@ -135,25 +132,42 @@ export default{
     adjustIndex (index) {
       index = this.range(index, 0, this.count)
       for (let i = index; i < this.count; i++) {
-        if (!this.isDisabled(this.currentOptions[i])) return i
+        if (!this.isDisabled(this.currentDatas[i])) return i
       }
       for (let i = index - 1; i >= 0; i--) {
-        if (!this.isDisabled(this.currentOptions[i])) return i
+        if (!this.isDisabled(this.currentDatas[i])) return i
       }
     },
     setIndex (index, userAction = false) {
       // TODO:
       // console.log('original index ', index)
       index = this.adjustIndex(index) || 0
-      console.log('adjusted index ', index)
+      // console.log('adjusted index ', index)
       this.offset = this.indexToOffset(index)
       if (index !== this.currentIndex) {
         this.currentIndex = index
         userAction && this.$emit('change', index)
       }
     },
+    setInitialData () {
+      let isFinded = false
+      this.isArr(this.datas) && this.datas.map((item, index) => {
+        let value = typeof item === 'string' ? item : item.value
+        if (value === this.currentValue) {
+          this.setIndex(index)
+          this.$emit('initData', index)
+          isFinded = true
+        } else {
+          if ((this.datas.length - 1) === index && !isFinded) {
+            this.setIndex(this.defaultIndex)
+            this.$emit('initData', this.defaultIndex)
+          }
+        }
+      })
+    }
   },
-  created(){
+  created () {
+    this.setInitialData()
   }
 }
 </script>
@@ -193,5 +207,14 @@ export default{
   white-space: nowrap;
   overflow: hidden;
   color: #333333;
+}
+.leui-picker-new-container-string{
+  text-align: center;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #333333;
+  width: 100%;
 }
 </style>
