@@ -1,16 +1,44 @@
+### le-picker组件
+
+| 属性             | 说明                  | 类型    | 默认值   | 备注 |
+|------------------|---------------------|---------|----------|------|
+| title            | 选择栏标题            | String  | '请选择' |      |
+| value            | 显示隐藏              | Boolean | false    |      |
+| modelClickClose  | 是否支持背景点击关闭  | Boolean | true     |      |
+| confirmText      | 确认按钮文本          | String  | '确定'   |      |
+| cancelText       | 取消按键的文本        | String  | '取消'   |      |
+| showKey          | 用于显示的key         | String  | 'label'  |      |
+| datas            | 待选项数据            | Array   | [[]]       |      |
+| currentValue     | 选中的值              | Array   | []       |      |
+| showBar          | 显示顶部bar           | Boolean | true     |      |
+| visibleItemCount | 一次展示多少行数据    | Number  | 5        |      |
+| itemHeight       | 每行数据的高度，单位px | Number  | 36       |      |
+
+
+| 事件       | 说明             |
+|------------|----------------|
+| change     | 变化时触发       |
+| select     | 点击确认时触发   |
+| modelClick | 点击阴影蒙层触发 |
+| cancel     | 点击取消触发     |
+
+
+### 实例代码
+
+```html
 <template>
   <div class="picker-demo">
-
-    <le-button @click="show1 = true" size="large" style="margin: 20px 0;">打开picker1</le-button>
+    
+    <le-button @click="show1 = true" size="large">打开picker1</le-button>
     <le-picker-new v-model="show1" :datas="[data]" :currentValue="['10']" :modelClickClose="false" @change="change" @select="select" @cancel="cancel" />
 
-    <le-button @click="show2 = true" size="large" style="margin: 20px 0;">打开picker2</le-button>
+    <le-button @click="show2 = true" size="large">打开picker2</le-button>
     <le-picker-new v-model="show2" :datas="[data, data1]" :currentValue="['10', 'string20']" :modelClickClose="false" @change="change" @select="select" @modelClick="modelClick" @cancel="cancel" />
 
-    <le-button @click="show3 = true" size="large" style="margin: 20px 0;">打开picker3</le-button>
+    <le-button @click="show3 = true" size="large">打开picker3</le-button>
     <le-picker-new v-model="show3" :datas="[data, data1, data2]" :currentValue="['10', 'string20', '11']" :modelClickClose="false" @change="change" @select="select" @cancel="cancel" />
 
-    <le-button @click="show4 = true" size="large" style="margin: 20px 0;">打开联动picker</le-button>
+    <le-button @click="show4 = true" size="large">打开联动picker</le-button>
     <le-picker-new v-model="show4" :datas="[data3]" :currentValue="['10', '10-2', '10-2-3']" :modelClickClose="false" @change="change" @select="select" @modelClick="modelClick" @cancel="cancel" />
 
   </div>
@@ -103,3 +131,4 @@ export default{
   }
 }
 </script>
+```

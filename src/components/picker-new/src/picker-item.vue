@@ -95,7 +95,7 @@ export default{
       return x !== null && (type === 'object' || type === 'function')
     },
     isArr (a) {
-      return this.isObj(a) && Object.prototype.toString.call(a)==='[object Array]'
+      return (typeof a === 'object') && Object.prototype.toString.call(a)==='[object Array]'
     },
     getOptionText (option) {
       return this.isObj(option) && this.showKey in option ? option[this.showKey] : option

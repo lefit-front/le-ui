@@ -56,8 +56,11 @@ export default{
       default: () => {
         return []
       },
-      validator: function (value) { // 限制最多五列
-        return value.length <= 5
+      validator: (value) => { // 限制是二维数组且最多五列
+        if (value.length !== 0) {
+          return (typeof value[0] === 'object') && Object.prototype.toString.call(value[0])==='[object Array]' && value.length <= 5
+        }
+        return true
       }
     },
     currentValue: {                 // 选中对象
@@ -96,7 +99,7 @@ export default{
   methods: {
     itemChange(selectIndex, item, index){                                  // 数据变化
       this.selectValue[index] = item[selectIndex]
-      console.log('change', this.selectValue)
+      // console.log('change', this.selectValue)
       this.$emit('change', this.selectValue)
       this.setChildren(selectIndex, item, index)
     },
@@ -106,6 +109,7 @@ export default{
     },
     cancel(){                                                              // 取消按钮
       this.$emit('input', false)
+      this.$emit('cancel')
     },
     confirm(){                                                             // 确认按钮
       this.$emit('input', false)
@@ -113,7 +117,7 @@ export default{
     },
     modelClick(){                                                          // 背景被点击
       this.modelClickClose && this.$emit('input', false)
-      this.$emit('modelClick')
+      this.$emit('modelClick', this.selectValue)
     },
     setChildren (selectIndex, item, index) {                               //联动滚动
       if (item[selectIndex].children) {
