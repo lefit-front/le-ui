@@ -9,7 +9,7 @@
       </div>
       <div class="leui-picker-new-container" :style="{height: pickerContainerHeight}">
         <picker-item 
-          v-for="(item, index) in datas"
+          v-for="(item, index) in currentDatas"
           :key="index"
           :datas="item"
           :itemHeight="itemHeight"
@@ -27,54 +27,62 @@ import pickerItem from './picker-item'
 export default{
   name: 'le-picker-new',
   props: {
-    title: {            // 选择栏标题
+    title: {                        // 选择栏标题
       type: String,
       default: '请选择'
     },
-    value: {             // 显示隐藏
+    value: {                        // 显示隐藏
       type: Boolean,
       default: false
     },
-    confirmText: {
-      type: String,
-      default: '确定'
-    },
-    cancelText: {
-      type: String,
-      default: '取消'
-    },
-    showKey: {            // 用于显示的key
-      type: String,
-      default: 'label'
-    },
-    datas: {            // 待选项
-      type: Array,
-      default: () => {
-        return []
-      }
-    },
-    currentValue: {            // 选中对象
-      type: Array,
-      default: () => {
-        return []
-      }
-    },
-    showBar: {          // 显示顶部bar
+    modelClickClose: {              // 是否支持背景点击关闭
       type: Boolean,
       default: true
     },
-    visibleItemCount: { // 一次展示多少行数据
+    confirmText: {                  // 确认按钮文本
+      type: String,
+      default: '确定'
+    },
+    cancelText: {                   // 取消按键的文本
+      type: String,
+      default: '取消'
+    },
+    showKey: {                      // 用于显示的key
+      type: String,
+      default: 'label'
+    },
+    datas: {                        // 待选项
+      type: Array,
+      default: () => {
+        return []
+      },
+      validator: function (value) { // 限制最多五列
+        return value.length <= 5
+      }
+    },
+    currentValue: {                 // 选中对象
+      type: Array,
+      default: () => {
+        return []
+      }
+    },
+    showBar: {                      // 显示顶部bar
+      type: Boolean,
+      default: true
+    },
+    visibleItemCount: {             // 一次展示多少行数据
       type: Number,
       default: 5
     },
-    itemHeight: {       // 每行数据的高度，单位px
+    itemHeight: {                   // 每行数据的高度，单位px
       type: Number,
       default: 36
     }
   },
   data () {
     return {
-      selectValue: []
+      selectValue: [],
+      currentDatas: this.datas
     }
   },
   components: {
@@ -86,29 +94,32 @@ export default{
     }
   },
   methods: {
-    itemChange(selectIndex, item, index){
+    itemChange(selectIndex, item, index){                                  // 数据变化
       this.selectValue[index] = item[selectIndex]
-      console.log('this.selectValue', JSON.stringify(this.selectValue))
+      console.log('change', this.selectValue)
       this.$emit('change', this.selectValue)
+      this.setChildren(selectIndex, item, index)
     },
-    initData(selectIndex, item, index){ // 初始化数据
+    initData(selectIndex, item, index){                                    // 初始化数据
       this.selectValue[index] = item[selectIndex]
+      this.setChildren(selectIndex, item, index)
     },
-    cancel(){
+    cancel(){                                                              // 取消按钮
       this.$emit('input', false)
     },
-    confirm(){
+    confirm(){                                                             // 确认按钮
       this.$emit('input', false)
       this.$emit('select', this.selectValue)
     },
-    modelClick(){
-      this.$emit('input', false)
+    modelClick(){                                                          // 背景被点击
+      this.modelClickClose && this.$emit('input', false)
       this.$emit('modelClick')
+    },
+    setChildren (selectIndex, item, index) {                               //联动滚动
+      if (item[selectIndex].children) {
+        this.$set(this.currentDatas, index + 1, item[selectIndex].children)
+      }
     }
-  },
-  mounted () {
-    console.log(this.datas);
-    console.log(this.currentValue)
   }
 }
 </script>

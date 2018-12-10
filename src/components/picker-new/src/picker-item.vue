@@ -81,6 +81,11 @@ export default{
       return this.currentDatas.length
     }
   },
+  watch: {
+    datas (val) {
+      this.setInitialData()
+    }
+  },
   methods: {
     range (num, min, max) {
       return Math.min(Math.max(num, min), max)
@@ -139,7 +144,6 @@ export default{
       }
     },
     setIndex (index, userAction = false) {
-      // TODO:
       // console.log('original index ', index)
       index = this.adjustIndex(index) || 0
       // console.log('adjusted index ', index)
@@ -153,7 +157,7 @@ export default{
       let isFinded = false
       this.isArr(this.datas) && this.datas.map((item, index) => {
         let value = typeof item === 'string' ? item : item.value
-        if (value === this.currentValue) {
+        if (value.toString() === this.currentValue.toString()) {
           this.setIndex(index)
           this.$emit('initData', index)
           isFinded = true
