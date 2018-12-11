@@ -87,7 +87,7 @@ export default{
     }
   },
   methods: {
-    range (num, min, max) {
+    range (num, min, max) {                                                                        // 判断范围
       return Math.min(Math.max(num, min), max)
     },
     isObj (x) {
@@ -97,19 +97,19 @@ export default{
     isArr (a) {
       return (typeof a === 'object') && Object.prototype.toString.call(a)==='[object Array]'
     },
-    getOptionText (option) {
+    getOptionText (option) {                                                                       // 返回显示的字段
       return this.isObj(option) && this.showKey in option ? option[this.showKey] : option
     },
-    isDisabled (option) {
+    isDisabled (option) {                                                                          // 是否可选中
       return this.isObj(option) && option.disabled
     },
-    indexToOffset (index) {
+    indexToOffset (index) {                                                                        // 通过选中项转为位移位置
       const baseOffset = Math.floor(this.visibleItemCount / 2)
       return (index - baseOffset) * - this.itemHeight
     },
-    offsetToIndex (offset) {
-      offset = Math.round(offset /  this.itemHeight) *  this.itemHeight
-      return -(offset - Math.floor(this.visibleItemCount / 2) *  this.itemHeight) /  this.itemHeight
+    offsetToIndex (offset) {                                                                       // 通过位置转为选中项
+      offset = Math.round(offset /  this.itemHeight) * this.itemHeight
+      return -(offset - Math.floor(this.visibleItemCount / 2) *  this.itemHeight) / this.itemHeight
     },
     onTouchstart (event) {
       this.startOffset = this.offset
@@ -122,19 +122,18 @@ export default{
       const currentTime = +new Date()
       const currentY = event.touches[0].clientY
       const distance = currentY - this.startY
-      this.offset = this.startOffset + distance
-      // compute velocity
-      this.velocity = (event.touches[0].clientY - this.prevY) / (currentTime - this.prevTime)
+      this.offset = this.startOffset + distance 
+      this.velocity = (event.touches[0].clientY - this.prevY) / (currentTime - this.prevTime)      // 计算速度
       this.prevY = currentY
       this.prevTime = currentTime
     },
     onTouchend () {
       this.transition = 'all 150ms ease'
-      const endOffset = this.offset + this.velocity * 150 // 计算按原速度结束时的位置
+      const endOffset = this.offset + this.velocity * 150                                          // 计算按原速度结束时的位置
       const index = this.offsetToIndex(endOffset)
       this.setIndex(index, true)
     },
-    adjustIndex (index) {
+    adjustIndex (index) {                                                                          // 校验调整选中项
       index = this.range(index, 0, this.count)
       for (let i = index; i < this.count; i++) {
         if (!this.isDisabled(this.currentDatas[i])) return i
@@ -143,17 +142,17 @@ export default{
         if (!this.isDisabled(this.currentDatas[i])) return i
       }
     },
-    setIndex (index, userAction = false) {
-      // console.log('original index ', index)
+    setIndex (index, userAction = false) {                                                         // 设置选中项
+      console.log('original index ', index)
       index = this.adjustIndex(index) || 0
-      // console.log('adjusted index ', index)
+      console.log('adjusted index ', index)
       this.offset = this.indexToOffset(index)
       if (index !== this.currentIndex) {
         this.currentIndex = index
         userAction && this.$emit('change', index)
       }
     },
-    setInitialData () {
+    setInitialData () {                                                                            // 设置初始值
       let isFinded = false
       this.isArr(this.datas) && this.datas.map((item, index) => {
         let value = typeof item === 'string' ? item : item.value

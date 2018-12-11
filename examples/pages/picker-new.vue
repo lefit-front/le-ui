@@ -47,6 +47,7 @@ export default{
       for (let index = 0; index < 100; index++) {
         result.push({
           value: index,
+          disabled: index % 10 === 0 ? true : false,
           label: `testData${index}`
         });
       }
