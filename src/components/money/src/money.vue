@@ -1,7 +1,7 @@
 <template>
   <div class="le-money-box" :style="{'color': color}" :class="[{'le-money-bold': bold, 'le-money-delete': line}]">
     <small :style="{'font-size': setMoneyIconSize}">{{moneyIcon}}</small>
-    <span :style="{'font-size': setMoneySize}">{{number}}</span>
+    <span :style="{'font-size': setMoneySize}">{{moneyText}}</span>
   </div>
 </template>
 <script>
@@ -14,6 +14,7 @@
  * @param {String} [color='']  -  数字和icon颜色， 接受 #开头，yellow, rbga() 三种方式
  * @param {String} [moneyIcon='¥']     -  数值icon，默认'¥'
  * @param {Boolean} [bold=false]     -  字体加粗，接受 true false
+ * @param {Boolean} [split=false]    -  千位分隔符，接受 true false
  *
  * @example
  * <Money :number="number" :size="20" :color="color" moneyIcon="$"></Money>
@@ -27,6 +28,11 @@ export default {
     setMoneyIconSize () {
       /*规则 icon是数值的 三分之二 大小*/
       return parseInt(this.size, 10)*(2/3) + 'px'
+    },
+    moneyText () {
+      return this.split
+        ? this.number.toLocaleString('en-US')
+        : this.number
     }
   },
   props: {
@@ -47,6 +53,10 @@ export default {
       default: false
     },
     line: {
+      type: Boolean,
+      default: false
+    },
+    split: {
       type: Boolean,
       default: false
     }
