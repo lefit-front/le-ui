@@ -19,6 +19,8 @@
  * @param {boolean}[modal=true] - 阴影,接受 true, false
  * @param {boolean}[closeOnClickModal=true] - 标记阴影是否关闭弹窗,接受 true, false
  * @param {string} [popupTransition=popup-slide] - 	显示/隐藏时的动效，仅在省略 position 时可配置，接受 popup-fade
+ * @param {string} [zIndex='99'] - 修改z-index
+ * @param {boolean}[modalFade=true] - 是否加渐变动画（建议postion=''的时候加）
  * @param {slot} - 显示文本
  *
  * @example

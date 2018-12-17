@@ -21,7 +21,9 @@
     <le-button type="primary" @click="popCenter">中间</le-button>
     <le-popup
       v-model="popupCenter"
+      :modalFade="true"
       position=""
+      zIndex="99"
       class="popupCenter"
       pop-transition="popup-fade"
       >
